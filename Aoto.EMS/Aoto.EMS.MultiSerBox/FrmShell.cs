@@ -5,6 +5,7 @@ using Aoto.EMS.Infrastructure.ComponentModel;
 using Aoto.EMS.Infrastructure.Configuration;
 using Aoto.EMS.Peripheral;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -134,7 +135,8 @@ namespace Aoto.EMS.MultiSerBox
         }
         public string HandleBuss(string busNo)
         {
-           IEnumerable<Business> list = responseJsonObject.businesslist.Where(b => b.BusinessNameNo == busNo);
+            JObject jo = JObject.Parse(busNo);
+            IEnumerable<Business> list = responseJsonObject.businesslist.Where(b => b.BusinessNameNo == jo.Value<string>("BusinessNameNo"));
             if (list != null && list.Count() != 0)
                 return "0";
             else
