@@ -8,6 +8,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
@@ -133,9 +134,9 @@ namespace Aoto.EMS.MultiSerBox
 
             return JsonConvert.SerializeObject(list);
         }
-        public string HandleBuss(string busNo)
+        public string HandleBuss(string bus)
         {
-            JObject jo = JObject.Parse(busNo);
+            JObject jo = JObject.Parse(bus);
             string str = jo.Value<string>("BusinessNameNo");
             IEnumerable<Business> list = responseJsonObject.businesslist.Where(b => b.BusinessNameNo == jo.Value<string>("BusinessNameNo"));
             if (list != null && list.Count() != 0)
@@ -170,6 +171,7 @@ namespace Aoto.EMS.MultiSerBox
 
         private void FrmShell_Load(object sender, EventArgs e)
         {
+            //webBrowser.Navigate(Path.Combine(Config.AppRoot, "web\\qms\\html\\admin\\index.html"));
             webBrowser.Navigate(AppState.WelcomeUrl);
         }
 
@@ -206,6 +208,17 @@ namespace Aoto.EMS.MultiSerBox
             if (readQRCode != null)
                 readQRCode.CloseQRCode();
 
+        }
+        IDCardReader iDCardReader;
+        public string ReadIDCard()
+        {
+            if(iDCardReader==null)
+                iDCardReader = new IDCardReader();
+            else
+                iDCardReader.Initialize();
+            JObject jo = new JObject();
+            iDCardReader.Read(jo);
+            return jo.ToString();
         }
         private void FrmShell_FormClosing(object sender, FormClosingEventArgs e)
         {

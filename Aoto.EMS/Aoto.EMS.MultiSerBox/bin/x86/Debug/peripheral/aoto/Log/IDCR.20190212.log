@@ -1,0 +1,20 @@
+<<16:32:30.795#信息>>[InitInstance] 动态库文件路径：C:\Users\Administrator\Desktop\client\peripheral\aoto\lib\MT321.dll
+<<16:32:30.811#信息>>[IDCR_Initialize] 调用开始 ，lpszConfigXml=<Device><DeviceId>IDCR001</DeviceId><LogLevel>0</LogLevel></Device>
+<<16:32:30.811#错误>>[IDCR_Initialize]串口号为：3
+<<16:32:30.826#信息>>[IDCR_Initialize]设备标识为：IDCR001,日志级别为：0
+<<16:32:54.432#信息>>[InitInstance] 动态库文件路径：C:\Users\Administrator\Desktop\client\peripheral\aoto\lib\MT321.dll
+<<16:32:54.448#信息>>[IDCR_Initialize] 调用开始 ，lpszConfigXml=<Device><DeviceId>IDCR001</DeviceId><LogLevel>0</LogLevel></Device>
+<<16:32:54.464#错误>>[IDCR_Initialize]串口号为：3
+<<16:32:54.464#信息>>[IDCR_Initialize]设备标识为：IDCR001,日志级别为：0
+<<16:33:51.198#信息>>[InitInstance] 动态库文件路径：C:\Users\Administrator\Desktop\client\peripheral\aoto\lib\MT321.dll
+<<16:33:51.214#信息>>[IDCR_Initialize] 调用开始 ，lpszConfigXml=<Device><DeviceId>IDCR001</DeviceId><LogLevel>0</LogLevel></Device>
+<<16:33:51.214#错误>>[IDCR_Initialize]串口号为：3
+<<16:33:51.214#信息>>[IDCR_Initialize]设备标识为：IDCR001,日志级别为：0
+<<16:37:42.757#信息>>[InitInstance] 动态库文件路径：C:\Users\Administrator\Desktop\client\peripheral\aoto\lib\MT321.dll
+<<16:37:42.757#信息>>[IDCR_Initialize] 调用开始 ，lpszConfigXml=<Device><DeviceId>IDCR001</DeviceId><LogLevel>0</LogLevel></Device>
+<<16:37:42.773#错误>>[IDCR_Initialize]串口号为：3
+<<16:37:42.773#信息>>[IDCR_Initialize]设备标识为：IDCR001,日志级别为：0
+<<16:54:09.713#信息>>[InitInstance] 动态库文件路径：C:\Users\Administrator\Desktop\client\peripheral\aoto\lib\MT321.dll
+<<16:54:09.728#信息>>[IDCR_Initialize] 调用开始 ，lpszConfigXml=<Device><DeviceId>IDCR001</DeviceId><LogLevel>0</LogLevel></Device>
+<<16:54:09.728#错误>>[IDCR_Initialize]串口号为：3
+<<16:54:09.744#信息>>[IDCR_Initialize]设备标识为：IDCR001,日志级别为：0

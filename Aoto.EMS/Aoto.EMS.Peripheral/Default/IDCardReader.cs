@@ -99,7 +99,7 @@ namespace Aoto.EMS.Peripheral
 
             if (!File.Exists(dllPath))
             {
-                dllPath = Path.Combine(Config.PeripheralAbsolutePath, PeripheralManager.Dir, "lib", dll);
+                dllPath = Path.Combine(Config.PeripheralAbsolutePath, PeripheralManager.Dir, "IDCardlib", dll);
             }
 
             ptr = Win32ApiInvoker.LoadLibrary(dllPath);
@@ -129,7 +129,7 @@ namespace Aoto.EMS.Peripheral
             idcrGetstatus = (IDCR_GetStatus)Marshal.GetDelegateForFunctionPointer(api, typeof(IDCR_GetStatus));
             log.InfoFormat("GetProcAddress: ptr = {0}, entryPoint = IDCR_GetStatus", ptr);
 
-            string xml = "<Device><DeviceId>IDCR001</DeviceId><LogLevel>" + logLevel + "</LogLevel></Device>";
+            string xml = "<?xml version =\"1.0\" encoding=\"utf-8\"?><Device>  <DeviceId>IDCard001</DeviceId>  <LogLevel>3</LogLevel></Device>";
             int code = idcrInitialize(xml);
             log.InfoFormat("invoke {0} -> IDCR_Initialize, args: xml = {1}, return = {2}", dll, xml, code);
             log.Debug("end");

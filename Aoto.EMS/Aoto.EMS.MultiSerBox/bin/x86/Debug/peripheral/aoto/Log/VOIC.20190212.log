@@ -1,0 +1,11 @@
+<<16:31:36.764#信息>>[DllMain]加载VOIC--20151215
+<<16:31:36.764#信息>>本地窗口号：   1   2   3   4   5   6   7   8   9  10
+<<16:31:36.764#信息>>[DllMain]日志保存天数：[10]
+<<16:31:36.827#信息>>没有有效的音频设备
+<<16:31:36.827#信息>>[VOIC_Initialize]去掉入参非法字符前lpszConfigXml=<Device><DeviceId>VOIC001</DeviceId><LogLevel>3</LogLevel></Device>
+<<16:31:36.827#信息>>[VOIC_Initialize]去掉入参非法字符后lpszConfigXml=<Device><DeviceId>VOIC001</DeviceId><LogLevel>3</LogLevel></Device>
+<<16:31:36.827#信息>>[VOIC_Initialize]设备标识为：VOIC001,日志级别为：3
+<<16:31:36.842#信息>>[VOIC_Initialize]返回值：0(成功)
+<<16:31:36.842#信息>>[VOIC_Initialize]调用结束
+
+<<16:31:58.311#信息>>[DllMain]-------------动态库卸载------------------

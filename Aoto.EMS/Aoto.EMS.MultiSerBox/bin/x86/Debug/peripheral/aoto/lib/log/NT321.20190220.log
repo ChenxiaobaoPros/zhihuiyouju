@@ -1,0 +1,21 @@
+<<11:25:00.118#信息>>[LoadLib] H003driver 动态库文件路径：C:\Users\Administrator\Desktop\client\peripheral\aoto\lib\H003driver.dll
+<<11:25:00.134#信息>>[LoadLib] WltRS 动态库文件路径：C:\Users\Administrator\Desktop\client\peripheral\aoto\lib\WltRS.dll
+<<11:25:00.196#错误>>[LoadLib] 加载动态库：C:\Users\Administrator\Desktop\client\peripheral\aoto\lib\H003driver.dll 成功
+<<11:25:00.337#信息>>[InitDevice] 已存在副本
+<<11:26:09.682#信息>>[ReadCardInfo] SN=[{"ATR":"3B6D000000855416108660130922000194","CODE":"0","SLOT":"2","SLOT_NAME":"Contact"}]
+<<11:26:20.259#信息>>[ReadCardInfo] SN=[{"CODE":"0","SLOT":"4","SLOT_NAME":"IDC"}]
+<<11:26:20.259#信息>>读卡参数：{"Wltfile":"C:\\Users\\Administrator\\Desktop\\client\\peripheral\\aoto\\zp.wlt"}
+<<11:26:21.759#信息>>[ReadCardData]IDCardInfo1={"Address":"江苏省射阳县海河镇跃华村三组30号","Birthday":"19891219","CODE":"0","Department":"射阳县公安局","EndDate":"20220709","Gender":"男","GenderCode":"1","ID":"320924198912192932","IsTxtOK":"true","Name":"戴雪松","Nation":"汉","NationCode":"1","StartDate":"20120709","Wltfile":"C:\\Users\\Administrator\\Desktop\\client\\peripheral\\aoto\\zp.wlt"} 
+<<11:26:21.759#信息>>IDCardInfo={"Address=江苏省射阳县海河镇跃华村三组30号|Birthday=19891219|CODE=0|EndorseMachinery=射阳县公安局|ValidityEndDate=20220709|Sex=男|SexCode=1|IDNumber=320924198912192932|IsTxtOK=true|Name=戴雪松|Nationality=汉|NationalityCode=1|ValidityStartingDate=20120709|PortraitFileName=C:\\Users\\Administrator\\Desktop\\client\\peripheral\\aoto\\image\zp.bmp
+<<11:26:24.134#信息>>[ReadCardInfo] SN=[{"CODE":"0","SLOT":"4","SLOT_NAME":"IDC"}]
+<<11:26:24.134#信息>>读卡参数：{"Wltfile":"C:\\Users\\Administrator\\Desktop\\client\\peripheral\\aoto\\zp.wlt"}
+<<11:26:25.525#信息>>[ReadCardData]IDCardInfo1={"Address":"江苏省射阳县海河镇跃华村三组30号","Birthday":"19891219","CODE":"0","Department":"射阳县公安局","EndDate":"20220709","Gender":"男","GenderCode":"1","ID":"320924198912192932","IsTxtOK":"true","Name":"戴雪松","Nation":"汉","NationCode":"1","StartDate":"20120709","Wltfile":"C:\\Users\\Administrator\\Desktop\\client\\peripheral\\aoto\\zp.wlt"} 
+<<11:26:25.525#信息>>IDCardInfo={"Address=江苏省射阳县海河镇跃华村三组30号|Birthday=19891219|CODE=0|EndorseMachinery=射阳县公安局|ValidityEndDate=20220709|Sex=男|SexCode=1|IDNumber=320924198912192932|IsTxtOK=true|Name=戴雪松|Nationality=汉|NationalityCode=1|ValidityStartingDate=20120709|PortraitFileName=C:\\Users\\Administrator\\Desktop\\client\\peripheral\\aoto\\image\zp.bmp
+<<14:31:07.230#信息>>[LoadLib] H003driver 动态库文件路径：C:\Users\Administrator\Desktop\client\peripheral\aoto\lib\H003driver.dll
+<<14:31:07.230#信息>>[LoadLib] WltRS 动态库文件路径：C:\Users\Administrator\Desktop\client\peripheral\aoto\lib\WltRS.dll
+<<14:31:07.246#错误>>[LoadLib] 加载动态库：C:\Users\Administrator\Desktop\client\peripheral\aoto\lib\H003driver.dll 成功
+<<14:31:07.437#信息>>[InitDevice] 已存在副本
+<<14:55:49.306#信息>>[LoadLib] H003driver 动态库文件路径：C:\Users\Administrator\Desktop\client\peripheral\aoto\lib\H003driver.dll
+<<14:55:49.306#信息>>[LoadLib] WltRS 动态库文件路径：C:\Users\Administrator\Desktop\client\peripheral\aoto\lib\WltRS.dll
+<<14:55:49.369#错误>>[LoadLib] 加载动态库：C:\Users\Administrator\Desktop\client\peripheral\aoto\lib\H003driver.dll 成功
+<<14:55:49.607#信息>>[InitDevice] 已存在副本
