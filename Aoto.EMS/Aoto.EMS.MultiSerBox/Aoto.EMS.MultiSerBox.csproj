@@ -140,9 +140,6 @@
     <None Include="config\app.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="duogong\.idea\%24CACHE_FILE%24" />
-    <None Include="duogong\.idea\duogong.iml" />
-    <None Include="duogong\html.lnk" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -177,40 +174,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="duogong\.idea\inspectionProfiles\profiles_settings.xml" />
-    <Content Include="duogong\.idea\misc.xml" />
-    <Content Include="duogong\.idea\modules.xml" />
-    <Content Include="duogong\.idea\workspace.xml" />
-    <Content Include="duogong\css\base.css" />
-    <Content Include="duogong\css\index.css" />
-    <Content Include="duogong\html\index.html">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="duogong\img\arrow.png" />
-    <Content Include="duogong\img\ban.png" />
-    <Content Include="duogong\img\bao.png" />
-    <Content Include="duogong\img\bm.jpg" />
-    <Content Include="duogong\img\cha.png" />
-    <Content Include="duogong\img\dui.png" />
-    <Content Include="duogong\img\gao.png" />
-    <Content Include="duogong\img\index_bottom.jpg" />
-    <Content Include="duogong\img\index_top.jpg" />
-    <Content Include="duogong\img\kan.png" />
-    <Content Include="duogong\img\li.png" />
-    <Content Include="duogong\img\LOGO.png" />
-    <Content Include="duogong\img\re.png" />
-    <Content Include="duogong\img\san.png" />
-    <Content Include="duogong\img\wang.png" />
-    <Content Include="duogong\img\wei.jpeg" />
-    <Content Include="duogong\img\wu.png" />
-    <Content Include="duogong\img\yue.png" />
-    <Content Include="duogong\img\zi.png" />
-    <Content Include="duogong\js\city.json.js" />
-    <Content Include="duogong\js\citySet.js" />
-    <Content Include="duogong\js\esign.js" />
-    <Content Include="duogong\js\index.js" />
-    <Content Include="duogong\js\jquery.js" />
-    <Content Include="duogong\js\Popt.js" />
     <Content Include="web\images\logo.bmp" />
     <Content Include="web\images\logo.ico" />
     <Content Include="web\images\logo.png" />
