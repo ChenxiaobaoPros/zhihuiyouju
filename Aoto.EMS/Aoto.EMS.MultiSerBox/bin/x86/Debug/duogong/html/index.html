@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,6 +19,7 @@
 <div style="margin: 0 auto; width: 1080px;overflow: hidden;">
     <!-- 首页开始   -->
     <div>
+		
         <div class="intex_top">
             <div class="logo">
                 <img src="../img/LOGO.png" />
@@ -288,17 +289,21 @@
                 $('.ge').on('click','.loader-button3',function (){//获取每一行的数据
                     // var userName = $(this).parents("tr").find(".aaa").text();
 
-                    var result = []; // 数组,存储每一行数据
-                    result.push({
-                        "name" : $(this).parents("tr").find(".aaa").text(),
-                        "age" : $(this).parents("tr").find(".bbb").text(),
-                        "sex" : $(this).parents("tr").find(".ccc").text()
-                    })
-                    //alert(result)
-
-                    var Insurance_list4 =  window.external.HandleBuss(result);
-                    var last=JSON.parse(Insurance_list4);//获取保险列表数据
-                    alert(last)
+                    // var result = []; // 数组,存储每一行数据
+                    // result.push({
+                    //     "name" : $(this).parents("tr").find(".aaa").text(),
+                    //     "age" : $(this).parents("tr").find(".bbb").text(),
+                    //     "sex" : $(this).parents("tr").find(".ccc").text()
+                    // })
+                    // alert(typeof result)
+                    var result = {}; // 数组,存储每一行数据
+                    result.name=$(this).parents("tr").find(".aaa").text();
+                    result.age=$(this).parents("tr").find(".aaa").text();
+                    result.sex=$(this).parents("tr").find(".aaa").text();
+                    var str = JSON.stringify(result);
+                    var Insurance_list4 =  window.external.HandleBuss(str);
+                    //var last=JSON.parse(Insurance_list4);//获取保险列表数据
+                    alert(Insurance_list4)
 
 
                     $(".index_content").hide();//隐藏首页
