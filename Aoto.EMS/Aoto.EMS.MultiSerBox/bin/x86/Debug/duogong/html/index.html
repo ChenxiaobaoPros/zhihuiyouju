@@ -278,9 +278,9 @@
 				//渲染列表
                 for ( var i = 0; i < last.businesslist.length; i++) {//循环json对象，拼接tr,td的html
                     html = html + '<tr class="banse">';
-                    html = html + '<td class="tou_td aaa">' + last.businesslist[i].BusinessNameNo + '</td>';
-                    html = html + '<td class="tou_td bbb">' + last.businesslist[i].BusinessName  + '</td>';
-                    html = html + '<td class="tou_td ccc">' + last.businesslist[i].RealBusiness  + '</td>';
+                    html = html + '<td class="tou_td BusinessNameNo">' + last.businesslist[i].BusinessNameNo + '</td>';
+                    html = html + '<td class="tou_td BusinessName">' + last.businesslist[i].BusinessName  + '</td>';
+                    html = html + '<td class="tou_td RealBusiness">' + last.businesslist[i].RealBusiness  + '</td>';
                     html = html + '<td class="tou_td2"><div> <button class="loader-button3"> <img src="../img/ban.png" />办 理</button></div>  </td>';
 
                     html = html + '</tr>';
@@ -297,11 +297,11 @@
                     // })
                     // alert(typeof result)
                     var result = {}; // 数组,存储每一行数据
-                    result.name=$(this).parents("tr").find(".aaa").text();
-                    result.age=$(this).parents("tr").find(".aaa").text();
-                    result.sex=$(this).parents("tr").find(".aaa").text();
-                    var str = JSON.stringify(result);
-                    var Insurance_list4 =  window.external.HandleBuss(str);
+                    result.BusinessNameNo=$(this).parents("tr").find(".BusinessNameNo").text();
+                    result.BusinessName=$(this).parents("tr").find(".BusinessName").text();
+                    result.RealBusiness=$(this).parents("tr").find(".RealBusiness").text();
+                    var Root = JSON.stringify(result);
+                    var Insurance_list4 =  window.external.HandleBuss(Root);
                     //var last=JSON.parse(Insurance_list4);//获取保险列表数据
                     alert(Insurance_list4)
 
