@@ -136,6 +136,7 @@ namespace Aoto.EMS.MultiSerBox
         public string HandleBuss(string busNo)
         {
             JObject jo = JObject.Parse(busNo);
+            string str = jo.Value<string>("BusinessNameNo");
             IEnumerable<Business> list = responseJsonObject.businesslist.Where(b => b.BusinessNameNo == jo.Value<string>("BusinessNameNo"));
             if (list != null && list.Count() != 0)
                 return "0";
