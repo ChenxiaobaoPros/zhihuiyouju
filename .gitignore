@@ -1,6 +1,12 @@
-﻿################################################################################
+################################################################################
 # 此 .gitignore 文件已由 Microsoft(R) Visual Studio 自动创建。
 ################################################################################
 
 /Aoto.EMS/.vs/Aoto.EMS/v16/Server/sqlite3
 /*.vs
+Aoto.EMS/.vs/Aoto.EMS/v16/.suo
+Aoto.EMS/Aoto.EMS.Common/obj/Debug/Aoto.EMS.Common.csprojAssemblyReference.cache
+Aoto.EMS/Aoto.EMS.Infrastructure/obj/Debug/Aoto.EMS.Infrastructure.csprojAssemblyReference.cache
+Aoto.EMS/Aoto.EMS.MultiSerBox/bin/x86/Debug/logs/app
+Aoto.EMS/Aoto.EMS.MultiSerBox/obj/x86/Debug/Aoto.EMS.MultiSerBox.csprojAssemblyReference.cache
+Aoto.EMS/Aoto.EMS.Peripheral/obj/Debug/Aoto.EMS.Peripheral.csprojAssemblyReference.cache
