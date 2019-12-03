@@ -31,3 +31,13 @@ D:\多功能业务柜\client\config\app.json
 D:\多功能业务柜\client\Aoto.EMS.MultiSerBox.exe.config
 D:\多功能业务柜\client\Aoto.EMS.MultiSerBox.exe
 D:\多功能业务柜\client\Aoto.EMS.MultiSerBox.pdb
+D:\client\web\qms\html\admin\index.html
+D:\client\config\app.json
+D:\client\Aoto.EMS.MultiSerBox.exe.config
+D:\client\Aoto.EMS.MultiSerBox.exe
+D:\client\Aoto.EMS.MultiSerBox.pdb
+D:\Multiclient\web\qms\html\admin\index.html
+D:\Multiclient\config\app.json
+D:\Multiclient\Aoto.EMS.MultiSerBox.exe.config
+D:\Multiclient\Aoto.EMS.MultiSerBox.exe
+D:\Multiclient\Aoto.EMS.MultiSerBox.pdb
