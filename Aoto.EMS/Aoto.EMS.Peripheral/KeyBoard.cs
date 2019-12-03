@@ -1,7 +1,11 @@
-﻿using Aoto.EMS.Infrastructure.Configuration;
+﻿using Aoto.EMS.Infrastructure;
+using Aoto.EMS.Infrastructure.ComponentModel;
+using Aoto.EMS.Infrastructure.Configuration;
 using log4net;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -83,13 +87,43 @@ namespace Aoto.EMS.Peripheral
             this.timeout = Config.App.Peripheral["keyBoard"].Value<int>("timeout");
             this.enabled = Config.App.Peripheral["keyBoard"].Value<bool>("enabled");
             this.name = Config.App.Peripheral["keyBoard"].Value<string>("name");
-
+            runAsyncCaller = new RunAsyncCaller(UseEppPlainTextMode);
             Initialize();
+        }
+        /// <summary>
+        /// 明文模式
+        /// </summary>
+        /// <param name="jo"></param>
+        private void UseEppPlainTextMode(JObject jo)
+        {
+            throw new NotImplementedException();
         }
 
         private void Initialize()
         {
-            throw new NotImplementedException();
+            log.Debug("begin");
+
+            if (!enabled)
+            {
+                return;
+            }
+
+            string dllPath = Path.Combine(Config.PeripheralAbsolutePath, PeripheralManager.Dir, dll);
+
+            if (!File.Exists(dllPath))
+            {
+                dllPath = Path.Combine(Config.PeripheralAbsolutePath, PeripheralManager.Dir, "KeyBoardLib", dll);
+            }
+
+            intPtr = Win32ApiInvoker.LoadLibrary(dllPath);
+            log.InfoFormat("LoadLibrary: dllPath = {0}, ptr = {1}", dllPath, intPtr);
+
+            uint idcoed = Win32ApiInvoker.GetLastError();
+            IntPtr api = Win32ApiInvoker.GetProcAddress(intPtr, "SUNSON_OpenCom");
+            sUNSON_OpenCom = (SUNSON_OpenCom)Marshal.GetDelegateForFunctionPointer(api, typeof(SUNSON_OpenCom));
         }
+
+
+
     }
 }

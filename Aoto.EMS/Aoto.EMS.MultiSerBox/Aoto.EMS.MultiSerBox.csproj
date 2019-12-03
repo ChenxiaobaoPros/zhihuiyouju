@@ -109,6 +109,12 @@
     <Compile Include="FrmFinger.Designer.cs">
       <DependentUpon>FrmFinger.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmKeyBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKeyBoard.Designer.cs">
+      <DependentUpon>FrmKeyBoard.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmShell.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmFinger.resx">
       <DependentUpon>FrmFinger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmKeyBoard.resx">
+      <DependentUpon>FrmKeyBoard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmShell.resx">
       <DependentUpon>FrmShell.cs</DependentUpon>
