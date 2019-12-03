@@ -1,0 +1,221 @@
+   body{
+    	background:#2077A4;
+    	color: #FFFFFF;
+    }
+    .box-inner{
+    	border: 1px solid #FFFFFF;
+    }
+    .box-header{
+    	border-bottom: 1px solid #FFFFFF;
+    }
+    .box-header h2{
+    	color: #FFFFFF;
+    }
+    .box-content{
+    	background: #023D69;
+    }
+    .form-control{
+    	width:60%;
+    	background-color: #126B93 ;
+    	color: #FFFFFF;
+    	border: 1px solid #3C9EC3;
+    }
+	.form-control[disabled],.form-control[readonly],fieldset[disabled] .form-control {
+		background-color: #126B93 ;
+	}    
+    .row .col-xs-3{
+    	text-align: center;
+    	height: 40px;
+    	line-height: 40px;
+    }
+    .table-bordered{
+    	border: 0px;
+    }
+    .table-bordered tbody tr{
+    	border: 0px;
+    }
+    .table-bordered tbody tr td{
+    	border: 0px;
+    }
+    
+    .datetimepicker{
+    	background-color: #7AAF3B;
+    }
+    
+    .datetimepicker table tr td span:hover {
+		background: #FF0906;
+	}
+	
+	.datetimepicker table tr td span.active.disabled:hover.active {
+		background-color: #003399;
+	}
+	
+	.datetimepicker tfoot tr:first-child th {
+		background: #FFAB3F;
+	}	
+
+	.datetimepicker tfoot tr:first-child th:hover {
+		background: #FF0906;
+	}
+	.datetimepicker .datetimepicker-days .table-condensed .switch:hover{
+		background-color: red;
+	}
+	.datetimepicker .datetimepicker-days .table-condensed .prev{
+		background-color: #ffab3f;
+	}
+	.datetimepicker .datetimepicker-days .table-condensed .prev:hover{
+		background-color: red;
+	}
+	.datetimepicker .datetimepicker-days .table-condensed .next{
+		background-color: #ffab3f;
+	}
+	.datetimepicker .datetimepicker-days .table-condensed .next:hover{
+		background-color: red;
+	}
+	.popover{
+        color:#FF0000;
+	}	
+    .button{
+		font-size: 20px;
+		background-color: #7AAF3B;
+    }
+    .button:hover{
+    	background-color: white;
+    	color:#2077A4;
+    }
+	.chosen-container .chosen-results{
+		color:black;
+	} 
+    
+    /**
+ * 自定义
+ */
+.td-right{
+	width: 20%;
+	text-align: right;
+}
+
+em {
+	color: red;
+	font-weight: bold;
+	padding-right: .25em;
+}
+
+.form-control{
+	border-radius: 0px;
+}
+
+#loading1{
+	padding-top: 50%;
+	background-color:#2077A4;
+}
+
+#loading1 div{
+	background-color: white;
+}
+.ipWidget input{
+	background-color: #2077A4;
+	border: 1px solid #3C9EC3;
+}
+.ipWidget input{
+	height: 36px;
+	width: 10%;
+	background-color: #126b93;
+	border: 1px solid #3c9ec3;
+}
+.ipWidget input:focus{
+	border-color:whitesmoke;
+	outline:0;
+	-webkit-box-shadow:inset 5px 5px 5px rgba(102,175,233,0.1),0 0 16px rgba(102,175,233,0.98);
+	box-shadow:inset 5px 5px 5px rgba(102,175,233,0.1),0 0 16px rgba(102,175,233,0.98);
+}
+
+/*
+ * bootbox自定义样式
+ */
+.bootbox .modal-dialog{
+	margin: 25% auto 0px auto;
+}
+.bootbox .modal-dialog .modal-content{
+	height: 200px;
+	width: 300px;
+	margin: 0px auto;
+	background-color: #2077a4;
+}
+.bootbox .modal-dialog .modal-content .modal-body{
+	height: 130px;
+}
+.bootbox .modal-dialog .modal-content .modal-body .bootbox-body{
+	margin: 12% auto;
+}
+.box .box-inner .box-content .table .dataStyle{
+	background-color: #126b93;
+	border: 1px solid #3c9ec3;
+	color:#ffffff ;
+	width: 60%;
+	height: 38px;
+	padding: 8px 12px;
+	transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+	line-height: 1.42857;
+}
+
+/*
+ * 遮罩层2
+ */
+#loading2{
+	height: 100%;
+	display: none;
+	margin-top:-3px;
+	padding-top:50%;
+	width: 100%;
+	position:absolute;
+	text-align:center;
+	z-index: 2000;
+}
+#loading2 div{
+	border:1px solid #95b8e7;
+	color: #000;
+	display: inline-block;
+	font-size:14px;
+	height: 43px;
+	line-height: 43px;
+	width: 174px;
+	background-color: white;
+}
+/*
+ * 设备管理
+ */
+	.cleanButton{
+		height: 38px;
+		background-color: #126b93;
+	}
+	
+/*
+ * 保存按钮
+ */
+.btn-custom{
+	width: 80px;
+}
+/*
+ * 综合管理
+ */
+.qmsconfigSelect .chosen-container .chosen-results li{
+	color: black;
+}
+/**
+ * 页签
+ */
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
+    background-color: #023d69;
+    color: white;
+}
+.nav-tabs li a{
+    color: white;
+    padding: 7px 20px;
+}
+.nav-tabs li a:hover{
+    color: #023d69;
+}
+.nav-tabs{
+    margin-top: 10px;
+}

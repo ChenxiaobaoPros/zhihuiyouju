@@ -1,0 +1,91 @@
+C:\Users\Administrator\Desktop\0209\clientsrc\Aoto.CQMS.Core\bin\Release\Aoto.CQMS.Core.dll
+C:\Users\Administrator\Desktop\0209\clientsrc\Aoto.CQMS.Core\bin\Release\Aoto.CQMS.Core.pdb
+C:\Users\Administrator\Desktop\0209\clientsrc\Aoto.CQMS.Core\bin\Release\Aoto.PPS.Infrastructure.dll
+C:\Users\Administrator\Desktop\0209\clientsrc\Aoto.CQMS.Core\bin\Release\ICSharpCode.SharpZipLib.dll
+C:\Users\Administrator\Desktop\0209\clientsrc\Aoto.CQMS.Core\bin\Release\log4net.dll
+C:\Users\Administrator\Desktop\0209\clientsrc\Aoto.CQMS.Core\bin\Release\Newtonsoft.Json.dll
+C:\Users\Administrator\Desktop\0209\clientsrc\Aoto.CQMS.Core\bin\Release\CoreAudioApi.dll
+C:\Users\Administrator\Desktop\0209\clientsrc\Aoto.CQMS.Core\bin\Release\Autofac.dll
+C:\Users\Administrator\Desktop\0209\clientsrc\Aoto.CQMS.Core\bin\Release\Autofac.Configuration.dll
+C:\Users\Administrator\Desktop\0209\clientsrc\Aoto.CQMS.Core\obj\Release\ResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\0209\clientsrc\Aoto.CQMS.Core\obj\Release\Aoto.CQMS.Core.dll
+C:\Users\Administrator\Desktop\0209\clientsrc\Aoto.CQMS.Core\obj\Release\Aoto.CQMS.Core.pdb
+D:\工行银行\01 代码\20170223\clientsrc\Aoto.CQMS.Core\bin\Release\Aoto.CQMS.Core.dll
+D:\工行银行\01 代码\20170223\clientsrc\Aoto.CQMS.Core\bin\Release\Aoto.CQMS.Core.pdb
+D:\工行银行\01 代码\20170223\clientsrc\Aoto.CQMS.Core\bin\Release\Aoto.PPS.Infrastructure.dll
+D:\工行银行\01 代码\20170223\clientsrc\Aoto.CQMS.Core\bin\Release\ICSharpCode.SharpZipLib.dll
+D:\工行银行\01 代码\20170223\clientsrc\Aoto.CQMS.Core\bin\Release\log4net.dll
+D:\工行银行\01 代码\20170223\clientsrc\Aoto.CQMS.Core\bin\Release\Newtonsoft.Json.dll
+D:\工行银行\01 代码\20170223\clientsrc\Aoto.CQMS.Core\bin\Release\CoreAudioApi.dll
+D:\工行银行\01 代码\20170223\clientsrc\Aoto.CQMS.Core\bin\Release\Autofac.dll
+D:\工行银行\01 代码\20170223\clientsrc\Aoto.CQMS.Core\bin\Release\Autofac.Configuration.dll
+D:\工行银行\01 代码\20170223\clientsrc\Aoto.CQMS.Core\obj\Release\Aoto.CQMS.Core.csprojResolveAssemblyReference.cache
+D:\工行银行\01 代码\20170223\clientsrc\Aoto.CQMS.Core\obj\Release\Aoto.CQMS.Core.dll
+D:\工行银行\01 代码\20170223\clientsrc\Aoto.CQMS.Core\obj\Release\Aoto.CQMS.Core.pdb
+D:\工行银行\01 代码\20170223\clientsrc\Aoto.CQMS.Core\bin\Release\Aoto.PPS.Infrastructure.pdb
+D:\工行银行\01代码\20170223\clientsrc\Aoto.CQMS.Core\bin\Release\Aoto.CQMS.Core.dll
+D:\工行银行\01代码\20170223\clientsrc\Aoto.CQMS.Core\bin\Release\Aoto.CQMS.Core.pdb
+D:\工行银行\01代码\20170223\clientsrc\Aoto.CQMS.Core\bin\Release\Aoto.PPS.Infrastructure.dll
+D:\工行银行\01代码\20170223\clientsrc\Aoto.CQMS.Core\bin\Release\ICSharpCode.SharpZipLib.dll
+D:\工行银行\01代码\20170223\clientsrc\Aoto.CQMS.Core\bin\Release\log4net.dll
+D:\工行银行\01代码\20170223\clientsrc\Aoto.CQMS.Core\bin\Release\Newtonsoft.Json.dll
+D:\工行银行\01代码\20170223\clientsrc\Aoto.CQMS.Core\bin\Release\Autofac.dll
+D:\工行银行\01代码\20170223\clientsrc\Aoto.CQMS.Core\bin\Release\CoreAudioApi.dll
+D:\工行银行\01代码\20170223\clientsrc\Aoto.CQMS.Core\bin\Release\Autofac.Configuration.dll
+D:\工行银行\01代码\20170223\clientsrc\Aoto.CQMS.Core\bin\Release\Aoto.PPS.Infrastructure.pdb
+D:\工行银行\01代码\20170223\clientsrc\Aoto.CQMS.Core\obj\Release\Aoto.CQMS.Core.csprojResolveAssemblyReference.cache
+D:\工行银行\01代码\20170223\clientsrc\Aoto.CQMS.Core\obj\Release\Aoto.CQMS.Core.dll
+D:\工行银行\01代码\20170223\clientsrc\Aoto.CQMS.Core\obj\Release\Aoto.CQMS.Core.pdb
+D:\工行银行\03部署\ICBC_20170223\install\Browser\clientsrc\Aoto.CQMS.Core\bin\Release\Aoto.CQMS.Core.dll
+D:\工行银行\03部署\ICBC_20170223\install\Browser\clientsrc\Aoto.CQMS.Core\bin\Release\Aoto.CQMS.Core.pdb
+D:\工行银行\03部署\ICBC_20170223\install\Browser\clientsrc\Aoto.CQMS.Core\bin\Release\Aoto.PPS.Infrastructure.dll
+D:\工行银行\03部署\ICBC_20170223\install\Browser\clientsrc\Aoto.CQMS.Core\bin\Release\ICSharpCode.SharpZipLib.dll
+D:\工行银行\03部署\ICBC_20170223\install\Browser\clientsrc\Aoto.CQMS.Core\bin\Release\log4net.dll
+D:\工行银行\03部署\ICBC_20170223\install\Browser\clientsrc\Aoto.CQMS.Core\bin\Release\Newtonsoft.Json.dll
+D:\工行银行\03部署\ICBC_20170223\install\Browser\clientsrc\Aoto.CQMS.Core\bin\Release\CoreAudioApi.dll
+D:\工行银行\03部署\ICBC_20170223\install\Browser\clientsrc\Aoto.CQMS.Core\bin\Release\Autofac.dll
+D:\工行银行\03部署\ICBC_20170223\install\Browser\clientsrc\Aoto.CQMS.Core\bin\Release\Autofac.Configuration.dll
+D:\工行银行\03部署\ICBC_20170223\install\Browser\clientsrc\Aoto.CQMS.Core\bin\Release\Aoto.PPS.Infrastructure.pdb
+D:\工行银行\03部署\ICBC_20170223\install\Browser\clientsrc\Aoto.CQMS.Core\obj\Release\Aoto.CQMS.Core.csprojResolveAssemblyReference.cache
+D:\工行银行\03部署\ICBC_20170223\install\Browser\clientsrc\Aoto.CQMS.Core\obj\Release\Aoto.CQMS.Core.dll
+D:\工行银行\03部署\ICBC_20170223\install\Browser\clientsrc\Aoto.CQMS.Core\obj\Release\Aoto.CQMS.Core.pdb
+D:\工行银行\03部署\ICBC\install\Browser\clientsrc\Aoto.CQMS.Core\bin\Release\Aoto.CQMS.Core.dll
+D:\工行银行\03部署\ICBC\install\Browser\clientsrc\Aoto.CQMS.Core\bin\Release\Aoto.CQMS.Core.pdb
+D:\工行银行\03部署\ICBC\install\Browser\clientsrc\Aoto.CQMS.Core\bin\Release\Aoto.PPS.Infrastructure.dll
+D:\工行银行\03部署\ICBC\install\Browser\clientsrc\Aoto.CQMS.Core\bin\Release\ICSharpCode.SharpZipLib.dll
+D:\工行银行\03部署\ICBC\install\Browser\clientsrc\Aoto.CQMS.Core\bin\Release\log4net.dll
+D:\工行银行\03部署\ICBC\install\Browser\clientsrc\Aoto.CQMS.Core\bin\Release\Newtonsoft.Json.dll
+D:\工行银行\03部署\ICBC\install\Browser\clientsrc\Aoto.CQMS.Core\bin\Release\CoreAudioApi.dll
+D:\工行银行\03部署\ICBC\install\Browser\clientsrc\Aoto.CQMS.Core\bin\Release\Autofac.dll
+D:\工行银行\03部署\ICBC\install\Browser\clientsrc\Aoto.CQMS.Core\bin\Release\Autofac.Configuration.dll
+D:\工行银行\03部署\ICBC\install\Browser\clientsrc\Aoto.CQMS.Core\bin\Release\Aoto.PPS.Infrastructure.pdb
+D:\工行银行\03部署\ICBC\install\Browser\clientsrc\Aoto.CQMS.Core\obj\Release\Aoto.CQMS.Core.csprojResolveAssemblyReference.cache
+D:\工行银行\03部署\ICBC\install\Browser\clientsrc\Aoto.CQMS.Core\obj\Release\Aoto.CQMS.Core.dll
+D:\工行银行\03部署\ICBC\install\Browser\clientsrc\Aoto.CQMS.Core\obj\Release\Aoto.CQMS.Core.pdb
+D:\Work\Project\智能机器人\clientsrc\Aoto.CQMS.Core\bin\Release\Aoto.CQMS.Core.dll
+D:\Work\Project\智能机器人\clientsrc\Aoto.CQMS.Core\bin\Release\Aoto.CQMS.Core.pdb
+D:\Work\Project\智能机器人\clientsrc\Aoto.CQMS.Core\bin\Release\Aoto.PPS.Infrastructure.dll
+D:\Work\Project\智能机器人\clientsrc\Aoto.CQMS.Core\bin\Release\ICSharpCode.SharpZipLib.dll
+D:\Work\Project\智能机器人\clientsrc\Aoto.CQMS.Core\bin\Release\log4net.dll
+D:\Work\Project\智能机器人\clientsrc\Aoto.CQMS.Core\bin\Release\Newtonsoft.Json.dll
+D:\Work\Project\智能机器人\clientsrc\Aoto.CQMS.Core\bin\Release\Autofac.dll
+D:\Work\Project\智能机器人\clientsrc\Aoto.CQMS.Core\bin\Release\Autofac.Configuration.dll
+D:\Work\Project\智能机器人\clientsrc\Aoto.CQMS.Core\bin\Release\CoreAudioApi.dll
+D:\Work\Project\智能机器人\clientsrc\Aoto.CQMS.Core\bin\Release\Aoto.PPS.Infrastructure.pdb
+D:\Work\Project\智能机器人\clientsrc\Aoto.CQMS.Core\obj\Release\Aoto.CQMS.Core.csprojResolveAssemblyReference.cache
+D:\Work\Project\智能机器人\clientsrc\Aoto.CQMS.Core\obj\Release\Aoto.CQMS.Core.csproj.CoreCompileInputs.cache
+D:\Work\Project\智能机器人\clientsrc\Aoto.CQMS.Core\obj\Release\Aoto.CQMS.Core.dll
+D:\Work\Project\智能机器人\clientsrc\Aoto.CQMS.Core\obj\Release\Aoto.CQMS.Core.pdb
+D:\feiq\Recv Files\clientsrc\Aoto.CQMS.Core\bin\Release\Aoto.CQMS.Core.dll
+D:\feiq\Recv Files\clientsrc\Aoto.CQMS.Core\bin\Release\Aoto.CQMS.Core.pdb
+D:\feiq\Recv Files\clientsrc\Aoto.CQMS.Core\bin\Release\Aoto.PPS.Infrastructure.dll
+D:\feiq\Recv Files\clientsrc\Aoto.CQMS.Core\bin\Release\ICSharpCode.SharpZipLib.dll
+D:\feiq\Recv Files\clientsrc\Aoto.CQMS.Core\bin\Release\log4net.dll
+D:\feiq\Recv Files\clientsrc\Aoto.CQMS.Core\bin\Release\Newtonsoft.Json.dll
+D:\feiq\Recv Files\clientsrc\Aoto.CQMS.Core\bin\Release\Autofac.dll
+D:\feiq\Recv Files\clientsrc\Aoto.CQMS.Core\bin\Release\CoreAudioApi.dll
+D:\feiq\Recv Files\clientsrc\Aoto.CQMS.Core\bin\Release\Autofac.Configuration.dll
+D:\feiq\Recv Files\clientsrc\Aoto.CQMS.Core\bin\Release\Aoto.PPS.Infrastructure.pdb
+D:\feiq\Recv Files\clientsrc\Aoto.CQMS.Core\obj\Release\Aoto.CQMS.Core.csprojResolveAssemblyReference.cache
+D:\feiq\Recv Files\clientsrc\Aoto.CQMS.Core\obj\Release\Aoto.CQMS.Core.dll
+D:\feiq\Recv Files\clientsrc\Aoto.CQMS.Core\obj\Release\Aoto.CQMS.Core.pdb

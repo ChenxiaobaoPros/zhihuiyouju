@@ -1,0 +1,365 @@
+﻿<!DOCTYPE>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Free HTML5 Bootstrap Admin Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
+    <meta name="author" content="Muhammad Usman">
+
+	<title>排队配置</title>
+	<link rel="stylesheet" type="text/css" href="../../js/lib/easyui/themes/bootstrap/easyui.css" />
+	<link rel="stylesheet" type="text/css" href="../../js/lib/easyui/themes/icon.css" />
+	
+	<!-- The styles --> 
+    <link id="bs-css" href="../../css/bootstrap-11.min.css" rel="stylesheet">
+    <link href="../../css/charisma-app.css" rel="stylesheet">
+    <link href='../../css/chosen.min.css' rel='stylesheet'>
+    <link href='../../css/colorbox.css' rel='stylesheet'>
+    <link href='../../css/responsive-tables.css' rel='stylesheet'>
+    <link href='../../css/bootstrap-tour.min.css' rel='stylesheet'>
+    <link href='../../css/jquery.noty.css' rel='stylesheet'>
+    <link href='../../css/noty_theme_default.css' rel='stylesheet'>
+    <link href='../../css/elfinder.min.css' rel='stylesheet'>
+    <link href='../../css/elfinder.theme.css' rel='stylesheet'>
+    <link href='../../css/jquery.iphone.toggle.css' rel='stylesheet'>
+    <link href='../../css/uploadify.css' rel='stylesheet'>
+    <link href='../../css/animate.min.css' rel='stylesheet'>
+    <link rel="stylesheet"  href="../../css/button.css"/>
+    
+    <style type="text/css">
+         body{
+         	background:#2077A4;
+         }
+  
+		 .panel{
+		 	background:#2077A4;
+		 }
+		 ul.main-menu li:not(.nav-header) {
+		    background: #123843;
+		 }  		 
+		a {
+			color:#FFFFFF;
+		}		 
+		a:hover,a:focus {
+			background: #1FBCE5;
+		}	
+	    .button{
+			font-size: 20px;
+			background-color: #7AAF3B;
+	    }
+	    .button:hover{
+	    	background-color: white;
+	    	color:#2077A4;
+	    }	
+	    .navbar .navbar-inner .btn-group .btn-custom{
+	    	width: 80px;
+	    }				 
+    </style>
+	
+	
+	<script type="text/javascript" src="../../js/lib/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="../../js/lib/jquery/plugins/jquery.string.js"></script>
+	<script type="text/javascript" src="../../js/lib/jquery/plugins/jquery.json.js"></script>
+	<script type="text/javascript" src="../../js/lib/easyui/plugins/jquery.draggable.js"></script>
+	<script type="text/javascript" src="../../js/lib/easyui/plugins/jquery.parser.js"></script>
+    <script type="text/javascript" src="../../../js/peripheral.js"></script>
+    <script type="text/javascript" src="../../js/map.js"></script>
+	<script type="text/javascript" src="../../js/jquery.metadata.js"></script>
+	<script type="text/javascript" src="../../js/jquery.validate.js"></script>
+	<script type="text/javascript" src="../../js/qmsVld.js"></script>
+	
+	
+	<script type="text/javascript" src="../../js/lib/easyui/jquery.easyui.js"></script>
+	<script type="text/javascript" src="../../js/lib/easyui/locale/easyui-lang-zh_CN.js"></script>
+	<script type="text/javascript" src="../../js/outlook.js"></script>
+	<script src="../../js/bootstrap.min.js"></script>
+
+<!-- library for cookie management -->
+<script src="../../js/jquery.cookie.js"></script>
+<!-- data table plugin -->
+<script src='../../js/jquery.dataTables.min.js'></script>
+
+<!-- select or dropdown enhancer -->
+<script src="../../js/chosen.jquery.min.js"></script>
+<!-- plugin for gallery image view -->
+<script src="../../js/jquery.colorbox-min.js"></script>
+<!-- notification plugin -->
+<script src="../../js/jquery.noty.js"></script>
+<!-- library for making tables responsive -->
+<script src="../../js/responsive-tables.js"></script>
+<!-- tour plugin -->
+<script src="../../js/bootstrap-tour.min.js"></script>
+<!-- star rating plugin -->
+<script src="../../js/jquery.raty.min.js"></script>
+<!-- for iOS style toggle switch -->
+<script src="../../js/jquery.iphone.toggle.js"></script>
+<!-- autogrowing textarea plugin -->
+<script src="../../js/jquery.autogrow-textarea.js"></script>
+<!-- multiple file upload plugin -->
+<script src="../../js/jquery.uploadify-3.1.min.js"></script>
+<!-- history.js for cross-browser state change on ajax -->
+<script src="../../js/jquery.history.js"></script>
+<!-- application script for Charisma demo -->
+<script src="../../js/index.js"></script>
+
+</head>
+<body class="easyui-layout" style="overflow:hidden;">
+  <div region="north" split="false" border="false" style="padding:0;overflow:hidden;" >
+	<div class="navbar navbar-default" role="navigation" id="navbar" border="0" style="margin-bottom:0px;">
+		<div class="navbar-inner">
+			<button type="button" class="navbar-toggle pull-left animated flip">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<div class="btn-group pull-left" ><img ondragstart="return false;" alt="Charisma Logo" src="../../../images/logo.png" style="width:auto;height:40px;"/></div>
+           <!-- user dropdown starts -->
+			<div class="btn-group pull-right">
+				<input type="button" class="btn btn-info btn-custom" onclick="backHtml()"  value="返回">
+			</div>
+			<!-- user dropdown ends -->
+		</div>
+    </div>
+	
+  </div>
+  <div region="west" title=" "  split="true" id="west" style="width:170px !important;">
+		<div class="sidebar-nav">
+			<div class="nav-canvas">
+				<div class="nav-sm nav nav-stacked">
+				</div>
+				<ul class="nav nav-pills nav-stacked main-menu">
+					<li onclick="initCenterFrame('qmsconfig.html')"><a ondragstart="return false" class="ajax-link" href="#"><i class="glyphicon glyphicon-tree-deciduous"></i><span> 综合设置</span></a></li>
+					<li onclick="initCenterFrame('basic.html')"><a ondragstart="return false" class="ajax-link" href="#"><i class="glyphicon glyphicon-folder-open"></i><span> 基本设置</span></a></li>
+					<li onclick="initCenterFrame('basic-gsyhzy.html')"><a ondragstart="return false" class="ajax-link" href="#"><i class="glyphicon glyphicon-leaf"></i><span>工商银行专用</span></a></li>
+					<li onclick="initCenterFrame('custLevel.html')"><a ondragstart="return false" class="ajax-link" href="#"><i class="glyphicon glyphicon-time"></i><span> 客户识别</span></a></li>
+					<li onclick="initCenterFrame('tellerWin.html')"><a ondragstart="return false" class="ajax-link" href="#"><i class="glyphicon glyphicon-road"></i><span> 柜台设置</span></a></li>
+					<li onclick="initCenterFrame('bus.html')"><a ondragstart="return false" class="ajax-link" href="#"><i class="glyphicon glyphicon-tasks"></i><span> 业务设置</span></a></li>
+					<li onclick="initCenterFrame('ticket.html')"><a ondragstart="return false" class="ajax-link" href="#"><i class="glyphicon glyphicon-adjust"></i><span> 号票设置</span></a></li>
+					<li onclick="initCenterFrame('custNumber.html')"><a ondragstart="return false" class="ajax-link" href="#"><i class="glyphicon glyphicon-eye-open"></i><span> 现场管理</span></a></li>			
+					<li onclick="initCenterFrame('basic-update.html')"><a ondragstart="return false" class="ajax-link" href="#" ><i class="glyphicon glyphicon-align-justify"></i><span>更新设置</span></a></li>
+					<li onclick="initCenterFrame('yj-yysz.html')"><a ondragstart="return false" class="ajax-link" href="#" ><i class="glyphicon glyphicon-book"></i><span>语音设置</span></a></li>
+					<li onclick="initCenterFrame('machine.html')"><a ondragstart="return false" class="ajax-link" href="#" ><i class="glyphicon glyphicon-tower"></i><span>设备管理</span></a></li>
+					<li onclick="initCenterFrame('about.html')"><a ondragstart="return false" class="ajax-link" href="#" ><i class="glyphicon glyphicon-subtitles"></i><span>关于</span></a></li>
+				</ul>
+			</div>
+    </div>
+  </div>
+  <div region="center" style="overflow:hidden;padding:0 0 0 0;background: #2077A4;" >
+      	<iframe id="centerFrame" src="welcome.html" frameborder="0" style="overflow:hidden;width:100%;height:100%;z-index:1000;" >
+		</iframe>
+  </div>
+
+</body>
+
+<script type="text/javascript">
+function backHtml(){
+	var signFlag = $.qms.getCache("signFlag");
+	if(signFlag == 0){
+		window.parent.location.href='../../../qms/html/q/sign.html';
+	}else{
+		window.parent.location.href='../../../qms/html/q/q1.html';
+	}
+}
+var ifrm = document.getElementById("centerFrame");
+/**
+ * 基本设置
+ * @param {Object} args
+ */
+function basicconfig2JSCallback(args){
+	ifrm.contentWindow.basicconfig2JSCallback(args);
+}
+function basicconfig2updateCallBack(args){
+	ifrm.contentWindow.basicconfig2updateCallBack(args);
+}
+/**
+ * 工商银行专用
+ * @param {Object} args
+ */
+function icbcspecialuse2selectCallBack(args){
+	ifrm.contentWindow.icbcspecialuse2selectCallBack(args);
+}
+function icbcspecialuse2updateCallBack(args){
+	ifrm.contentWindow.icbcspecialuse2updateCallBack(args);
+}
+/**
+ * 更新设置
+ * @param {Object} args
+ */
+function updateconfig2JSCallback(args){
+	ifrm.contentWindow.updateconfig2JSCallback(args);
+}
+function updateconfig2updateCallBack(args){
+	ifrm.contentWindow.updateconfig2updateCallBack(args);
+}
+/**
+ * 语音设置
+ * @param {Object} args
+ */
+function voiceconfig2JSCallback(args){
+	ifrm.contentWindow.voiceconfig2JSCallback(args);
+}
+function voiceconfig2updateCallBack(args){
+	ifrm.contentWindow.voiceconfig2updateCallBack(args);
+}
+/**
+ * 关于
+ * @param {Object} args
+ */
+function about2JSCallBack(args){
+	ifrm.contentWindow.about2JSCallBack(args);
+}
+/**
+ * 远程卡BIN星级对照
+ * @param {Object} args
+ */
+function biomqmscardbinselectCallBack(args){
+	ifrm.contentWindow.biomqmscardbinselectCallBack(args);
+}
+/**
+ * 队列查询
+ * @param {Object} args
+ */
+function getqueuequeryCallBack(args){
+	ifrm.contentWindow.getqueuequeryCallBack(args);
+}
+/**
+ * 窗口队列调整
+ * @param {Object} args
+ */
+function windowQueueAdjust2JSupdateCallBack(args){
+	ifrm.contentWindow.windowQueueAdjust2JSupdateCallBack(args);
+}
+/**
+ * 队列属性更新
+ * @param {Object} args
+ */
+function queueAttributesUpdate2JSCallBack(args){
+	ifrm.contentWindow.queueAttributesUpdate2JSCallBack(args);
+}
+
+/**
+ * 本地卡BIN星级对照
+ * @param {Object} args
+ */
+function getLocalcardbinCallBack(args){
+	ifrm.contentWindow.getLocalcardbinCallBack(args);
+}
+function addLocalcardbinCallBack(args){
+	ifrm.contentWindow.addLocalcardbinCallBack(args);
+}
+function updateLocalcardbinCallBack(args){
+	ifrm.contentWindow.updateLocalcardbinCallBack(args);
+}
+function removeLocalcardbinCallBack(args){
+	ifrm.contentWindow.removeLocalcardbinCallBack(args);
+}
+/**
+ * 本地卡类型星级对照
+ * @param {Object} args
+ */
+function getLocalcardtypeCallBack(args){
+	ifrm.contentWindow.getLocalcardtypeCallBack(args);
+}
+function addLocalcardtypeCallBack(args){
+	ifrm.contentWindow.addLocalcardtypeCallBack(args);
+}
+function updateLocalcardtypeCallBack(args){
+	ifrm.contentWindow.updateLocalcardtypeCallBack(args);
+}
+function removeLocalcardtypeCallBack(args){
+	ifrm.contentWindow.removeLocalcardtypeCallBack(args);
+}
+/**
+ * 本地号码/删废号
+ */
+function getLocalNumberQueryCallBack(args){
+	ifrm.contentWindow.getLocalNumberQueryCallBack(args);
+}
+function removeAbolishNumberCallBack(args){
+	ifrm.contentWindow.removeAbolishNumberCallBack(args);
+}
+/**
+ * 营业厅分区
+ */
+function getBusinesshallCallBack(args){
+	ifrm.contentWindow.getBusinesshallCallBack(args);
+}
+function addBusinesshallCallBack(args){
+	ifrm.contentWindow.addBusinesshallCallBack(args);
+}
+function updateBusinesshallCallBack(args){
+	ifrm.contentWindow.updateBusinesshallCallBack(args);
+}
+function removeBusinesshallCallBack(args){
+	ifrm.contentWindow.removeBusinesshallCallBack(args);
+}
+
+/**
+ * 柜台设置
+ */
+function getCounterconfigCallBack(args){
+	ifrm.contentWindow.getCounterconfigCallBack(args);
+}
+function addCounterconfigCallBack(args){
+	ifrm.contentWindow.addCounterconfigCallBack(args);
+}
+function updateCounterconfigCallBack(args){
+	ifrm.contentWindow.updateCounterconfigCallBack(args);
+}
+function removeCounterconfigCallBack(args){
+	ifrm.contentWindow.removeCounterconfigCallBack(args);
+}
+
+//号票查询
+function getTicketsconfigCallBack(args){
+	ifrm.contentWindow.getTicketsconfigCallBack(args);
+}
+//业务设置的查询
+function servicequery2JSCallback(args){
+	ifrm.contentWindow.servicequery2JSCallback(args);
+}
+
+function updateTicketTemplateCallback(args){
+	ifrm.contentWindow.updateTicketTemplateCallback(args);
+}
+function getTicketTemplateJsonFileCallback(args){
+	ifrm.contentWindow.getTicketTemplateJsonFileCallback(args);
+}
+/*
+ *设备管理
+ */
+function getQcmConfig2JSCallback(args){
+	ifrm.contentWindow.getQcmConfig2JSCallback(args);
+}
+function updateQcmConfig2JSCallBack(args){
+	ifrm.contentWindow.updateQcmConfig2JSCallBack(args);
+}
+/*
+ *连接测试
+ */
+function getPinLisServiceCallBack(args){
+	ifrm.contentWindow.getPinLisServiceCallBack(args);
+}
+/*
+ *叫号机日志下载
+ */
+function getLogQueryCallBack(args){
+	ifrm.contentWindow.getLogQueryCallBack(args);
+}
+/*
+ *重启叫号机
+ */
+function boxRestartCallBack(args){
+	ifrm.contentWindow.boxRestartCallBack(args);
+}
+/*
+ *usb开启和禁用（设备管理）
+ */
+function updateUsb2JSCallback(args){
+	ifrm.contentWindow.updateUsb2JSCallback(args);
+}
+</script>
+</html>

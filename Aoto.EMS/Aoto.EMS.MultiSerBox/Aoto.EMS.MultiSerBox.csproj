@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F525F30D-8F5C-4A36-A2D5-E57A6ECB2578}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Aoto.EMS.MultiSerBox</RootNamespace>
+    <AssemblyName>Aoto.EMS.MultiSerBox</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\client\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Aoto.EMS.MultiSerBox.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\client\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac">
+      <HintPath>..\lib\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Configuration">
+      <HintPath>..\lib\Autofac.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ThoughtWorks.QRCode">
+      <HintPath>..\lib\ThoughtWorks.QRCode.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FrmBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBoard.Designer.cs">
+      <DependentUpon>FrmBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFinger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFinger.Designer.cs">
+      <DependentUpon>FrmFinger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmShell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmShell.Designer.cs">
+      <DependentUpon>FrmShell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmBoard.resx">
+      <DependentUpon>FrmBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFinger.resx">
+      <DependentUpon>FrmFinger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmShell.resx">
+      <DependentUpon>FrmShell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="config\app.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="web\qms\fonts\glyphicons-halflings-regular.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Aoto.EMS.Common\Aoto.EMS.Common.csproj">
+      <Project>{B48B4D2E-5B2B-45DF-BC61-84415323D6FA}</Project>
+      <Name>Aoto.EMS.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Aoto.EMS.Infrastructure\Aoto.EMS.Infrastructure.csproj">
+      <Project>{8628FBF1-A1E2-4B06-B506-ECE2E116FA53}</Project>
+      <Name>Aoto.EMS.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Aoto.EMS.Peripheral\Aoto.EMS.Peripheral.csproj">
+      <Project>{0479D333-76E2-4DCE-887E-F7C08469950F}</Project>
+      <Name>Aoto.EMS.Peripheral</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="web\images\logo.bmp" />
+    <Content Include="web\images\logo.ico" />
+    <Content Include="web\images\logo.png" />
+    <Content Include="web\images\logo2.png" />
+    <Content Include="web\images\o_eye.png" />
+    <Content Include="web\images\s_eye.png" />
+    <Content Include="web\js\lib\date\bootstrap-datetimepicker.js" />
+    <Content Include="web\js\lib\date\bootstrap-datetimepicker.zh-CN.js" />
+    <Content Include="web\js\lib\date\date-zh-CN.js" />
+    <Content Include="web\js\lib\date\date.js" />
+    <Content Include="web\js\lib\jquery\jquery.js" />
+    <Content Include="web\js\lib\jquery\plugins\highlight.pack.js" />
+    <Content Include="web\js\lib\jquery\plugins\jquery.json.js" />
+    <Content Include="web\js\lib\jquery\plugins\jquery.string.js" />
+    <Content Include="web\js\lib\jquery\plugins\tabifier.js" />
+    <Content Include="web\js\peripheral.js" />
+    <Content Include="web\qms\css\animate.min.css" />
+    <Content Include="web\qms\css\bootstrap-11.min.css" />
+    <Content Include="web\qms\css\bootstrap-datetimepicker.css" />
+    <Content Include="web\qms\css\bootstrap-tour.min.css" />
+    <Content Include="web\qms\css\button.css" />
+    <Content Include="web\qms\css\charisma-app.css" />
+    <Content Include="web\qms\css\chosen.min.css" />
+    <Content Include="web\qms\css\colorbox.css" />
+    <Content Include="web\qms\css\common.css" />
+    <Content Include="web\qms\css\commonlist.css" />
+    <Content Include="web\qms\css\css\animate.css" />
+    <Content Include="web\qms\css\css\github.css" />
+    <Content Include="web\qms\css\css\jPages.css" />
+    <Content Include="web\qms\css\css\style.css" />
+    <Content Include="web\qms\css\elfinder.min.css" />
+    <Content Include="web\qms\css\elfinder.theme.css" />
+    <Content Include="web\qms\css\icheck\yellow%402x.png" />
+    <Content Include="web\qms\css\icheck\yellow.css" />
+    <Content Include="web\qms\css\icheck\yellow.png" />
+    <Content Include="web\qms\css\jquery.iphone.toggle.css" />
+    <Content Include="web\qms\css\jquery.noty.css" />
+    <Content Include="web\qms\css\noty_theme_default.css" />
+    <Content Include="web\qms\css\pagination.css" />
+    <Content Include="web\qms\css\reset.css" />
+    <Content Include="web\qms\css\responsive-tables.css" />
+    <Content Include="web\qms\css\uploadify.css" />
+    <Content Include="web\qms\html\admin\index.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="web\qms\images\background\11.jpg" />
+    <Content Include="web\qms\images\chosen\chosen-sprite%402x.png" />
+    <Content Include="web\qms\images\chosen\chosen-sprite.png" />
+    <Content Include="web\qms\images\q\1\buzType\03.png" />
+    <Content Include="web\qms\images\q\1\buzType\04.png" />
+    <Content Include="web\qms\images\q\1\buzType\06.png" />
+    <Content Include="web\qms\images\q\1\buzType\08.png" />
+    <Content Include="web\qms\images\q\1\buzType\cqk.png" />
+    <Content Include="web\qms\images\q\1\buzType\dgkh.png" />
+    <Content Include="web\qms\images\q\1\buzType\dglc.png" />
+    <Content Include="web\qms\images\q\1\buzType\dgwkh.png" />
+    <Content Include="web\qms\images\q\1\buzType\dgyw.png" />
+    <Content Include="web\qms\images\q\1\buzType\grwkzh.png" />
+    <Content Include="web\qms\images\q\1\buzType\jf.png" />
+    <Content Include="web\qms\images\q\1\buzType\kxh.png" />
+    <Content Include="web\qms\images\q\1\buzType\lc.png" />
+    <Content Include="web\qms\images\q\1\buzType\lcgw.png" />
+    <Content Include="web\qms\images\q\1\buzType\qtwdxx.png" />
+    <Content Include="web\qms\images\q\1\buzType\qtyw.png" />
+    <Content Include="web\qms\images\q\1\buzType\wb.png" />
+    <Content Include="web\qms\images\q\1\buzType\yyqh.png" />
+    <Content Include="web\qms\images\q\1\buzType\zzhk.png" />
+    <Content Include="web\qms\images\q\1\dd.gif" />
+    <Content Include="web\qms\images\q\1\gray.png" />
+    <Content Include="web\qms\images\q\1\green.png" />
+    <Content Include="web\qms\images\q\1\jt.gif" />
+    <Content Include="web\qms\images\q\1\out.png" />
+    <Content Include="web\qms\images\q\1\red.png" />
+    <Content Include="web\qms\js\bootbox.js" />
+    <Content Include="web\qms\js\bootstrap-tour.min.js" />
+    <Content Include="web\qms\js\bootstrap.min.js" />
+    <Content Include="web\qms\js\charisma.js" />
+    <Content Include="web\qms\js\chosen.jquery.min.js" />
+    <Content Include="web\qms\js\hashMap.js" />
+    <Content Include="web\qms\js\index.js" />
+    <Content Include="web\qms\js\jquery.autogrow-textarea.js" />
+    <Content Include="web\qms\js\jquery.colorbox-min.js" />
+    <Content Include="web\qms\js\jquery.cookie.js" />
+    <Content Include="web\qms\js\jquery.dataTables.min.js" />
+    <Content Include="web\qms\js\jquery.history.js" />
+    <Content Include="web\qms\js\jquery.iphone.toggle.js" />
+    <Content Include="web\qms\js\jquery.metadata.js" />
+    <Content Include="web\qms\js\jquery.noty.js" />
+    <Content Include="web\qms\js\jquery.raty.min.js" />
+    <Content Include="web\qms\js\jquery.uploadify-3.1.min.js" />
+    <Content Include="web\qms\js\jquery.validate.js" />
+    <Content Include="web\qms\js\jquery.validate.min.js" />
+    <Content Include="web\qms\js\lib\easyui\easyloader.js" />
+    <Content Include="web\qms\js\lib\easyui\jquery.easyui.js" />
+    <Content Include="web\qms\js\lib\easyui\locale\easyui-lang-zh_CN.js" />
+    <Content Include="web\qms\js\lib\easyui\plugins\jquery.draggable.js" />
+    <Content Include="web\qms\js\lib\easyui\plugins\jquery.parser.js" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\accordion.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\calendar.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\combo.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\combobox.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\datagrid.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\datebox.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\dialog.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\easyui.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\images\layout_arrows.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\layout.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\linkbutton.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\menu.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\menubutton.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\messager.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\numberbox.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\pagination.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\panel.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\progressbar.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\propertygrid.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\searchbox.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\slider.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\spinner.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\splitbutton.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\tabs.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\textbox.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\tooltip.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\tree.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\validatebox.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\window.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\color.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\default\easyui.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\default\images\loading.gif" />
+    <Content Include="web\qms\js\lib\easyui\themes\icon.css" />
+    <Content Include="web\qms\js\lib\jquery\icheck\jquery.icheck.js" />
+    <Content Include="web\qms\js\lib\jquery\jquery.js" />
+    <Content Include="web\qms\js\lib\jquery\jquery.min.js" />
+    <Content Include="web\qms\js\lib\jquery\plugins\jquery.cycle.js" />
+    <Content Include="web\qms\js\lib\jquery\plugins\jquery.json.js" />
+    <Content Include="web\qms\js\lib\jquery\plugins\jquery.nouislider.js" />
+    <Content Include="web\qms\js\lib\jquery\plugins\jquery.pagination.js" />
+    <Content Include="web\qms\js\lib\jquery\plugins\jquery.smartWizard.js" />
+    <Content Include="web\qms\js\lib\jquery\plugins\jquery.string.js" />
+    <Content Include="web\qms\js\map.js" />
+    <Content Include="web\qms\js\messages_zh.js" />
+    <Content Include="web\qms\js\multiselect.js" />
+    <Content Include="web\qms\js\multiselect.min.js" />
+    <Content Include="web\qms\js\outlook.js" />
+    <Content Include="web\qms\js\prettify.min.js" />
+    <Content Include="web\qms\js\qmsVld.js" />
+    <Content Include="web\qms\js\responsive-tables.js" />
+    <Content Include="web\qms\js\ticket.js" />
+    <Content Include="web\qms\js\validation.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="web\js\lib\easyui\locale\" />
+    <Folder Include="web\js\lib\easyui\plugins\" />
+    <Folder Include="web\js\lib\easyui\themes\default\images\" />
+    <Folder Include="web\js\lib\easyui\themes\icons\" />
+    <Folder Include="web\js\lib\jquery\themes\base\images\" />
+    <Folder Include="web\js\lib\jquery\themes\base\minified\images\" />
+    <Folder Include="web\js\lib\jquery\themes\jplayer\skin\blue.monday\mustache\" />
+    <Folder Include="web\js\lib\jquery\themes\jplayer\skin\circle.player\" />
+    <Folder Include="web\js\lib\jquery\themes\jplayer\skin\pink.flag\mustache\" />
+    <Folder Include="web\js\lib\jquery\themes\ui-lightness\images\" />
+    <Folder Include="web\js\lib\jquery\themes\ui-lightness\minified\images\" />
+    <Folder Include="web\js\lib\msdropdown___\css\" />
+    <Folder Include="web\js\lib\msdropdown___\icons\" />
+    <Folder Include="web\js\lib\msdropdown___\images\" />
+    <Folder Include="web\qms\css\contextmenu_css\images\contextmenu\.svn\prop-base\" />
+    <Folder Include="web\qms\css\contextmenu_css\images\contextmenu\.svn\props\" />
+    <Folder Include="web\qms\css\contextmenu_css\images\contextmenu\.svn\text-base\" />
+    <Folder Include="web\qms\css\contextmenu_css\images\contextmenu\.svn\tmp\prop-base\" />
+    <Folder Include="web\qms\css\contextmenu_css\images\contextmenu\.svn\tmp\props\" />
+    <Folder Include="web\qms\css\contextmenu_css\images\contextmenu\.svn\tmp\text-base\" />
+    <Folder Include="web\qms\css\contextmenu_css\sample-css\" />
+    <Folder Include="web\qms\css\fonts\" />
+    <Folder Include="web\qms\css\icon-fonts\elusive-icons-2.0.0\css\" />
+    <Folder Include="web\qms\css\icon-fonts\elusive-icons-2.0.0\fonts\" />
+    <Folder Include="web\qms\css\icon-fonts\font-awesome-4.0.0\css\" />
+    <Folder Include="web\qms\css\icon-fonts\font-awesome-4.0.0\fonts\" />
+    <Folder Include="web\qms\css\icon-fonts\font-awesome-4.1.0\css\" />
+    <Folder Include="web\qms\css\icon-fonts\font-awesome-4.1.0\fonts\" />
+    <Folder Include="web\qms\css\icon-fonts\font-awesome-4.2.0\css\" />
+    <Folder Include="web\qms\css\icon-fonts\font-awesome-4.2.0\fonts\" />
+    <Folder Include="web\qms\css\icon-fonts\font-awesome-4.3.0\css\" />
+    <Folder Include="web\qms\css\icon-fonts\font-awesome-4.3.0\fonts\" />
+    <Folder Include="web\qms\css\icon-fonts\ionicons-1.5.2\css\" />
+    <Folder Include="web\qms\css\icon-fonts\ionicons-1.5.2\fonts\" />
+    <Folder Include="web\qms\css\icon-fonts\map-icons-2.1.0\css\" />
+    <Folder Include="web\qms\css\icon-fonts\map-icons-2.1.0\fonts\" />
+    <Folder Include="web\qms\css\icon-fonts\material-design-1.1.1\css\" />
+    <Folder Include="web\qms\css\icon-fonts\material-design-1.1.1\fonts\" />
+    <Folder Include="web\qms\css\icon-fonts\octicons-2.1.2\css\" />
+    <Folder Include="web\qms\css\icon-fonts\octicons-2.1.2\fonts\" />
+    <Folder Include="web\qms\css\icon-fonts\typicons-2.0.6\css\" />
+    <Folder Include="web\qms\css\icon-fonts\typicons-2.0.6\fonts\" />
+    <Folder Include="web\qms\css\icon-fonts\weather-icons-1.2.0\css\" />
+    <Folder Include="web\qms\css\icon-fonts\weather-icons-1.2.0\fonts\" />
+    <Folder Include="web\qms\images\ajax-loaders\" />
+    <Folder Include="web\qms\images\iphone-style-checkboxes\" />
+    <Folder Include="web\qms\js\iconset\" />
+    <Folder Include="web\qms\js\lib\date\" />
+    <Folder Include="web\qms\js\lib\easyui\themes\icons\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

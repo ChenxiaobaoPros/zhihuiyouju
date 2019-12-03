@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Aoto.PPS.Infrastructure.AutofacContainer" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAACAEAAAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AutofacContainer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aoto.PPS.Infrastructure.IcbcInfos" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAQAIAgAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>HttpClient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aoto.PPS.Infrastructure.HttpClient" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAABABCAACAAACAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>HttpClient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aoto.PPS.Infrastructure.HttpServer" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAACBAAAFAAAAACAAAAIACAAAAIAAAAAAAAAI=</HashCode>
+      <FileName>HttpServer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aoto.PPS.Infrastructure.Win32ApiInvoker" Collapsed="true">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQEAgAAACBAAAAAIQAoAAAAIEABggBAAAUACQAEAAAI=</HashCode>
+      <FileName>Win32ApiInvoker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aoto.PPS.Infrastructure.ComponentModel.RunCompletedEventArgs" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ComponentModel\RunCompletedEventHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aoto.PPS.Infrastructure.ComponentModel.ErrorCode" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABCAAAAAAAAgAAAAAAgAAAAKAAAAAAAAAAAA=</HashCode>
+      <FileName>ComponentModel\RunCompletedEventHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aoto.PPS.Infrastructure.ComponentModel.StatusCode" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAJAAAAAAAAAiAAAAAAAAIAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>ComponentModel\RunCompletedEventHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aoto.PPS.Infrastructure.Configuration.AppCache" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Configuration\AppCache.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aoto.PPS.Infrastructure.Configuration.AppConfig" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAABEDAHBIBAAyCAAgAAlAQEhBgEAIOIAAACgEACgxA=</HashCode>
+      <FileName>Configuration\AppConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aoto.PPS.Infrastructure.Configuration.AppState" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAIAAAAAAAAgAAAAAgCFAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Configuration\AppState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aoto.PPS.Infrastructure.Configuration.BuzConfig2ICBC" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAACAABAQDB4AAAHBCxIEhEoByoAAAAhUAIGQgDCkBw=</HashCode>
+      <FileName>Configuration\BuzConfig2ICBC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aoto.PPS.Infrastructure.Configuration.Config" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACESAAAAIDAAAAgAAAEBAIAgAAAJEEoAAAQgCACgACA=</HashCode>
+      <FileName>Configuration\Config.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aoto.PPS.Infrastructure.Configuration.ConnectionStrings" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAACAAAACJAAAAAQAAAAAAAACEAACABAAAgAgAA=</HashCode>
+      <FileName>Configuration\Config.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aoto.PPS.Infrastructure.Configuration.DeviceInfo" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgGAABAAAAQAAiAAQAAAAAAACAAAAAAQCAAAAAgEAA=</HashCode>
+      <FileName>Configuration\DeviceInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aoto.PPS.Infrastructure.Configuration.GlobalVariable2ICBC" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QQAEzAhCQAIQSEADAIBIZgAYIkACEADACBQxYRAIkQA=</HashCode>
+      <FileName>Configuration\GlobalVariable2ICBC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aoto.PPS.Infrastructure.Configuration.PromptInfos2ICBC" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Configuration\PromptInfos2ICBC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aoto.PPS.Infrastructure.ICBC.MessagePackage2ICBC" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ICBC\MessagePackage2ICBC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aoto.PPS.Infrastructure.Utils.CodeRegister" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAgAAAAAAAAAAAQEAAAAACAAAAAAAACAAgAIAAAAAQ=</HashCode>
+      <FileName>Utils\CodeRegister.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aoto.PPS.Infrastructure.Utils.CommonUtils" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IQgAAAAAAAAAAAAQAAAAAAAEAAAAAAAEAAAAAIAAAAE=</HashCode>
+      <FileName>Utils\CommonUtils.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aoto.PPS.Infrastructure.Utils.ConvertUtil" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAIQAEBAAgAAgAIBAAAAACIAgEgBCBAIAACA=</HashCode>
+      <FileName>Utils\ConvertUtil.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aoto.PPS.Infrastructure.Utils.CsvUtil" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABCAAAAIAAA=</HashCode>
+      <FileName>Utils\CsvUtil.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aoto.PPS.Infrastructure.Utils.FileHelper" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAARAIAgEAADAABAEAAAAAFAIAAAAIAACA=</HashCode>
+      <FileName>Utils\FileHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aoto.PPS.Infrastructure.Utils.JsonSplit" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAEAAAAAAAAAAAQAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>Utils\JsonSplit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Aoto.PPS.Infrastructure.Utils.VolumeControl" Collapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAQAAAAAAAAAAAAAAAAgQAAEAAAAAAA=</HashCode>
+      <FileName>Utils\VolumeControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Aoto.PPS.Infrastructure.ComponentModel.IAppInitializer" Collapsed="true">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ComponentModel\IAppInitializer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Aoto.PPS.Infrastructure.ComponentModel.IScriptInvoker" Collapsed="true">
+    <Position X="2.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAIAAAAAAABAAAIAAAAAAAQBAAAAAA=</HashCode>
+      <FileName>ComponentModel\RunCompletedEventHandler.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Aoto.PPS.Infrastructure.Configuration.OperationCommand" Collapsed="true">
+    <Position X="0.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAEAAAAAAAAAAAAAAAAAAQAAAAAAACAAQABAAAEAAEA=</HashCode>
+      <FileName>Configuration\AppState.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Aoto.PPS.Infrastructure.Configuration.PageCommand" Collapsed="true">
+    <Position X="2.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAAAAAAAAAAAAAAAAAAAEACAAAAIAAQAAAAAA=</HashCode>
+      <FileName>Configuration\AppState.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Delegate Name="Aoto.PPS.Infrastructure.ComponentModel.RunAsyncCaller" Collapsed="true">
+    <Position X="0.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ComponentModel\RunCompletedEventHandler.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Aoto.PPS.Infrastructure.ComponentModel.RunCompletedEventHandler" Collapsed="true">
+    <Position X="2.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAQAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>ComponentModel\RunCompletedEventHandler.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>

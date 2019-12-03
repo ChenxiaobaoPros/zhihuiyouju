@@ -1,0 +1,647 @@
+/*头部开始*/
+.intex_top{
+    width: 1080px;
+    height: 239px;
+    background: url("../img/index_top.jpg") no-repeat;
+}
+.logo{
+    width: 240px;
+    height: 64px;
+    padding-top: 20px;
+    margin-left: 10px;
+}
+.logo_p{
+    font-size: 80px;
+    text-shadow:5px 5px 5px #027951;
+    font-weight: 500;
+    color: #ffffff;
+    text-align: center;
+    line-height: 130px;
+
+}
+/*头部结束*/
+/*底部开始*/
+.index-bottom{
+    width: 1080px;
+    height: 124px;
+    background: url("../img/index_bottom.jpg") no-repeat;
+}
+/*底部结束*/
+/*首页内容开始*/
+.index_content{
+    width: 1080px;
+    height: 1556px;
+    background: #f6f6f6;
+    display: none;
+}
+.kong{
+    width: 1080px;
+    height: 96px;
+}
+.content_fff{
+    width: 888px;
+    height: 1362px;
+    background: #ffffff;
+    border-radius: 10px;
+    margin: 0 auto;
+    box-shadow: -2px 0px 5px 1px #ccc,0px -2px 5px 1px #ccc,2px 0px 5px 1px #ccc,0px 2px 5px 1px #ccc;
+}
+.content_div{
+    width: 800px;
+    height: 790px;
+    margin: 0 auto;
+    padding-top: 60px;
+}
+.content_ul {
+    width: 400px;
+    height: 850px;
+    float: left;
+}
+.content_ul2 {
+    width: 398px;
+    height: 850px;
+    float: left;
+    margin-left: 1px;
+}
+.content_ul2 li{
+    width: 400px;
+    height: 170px;
+    font-size: 44px;
+    text-align: center;
+    line-height: 170px;
+    font-weight: 500;
+    border-bottom: 1px solid #007f3e;
+
+}
+.content_ul li{
+    width: 400px;
+    height: 170px;
+    font-size: 44px;
+    text-align: center;
+    line-height: 170px;
+    font-weight: 500;
+    border-bottom: 1px solid #007f3e;
+    border-right: 1px solid #007f3e;
+}
+.content_li_span{
+    width: 60px;
+    height: 60px;
+    background: url("../img/yue.png") no-repeat center;
+    display: block;
+    float: left;
+    margin-left: 50px;
+    margin-top: 56px;
+}
+.content_li_span2{
+    width: 60px;
+    height: 60px;
+    background: url("../img/wu.png") no-repeat center;
+    display: block;
+    float: left;
+    margin-left: 50px;
+    margin-top: 56px;
+}
+.content_li_span3{
+    width: 60px;
+    height: 60px;
+    background: url("../img/zi.png") no-repeat center;
+    display: block;
+    float: left;
+    margin-left: 50px;
+    margin-top: 56px;
+}
+.content_li_span4{
+    width: 60px;
+    height: 60px;
+    background: url("../img/cha.png") no-repeat center;
+    display: block;
+    float: left;
+    margin-left: 50px;
+    margin-top: 56px;
+}
+.content_li_span5{
+    width: 60px;
+    height: 60px;
+    background: url("../img/li.png") no-repeat center;
+    display: block;
+    float: left;
+    margin-left: 50px;
+    margin-top: 56px;
+}
+.content_li_span6{
+    width: 60px;
+    height: 60px;
+    background: url("../img/re.png") no-repeat center;
+    display: block;
+    float: left;
+    margin-left: 50px;
+    margin-top: 56px;
+}
+.content_li_span7{
+    width: 60px;
+    height: 60px;
+    background: url("../img/wang.png") no-repeat center;
+    display: block;
+    float: left;
+    margin-left: 50px;
+    margin-top: 56px;
+}
+.content_li_span8{
+    width: 60px;
+    height: 60px;
+    background: url("../img/kan.png") no-repeat center;
+    display: block;
+    float: left;
+    margin-left: 50px;
+    margin-top: 56px;
+}
+.content_li_span9{
+    width: 60px;
+    height: 60px;
+    background: url("../img/bao.png") no-repeat center;
+    display: block;
+    float: left;
+    margin-left: 50px;
+    margin-top: 56px;
+}
+.content_li_p{
+    width: 200px;
+    height: 170px;
+    float: left;
+}
+.content_ul2 li{
+    width: 400px;
+    height: 170px;
+    font-size: 44px;
+    text-align: center;
+    line-height: 170px;
+    font-weight: 500;
+}
+.content_li{
+    background: #f2f8f6;
+}
+/*首页内容结束*/
+/*保险业务开始*/
+.Insurance{
+    width: 1080px;
+    height: 1456px;
+    background: #f6f6f6;
+    padding-top: 100px;
+    display: none;
+}
+.Insurance_top{
+    width: 888px;
+    height: 200px;
+    background: #ffffff;
+    border-radius: 10px;
+    margin: 0px auto;
+    /*box-shadow: -2px 0px 5px 1px #ccc,0px -2px 5px 1px #ccc,2px 0px 5px 1px #ccc,0px 2px 5px 1px #ccc;*/
+    box-shadow: 2px 0px 5px 1px #ccc,0px 2px 5px 1px #ccc;
+}
+.Insurance_top_div{
+    width: 100%;
+    height: 74px;
+    background: -moz-linear-gradient(top, #53a786 0%, #087d53 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#53a786), color-stop(100%,#087d53));
+    background: -webkit-linear-gradient(top, #53a786 0%,#087d53 100%);
+    background: -o-linear-gradient(top, #53a786 0%,#087d53 100%);
+    background: -ms-linear-gradient(top, #53a786 0%,#087d53 100%);
+    background: linear-gradient(to bottom, #53a786 0%,#087d53 100%);
+    border-radius: 10px 10px 0 0;
+}
+.Insurance_top_p1{
+    width: 164px;
+    height: 64px;
+    text-align: center;
+    font-size: 34px;
+    line-height: 74px;
+    color: #fff;
+    float: left;
+    margin-top: 10px;
+}
+.Insurance_top_p2{
+    width: 164px;
+    height: 64px;
+    text-align: center;
+    font-size: 34px;
+    line-height: 74px;
+    color: #595959;
+    float: left;
+    background: #fff;
+    border-radius: 5px 5px 0 0;
+    margin-top: 10px;
+}
+.Insurance_type{
+    width: 140px;
+    height: 120px;
+    font-size: 30px;
+    color: #595959;
+    line-height: 126px;
+    float: left;
+    margin-left: 30px;
+}
+.Insurance_opt{
+    width: 260px;
+    height: 38px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    float: left;
+    margin-top: 42px;
+    color: #595959;
+    font-size: 16px;
+    padding-left: 10px;
+}
+select:focus { outline: none; }
+.Insurance_opt_btn{
+    width: 300px;
+    height: 40px;
+    float: left;
+    margin-top: 36px;
+    margin-left: 30px;
+}
+.loader-button {
+    width: 94px;
+    height: 40px;
+    background: -moz-linear-gradient(top, #53a786 0%, #087d53 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#53a786), color-stop(100%,#087d53));
+    background: -webkit-linear-gradient(top, #53a786 0%,#087d53 100%);
+    background: -o-linear-gradient(top, #53a786 0%,#087d53 100%);
+    background: -ms-linear-gradient(top, #53a786 0%,#087d53 100%);
+    background: linear-gradient(to bottom, #53a786 0%,#087d53 100%);
+    color: #fff;
+    font-size: 18px;
+    line-height: 40px;
+    border-radius: 6px;
+    box-shadow: 1px 0px 1px rgba(0, 0, 0, 0.7);
+    outline: none;
+}
+.loader-button2 {
+    width: 94px;
+    height: 40px;
+    background: #ccc;
+    color: #666;
+    font-size: 18px;
+    line-height: 40px;
+    border-radius: 6px;
+    box-shadow: 1px 0px 1px rgba(0, 0, 0, 0.7);
+    outline: none;
+    margin-left: 20px;
+}
+.loader-button3 {
+    width: 120px;
+    height: 40px;
+    background: -moz-linear-gradient(top, #53a786 0%, #087d53 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#53a786), color-stop(100%,#087d53));
+    background: -webkit-linear-gradient(top, #53a786 0%,#087d53 100%);
+    background: -o-linear-gradient(top, #53a786 0%,#087d53 100%);
+    background: -ms-linear-gradient(top, #53a786 0%,#087d53 100%);
+    background: linear-gradient(to bottom, #53a786 0%,#087d53 100%);
+    color: #fff;
+    font-size: 20px;
+    line-height: 40px;
+    border-radius: 6px;
+    box-shadow: 1px 0px 1px rgba(0, 0, 0, 0.7);
+    outline: none;
+}
+.loader-button3 img{
+    margin-top: 9px;
+    margin-right: 6px;
+}
+
+.biaoge{
+    width: 888px;
+    height:1093px;
+    /*padding-top: 50px;*/
+    overflow: hidden;
+    /*overflow-y:scroll;*/
+    scrollbar-face-color: #ccc;
+    scrollbar-arrow-color: #ccc;
+    scrollbar-3dlight-color: #53a786;
+    scrollbar-highlight-color: #53a786;
+    scrollbar-shadow-color: #53a786;
+    scrollbar-darkshadow-color: #53a786;
+    scrollbar-track-color: #53a786;
+    scrollbar-base-color: #f6f6f6;
+
+}
+
+.ge{
+    width: 888px;
+
+}
+.tou{
+    background: -moz-linear-gradient(top, #53a786 0%, #087d53 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#53a786), color-stop(100%,#087d53));
+    background: -webkit-linear-gradient(top, #53a786 0%,#087d53 100%);
+    background: -o-linear-gradient(top, #53a786 0%,#087d53 100%);
+    background: -ms-linear-gradient(top, #53a786 0%,#087d53 100%);
+    background: linear-gradient(to bottom, #53a786 0%,#087d53 100%);
+    color: #fff;
+    font-size: 18px;
+    line-height: 74px;
+}
+.aaa{
+    margin-top: 50px;
+}
+.border-r{
+     border-right: 1px solid #fff;
+     width: 223px;
+     border-radius: 5px 0 0 0;
+ }
+.border-rr{
+    border-radius: 10px 0 0 0;
+}
+.border-l{
+    border-radius: 0 10px 0 0;
+}
+.tou_td{
+    width: 223px;
+    text-align: center;
+    font-size: 18px;
+    color: #595959;
+    height: 90px;
+    border-top: 1px solid #007f3e;
+    border-right: 1px solid #007f3e;
+}
+.tou_td2{
+    width: 223px;
+    text-align: center;
+    font-size: 18px;
+    color: #595959;
+    height: 90px;
+    border-top: 1px solid #007f3e;
+}
+/*保险列表结束*/
+/*身份识别开始*/
+.shib{
+    width: 1080px;
+    height: 1456px;
+    background: #f6f6f6;
+    padding-top: 100px;
+    display: none;
+}
+.Insurance_top_p3{
+    width: 164px;
+    height: 64px;
+    text-align: center;
+    font-size: 34px;
+    line-height: 74px;
+    color: #fff;
+    float: left;
+    margin-top: 10px;
+}
+.shenzheng{
+    width: 888px;
+    height: 150px;
+    margin-top: 40px;
+}
+.shenzheng button{
+    width: 240px;
+    height: 60px;
+    background: -moz-linear-gradient(top, #53a786 0%, #087d53 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#53a786), color-stop(100%,#087d53));
+    background: -webkit-linear-gradient(top, #53a786 0%,#087d53 100%);
+    background: -o-linear-gradient(top, #53a786 0%,#087d53 100%);
+    background: -ms-linear-gradient(top, #53a786 0%,#087d53 100%);
+    background: linear-gradient(to bottom, #53a786 0%,#087d53 100%);
+    color: #fff;
+    font-size: 20px;
+    line-height: 60px;
+    border-radius: 6px;
+    box-shadow: 1px 0px 1px rgba(0, 0, 0, 0.7);
+    outline: none;
+    margin-left: 144px;
+}
+/*身份识别结束*/
+/*保险业务办理页开始*/
+.details{
+    width: 1080px;
+    height: 1456px;
+    background: #f6f6f6;
+    padding-top: 100px;
+    overflow: hidden;
+    /*display: none;*/
+}
+.details_top{
+    width: 888px;
+    height: 74px;
+    background: #ffffff;
+    border-radius: 10px;
+    margin: 0px auto;
+    /*box-shadow: -2px 0px 5px 1px #ccc,0px -2px 5px 1px #ccc,2px 0px 5px 1px #ccc,0px 2px 5px 1px #ccc;*/
+    box-shadow: 2px 0px 5px 1px #ccc,0px 2px 5px 1px #ccc;
+}
+.Insurance_top_p4{
+    width: 164px;
+    height: 64px;
+    text-align: center;
+    font-size: 34px;
+    line-height: 74px;
+    color: #fff;
+    float: left;
+    margin-top: 10px;
+}
+.details_box{
+    width: 886px;
+    height: 1280px;
+    background: #fff;
+    margin: 0 auto;
+    box-shadow: 1px 0px 5px 1px #ccc,0px 1px 5px 1px #ccc;
+    border-radius: 0 0 10px 10px;
+}
+.details_box_h3{
+    width: 100%;
+    height: 66px;
+    background: #e8e8e8;
+    text-align: center;
+    line-height: 78px;
+    font-size: 34px;
+    color: #595959;
+}
+.zhhu{
+    width: 886px;
+    height: 120px;
+    background: #f2f8f6;
+}
+.zhhu2{
+    width: 886px;
+    height: 120px;
+}
+.zhhu_hao{
+    width: 380px;
+    height: 120px;
+    margin-left: 40px;
+    float: left;
+}
+.zhhu_hao p{
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+    font-size: 22px;
+    color: #595959;
+    float: left;
+}
+.zhhu_hao input{
+    width: 240px;
+    height: 38px;
+    line-height: 38px;
+    font-size: 16px;
+    color: #595959;
+    float: left;
+    display: block;
+    border: 1px solid #000;
+    border-radius: 5px;
+    margin-top: 38px;
+    padding-left: 10px;
+}
+
+.wrap{width:240px;height:34px;margin-left: 124px;border:0;position:relative;}
+.input{position:absolute;top:0;left:0;width:457px;margin:0;padding-left:5px;height:30px;line-height:30px;font-size:12px;border:1px solid #c9cacb;}
+s{position:absolute;top:54px;right:0;width:32px;height:32px;background:url("../img/san.png") no-repeat;}
+._citys { width: 450px; display: inline-block; border: 2px solid #eee; padding: 5px; position: relative; }
+._citys span { color: #05920a; height: 15px; width: 15px; line-height: 15px; text-align: center; border-radius: 3px; position: absolute; right: 10px; top: 10px; border: 1px solid #05920a; cursor: pointer; }
+._citys0 { width: 95%; height: 34px; line-height: 34px; display: inline-block; border-bottom: 2px solid #05920a; padding: 0px 5px; font-size:14px; font-weight:bold; margin-left:6px; }
+._citys0 li { display: inline-block; line-height: 34px; font-size: 15px; color: #888; width: 80px; text-align: center; cursor: pointer; }
+._citys1 { width: 100%; display: inline-block; padding: 10px 0; background: #fff; }
+._citys1 a { width: 83px; height: 35px; display: inline-block; background-color: #f5f5f5; color: #666; margin-left: 6px; margin-top: 3px; line-height: 35px; text-align: center; cursor: pointer; font-size: 12px; border-radius: 5px; overflow: hidden; }
+._citys1 a:hover { color: #fff; background-color: #05920a; }
+.AreaS { background-color: #05920a !important; color: #fff !important; }
+.zhhu3{
+    width: 886px;
+    height: 220px;
+    background: #f2f8f6;
+}
+.zhhu_hao2{
+    width: 230px;
+    height:40px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    margin-left: 40px;
+    margin-top: 95px;
+    float: left;
+}
+.zhhu3_span{
+    width: 25px;
+    height: 25px;
+    background: url("../img/gao.png") no-repeat;
+    display: block;
+    float: left;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.zhhu_hao2 p{
+    width: 160px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 22px;
+    color: #595959;
+    float: left;
+    margin-left: 10px;
+}
+.xiangce{
+    width: 610px;
+    height: 200px;
+    float: left;
+    margin-top: 10px;
+}
+.xiangce img{
+    width: 280px;
+    height: 200px;
+    float: left;
+    margin-left: 20px;
+}
+.rlxb{
+    width: 880px;
+    height: 120px;
+}
+.rlxb p{
+    width: 166px;
+    height: 54px;
+    text-align: center;
+    line-height: 54px;
+    border: 1px solid #007e3e;
+    border-radius: 5px;
+    background: #fbfdf8;
+    font-size: 16px;
+    color: #595959;
+    float: left;
+    margin-left: 30px;
+    margin-top: 35px;
+}
+.rlxb2{
+    width: 880px;
+    height: 120px;
+    background: #f2f8f6;
+}
+.rlxb2 p{
+    width: 166px;
+    height: 54px;
+    text-align: center;
+    line-height: 54px;
+    border: 1px solid #007e3e;
+    border-radius: 5px;
+    background: #eff6ee;
+    font-size: 16px;
+    color: #595959;
+    float: left;
+    margin-left: 30px;
+    margin-top: 35px;
+}
+.canvasDiv{
+    height: 200px;
+    width: 400px;
+    border: 1px solid black;
+    float: right;
+    margin-right: 20px;
+}
+.imgDiv{
+    height:150px;
+    width: 400px;
+    border: 1px solid black;
+    margin-top: 5px;
+}
+.btnDiv{
+    height: 100px;
+    width: 400px;
+    margin-top: 15px;
+}
+.clearBtn{
+    font-size: 22px;
+    background:#595959;
+    padding: 10px 20px;
+    border: 0;
+    margin-left: 25px;
+    color: #ffffff;
+}
+.okBtn{
+    font-size: 22px;
+    padding: 10px 20px;
+    background: #53a786;
+    border: 0;
+    margin-left: 15px;
+    color: #ffffff;
+}
+#sign_show img{
+
+    width: 400px;
+    height: 150px;
+    display: block;
+}
+.hua{
+    width: 400px;
+    float: left;
+    margin-left: 20px;
+}
+/*保险业务办理页结束*/
+
+
+
+
+
+
+
+
+
+
+
+

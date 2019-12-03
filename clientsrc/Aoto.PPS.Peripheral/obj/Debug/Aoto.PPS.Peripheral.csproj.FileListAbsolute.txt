@@ -1,0 +1,16 @@
+D:\工行银行\clientsrc\Aoto.PPS.Peripheral\bin\Debug\Aoto.PPS.Peripheral.dll
+D:\工行银行\clientsrc\Aoto.PPS.Peripheral\bin\Debug\Aoto.PPS.Peripheral.pdb
+D:\工行银行\clientsrc\Aoto.PPS.Peripheral\bin\Debug\Aoto.PPS.Infrastructure.dll
+D:\工行银行\clientsrc\Aoto.PPS.Peripheral\bin\Debug\AxInterop.EMVICAxLib.dll
+D:\工行银行\clientsrc\Aoto.PPS.Peripheral\bin\Debug\AxInterop.IdcAxLib.dll
+D:\工行银行\clientsrc\Aoto.PPS.Peripheral\bin\Debug\AxInterop.PtrAxLib.dll
+D:\工行银行\clientsrc\Aoto.PPS.Peripheral\bin\Debug\log4net.dll
+D:\工行银行\clientsrc\Aoto.PPS.Peripheral\bin\Debug\Newtonsoft.Json.dll
+D:\工行银行\clientsrc\Aoto.PPS.Peripheral\bin\Debug\CoreAudioApi.dll
+D:\工行银行\clientsrc\Aoto.PPS.Peripheral\bin\Debug\Autofac.dll
+D:\工行银行\clientsrc\Aoto.PPS.Peripheral\bin\Debug\ICSharpCode.SharpZipLib.dll
+D:\工行银行\clientsrc\Aoto.PPS.Peripheral\bin\Debug\Autofac.Configuration.dll
+D:\工行银行\clientsrc\Aoto.PPS.Peripheral\bin\Debug\Aoto.PPS.Infrastructure.pdb
+D:\工行银行\clientsrc\Aoto.PPS.Peripheral\obj\Debug\Aoto.PPS.Peripheral.csprojResolveAssemblyReference.cache
+D:\工行银行\clientsrc\Aoto.PPS.Peripheral\obj\Debug\Aoto.PPS.Peripheral.dll
+D:\工行银行\clientsrc\Aoto.PPS.Peripheral\obj\Debug\Aoto.PPS.Peripheral.pdb

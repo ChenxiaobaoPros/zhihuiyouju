@@ -1,0 +1,1078 @@
+﻿<!DOCTYPE>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Free HTML5 Bootstrap Admin Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
+    <meta name="author" content="Muhammad Usman">
+
+    <!-- The styles -->
+    <link id="bs-css" href="../../css/bootstrap-11.min.css" rel="stylesheet">
+    <link href="../../css/charisma-app.css" rel="stylesheet">
+    <link href='../../css/chosen.min.css' rel='stylesheet'>
+    <link href='../../css/colorbox.css' rel='stylesheet'>
+    <link href='../../css/responsive-tables.css' rel='stylesheet'>
+    <link href='../../css/bootstrap-tour.min.css' rel='stylesheet'>
+    <link href='../../css/jquery.noty.css' rel='stylesheet'>
+    <link href='../../css/noty_theme_default.css' rel='stylesheet'>
+    <link href='../../css/elfinder.min.css' rel='stylesheet'>
+    <link href='../../css/elfinder.theme.css' rel='stylesheet'>
+    <link href='../../css/jquery.iphone.toggle.css' rel='stylesheet'>
+    <link href='../../css/uploadify.css' rel='stylesheet'>
+    <link href='../../css/animate.min.css' rel='stylesheet'>
+    <link rel="stylesheet"  href="../../css/button.css"/>
+    <link rel="stylesheet"  href="../../css/commonlist.css"/>    
+
+    <!-- jQuery -->
+	<script type="text/javascript" src="../../js/lib/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="../../js/lib/jquery/plugins/jquery.string.js"></script>
+	<script type="text/javascript" src="../../js/lib/jquery/plugins/jquery.json.js"></script>
+	<script type="text/javascript" src="../../js/lib/easyui/plugins/jquery.draggable.js"></script>
+	<script type="text/javascript" src="../../js/lib/easyui/plugins/jquery.parser.js"></script>
+    <script type="text/javascript" src="../../../js/peripheral.js"></script>
+	<script type="text/javascript" src="../../js/map.js"></script>
+ 
+    <!-- The fav icon -->
+    <link rel="shortcut icon" href="../../images/favicon.ico">
+
+</head>
+
+<body>
+	<div id="loading1">
+		<div>
+			<image src='../../js/lib/easyui/themes/default/images/loading.gif' />  正在处理，请稍等...
+		</div>
+	</div>
+	
+<div class="ch-container" id="container" style="display: none;">
+<ul id="myTab" class="nav nav-tabs">
+    <li class="active">
+        <a href="#home" data-toggle="tab">
+        营业厅分区设置
+        </a>
+    </li>
+    <li><a href="#cardTypeDiv" data-toggle="tab">柜台设置</a></li>
+    
+</ul>  
+<div id="myTabContent" class="tab-content">
+<div class="tab-pane fade in active" id="home">	
+    <div class="row">
+        
+        <noscript>
+            <div class="alert alert-block col-md-12">
+                <h4 class="alert-heading">Warning!</h4>
+
+               <!-- <p>You need to have <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a>
+                    enabled to use this site.</p>-->
+            </div>
+        </noscript>
+
+        <div id="content" class="col-lg-12 col-sm-12">
+            <!-- content starts -->
+
+	<div class="row">
+        <div class="box col-md-12">
+            <div class="box-inner">
+                <div class="box-header well" data-original-title="">
+                    <h2><i class="glyphicon glyphicon-info-sign"></i>营业厅分区设置</h2>
+
+                    <div class="box-icon">
+                        <a href="#" class="btn btn-minimize btn-round btn-default"><i
+                                class="glyphicon glyphicon-chevron-up"></i></a>
+                    </div>
+                </div>
+                <div class="box-content">
+					<p class="left">
+						<a class="btn btn-primary btn-custom" href="#" id="addBtn">
+							<i class="glyphicon glyphicon-plus icon-white"></i>
+							添加
+						</a>
+					</p>						
+					<table class="table table-striped table-bordered responsive" id="ccc">
+                        <thead>
+                        <tr>
+							<th style="width:20%;">分区编号</th>
+                            <th style="width:40%;">分区名称</th>
+                            <th style="width:40%;">操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>						
+
+                        </tbody>
+                   </table>
+                </div>
+            </div>
+        </div>
+        <!--/span-->
+    </div><!--/row-->
+	
+	
+    <!-- content ends -->
+    </div><!--/#content.col-md-0-->
+</div><!--/fluid-row-->
+
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 id="modalTitle" class="modal-title">
+             分区属性添加</h4>
+          </div>
+          <form id="frm" name="frm" method="post" action="">
+          <div class="modal-body">
+              <table style="width: 100%">
+                <tbody>
+                  <tr>
+                    <td style="text-align: right; width: 20%">
+                                            分区编号<em>* </em>
+                    </td>
+                    <td>
+                      <!--
+                      <select name="districtId" id="districtId" validate="{required:false}"  >
+                      	<option value="1" selected="selected">1</option>
+                      	<option value="2">2</option>
+                      </select>
+                      -->
+                    <input  validate="{required:true,num:true}" maxlength="10" class="form-control" name="districtId" id="districtId" placeholder="请输入分区编号"/>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: right; width: 20%">
+                                         分区名称<em>* </em>
+                    </td>
+                    <td>
+                      <input  validate="{required:true,byteRangeLength:[0,500]}" maxlength="500" class="form-control" name="districtName" id="districtName" placeholder="请输入分区名称"/>
+                    </td>
+                  </tr>                  
+                </tbody>
+              </table>
+          </div>
+          <div class="modal-footer">
+            <input type="hidden" id="actionType" />
+            <input type="button" class="btn btn-default" data-dismiss="modal" value="取消"/>
+            <input type="submit" class="btn btn-primary" value="确定"/>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <footer class="row">
+    </footer>
+
+</div>
+<div class="tab-pane fade" id="cardTypeDiv" >
+    <div class="row">
+        
+        <noscript>
+            <div class="alert alert-block col-md-12">
+                <h4 class="alert-heading">Warning!</h4>
+
+               <!-- <p>You need to have <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a>
+                    enabled to use this site.</p>-->
+            </div>
+        </noscript>
+
+        <div id="content" class="col-lg-12 col-sm-12">
+            <!-- content starts -->
+
+	<div class="row">
+        <div class="box col-md-12">
+            <div class="box-inner">
+                <div class="box-header well" data-original-title="">
+                    <h2><i class="glyphicon glyphicon-info-sign"></i>柜台设置</h2>
+
+                    <div class="box-icon">
+                        <a href="#" class="btn btn-minimize btn-round btn-default"><i
+                                class="glyphicon glyphicon-chevron-up"></i></a>
+                    </div>
+                </div>
+                <div class="box-content">
+					<p class="left">
+						<a class="btn btn-primary btn-custom" href="#" id="addBtn1">
+							<i class="glyphicon glyphicon-plus icon-white"></i>
+							添加
+						</a>
+					</p>						
+					<table class="table table-striped table-bordered responsive" id="ddd">
+                        <thead>
+                        <tr>
+							<th style="width:5%;">地址</th>
+							<th style="width:5%;">分区</th>
+							<th style="width:10%;">显示为</th>
+                            <th style="width:10%;">IP地址</th>
+                            <th style="width:10%;">柜台编号</th>
+                            <th style="width:10%;">柜台名称</th>
+                            <th style="width:10%;">优先队列策略</th>
+                            <th style="width:10%;">普通队列策略</th>
+                            <th style="width:10%;">延后队列策略</th>
+                            <th style="width:20%;">操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>						
+							
+                        </tbody>
+                   </table>
+                </div>
+            </div>
+        </div>
+        <!--/span-->
+    </div><!--/row-->
+	
+	
+    <!-- content ends -->
+    </div><!--/#content.col-md-0-->
+</div><!--/fluid-row-->
+
+	<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 id="modalTitle1" class="modal-title">
+             柜台设置添加</h4>
+          </div>
+          <form id="frm1" name="frm1" method="post" action="">
+          <div class="modal-body">
+              <table style="width: 100%">
+                <tbody>
+                  <tr>
+                    <td style="text-align: right; width: 20%">
+                                         地址<em>*</em>
+                    </td>
+                    <td>
+                      <input  validate="{required:true,byteRangeLength:[0,500],num:true}" maxlength="500" class="form-control" name="winId" id="winId" placeholder="请输入地址">
+                    </td>
+                  </tr>                 	
+                  <tr>
+                    <td style="text-align: right; width: 20%">
+                                            分区<em>*</em>
+                    </td>
+                    <td>
+                      <select name="zoneNo" id="zoneNo" validate="{required:false}"  >
+                      	<!--
+                      	<option value="1" selected="selected">1</option>
+                      	<option value="2">2</option>
+                          -->
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="text-align: right; width: 20%">
+                                         显示为<em>*</em>
+                    </td>
+                    <td>
+                      <input  validate="{required:true,byteRangeLength:[0,500]}" maxlength="500" class="form-control" name="winViewNum" id="winViewNum" placeholder="请输入显示为">
+                    </td>
+                  </tr> 
+                  <tr>
+                    <td style="text-align: right; width: 20%">
+                    IP地址<em>*</em>
+                    </td>
+                    <td>
+                      <!--<input  validate="{required:true,byteRangeLength:[0,15],ip:true}" maxlength="15" class="form-control" name="winIp" id="winIp" placeholder="请输入IP地址">-->
+                    <div class="ipWidget">
+						<form name="ip">
+							<input type="text" class="form-control ipfloat" validate="{required:true,ipPart:true}" name="ipOne" id="ipOne" size="3" maxlength="3" onkeyup="return T1_onkeyup()">
+							<input type="text" class="form-control ipfloat" validate="{required:true,ipPart:true}" name="ipTwo" id="ipTwo" size="3" maxlength="3" onkeyup="return T2_onkeyup()">
+							<input type="text" class="form-control ipfloat" validate="{required:true,ipPart:true}" name="ipThr" id="ipThr" size="3" maxlength="3" onkeyup="return T3_onkeyup()">
+							<input type="text" class="form-control ipfloat" validate="{required:true,ipPart:true}" name="ipFour" id="ipFour" size="3" maxlength="3">
+						</form>
+					</div>	
+                    </td>
+                  </tr>  
+                  <tr>
+                    <td style="text-align: right; width: 20%">
+                                     柜台编号<em>*</em>
+                    </td>
+                    <td>
+                      <input  validate="{required:true,num:true}" maxlength="10" class="form-control" name="winCode" id="winCode" placeholder="请输入柜台编号">
+                    </td>
+                  </tr>                   
+                  <tr>
+                    <td style="text-align: right; width: 20%">
+                                     柜台名称<em>*</em>
+                    </td>
+                    <td>
+                      <input  validate="{required:true,byteRangeLength:[0,500]}" maxlength="500" class="form-control" name="winName" id="winName" placeholder="请输入柜台名称">
+                    </td>
+                  </tr>   
+                  <tr>
+                    <td style="text-align: right; width: 20%">
+                                     优先队列策略
+                    </td>
+                    <td>
+                      <!--
+                        <input  validate="{required:true}" class="form-control" name="winPreTac" id="winPreTac"/>
+                      -->
+                      <select name="winPreTac" id="winPreTac" validate="{required:false}" disabled="disabled" >
+                      	<option value="1" selected="selected">按照超时时间</option>
+                      	<option value="2">按照叫号个数</option>
+                      	<option value="3">按照队列叫号</option>
+                      	<option value="4">按照等待时间</option>
+                      	<option value="5">按照延时比例叫号</option>
+                      </select>                      
+                    </td>
+                  </tr> 
+                  <tr>
+                    <td style="text-align: right; width: 20%">
+                                     普通队列策略
+                    </td>
+                    <td>
+                    <!--
+                    	<input  validate="{required:true}" class="form-control" name="winTac" id="winTac"/>
+                    -->
+                      <select name="winTac" id="winTac" validate="{required:false}" disabled="disabled" >
+                      	<option value="1" selected="selected">按照超时时间</option>
+                      	<option value="2">按照叫号个数</option>
+                      	<option value="3">按照队列叫号</option>
+                      	<option value="4">按照等待时间</option>
+                      	<option value="5">按照延时比例叫号</option>
+                      </select>                       
+                    </td>
+                  </tr> 
+                  <tr>
+                    <td style="text-align: right; width: 20%">
+                                     延后队列策略
+                    </td>
+                    <td>
+                      <!--
+                      	<input  validate="{required:true}" class="form-control" name="winLatTac" id="winLatTac"/>
+                      -->
+                      <select name="winLatTac" id="winLatTac" validate="{required:false}" disabled="disabled" >
+                      	<option value="1" selected="selected">按照超时时间</option>
+                      	<option value="2">按照叫号个数</option>
+                      	<option value="3">按照队列叫号</option>
+                      	<option value="4">按照等待时间</option>
+                      	<option value="5">按照延时比例叫号</option>
+                      </select>                       
+                    </td>
+                  </tr>                   
+                </tbody>
+              </table>
+          </div>
+          <div class="modal-footer">
+            <input type="hidden" id="actionType1" />
+            <input type="button" class="btn btn-default" data-dismiss="modal" value="取消">
+            <input type="submit" class="btn btn-primary" value="确定">
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <footer class="row">
+    </footer>
+
+
+</div>
+</div>
+<!-- external javascript -->
+</div><!--/.fluid-container-->
+<script src="../../js/bootstrap.min.js"></script>
+
+<!-- library for cookie management -->
+<script src="../../js/jquery.cookie.js"></script>
+<!-- data table plugin -->
+<script src='../../js/jquery.dataTables.min.js'></script>
+
+<!-- select or dropdown enhancer -->
+<script src="../../js/chosen.jquery.min.js"></script>
+<!-- plugin for gallery image view -->
+<script src="../../js/jquery.colorbox-min.js"></script>
+<!-- notification plugin -->
+<script src="../../js/jquery.noty.js"></script>
+<!-- library for making tables responsive -->
+<script src="../../js/responsive-tables.js"></script>
+<!-- tour plugin -->
+<script src="../../js/bootstrap-tour.min.js"></script>
+<!-- star rating plugin -->
+<script src="../../js/jquery.raty.min.js"></script>
+<!-- for iOS style toggle switch -->
+<script src="../../js/jquery.iphone.toggle.js"></script>
+<!-- autogrowing textarea plugin -->
+<script src="../../js/jquery.autogrow-textarea.js"></script>
+<!-- multiple file upload plugin -->
+<script src="../../js/jquery.uploadify-3.1.min.js"></script>
+<!-- history.js for cross-browser state change on ajax -->
+<script src="../../js/jquery.history.js"></script>
+<!-- application script for Charisma demo -->
+<script src="../../js/charisma.js"></script>
+<script type="text/javascript" src="../../js/jquery.metadata.js"></script>
+<script type="text/javascript" src="../../js/jquery.validate.js"></script>
+<script type="text/javascript" src="../../js/qmsVld.js"></script>
+<script type="text/javascript" src="../../js/bootbox.js"></script>
+<script type="text/javascript">
+
+	var $rowNum = 0;	
+    var $myModal = $("#myModal");
+    var $actionType = $("#actionType");
+    var $modalTitle = $("#modalTitle");	
+    
+    var $rowNum1 = 0;
+    var $myModal1 = $("#myModal1");
+    var $actionType1 = $("#actionType1");
+    var $modalTitle1 = $("#modalTitle1");	 
+    
+	var zoneNoArray = new Array();
+	var maxWinId = new Array();
+	$(function (){
+		$("#servelevel").next().css("width","60%"); 
+		$("#servelevel1").next().css("width","60%"); 
+		$.metadata.setType("attr", "validate");
+		$("#frm").validate({
+			onfocusout: function(element) { 
+				$(element).valid(); 
+			},
+			submitHandler: function(form){
+				saveConfig();
+				return false;
+			}
+		});
+		
+		$("#frm1").validate({
+			onfocusout: function(element) { 
+				$(element).valid(); 
+			},
+			submitHandler: function(form){
+				saveConfig1();
+				return false;
+			}
+		});		
+		
+		$("#addBtn").on("click", function(){
+	        //e.preventDefault();
+	        var itemData = {};
+	        showModal("new", itemData);
+		});	
+		
+		$("#addBtn1").on("click", function(){
+	        //e.preventDefault();
+	        var itemData = {};
+	        showModal1("new", itemData);
+		});			
+		initPage();
+		setTimeout(function(){
+			initPage1();
+		},800);
+	});
+	
+	
+    function editTr(obj)
+    {
+      //window.event.stopPropagation();
+      var $tr = $(obj).parent().parent();
+      showModal("update", $tr.data("itemData"));
+    }
+    
+    function editTr1(obj)
+    {
+      //window.event.stopPropagation();
+      var $tr = $(obj).parent().parent();
+      showModal1("update", $tr.data("itemData"));
+    }    
+	
+
+	//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    function initPage()
+    {
+      $('#myModal').modal('hide');
+      $rowNum = 0;
+      $("#ccc tbody").empty().html("");    	
+
+	  var args = {};
+	  args.biom = {};
+	  args.biom.head = {};
+	  args.biom.head.tradeCode = "businesshall2select";
+	  args.biom.head.qmsIp = $.qms.getCache("qmsIp");
+	  args.biom.body = {};	
+	  args.command=34;	
+	  args.callback="getBusinesshallCallBack";
+//	  alert($.toJSON(args));
+	  $.icbcQms.businesshall2JS(args);
+	}
+    //初始化分区属性 callback
+    function getBusinesshallCallBack(args){
+    	closeLoading();
+    	$("#container").css("display","block");
+	    var jo = $.parseJSON(args);
+		var retCode = jo.biom.head.retCode;
+		var retMsg = jo.biom.head.retMsg;
+		zoneNoArray.splice(0,zoneNoArray.length);
+		//alert(args);
+		if(retCode == "0"){				
+			$.each(jo.biom.body.businesshallList.businesshall, function (index, item){
+				initData(item);
+			});		
+		}else{
+			//跳转错误页面
+			window.location.href = "timeout.html?retMsg="+retMsg;		
+		}
+    }
+    
+    function initPage1()
+    {
+      $('#myModal1').modal('hide');
+      $rowNum1 = 0;
+      $("#ddd tbody").empty().html("");
+      //清空数组
+      maxWinId = [];
+
+	  var args = {};
+	  args.biom = {};
+	  args.biom.head = {};
+	  args.biom.head.tradeCode = "counterconfig2select";
+	  args.biom.head.qmsIp = $.qms.getCache("qmsIp");
+	  args.biom.body = {};	
+	  args.command=34;	
+	  args.callback="getCounterconfigCallBack";
+	  $.icbcQms.counterconfig2JS(args);
+	}    
+    //初始化柜台设置 callback
+    function getCounterconfigCallBack(args){
+     	closeLoading();
+     	$("#container").css("display","block");
+	    var jo = $.parseJSON(args);    	
+		var retCode = jo.biom.head.retCode;
+		var retMsg = jo.biom.head.retMsg;
+		if(retCode == "0"){				
+			$.each(jo.biom.body.counterconfigList.counterconfig, function (index, item){
+				initData1(item);
+			});		
+		}else{
+			//跳转错误页面
+			window.location.href = "timeout.html?retMsg="+retMsg;		
+		}   	
+    }
+        
+	function delTr(obj){
+//		window.event.stopPropagation();
+ 		bootbox.setLocale("zh_CN");
+      	bootbox.confirm("确定删除?", function(result) {
+	        if (result) {  
+		    	var $tr = $(obj).parent().parent();
+		        var args = {};
+				args.biom = {};
+				args.biom.head = {};
+				args.biom.head.tradeCode = "businesshall2delete";
+				args.biom.head.qmsIp = $.qms.getCache("qmsIp");
+				args.biom.body = {};
+				args.biom.body.districtId = $tr.data("itemData").districtId;
+				args.biom.body.districtName = $tr.data("itemData").districtName;
+		        args.callback="removeBusinesshallCallBack";	
+				args.command=32;
+				//alert($.toJSON(args));
+		        $.icbcQms.businesshall2JS(args); 
+	        }  
+      	});
+	}
+	//删 营业厅分区 callback
+	function removeBusinesshallCallBack(args)
+    {
+		var joResult = $.parseJSON(args);
+		var retCode = joResult.biom.head.retCode;
+		var retMsg = joResult.biom.head.retMsg;
+		if(joResult){
+			if(retCode == 0){
+			  qmsVld.showInfo(retMsg);
+			  initPage();
+			}else{
+			  qmsVld.showError(retMsg?retMsg:"删除分区失败");
+			}				
+		}  
+    } 
+	
+	function delTr1(obj){
+//		window.event.stopPropagation();
+		var $tr = $(obj).parent().parent();
+		if($tr.data("itemData").winId == ""){
+			bootbox.alert("请先配置地址等完整参数!");
+			$(".modal-content .modal-footer .btn").text("");
+	  		$(".modal-content .modal-footer .btn").text("确定");
+		} else{
+			bootbox.setLocale("zh_CN");
+      		bootbox.confirm("确定删除?", function(result) {
+	        if (result) {  
+		    	var $tr = $(obj).parent().parent();
+		        var args = {};
+				args.biom = {};
+				args.biom.head = {};
+				args.biom.head.tradeCode = "counterconfig2delete";
+				args.biom.head.qmsIp = $.qms.getCache("qmsIp");
+				args.biom.body = {};
+				args.biom.body.winId = $tr.data("itemData").winId;
+		        args.callback="removeCounterconfigCallBack";	
+				args.command=32;	
+				//alert($.toJSON(args));
+		        $.icbcQms.counterconfig2JS(args);  	
+	        }  
+      	});
+		}
+	}
+    //删 柜台属性 callback
+    function removeCounterconfigCallBack(args){
+ 		var joResult = $.parseJSON(args);
+		var retCode = joResult.biom.head.retCode;
+		var retMsg = joResult.biom.head.retMsg;
+		if(joResult){
+			if(retCode == 0){
+			  qmsVld.showInfo(retMsg);
+			  initPage1();
+			}else{
+			  qmsVld.showError(retMsg?retMsg:"删除柜台属性失败");
+			}				
+		}   	
+    }
+
+	//初始化列表数据
+	function initData(itemData)
+	{
+		zoneNoArray.push(itemData.districtId);
+		//取到最大序号+1
+		var $tbody = $("#ccc tbody");
+		if($tbody.find("tr:last")){
+			var num = $tbody.find("tr:last").find("td").eq(0).text();
+			if(num){
+				$rowNum = num;
+			}
+		}
+		$rowNum++;
+		var $tr;
+		if(itemData){		
+			$tr = $("<tr>"+
+				"<td><div class=\"controls\">"+itemData.districtId+"</div></td>"+
+				"<td><div class=\"controls\">"+itemData.districtName+"</div></td>"+
+//              "<td class=\"center\"><a class='btn btn-primary btn-custom' href='#' name='editTmpBtn' onclick='editTr(this);'><i class='glyphicon glyphicon-edit icon-white'></i> 编辑</a> " +				
+//				"<a class=\"btn btn-primary btn-custom\" href=\"#\" onclick='delTr(this);'><i class=\"glyphicon glyphicon-trash icon-white\"></i>删除</a></td>"+
+				"<td><button class=\"btn btn-primary btn-custom\"><i class='glyphicon glyphicon-edit icon-white'></i> 编辑</button>"+
+				"<button class=\"btn btn-primary btn-custom\"><i class=\"glyphicon glyphicon-trash icon-white\"></i>删除</button></td>"+
+			"</tr>");
+		}
+		$tr.data("itemData",itemData);
+		$tr.appendTo($tbody);
+		$('[data-rel="chosen"],[rel="chosen"]').chosen();
+		
+		$tbody.find("button:last").prev().on("click",function(){
+			editTr(this);
+		});
+		$tbody.find("button:last").on("click",function(){
+			delTr(this);
+		});
+	}
+	
+	//初始化列表数据
+	function initData1(itemData)
+	{
+		//取到最大序号+1
+		var $tbody = $("#ddd tbody");
+		if($tbody.find("tr:last")){
+			var num = $tbody.find("tr:last").find("td").eq(0).text();
+			if(num){
+				$rowNum1 = num;
+			}
+		}
+		
+		$rowNum1++;
+		var $tr;
+              
+		if(itemData){	
+			var winId = itemData.winId;
+			if(winId == undefined || winId == null){
+				winId = "";
+			};
+			var winViewNum = itemData.winViewNum;
+			if(winViewNum == undefined || winViewNum == null){
+				winViewNum = "";
+			};
+			var zoneNo = itemData.zoneNo;
+			if(zoneNo == undefined || zoneNo == null){
+				zoneNo = "";
+			};
+			maxWinId.push(winId);
+			$tr = $("<tr>"+
+                "<td><div class=\"controls\">"+winId+"</div></td>"+
+				"<td><div class=\"controls\">"+zoneNo+"</div></td>"+
+				"<td><div class=\"controls\">"+winViewNum+"</div></td>"+
+				"<td><div class=\"controls\">"+itemData.winIp+"</div></td>"+
+				"<td><div class=\"controls\">"+itemData.winCode+"</div></td>"+
+				"<td><div class=\"controls\">"+itemData.winName+"</div></td>"+
+				"<td><div class=\"controls\">"+getWinTac(itemData.winPreTac)+"</div></td>"+
+				"<td><div class=\"controls\">"+getWinTac(itemData.winTac)+"</div></td>"+
+				"<td><div class=\"controls\">"+getWinTac(itemData.winLatTac)+"</div></td>"+
+//              "<td class=\"center\"><a class='btn btn-primary btn-custom' href='#' name='editTmpBtn' onclick='editTr1(this);'><i class='glyphicon glyphicon-edit icon-white'></i> 编辑</a> " +				
+//				"<a class=\"btn btn-primary btn-custom\" href=\"#\" onclick='delTr1(this);'><i class=\"glyphicon glyphicon-trash icon-white\"></i>删除</a></td>"+
+				"<td><button class=\"btn btn-primary btn-custom\"><i class='glyphicon glyphicon-edit icon-white'></i> 编辑</button>"+
+				"<button class=\"btn btn-primary btn-custom\"><i class=\"glyphicon glyphicon-trash icon-white\"></i>删除</button></td>"+
+			"</tr>");
+		}
+		$tr.data("itemData",itemData);
+		$tr.appendTo($tbody);
+		//$(".iphone-toggle",$tr).iphoneStyle();
+		$('[data-rel="chosen"],[rel="chosen"]').chosen();
+		
+		$tbody.find("button:last").prev().on("click",function(){
+			editTr1(this);
+		});
+		$tbody.find("button:last").on("click",function(){
+			delTr1(this);
+		});
+	}	
+	
+	//保存
+	function saveConfig()
+	{
+        $("#myModal input").parent().removeClass("has-error");
+        var type = $actionType.val();
+        var args = {};
+        if(type=="new"){
+			args.biom = {};
+			args.biom.head = {};
+			args.biom.head.tradeCode = "businesshall2add";
+			args.biom.head.qmsIp = $.qms.getCache("qmsIp");
+			args.biom.body = {};
+			args.biom.body.districtId = $("#districtId").val();
+			args.biom.body.districtName = $("#districtName").val();		        
+	        args.callback="addBusinesshallCallBack";	
+			args.command=31;
+        }else if(type=="update"){
+			args.biom = {};
+			args.biom.head = {};
+			args.biom.head.tradeCode = "businesshall2update";
+			args.biom.head.qmsIp = $.qms.getCache("qmsIp");
+			args.biom.body = {};
+			args.biom.body.districtId = $("#districtId").val();
+			args.biom.body.districtName = $("#districtName").val();	
+	        args.callback="updateBusinesshallCallBack";	
+			args.command=33;
+        } 
+        //alert($.toJSON(args)); 
+        $.icbcQms.businesshall2JS(args);
+	}
+    //增 营业厅分区 callback
+    function addBusinesshallCallBack(args)
+    {
+		var joResult = $.parseJSON(args);
+		var retCode = joResult.biom.head.retCode;
+		var retMsg = joResult.biom.head.retMsg;
+		if(joResult){
+			if(retCode == 0){
+			  qmsVld.showInfo(retMsg);
+			  initPage();
+			}else{
+			  qmsVld.showError(retMsg?retMsg:"新增营业厅分区失败");
+			}				
+		}    	
+	  
+    }
+    //改 营业厅分区 callback
+	function updateBusinesshallCallBack(args)
+    {
+		var joResult = $.parseJSON(args);
+		var retCode = joResult.biom.head.retCode;
+		var retMsg = joResult.biom.head.retMsg;
+		if(joResult){
+			if(retCode == 0){
+			  qmsVld.showInfo(retMsg);
+			  initPage();
+			}else{
+			  qmsVld.showError(retMsg?retMsg:"修改营业厅分区失败");
+			}				
+		}   
+	  
+    }
+	//保存1
+	function saveConfig1()
+	{
+        $("#myModal1 input").parent().removeClass("has-error");
+        var type = $actionType1.val();
+        var args = {};
+        if(type=="new"){
+        	if($.trim($("#zoneNo").val()) == ""){
+        		bootbox.alert("没有可选分区,请先配置分区!");
+				$(".modal-content .modal-footer .btn").text("");
+		  		$(".modal-content .modal-footer .btn").text("确定");
+        	} else{
+        		args.biom = {};
+				args.biom.head = {};
+				args.biom.head.tradeCode = "counterconfig2add";
+				args.biom.head.qmsIp = $.qms.getCache("qmsIp");
+				args.biom.body = {};
+				args.biom.body.winId = $("#winId").val();
+				args.biom.body.zoneNo = $("#zoneNo").val();	
+				args.biom.body.winViewNum = $("#winViewNum").val();	
+				args.biom.body.winCode = $("#winCode").val();
+	
+				var $ipOne = $.trim($("#ipOne").val());
+			    var $ipTwo = $.trim($("#ipTwo").val());
+			    var $ipThr = $.trim($("#ipThr").val());
+			    var $ipFour = $.trim($("#ipFour").val());
+				args.biom.body.winIp = $.trim($ipOne+"."+$ipTwo+"."+$ipThr+"."+$ipFour);;
+				args.biom.body.winName = $("#winName").val();
+				args.biom.body.winPreTac = $("#winPreTac").val();
+				args.biom.body.winTac = $("#winTac").val();
+				args.biom.body.winLatTac = $("#winLatTac").val();
+		        args.callback="addCounterconfigCallBack";	
+				args.command=31;
+        	}
+        }else if(type=="update"){
+        	if($.trim($("#zoneNo").val()) == ""){
+        		bootbox.alert("没有可选分区,请先配置分区!");
+				$(".modal-content .modal-footer .btn").text("");
+		  		$(".modal-content .modal-footer .btn").text("确定");
+        	} else{
+        		args.biom = {};
+				args.biom.head = {};
+				args.biom.head.tradeCode = "counterconfig2update";
+				args.biom.head.qmsIp = $.qms.getCache("qmsIp");
+				args.biom.body = {};
+				args.biom.body.winId = $("#winId").val();
+				args.biom.body.zoneNo = $("#zoneNo").val();	
+				args.biom.body.winViewNum = $("#winViewNum").val();
+				args.biom.body.winCode = $("#winCode").val();
+				
+				var $ipOne = $.trim($("#ipOne").val());
+			    var $ipTwo = $.trim($("#ipTwo").val());
+			    var $ipThr = $.trim($("#ipThr").val());
+			    var $ipFour = $.trim($("#ipFour").val());
+				args.biom.body.winIp = $.trim($ipOne+"."+$ipTwo+"."+$ipThr+"."+$ipFour);;
+				args.biom.body.winName = $("#winName").val();
+				args.biom.body.winPreTac = $("#winPreTac").val();
+				args.biom.body.winTac = $("#winTac").val();
+				args.biom.body.winLatTac = $("#winLatTac").val();	
+		        args.callback="updateCounterconfigCallBack";	
+				args.command=33;
+        	}
+        } 
+        //alert($.toJSON(args)); 
+        $.icbcQms.counterconfig2JS(args);
+	}
+    //增 柜台属性  callback
+    function addCounterconfigCallBack(args){
+ 		var joResult = $.parseJSON(args);
+		var retCode = joResult.biom.head.retCode;
+		var retMsg = joResult.biom.head.retMsg;
+		if(joResult){
+			if(retCode == 0){
+			  qmsVld.showInfo(retMsg);
+			  initPage1();
+			}else{
+			  qmsVld.showError(retMsg?retMsg:"新增柜台属性失败");
+			}				
+		}     	
+    }
+    //改 柜台属性 callback
+    function updateCounterconfigCallBack(args){
+ 		var joResult = $.parseJSON(args);
+		var retCode = joResult.biom.head.retCode;
+		var retMsg = joResult.biom.head.retMsg;
+		if(joResult){
+			if(retCode == 0){
+			  qmsVld.showInfo(retMsg);
+			  initPage1();
+			}else{
+			  qmsVld.showError(retMsg?retMsg:"修改柜台属性失败");
+			}				
+		}   	
+    }
+	
+	function showModal(type, itemData)
+    {	
+	//      window.event.stopPropagation();
+	//      window.event.preventDefault();
+	      $("#frm input").popover('hide');
+	      $("#frm input").parent().removeClass("has-error");
+	      if (type == "new"){
+	        $modalTitle.text("分区属性新增");
+	        var aotuId = $("#ccc tbody").find("tr:last").find("td").eq(0).text();
+	        if(aotuId){
+	        	var newId = parseInt(aotuId)+1;
+	        	$("#districtId").val(newId);
+	        } else{
+	        	$("#districtId").val("1");
+	        }
+	        $("#districtName").val("");
+	        $("#districtId").attr("disabled",false);
+	      } else if (type == "update"){
+	        $modalTitle.text("分区属性修改");
+	        $("#districtId").attr("disabled","disabled");
+	        $("#districtName").val(itemData.districtName);
+	        $("#districtId").val(itemData.districtId);
+	      }
+	      $actionType.val(type);
+	      $myModal.modal('show');
+    }	
+    
+	function showModal1(type, itemData)
+    {	
+	      $("#frm1 input").popover('hide');
+	      $("#frm1 input").parent().removeClass("has-error");
+    	  $("#zoneNo").empty();
+    	  $.each(zoneNoArray, function(i,n) {
+      		 $("<option value='"+n+"'>"+n+"</option>").appendTo($("#zoneNo"));
+    	  });
+    	  
+    	  //从maxWinId数组中取出最大值，+1赋给地址和显示为
+			function max(arr) {
+				var newTemp = new Array();
+				$.each(arr, function(i,n) {
+					if(n != ""){
+						newTemp.push(n);
+					}
+				});
+				var max1 = newTemp[0];
+				for (var i = 1; i < newTemp.length;i++){
+					if(parseInt(max1) < parseInt(newTemp[i])){
+						max1 = newTemp[i];
+					};
+				}		
+				return max1;
+			}
+			var max = max(maxWinId);
+			if(max == null || max == ""){
+				max = "0";
+			}
+	      if (type == "new"){
+	        $modalTitle1.text("柜台属性新增");
+	        //ip不可更改
+        	$("#ipOne").attr("disabled",false);
+        	$("#ipTwo").attr("disabled",false);
+        	$("#ipThr").attr("disabled",false);
+        	$("#ipFour").attr("disabled",false);
+	        
+	        $("#winId").val(parseInt(max)+1); 
+	        $("#zoneNo").val("1")
+			$("#zoneNo").trigger("chosen:updated");
+			$("#zoneNo").chosen(); 
+			$("#zoneNo").next().css("width","60%");
+			$("#winViewNum").val(parseInt(max)+1);
+			$("#winCode").val("");
+	        $("#winIp").val("");
+	        $("#winName").val("");
+	         $("#ipOne").val("");
+		    $("#ipTwo").val("");
+		    $("#ipThr").val("");
+	        $("#ipFour").val("");
+            $("#winPreTac").val("1");
+			$("#winPreTac").trigger("chosen:updated");
+			$("#winPreTac").chosen(); 
+			$("#winPreTac").next().css("width","60%");
+	        $("#winTac").val("1");
+			$("#winTac").trigger("chosen:updated");
+			$("#winTac").chosen(); 
+			$("#winTac").next().css("width","60%");
+	        $("#winLatTac").val("1");
+			$("#winLatTac").trigger("chosen:updated");
+			$("#winLatTac").chosen(); 
+			$("#winLatTac").next().css("width","60%");
+	      } else if (type == "update"){
+	        $modalTitle1.text("柜台属性修改");
+	        //ip不可更改
+        	$("#ipOne").attr("disabled","disabled");
+        	$("#ipTwo").attr("disabled","disabled");
+        	$("#ipThr").attr("disabled","disabled");
+        	$("#ipFour").attr("disabled","disabled");
+        	
+	        $("#winId").val(itemData.winId);
+	        if(itemData.zoneNo == ""){
+                $("#zoneNo").val("1");
+	        }else{
+                $("#zoneNo").val(itemData.zoneNo);
+	        }	          
+			$("#zoneNo").trigger("chosen:updated");
+			$("#zoneNo").chosen(); 
+			$("#zoneNo").next().css("width","60%");
+			$("#winViewNum").val(itemData.winViewNum);
+			$("#winCode").val(itemData.winCode);
+			$("#winName").val(itemData.winName);
+	        
+	        var winIp = itemData.winIp;
+	        var ipArray = winIp.split(".");
+		    $("#ipOne").val(ipArray[0]);
+		    $("#ipTwo").val(ipArray[1]);
+		    $("#ipThr").val(ipArray[2]);
+	        $("#ipFour").val(ipArray[3]);
+	        
+	        if(itemData.winPreTac == ""){
+                $("#winPreTac").val("1");
+	        }else{
+                $("#winPreTac").val(itemData.winPreTac);
+	        }	          
+			$("#winPreTac").trigger("chosen:updated");
+			$("#winPreTac").chosen(); 
+			$("#winPreTac").next().css("width","60%");
+	        if(itemData.winTac == ""){
+	        	$("#winTac").val("1");
+	        }else{
+                $("#winTac").val(itemData.winTac);
+	        }	          
+			$("#winTac").trigger("chosen:updated");
+			$("#winTac").chosen(); 
+			$("#winTac").next().css("width","60%");
+	        if(itemData.winLatTac == ""){
+                $("#winLatTac").val("1");
+	        }else{
+                $("#winLatTac").val(itemData.winLatTac);
+	        }	          
+			$("#winLatTac").trigger("chosen:updated");
+			$("#winLatTac").chosen(); 
+			$("#winLatTac").next().css("width","60%");
+	      }
+	      $actionType1.val(type);
+	      $myModal1.modal('show');
+    }    
+
+
+	//叫号策略
+	function getWinTac(value){
+		var result = "";
+		if(value == "1"){
+			result = "按照超时时间";
+		}else if(value == "2"){
+			result = "按照叫号个数";
+		}else if(value == "3"){
+			result = "按照队列叫号";
+		}else if(value == "4"){
+			result = "按照等待时间";
+		}else if(value == "5"){
+			result = "按照延时比例叫号";
+		}
+		
+		return result;
+	}
+	
+	function init_select(initValue){
+		var joStr = "[{\"key\":\"1\",\"value\":\"按照超时时间\"},{\"key\":\"2\",\"value\":\"按照叫号个数\"},{\"key\":\"3\",\"value\":\"按照队列叫号\"},{\"key\":\"4\",\"value\":\"按照等待时间\"},{\"key\":\"5\",\"value\":\"按照延时比例叫号\"}]";
+		//alert(joStr);
+		var jo = $.parseJSON(joStr);
+		var selectorsBuz = "";	
+		$.each(jo, function (index, item){
+			if(initValue == item.key){
+				selectorsBuz += item.value;   
+			}
+		});
+		return selectorsBuz;		
+	}
+	
+	//ip控件
+	function T1_onkeyup() {
+	  if($("#ipOne").val().length == 3){
+	    	$("#ipTwo").focus();
+	   }
+	} 
+	function T2_onkeyup() {
+	  if($("#ipTwo").val().length == 3){
+	    	$("#ipThr").focus();
+	   }
+	}
+	function T3_onkeyup() {
+	  if($("#ipThr").val().length == 3){
+	     $("#ipFour").focus();
+	   }
+	}
+</script>
+
+</body>
+</html>

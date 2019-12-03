@@ -1,0 +1,500 @@
+﻿{
+  "dpi": 100,
+  "offset": {
+    "x": 0,
+    "y": 0
+  }, 
+    "loadingItems": [
+    {
+      "type": "loading",
+      "orgType": 2	
+    }
+   ],
+   "qtwdxxItems": [
+    {
+      "buzCode": 1,
+      "type": "buzType",
+      "childrenPageImg": "../../images/background/11.jpg"
+    },
+    {
+      "type": "backBtn",
+      "orgType": 2,	
+      "width": 92,
+      "height": 149,
+      "x": 820,
+      "y": 1070,
+      "backgroundImage":"../../images/q/1/out.png"
+    },
+    {
+      "type": "pageTimeout",
+      "orgType": 2,
+      "width": 300,
+      "height": 90,
+      "family": "Microsoft YaHei",
+      "style": "normal",
+      "size": "24",
+      "backgroundColor": "rgba(182, 215, 168, 0)",
+      "fontColor": "#ffffff",
+      "buzCode": 1,
+      "x": 650,
+      "y": 70
+    },
+    {
+      "type": "qtwdxx",
+      "orgType": 2,
+      "family": "Microsoft YaHei",
+      "style": "normal",
+      "size": "45",
+      "backgroundColor": "rgba(182, 215, 168, 0)",
+      "fontColor": "#ffffff",
+      "buzCode": 1,		
+      "x": 100,
+      "y": 250
+    }    
+  ],
+  "errorItems": [
+    {
+      "buzCode": 1,
+      "type": "buzType",
+      "childrenPageImg": "../../images/background/11.jpg"
+    },
+    {
+      "type": "backBtn",
+      "orgType": 2,	
+      "width": 92,
+      "height": 149,
+      "x": 820,
+      "y": 1070,
+      "backgroundImage":"../../images/q/1/out.png"
+    },
+    {
+      "type": "pageTimeout",
+      "orgType": 2,
+      "width": 300,
+      "height": 90,
+      "family": "Microsoft YaHei",
+      "style": "normal",
+      "size": "24",
+      "backgroundColor": "rgba(182, 215, 168, 0)",
+      "fontColor": "#ffffff",
+      "buzCode": 1,
+      "x": 650,
+      "y": 70
+    },
+    {
+      "type": "errorMessage",
+      "orgType": 2,
+      "width": 817,
+      "family": "Microsoft YaHei",
+      "style": "normal",
+      "size": "40",
+      "backgroundColor": "rgba(182, 215, 168, 0)",
+      "fontColor": "#ffffff",
+      "buzCode": 1,		
+      "x": 100,
+      "y": 350
+    }    
+  ],
+  "yyqhItems": [
+    {
+      "buzCode": 1,
+      "type": "buzType",
+      "childrenPageImg": "../../images/background/11.jpg"
+    },
+    {
+      "type": "backBtn",
+      "orgType": 2,	
+      "width": 92,
+      "height": 149,
+      "x": 820,
+      "y": 1070,
+      "backgroundImage":"../../images/q/1/out.png"
+    },
+    {
+      "type": "pageTimeout",
+      "orgType": 2,
+      "width": 300,
+      "height": 90,
+      "family": "Microsoft YaHei",
+      "style": "normal",
+      "size": "24",
+      "backgroundColor": "rgba(182, 215, 168, 0)",
+      "fontColor": "#ffffff",
+      "buzCode": 1,
+      "x": 650,
+      "y": 70
+    },
+    {
+      "type": "keyboard",
+      "orgType": 2,
+      "width": 600,
+      "family": "Microsoft YaHei",
+      "style": "bold",
+      "size": "40",
+      "backgroundColor": "rgba(182, 215, 168, 0)",
+      "fontColor": "#ffffff",
+      "buzCode": 1,
+      "x": 200,
+      "y": 550
+    },
+    {
+      "type": "yySwipeTip",
+      "orgType": 2,
+      "width": 817,
+      "family": "Microsoft YaHei",
+      "style": "normal",
+      "size": "32",
+      "backgroundColor": "rgba(182, 215, 168, 0)",
+      "fontColor": "#ffffff",
+      "buzCode": 1,		
+      "x": 120,
+      "y": 250
+    }
+  ],
+  "level1Items": [
+    {
+      "buzCode": 1,
+      "type": "buzType",
+      "childrenPageImg": "../../images/background/11.jpg"
+    },
+    {
+      "type": "status",
+      "orgType": 2,
+      "width": 350,
+      "height": 50,
+      "family": "Microsoft YaHei",
+      "style": "normal",
+      "size": "24",
+      "backgroundColor": "rgba(182, 215, 168, 0)",
+      "fontColor": "#ffffff",
+      "buzCode": 1,
+      "x": 650,
+      "y": 50
+    },
+    {
+      "type": "remind",
+      "orgType": 2,
+      "width": 1024,
+      "height": 80,
+      "family": "Microsoft YaHei",
+      "style": "normal",
+      "size": "30",
+      "backgroundColor": "rgba(50, 50, 50, 0.6)",
+      "fontColor": "#ffffff",
+      "buzCode": 1,
+      "effect":"marquee",
+      "direction":"left",
+      "scrollAmount":"5",		
+      "x": 0,
+      "y": 1000
+    },
+    {
+      "type": "message",
+      "orgType": 2,
+      "width": 817,
+      "height": 80,
+      "family": "Microsoft YaHei",
+      "style": "normal",
+      "size": "40",
+      "backgroundColor": "rgba(50, 50, 50,0)",
+      "fontColor": "#ffffff",
+      "buzCode": 1,		
+      "x": 100,
+      "y": 350
+    },
+    {
+      "type": "queueNo",
+      "orgType": 2,
+      "width": 250,
+      "height": 50,
+      "family": "Microsoft YaHei",
+      "style": "normal",
+      "size": "24",
+      "backgroundColor": "rgba(50, 50, 50,0)",
+      "fontColor": "#ffffff",
+      "buzCode": 1,		
+      "x": 10,
+      "y": 1240
+    },
+    {
+      "type": "warmPrompt",
+      "orgType": 2,
+      "width": 512,
+      "height": 150,
+      "family": "Microsoft YaHei",
+      "style": "normal",
+      "size": "26",
+      "backgroundColor": "rgba(50, 50, 50,0)",
+      "fontColor": "#ffffff",
+      "buzCode": 1,		
+      "x": 250,
+      "y": 1100
+    },
+    {
+      "type": "swipeTip",
+      "orgType": 2,
+      "width": 817,
+      "height": 150,
+      "family": "Microsoft YaHei",
+      "style": "normal",
+      "size": "32",
+      "backgroundColor": "rgba(50, 50, 50,0)",
+      "fontColor": "#ffffff",
+      "buzCode": 1,		
+      "x": 150,
+      "y": 250
+    },
+    {
+      "type": "login",
+      "orgType": 2,
+      "width": 600,
+      "family": "Microsoft YaHei",
+      "style": "normal",
+      "backgroundColor": "rgba(218, 231, 242, 1)",
+      "buzCode": 1,		
+      "x": 200,
+      "y": 150
+    },
+    {
+      "type": "blockUI",
+      "orgType": 1
+    }
+  ],
+  "level2Items": [
+    {
+      "buzCode": 1,
+      "type": "buzType",
+      "childrenPageImg": "../../images/background/11.jpg"
+    },
+    {
+      "type": "pageTimeout",
+      "orgType": 2,
+      "width": 300,
+      "height": 90,
+      "family": "Microsoft YaHei",
+      "style": "normal",
+      "size": "24",
+      "backgroundColor": "rgba(182, 215, 168, 0)",
+      "fontColor": "#ffffff",
+      "buzCode": 1,
+      "x": 650,
+      "y": 70
+    },
+    {
+      "type": "blockUI",
+      "orgType": 1
+    },
+    {
+      "type": "backBtn",
+      "orgType": 2,	
+      "width": 92,
+      "height": 149,
+      "x": 820,
+      "y": 1070,
+      "backgroundImage":"../../images/q/1/out.png"
+    },
+    {
+      "type": "popRemind",
+      "orgType": 2,
+      "width": 740,	
+      "backgroundColor": "rgba(218, 231, 242, 1)",	
+      "x": 148,
+      "y": 200
+    }
+  ],
+
+	"level1":[
+		{
+		  "x": 195,
+		  "y": 455,
+		  "width": 300,
+		  "height": 225
+		},
+		{
+		  "x": 529,
+		  "y": 455,
+		  "width": 300,
+		  "height": 225
+		},
+		{
+		  "x": 195,
+		  "y": 715,
+		  "width": 300,
+		  "height": 225
+		},
+		{
+		  "x": 529,
+		  "y": 715,
+		  "width": 300,
+		  "height": 225
+		}
+	],
+	"level2":[
+		{
+		  "x": 96,
+		  "y": 250,
+		  "width": 274,
+		  "height": 200
+		},
+		{
+		  "x":376,
+		  "y": 250,
+		  "width": 274,
+		  "height": 200
+		},
+		{
+		  "x": 656,
+		  "y": 250,
+		  "width": 274,
+		  "height": 200
+		},
+		{
+		  "x": 96,
+		  "y": 457,
+		  "width": 274,
+		  "height": 200
+		},
+		{
+		  "x":376,
+		  "y": 457,
+		  "width": 274,
+		  "height": 200
+		},
+		{
+		  "x": 656,
+		  "y": 457,
+		  "width": 274,
+		  "height": 200
+		},
+		{
+		  "x": 96,
+		  "y": 664,
+		  "width": 274,
+		  "height": 200
+		},
+		{
+		  "x":376,
+		  "y": 664,
+		  "width": 274,
+		  "height": 200
+		},
+		{
+		  "x": 656,
+		  "y": 664,
+		  "width": 274,
+		  "height": 200
+		},
+		{
+		  "x": 96,
+		  "y": 871,
+		  "width": 274,
+		  "height": 200
+		}
+	],
+
+	"level1BuzTypes":[
+		{
+			"buzCode": "grwkzh",
+			"backgroundColor": "#eb6100",
+			"enname":"Person PB customer",
+			"cnname":"个人无卡折户",	
+			"icon": "grwkzh"
+		},
+		{
+			"buzCode": "dgwkh",
+			"backgroundColor": "#ca4341",
+			"enname":"Co.Customer NoCard",
+			"cnname":"对公无卡户",
+			"icon": "dgwkh"
+		},
+		{
+			"buzCode": "dgkh",
+			"backgroundColor": "#ca4341",
+			"enname":"Corporate customer",
+			"cnname":"对公客户",
+			"icon": "dgkh"
+		},
+		{
+			"buzCode": "yyqh",
+			"backgroundColor": "#4875f7",
+			"enname":"Customer appointed",
+			"cnname":"预约取号",
+			"icon": "yyqh"
+		},
+		{
+			"buzCode": "qtwdxx",
+			"backgroundColor": "#1fbde5",
+			"enname":"Other outlet info",
+			"cnname":"其他网点信息",
+			"icon": "qtwdxx"
+		}
+	],        
+	"level2BuzTypes":[                        
+		{
+			"buzCode": "817",
+			"remark":"对公业务",
+			"backgroundColor": "#eb6100",	
+			"icon": "dgyw"
+		},
+		{
+			"buzCode": "877",
+			"remark":"对公理财",
+			"backgroundColor": "#ca4341",
+			"icon": "dglc"
+		},
+		{
+			"buzCode": "1",
+			"remark":"开销户",
+			"backgroundColor": "#4875f7",
+			"icon": "kxh"
+		},
+		{
+			"buzCode": "2",
+			"remark":"转帐汇款",
+			"backgroundColor": "#1fbde5",
+			"icon": "zzhk"
+		},
+		{
+			"buzCode": "3",
+			"remark":"理财",
+			"backgroundColor": "#1abc9c",
+			"icon": "lc"
+		},
+		{
+			"buzCode": "8",
+			"remark":"其他业务",
+			"backgroundColor": "#1fbde5",
+			"icon": "qtyw"
+		},
+		{
+			"buzCode": "5",
+			"remark":"缴费",
+			"backgroundColor": "#1abc9c",
+			"icon": "jf"
+		},
+		{
+			"buzCode": "6000354834",
+			"remark":"外币",
+			"backgroundColor": "#4875f7",
+			"icon": "wb"
+		},
+		{
+			"buzCode": "7",
+			"remark":"理财顾问",
+			"backgroundColor": "#4875f7",
+			"icon": "lcgw"
+		},
+		{
+			"buzCode": "4",
+			"remark":"存取款",
+			"backgroundColor": "#eb6100",
+			"icon": "cqk"
+		},
+		{
+			"buzCode": "6000354832",
+			"remark":"现金业务",
+			"backgroundColor": "#eb6100",
+			"icon": "cqk"
+		}
+	]
+}

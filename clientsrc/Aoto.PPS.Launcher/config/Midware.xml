@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<INSPUR>
+	<Cdm>INSPCDM.InspCdmCtrl.1</Cdm>
+	<Cim>INSPCIM.InspCimCtrl.1</Cim>
+	<Pin>INSPPIN.InspPinCtrl.1</Pin>
+	<Idc>INSPIDC.InspIdcCtrl.1</Idc>
+	<IdcIdd>INSPIDC.InspIdcCtrl.1</IdcIdd>
+	<IdcSWC>INSPIDC.InspIdcCtrl.1</IdcSWC>
+	<IdcNRF>INSPIDC.InspIdcCtrl.1</IdcNRF>
+	<IdcRF>INSPIDC.InspIdcCtrl.1</IdcRF>
+	<Idd>INSPIDC.InspIdcCtrl.1</Idd>
+	<CrdCrd>INSPCRD.InspCrdCtrl.1</CrdCrd>
+	<CrdIdc>INSPIDC.InspIdcCtrl.1</CrdIdc>
+	<CpmCrd>INSPCRD.InspCrdCtrl.1</CpmCrd>
+	<CpmIdc>INSPIDC.InspIdcCtrl.1</CpmIdc>
+	<UKeyCrd>INSPCRD.InspCrdCtrl.1</UKeyCrd>
+	<UKeyIdc>INSPIDC.InspIdcCtrl.1</UKeyIdc>
+	<Prr>INSPPTR.InspPtrCtrl.1</Prr>
+	<Prj>INSPPTR.InspPtrCtrl.1</Prj>
+	<Ptrptl>ICPFPTRPTL.IcpfPtrPtlCtrl.1</Ptrptl>
+	<Siu>INSPSIU.InspSiuCtrl.1</Siu>
+	<Trc>ICPFLOGAX.IcpfLogAxCtrl.1</Trc>
+	<Dict>ICPFDICTAX.IcpfDictAxCtrl.1</Dict>
+	<!--Emv>INSPEMV.InspEmvCtrl.1</Emv-->
+	<!--CrdEmv>INSPEMV.InspEmvCtrl.1</CrdEmv-->
+	<!--CpmEmv>INSPEMV.InspEmvCtrl.1</CpmEmv-->
+	<Emv>INSPEMV.InspEmvCtrl.1</Emv>
+	<Uty>INSPUTY.InspUtyCtrl.1</Uty>
+	<Ttu>INSPTTU.InspTtuCtrl.1</Ttu>
+	<Vdm>INSPVDM.InspVdmCtrl.1</Vdm>
+	<Camera>CAMERAAX.CameraAxCtrl.1</Camera>
+	<Finger>INSPPTR.InspPtrCtrl.1</Finger>
+	<!--HandWrite>INSPHANDWRITE.InspHandWriteCtrl.1</HandWrite-->
+</INSPUR>

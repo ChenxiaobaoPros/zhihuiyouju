@@ -1,0 +1,366 @@
+﻿<!DOCTYPE>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Free HTML5 Bootstrap Admin Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
+    <meta name="author" content="Muhammad Usman">
+
+    <!-- The styles -->
+    <link href="../../css/bootstrap-11.min.css" rel="stylesheet">
+    <link href="../../css/charisma-app.css" rel="stylesheet">
+    <link href='../../css/chosen.min.css' rel='stylesheet'>
+    <link href='../../css/colorbox.css' rel='stylesheet'>
+    <link href='../../css/responsive-tables.css' rel='stylesheet'>
+    <link href='../../css/bootstrap-tour.min.css' rel='stylesheet'>
+    <link href='../../css/jquery.noty.css' rel='stylesheet'>
+    <link href='../../css/noty_theme_default.css' rel='stylesheet'>
+    <link href='../../css/elfinder.min.css' rel='stylesheet'>
+    <link href='../../css/elfinder.theme.css' rel='stylesheet'>
+    <link href='../../css/jquery.iphone.toggle.css' rel='stylesheet'>
+    <link href='../../css/uploadify.css' rel='stylesheet'>
+    <link href='../../css/animate.min.css' rel='stylesheet'>
+    <link href='../../css/bootstrap-datetimepicker.css' rel='stylesheet'>
+    <link rel="stylesheet"  href="../../css/icheck/yellow.css"/>
+  	<link rel="stylesheet"  href="../../css/button.css"/>
+  	<link rel="stylesheet"  href="../../css/common.css"/>
+
+    <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- jQuery -->
+	<script type="text/javascript" src="../../js/lib/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="../../js/lib/jquery/plugins/jquery.string.js"></script>
+	<script type="text/javascript" src="../../js/lib/jquery/plugins/jquery.json.js"></script>
+	<script type="text/javascript" src="../../js/lib/easyui/plugins/jquery.draggable.js"></script>
+	<script type="text/javascript" src="../../js/lib/easyui/plugins/jquery.parser.js"></script>
+    <script type="text/javascript" src="../../../js/peripheral.js"></script>
+	<script type="text/javascript" src="../../js/map.js"></script>
+	<script src="../../js/lib/jquery/icheck/jquery.icheck.js" type="text/javascript" ></script>
+ 
+    <!-- The fav icon -->
+    <link rel="shortcut icon" href="../../images/favicon.ico">
+
+</head>
+<style type="text/css">
+	.ipWidget input{
+		float: left;
+		margin-left: 2px;
+		padding:0px;
+	}
+</style>
+<body>
+	<div id="loading1">
+		<div>
+			<image src='../../js/lib/easyui/themes/default/images/loading.gif' />  正在处理，请稍等...
+		</div>
+	</div>
+<div class="ch-container" id="container" style="display:none;">
+	<form id="frm">
+    <div class="row" >
+        
+        <noscript>
+            <div class="alert alert-block col-md-12">
+                <h4 class="alert-heading">Warning!</h4>
+            </div>
+        </noscript>
+
+        <div id="content" class="col-lg-12 col-sm-12">
+            <!-- content starts -->
+	<div class="row">
+        <div class="box col-md-12">
+            <div class="box-inner">
+                <div class="box-header well">
+                    <h2><i class="glyphicon glyphicon-info-sign"></i>自动更新配置</h2>
+
+                    <div class="box-icon">
+                        <a href="#" class="btn btn-minimize btn-round btn-default"><i
+                                class="glyphicon glyphicon-chevron-up"></i></a>
+                    </div>
+                </div>
+                <div class="box-content">
+                <table class="table table-bordered responsive">
+                     
+                        <tbody>
+                        	<tr>
+								<td class="td-right">
+									<div class="form-label">启动自动更新</div>
+								</td>
+								<td >
+									<div class="controls">
+										<input type="checkbox" id="updateFlag" name="updateFlag"/>
+									</div>
+								</td>							
+							</tr>
+							<tr>
+								<td  class="td-right">
+									<div class="form-label">FTP服务器地址<em>*</em></div>
+								</td>
+								<td  >
+									<div class="ipWidget">
+										<form name="ip" action>
+											<input type="text" name="ipOne" class="form-control" id="ipOne" size="3" maxlength="3" onkeyup="return T1_onkeyup()">
+											<input type="text" name="ipTwo" class="form-control" id="ipTwo" size="3" maxlength="3" onkeyup="return T2_onkeyup()">
+											<input type="text" name="ipThr" class="form-control"  id="ipThr" size="3" maxlength="3" onkeyup="return T3_onkeyup()">
+											<input type="text" name="ipFour"  class="form-control"  id="ipFour" size="3" maxlength="3">
+										</form>
+									</div>
+								</td>
+
+							</tr>
+							<tr>
+								<td  class="td-right">
+									FTP服务器端口<em>*</em>
+								</td>
+								<td >
+									<div class="controls">
+										<input type="text" id="httpPort" name="httpPort" class="form-control"  placeholder="请输入端口号" maxlength="10" />
+									</div>
+								</td>							
+							</tr>
+							<tr>
+								<td class="td-right">
+									<div class="form-label">FTP用户名<em>*</em></div>
+								</td>
+								<td >
+									<div class="controls">
+										<input type="text" id="ftpName" name="ftpName" class="form-control"  placeholder="请输入FTP用户名" maxlength="10" />
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="td-right">
+									<div class="form-label">FTP用户密码<em>*</em></div>
+								</td>
+								<td >
+									<div class="controls">
+										<input style="float: left;" type="password" id="ftpPassword" name="ftpPassword" class="form-control"  placeholder="请输入FTP用户密码" maxlength="10" />
+										<img class="eye" style="float: left;width: 23px;height: 23px;margin-top:7.5px;position: relative;left: -29px;" src="../../../images/o_eye.png"/>
+									</div>
+								</td>							
+							</tr>
+														
+                        </tbody>
+                    </table>
+               </div>
+            </div>
+        </div>
+        <!--/span-->
+    </div><!--/row-->
+
+    <!-- content ends -->
+    </div><!--/#content.col-md-0-->
+</div><!--/fluid-row-->
+    <div class="row">
+        <div class="box col-md-12">
+            <div class="box-inner">
+                <div class="box-content">
+                	<p class="center" style="margin-bottom: 0px;">
+						<input type="submit" class="btn btn-primary btn-custom" id="" value="保存">
+										
+					</p>
+					
+               </div>
+            </div>
+        </div>
+        <!--/span-->
+    </div><!--/row--> 
+
+</div><!--/.fluid-container-->
+</form>
+<!-- external javascript -->
+
+<script src="../../js/bootstrap.min.js"></script>
+
+<!-- library for cookie management -->
+<script src="../../js/jquery.cookie.js"></script>
+<!-- data table plugin -->
+<script src='../../js/jquery.dataTables.min.js'></script>
+
+<!-- select or dropdown enhancer -->
+<script src="../../js/chosen.jquery.min.js"></script>
+<!-- plugin for gallery image view -->
+<script src="../../js/jquery.colorbox-min.js"></script>
+<!-- notification plugin -->
+<script src="../../js/jquery.noty.js"></script>
+<!-- library for making tables responsive -->
+<script src="../../js/responsive-tables.js"></script>
+<!-- tour plugin -->
+<script src="../../js/bootstrap-tour.min.js"></script>
+<!-- star rating plugin -->
+<script src="../../js/jquery.raty.min.js"></script>
+<!-- for iOS style toggle switch -->
+<script src="../../js/jquery.iphone.toggle.js"></script>
+<!-- autogrowing textarea plugin -->
+<script src="../../js/jquery.autogrow-textarea.js"></script>
+<!-- multiple file upload plugin -->
+<script src="../../js/jquery.uploadify-3.1.min.js"></script>
+<!-- history.js for cross-browser state change on ajax -->
+<script src="../../js/jquery.history.js"></script>
+<!-- application script for Charisma demo -->
+<script src="../../js/charisma.js"></script>
+<script type="text/javascript" src="../../js/jquery.metadata.js"></script>
+<script type="text/javascript" src="../../js/jquery.validate.js"></script>
+<script type="text/javascript" src="../../js/qmsVld.js"></script>
+
+<script type="text/javascript" src="../../../js/lib/date/bootstrap-datetimepicker.js"></script>
+<script type="text/javascript" src="../../../js/lib/date/bootstrap-datetimepicker.zh-CN.js"></script>
+
+<script type="text/javascript">
+
+var $qmsIp = $.qms.getCache("qmsIp");
+$(function() {
+	var args ={};
+	args.biom ={};
+	args.biom.head ={};
+	args.biom.head.tradeCode = "updateconfig2select";
+	args.biom.head.qmsIp = $qmsIp;
+	args.biom.body ={};
+	args.command=34;
+    args.callback="updateconfig2JSCallback";
+	$.icbcQms.updateconfig2JS(args);
+	//alert($.toJSON(args));
+	
+	//查看密码，小眼睛
+	$(".eye").mouseover(function(){
+		$(this).attr("src","../../../images/s_eye.png");
+		$(this).parent().children(":first").attr("type","text");
+	});
+	$(".eye").mouseleave(function(){
+		$(this).attr("src","../../../images/o_eye.png");
+		$(this).parent().children(":first").attr("type","password");
+	});
+			
+	$("input").iCheck({
+	    checkboxClass: 'icheckbox_minimal-yellow',
+	    radioClass: 'iradio_minimal-yellow',
+	    increaseArea: '20%' // optional
+	});	
+	
+	$('#frm').validate({
+		rules:{
+			httpPort:{required:true,num:true},
+			ftpName:{required:true,byteRangeLength:[0,10]},
+			ftpPassword:{required:true,byteRangeLength:[0,10]},
+			ipOne:{required:true,ipPart:true},
+			ipTwo:{required:true,ipPart:true},
+			ipThr:{required:true,ipPart:true},
+			ipFour:{required:true,ipPart:true}
+		},
+		submitHandler: function(form){
+			saveConfig();
+			return false;
+		}
+	});
+});
+
+function saveConfig(){
+	  	//alert("OK");
+	  	var updateFlag = $("#updateFlag").is(':checked');
+	  	var $ipOne = $.trim($("#ipOne").val());
+	    var $ipTwo = $.trim($("#ipTwo").val());
+	    var $ipThr = $.trim($("#ipThr").val());
+	    var $ipFour = $.trim($("#ipFour").val());
+	    var httpIP = $.trim($ipOne+"."+$ipTwo+"."+$ipThr+"."+$ipFour);
+	  	var httpPort = $.trim($("#httpPort").val());
+	  	var ftpName = $.trim($("#ftpName").val());
+	  	var ftpPassword = $.trim($("#ftpPassword").val());
+	
+		var args = {};
+		args.biom = {};
+		args.biom.head = {};
+		args.biom.head.tradeCode = "updateconfig2update";
+		args.biom.body = {};
+		if(updateFlag){
+			args.biom.body.isAutoUpdate = "1";
+		}else{
+			args.biom.body.isAutoUpdate = "0";
+		}
+		args.biom.body.ftpIp = httpIP;
+		args.biom.body.ftpPort = httpPort;
+		args.biom.body.ftpUserName = ftpName;
+		args.biom.body.ftpUserPwd = ftpPassword;
+		args.callback="updateconfig2updateCallBack";	
+		args.command=33;
+		//alert($.toJSON(args));
+		$.icbcQms.updateconfig2JS(args);
+		
+};
+
+function updateconfig2updateCallBack(args){
+	//alert(args);
+	var joResult = $.parseJSON(args);
+	//alert($.toJSON(joResult));
+	if(joResult){
+		if(joResult.biom.head.retCode == 0){
+			qmsVld.showInfo(joResult.biom.head.retMsg);
+		}else{
+			qmsVld.showError(joResult.biom.head.retMsg);
+		}				
+	}
+
+}
+
+function updateconfig2JSCallback(args){
+	//alert(args);
+	closeLoading();
+	$("#container").css("display","block");
+	var joResult = $.parseJSON(args);
+	if(joResult){
+		$("#ipOne").val("");
+		$("#ipTwo").val("");
+		$("#ipThr").val("");
+		$("#ipFour").val("");
+	  	$("#httpPort").val("");
+	  	$("#ftpName").val("");
+	  	$("#ftpPassword").val("");
+		
+		var retCode = joResult.biom.head.retCode;
+		var retMsg = joResult.biom.head.retMsg;
+		if(retCode == "1"){
+			window.location.href = "timeout.html?retMsg="+retMsg;
+		}
+		if(joResult.biom.body.isAutoUpdate == "1"){
+	  		$('#updateFlag').iCheck('check');
+	  	}else{
+	  		$('#updateFlag').iCheck('uncheck');
+	  	}
+	  	//$("#httpIP").val(joResult.biom.body.httpIP);
+	  	//http地址
+	  	var httpIP = joResult.biom.body.ftpIp;
+		var $ipArray = httpIP.split(".");
+		$("#ipOne").val($ipArray[0]);
+		$("#ipTwo").val($ipArray[1]);
+		$("#ipThr").val($ipArray[2]);
+		$("#ipFour").val($ipArray[3]);
+		$("#ftpName").val(joResult.biom.body.ftpUserName);
+		$("#ftpPassword").val(joResult.biom.body.ftpUserPwd);
+	  	$("#httpPort").val(joResult.biom.body.ftpPort);
+	}
+}
+
+//ip控件
+function T1_onkeyup() {
+  if($("#ipOne").val().length == 3){
+    	$("#ipTwo").focus();
+   }
+} 
+function T2_onkeyup() {
+  if($("#ipTwo").val().length == 3){
+    	$("#ipThr").focus();
+   }
+}
+function T3_onkeyup() {
+  if($("#ipThr").val().length == 3){
+     $("#ipFour").focus();
+   }
+}
+
+		
+</script>
+
+</body>
+</html>

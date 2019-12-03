@@ -1,0 +1,690 @@
+﻿<!DOCTYPE>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Free HTML5 Bootstrap Admin Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Charisma, a fully featured, responsive, HTML5, Bootstrap admin template.">
+    <meta name="author" content="Muhammad Usman">
+
+    <!-- The styles -->
+    <link href="../../css/bootstrap-11.min.css" rel="stylesheet">
+    <link href="../../css/charisma-app.css" rel="stylesheet">
+    <link href='../../css/chosen.min.css' rel='stylesheet'>
+    <link href='../../css/colorbox.css' rel='stylesheet'>
+    <link href='../../css/responsive-tables.css' rel='stylesheet'>
+    <link href='../../css/bootstrap-tour.min.css' rel='stylesheet'>
+    <link href='../../css/jquery.noty.css' rel='stylesheet'>
+    <link href='../../css/noty_theme_default.css' rel='stylesheet'>
+    <link href='../../css/elfinder.min.css' rel='stylesheet'>
+    <link href='../../css/elfinder.theme.css' rel='stylesheet'>
+    <link href='../../css/jquery.iphone.toggle.css' rel='stylesheet'>
+    <link href='../../css/uploadify.css' rel='stylesheet'>
+    <link href='../../css/animate.min.css' rel='stylesheet'>
+    <link href='../../css/bootstrap-datetimepicker.css' rel='stylesheet'>
+    <link rel="stylesheet"  href="../../css/icheck/yellow.css"/>
+  	<link rel="stylesheet"  href="../../css/button.css"/>
+  	<link rel="stylesheet"  href="../../css/common.css"/>
+
+    <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- jQuery -->
+	<script type="text/javascript" src="../../js/lib/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="../../js/lib/jquery/plugins/jquery.string.js"></script>
+	<script type="text/javascript" src="../../js/lib/jquery/plugins/jquery.json.js"></script>
+	<script type="text/javascript" src="../../js/lib/easyui/plugins/jquery.draggable.js"></script>
+	<script type="text/javascript" src="../../js/lib/easyui/plugins/jquery.parser.js"></script>
+    <script type="text/javascript" src="../../../js/peripheral.js"></script>
+	<script type="text/javascript" src="../../js/map.js"></script>
+	<script src="../../js/lib/jquery/icheck/jquery.icheck.js" type="text/javascript" ></script>
+ 
+    <!-- The fav icon -->
+    <link rel="shortcut icon" href="../../images/favicon.ico">
+</head>
+
+<body>
+<div id="loading1">
+	<div>
+		<image src='../../js/lib/easyui/themes/default/images/loading.gif' />  正在处理，请稍等...
+	</div>
+</div>
+<div id="loading2">
+	<div>
+		<image src='../../js/lib/easyui/themes/default/images/loading.gif' />  正在刷新，请稍等...
+	</div>
+</div>
+<div class="ch-container" id="container" style="display: ;">
+	<form id= "frm">
+    <div class="row" >
+        
+        <noscript>
+            <div class="alert alert-block col-md-12">
+                <h4 class="alert-heading">Warning!</h4>
+            </div>
+        </noscript>
+
+        <div id="content" class="col-lg-12 col-sm-12">
+            <!-- content starts -->
+	<div class="row">
+        <div class="box col-md-12">
+            <div class="box-inner">
+                <div class="box-header well">
+                    <h2><i class="glyphicon glyphicon-info-sign"></i>工商银行网点运营管理平台</h2>
+
+                    <div class="box-icon">
+                        <a href="#" class="btn btn-minimize btn-round btn-default"><i
+                                class="glyphicon glyphicon-chevron-up"></i></a>
+                    </div>
+                </div>
+                <div class="box-content">
+                <table class="table table-bordered responsive">
+                     
+                        <tbody>
+							<tr>
+								<td  class="td-right">
+									<div class="form-label">管理平台地址<em>* </em></div>
+								</td>
+								<td  >
+									<div class="controls">
+										<input type="text" id="biomUrl" name="biomUrl" class="form-control"  placeholder="请输入平台地址" maxlength="500" />
+									</div>
+								</td>
+
+							</tr>
+							<tr>
+								<td  class="td-right">
+									BIOM连接超时(毫秒)<em>* </em>
+								</td>
+								<td >
+									<div class="controls">
+										<input type="text" id="biomTimeOut" name="biomTimeOut" class="form-control"  placeholder="请输入时间，单位毫秒" maxlength="10"/>
+									</div>
+								</td>							
+							</tr>
+							<tr>
+								<td class="td-right">
+									<div class="form-label">BIOM联网失败间隔(秒)<em>* </em></div>
+								</td>
+								<td >
+									<div class="controls">
+										<input type="text" id="biomTimeSpan" name="biomTimeSpan" class="form-control"  placeholder="请输入时间，单位秒" maxlength="10"/>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="td-right">
+									<div class="form-label">
+										守护线程间隔线程时间<em>* </em><br>(自动脱机转联机,秒)
+									</div>
+								</td>
+								<td >
+									<div class="controls">
+										<input type="text" id="autoOnlieSwitchTimeSpan" name="autoOnlieSwitchTimeSpan" class="form-control"  placeholder="请输入时间，单位秒" maxlength="10" />
+									</div>
+								</td>
+							</tr>	
+							<tr>
+								<td class="td-right">
+									<div class="form-label">
+										默认星级<em>* </em>
+									</div>
+								</td>
+								<td >
+									<div class="controls">
+										<!--<input type="text" id="defaultServeLevel" name="defaultServeLevel" class="form-control"  placeholder="请输入默认星级" maxlength="1" />-->
+										<select name="defaultServeLevel" id="defaultServeLevel">
+											<option value="0">零星</option>
+											<option value="3">三星</option>
+											<option value="4" selected="selected">四星</option>
+											<option value="5">五星</option>
+											<option value="6">六星</option>
+											<option value="7">七星</option>
+										</select>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="td-right">
+									<div class="form-label">
+										联脱机转换次数阀值<em>* </em>
+									</div>
+								</td>
+								<td >
+									<div class="controls">
+										<input type="text" id="offineTimeslimit" name="offineTimeslimit" class="form-control"  placeholder="请输入联脱机转换次数阀值" maxlength="10" />
+									</div>
+								</td>
+							</tr>
+                        </tbody>
+                    </table>
+               </div>
+            </div>
+        </div>
+        <!--/span-->
+    </div><!--/row-->
+    
+    <div class="row">
+        <div class="box col-md-12">
+            <div class="box-inner">
+                <div class="box-header well">
+                    <h2><i class="glyphicon glyphicon-info-sign"></i>监控设置</h2>
+
+                    <div class="box-icon">
+                        <a href="#" class="btn btn-minimize btn-round btn-default"><i
+                                class="glyphicon glyphicon-chevron-up"></i></a>
+                    </div>
+                </div>
+                <div class="box-content">
+                	<table class="table table-bordered responsive">
+                        <tbody>
+                        	<tr>
+								<td class="td-right">
+									<div><a class="btn btn-primary refresh" href="#" id="connect">连接测试</a></div>
+								</td>
+								<td >
+									<div id="connect-result">
+										
+									</div>
+								</td>							
+							</tr>
+							<tr>
+								<td class="td-right">
+									<div class="form-label">启用监控</div>
+								</td>
+								<td >
+									<div class="controls">
+										<input type="checkbox" id="monitorFlag" name="monitorFlag"/>
+									</div>
+								</td>							
+							</tr>
+							<tr>
+								<td class="td-right">
+									<div class="form-label">
+										监控地址<em>* </em>
+									</div>
+								</td>
+								<td >
+									<div class="controls">
+										<input type="text" id="monitorIp" name="monitorIp" class="form-control"  placeholder="请输入监控地址" maxlength="500"/>
+									</div>
+									<!--<div class="ipWidget">										
+											<input type="text" name="ipOne" id="ipOne" maxlength="3" onkeyup="return T1_onkeyup()">
+											<input type="text" name="ipTwo" id="ipTwo" maxlength="3" onkeyup="return T2_onkeyup()">
+											<input type="text" name="ipThr" id="ipThr" maxlength="3" onkeyup="return T3_onkeyup()">
+											<input type="text" name="ipFour" id="ipFour" maxlength="3">									
+									</div>									-->
+								</td>
+							</tr>
+							<tr>
+								<td class="td-right">
+									<div class="form-label">
+										监控时间间隔(秒)<em>* </em>
+									</div>
+								</td>
+								<td >
+									<div class="controls">
+										<input type="text" id="monitorTimeSpan" name="monitorTimeSpan" class="form-control"  placeholder="请输入时间，单位秒" maxlength="10"/>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="td-right">
+									<div class="form-label">
+										监控端口<em>* </em>
+									</div>
+								</td>
+								<td >
+									<div class="controls">
+										<input type="text" id="monitorPort" name="monitorPort" class="form-control"  placeholder="请输入监控端口" maxlength="10"/>
+									</div>
+								</td>
+							</tr>	
+							<tr>
+								<td class="td-right">
+									<div class="form-label">
+										DNS1<em>* </em>
+									</div>
+								</td>
+								<td >
+									<!--<div class="controls">
+										<input type="text" id="monitorDNS1" name="monitorDNS1" class="form-control"  placeholder="请输入DNS1" maxlength="15"/>
+									</div>-->
+									<div class="ipWidget">
+											<input type="text" name="dns1One" id="dns1One" maxlength="3" onkeyup="return dns11_onkeyup()">
+											<input type="text" name="dns1Two" id="dns1Two" maxlength="3" onkeyup="return dns12_onkeyup()">
+											<input type="text" name="dns1Thr" id="dns1Thr" maxlength="3" onkeyup="return dns13_onkeyup()">
+											<input type="text" name="dns1Four" id="dns1Four" maxlength="3">
+									</div>
+								</td>
+							</tr>	
+							<tr>
+								<td class="td-right">
+									<div class="form-label">
+										DNS2<em>* </em>
+									</div>
+								</td>
+								<td >
+									<!--<div class="controls">
+										<input type="text" id="monitorDNS2" name="monitorDNS2" class="form-control"  placeholder="请输入DNS2" maxlength="15" />
+									</div>-->
+									<div class="ipWidget">
+											<input type="text" name="dns2One" id="dns2One" maxlength="3" onkeyup="return dns21_onkeyup()">
+											<input type="text" name="dns2Two" id="dns2Two" maxlength="3" onkeyup="return dns22_onkeyup()">
+											<input type="text" name="dns2Thr" id="dns2Thr" maxlength="3" onkeyup="return dns23_onkeyup()">
+											<input type="text" name="dns2Four" id="dns2Four" maxlength="3">
+									</div>
+								</td>
+							</tr>
+                        </tbody>
+                    </table>
+               </div>
+            </div>
+        </div>
+        <!--/span-->
+    </div><!--/row-->
+    
+	<div class="row">
+        <div class="box col-md-12">
+            <div class="box-inner">
+                <div class="box-header well">
+                    <h2><i class="glyphicon glyphicon-info-sign"></i>其他终端取号</h2>
+
+                    <div class="box-icon">
+                        <a href="#" class="btn btn-minimize btn-round btn-default"><i
+                                class="glyphicon glyphicon-chevron-up"></i></a>
+                    </div>
+                </div>
+                <div class="box-content">
+                <table class="table table-bordered responsive">                    
+                        <tbody>
+							<tr>
+								<td class="td-right">
+									<div class="form-label">同步其他端机取号数据</div>
+								</td>
+								<td >
+									<div class="controls">
+										<input type="checkbox" id="synOtherTicketFlag" name="synOtherTicketFlag"/>
+									</div>
+								</td>							
+							</tr>
+							<tr>
+								<td class="td-right">
+									<div class="form-label">
+										同步时间间隔(秒)<em>* </em>
+									</div>
+								</td>
+								<td >
+									<div class="controls">
+										<input type="text" id="synTimeSpan" name="synTimeSpan" class="form-control"  placeholder="请输入时间，单位秒"  maxlength="10"/>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="td-right">
+									<div class="form-label">禁止脱机取号</div>
+								</td>
+								<td >
+									<div class="controls">
+										<input type="checkbox" id="disableOfflineGetTicketFlag" name="disableOfflineGetTicketFlag"/>
+									</div>
+								</td>							
+							</tr>
+												
+                        </tbody>
+                    </table>
+               </div>
+            </div>
+        </div>
+        <!--/span-->
+    </div><!--/row-->   
+
+    <!-- content ends -->
+    </div><!--/#content.col-md-0-->
+</div><!--/fluid-row-->
+    <div class="row">
+        <div class="box col-md-12">
+            <div class="box-inner">
+                <div class="box-content">
+                	<p class="center" style="margin-bottom: 0px;">
+						<input type="submit" class="btn btn-primary btn-custom" id="saveConfig" value="保存">					
+					</p>
+					
+               </div>
+            </div>
+        </div>
+        <!--/span-->
+    </div><!--/row--> 
+</form>
+</div><!--/.fluid-container-->
+
+<!-- external javascript -->
+
+<script src="../../js/bootstrap.min.js"></script>
+
+<!-- library for cookie management -->
+<script src="../../js/jquery.cookie.js"></script>
+<!-- data table plugin -->
+<script src='../../js/jquery.dataTables.min.js'></script>
+
+<!-- select or dropdown enhancer -->
+<script src="../../js/chosen.jquery.min.js"></script>
+<!-- plugin for gallery image view -->
+<script src="../../js/jquery.colorbox-min.js"></script>
+<!-- notification plugin -->
+<script src="../../js/jquery.noty.js"></script>
+<!-- library for making tables responsive -->
+<script src="../../js/responsive-tables.js"></script>
+<!-- tour plugin -->
+<script src="../../js/bootstrap-tour.min.js"></script>
+<!-- star rating plugin -->
+<script src="../../js/jquery.raty.min.js"></script>
+<!-- for iOS style toggle switch -->
+<script src="../../js/jquery.iphone.toggle.js"></script>
+<!-- autogrowing textarea plugin -->
+<script src="../../js/jquery.autogrow-textarea.js"></script>
+<!-- multiple file upload plugin -->
+<script src="../../js/jquery.uploadify-3.1.min.js"></script>
+<!-- history.js for cross-browser state change on ajax -->
+<script src="../../js/jquery.history.js"></script>
+<!-- application script for Charisma demo -->
+<script src="../../js/charisma.js"></script>
+<script type="text/javascript" src="../../js/jquery.metadata.js"></script>
+<script type="text/javascript" src="../../js/jquery.validate.js"></script>
+<script type="text/javascript" src="../../js/qmsVld.js"></script>
+<script type="text/javascript" src="../../../js/lib/date/bootstrap-datetimepicker.js"></script>
+<script type="text/javascript" src="../../../js/lib/date/bootstrap-datetimepicker.zh-CN.js"></script>
+<script type="text/javascript" src="../../js/bootbox.js"></script>
+
+<script type="text/javascript">
+$(function() {
+	var testIp = "";
+	$("#defaultServeLevel").chosen(); 
+	$("#defaultServeLevel").next().css("width","60%");
+	
+	var args = {};
+	args.biom = {};
+	args.biom.head = {};
+	args.biom.head.tradeCode = "icbcspecialuse2select";
+	args.biom.head.qmsIp = $.qms.getCache("qmsIp");
+	args.biom.body = {};	
+    args.command=34;	
+    args.callback="icbcspecialuse2selectCallBack";
+	$.icbcQms.getIcbcspecialuse(args);
+	
+	//form submit	
+	$("#frm").validate({
+		rules: {		
+			biomUrl:{required:true,byteRangeLength:[0,500]},
+			biomTimeOut:{required:true,num:true},
+			biomTimeSpan:{required:true,num:true},
+			autoOnlieSwitchTimeSpan:{required:true,num:true},
+			synTimeSpan:{required:true,num:true},
+			monitorTimeSpan:{required:true,num:true},
+			monitorPort:{required:true,num:true},
+			//defaultServeLevel:{required:true,defaultServeLevel:true,byteRangeLength:[0,1]},
+			monitorIp:{required:true,byteRangeLength:[0,500]},
+			dns1One:{required:true,ipPart:true},
+			dns1Two:{required:true,ipPart:true},
+			dns1Thr:{required:true,ipPart:true},
+			dns1Four:{required:true,ipPart:true},
+			dns2One:{required:true,ipPart:true},
+			dns2Two:{required:true,ipPart:true},
+			dns2Thr:{required:true,ipPart:true},
+			dns2Four:{required:true,ipPart:true},
+			offineTimeslimit:{required:true,num:true}
+		},	
+		onfocusout: function(element) { 
+			$(element).valid(); 
+		},		
+		submitHandler: function(form){
+			saveConfig();
+			return false;
+		}
+	});	
+	//icheck控件	
+	$("input").iCheck({
+	    checkboxClass: 'icheckbox_minimal-yellow',
+	    radioClass: 'iradio_minimal-yellow',
+	    increaseArea: '20%' // optional
+	});
+	
+});
+
+function saveConfig(){
+	    var biomUrl = $.trim($("#biomUrl").val());
+	    var biomTimeOut = $.trim($("#biomTimeOut").val());
+	    var biomTimeSpan = $.trim($("#biomTimeSpan").val());
+	    var autoOnlieSwitchTimeSpan = $.trim($("#autoOnlieSwitchTimeSpan").val());
+	    var isSynOther = $("#synOtherTicketFlag").is(':checked');  
+	    var synTimeSpan = $.trim($("#synTimeSpan").val());
+	    var offineTimeslimit = $.trim($("#offineTimeslimit").val());
+	    var isDisableOffline = $("#disableOfflineGetTicketFlag").is(':checked');
+	    var isMonitorFlag = $("#monitorFlag").is(':checked');
+	    
+	    var monitorIp = $.trim($("#monitorIp").val());
+	    testIp = monitorIp;
+	    
+	    var monitorTimeSpan = $.trim($("#monitorTimeSpan").val());
+	    var monitorPort = $.trim($("#monitorPort").val());
+	    
+	    var $dns1One = $.trim($("#dns1One").val());
+	    var $dns1Two = $.trim($("#dns1Two").val());
+	    var $dns1Thr = $.trim($("#dns1Thr").val());
+	    var $dns1Four = $.trim($("#dns1Four").val());
+	    var monitorDNS1 = $.trim($dns1One+"."+$dns1Two+"."+$dns1Thr+"."+$dns1Four);
+	    
+	    var $dns2One = $.trim($("#dns2One").val());
+	    var $dns2Two = $.trim($("#dns2Two").val());
+	    var $dns2Thr = $.trim($("#dns2Thr").val());
+	    var $dns2Four = $.trim($("#dns2Four").val());
+	    var monitorDNS2 = $.trim($dns2One+"."+$dns2Two+"."+$dns2Thr+"."+$dns2Four);
+	    
+	    var defaultServeLevel = $.trim($("#defaultServeLevel").val());
+	    var offineTimeslimit = $.trim($("#offineTimeslimit").val());
+		
+		var args = {};
+		args.biom = {};
+		args.biom.head = {};
+		args.biom.head.tradeCode = "icbcspecialuse2update";
+		args.biom.head.qmsIp = $.qms.getCache("qmsIp");
+		args.biom.body = {};
+		args.biom.body.biomUrl = biomUrl;
+		args.biom.body.biomTimeOut = biomTimeOut;
+		args.biom.body.biomTimeSpan = biomTimeSpan;
+		args.biom.body.autoOnlieSwitchTimeSpan = autoOnlieSwitchTimeSpan;
+		if(isSynOther){
+			args.biom.body.synOtherTicketFlag = "1";
+		}else{
+			args.biom.body.synOtherTicketFlag = "0";
+		}
+		args.biom.body.synTimeSpan = synTimeSpan;
+		if(isDisableOffline){
+			args.biom.body.disableOfflineGetTicketFlag = "1";
+		}else{
+			args.biom.body.disableOfflineGetTicketFlag = "0";
+		}
+		if(isMonitorFlag){
+			args.biom.body.monitorFlag = "1";
+		}else{
+			args.biom.body.monitorFlag = "0";
+		}
+		args.biom.body.monitorIp = monitorIp;
+		args.biom.body.monitorTimeSpan = monitorTimeSpan;
+		args.biom.body.monitorPort = monitorPort;
+		args.biom.body.monitorDNS1 = monitorDNS1;
+		args.biom.body.monitorDNS2 = monitorDNS2;
+		args.biom.body.defaultServeLevel = defaultServeLevel;
+		args.biom.body.offineTimeslimit = offineTimeslimit;
+        args.callback="icbcspecialuse2updateCallBack";	
+		args.command=33;
+		//alert($.toJSON(args));
+		$.icbcQms.getIcbcspecialuse(args);	
+		
+		
+}
+
+function icbcspecialuse2updateCallBack(args){
+	var joResult = $.parseJSON(args);
+	if(joResult){
+		if(joResult.biom.head.retCode == 0){
+			qmsVld.showInfo(joResult.biom.head.retMsg);
+		}else{
+			qmsVld.showError(joResult.biom.head.retMsg);
+		}				
+	}	
+}
+
+//连接测试
+$("#connect").click(function(){
+    var monitorIp = $.trim($.trim($("#monitorIp").val()));
+    testIp = monitorIp;
+    
+	if(testIp == ""){
+		bootbox.alert("请先配置监控地址，保存后再测试");
+	} else{
+		$("#loading2").css("display","block");
+		$("#container").css("opacity","0.3");	
+		
+		var args = {};
+		args.biom = {};
+		args.biom.head = {};
+		args.biom.head.tradeCode = "pingLisServiceIp";
+		args.biom.head.qmsIp = testIp;
+		args.biom.body = {};
+	    args.callback="getPinLisServiceCallBack";
+	    //alert($.toJSON(args));
+		$.icbcQms.getPinLisService(args);
+	}
+});
+function getPinLisServiceCallBack(args){
+	$("#loading2").css("display","none");
+	$("#container").css("opacity","1");	
+	var joResult = $.parseJSON(args);
+	if(joResult){
+		var retCode = joResult.biom.head.retCode;
+		var retMsg = joResult.biom.head.retMsg;
+		if(retCode == "0"){
+			qmsVld.showInfo(retMsg);
+		} else{
+			qmsVld.showError(retMsg);
+		}
+	}
+}
+
+
+function icbcspecialuse2selectCallBack(args){
+	//alert($.toJSON(args));
+	closeLoading();
+	$("#container").css("display","block");	
+	var joResult = $.parseJSON(args);
+	if(joResult){
+		$("#biomUrl").val("");
+		$("#biomTimeOut").val("");
+		$("#biomTimeSpan").val("");
+		$("#autoOnlieSwitchTimeSpan").val("");
+		$("#defaultServeLevel").val("");
+		$("#offineTimeslimit").val("");
+		$("#monitorIp").val("");
+		$("#dns1One").val("");
+		$("#dns1Two").val("");
+		$("#dns1Thr").val("");
+		$("#dns1Four").val("");
+		$("#dns2One").val("");
+		$("#dns2Two").val("");
+		$("#dns2Thr").val("");
+		$("#dns2Four").val("");
+		$("#monitorTimeSpan").val("");
+		$("#monitorPort").val("");
+		
+		var retCode = joResult.biom.head.retCode;
+		var retMsg = joResult.biom.head.retMsg;
+		if(retCode == "1"){
+			window.location.href = "timeout.html?retMsg="+retMsg;
+		}
+		
+		$("#biomUrl").val(joResult.biom.body.biomUrl);
+		$("#biomTimeOut").val(joResult.biom.body.biomTimeOut);
+		$("#biomTimeSpan").val(joResult.biom.body.biomTimeSpan);
+		$("#autoOnlieSwitchTimeSpan").val(joResult.biom.body.autoOnlieSwitchTimeSpan);
+		$("#defaultServeLevel").val(joResult.biom.body.defaultServeLevel);
+		$("#offineTimeslimit").val(joResult.biom.body.offineTimeslimit);
+		if(joResult.biom.body.synOtherTicketFlag == "1"){
+			$('#synOtherTicketFlag').iCheck('check');
+		}else{
+			$('#synOtherTicketFlag').iCheck('uncheck');
+		}
+		if(joResult.biom.body.disableOfflineGetTicketFlag == "1"){
+			$('#disableOfflineGetTicketFlag').iCheck('check');
+		}else{
+			$('#disableOfflineGetTicketFlag').iCheck('uncheck');
+		}	
+		if(joResult.biom.body.monitorFlag == "1"){
+			$('#monitorFlag').iCheck('check');
+		}else{
+			$('#monitorFlag').iCheck('uncheck');
+		}				
+		$("#synTimeSpan").val(joResult.biom.body.synTimeSpan);
+		//监控地址
+		$("#monitorIp").val(joResult.biom.body.monitorIp);
+		//DNS1地址
+		var $monitorDNS1 = joResult.biom.body.monitorDNS1;
+		var $dns1Array = $monitorDNS1.split(".");
+		$("#dns1One").val($dns1Array[0]);
+		$("#dns1Two").val($dns1Array[1]);
+		$("#dns1Thr").val($dns1Array[2]);
+		$("#dns1Four").val($dns1Array[3]);
+		//DNS1地址
+		var $monitorDNS2 = joResult.biom.body.monitorDNS2;
+		var $dns2Array = $monitorDNS2.split(".");
+		$("#dns2One").val($dns2Array[0]);
+		$("#dns2Two").val($dns2Array[1]);
+		$("#dns2Thr").val($dns2Array[2]);
+		$("#dns2Four").val($dns2Array[3]);
+		
+		$("#monitorTimeSpan").val(joResult.biom.body.monitorTimeSpan);
+		$("#monitorPort").val(joResult.biom.body.monitorPort);
+		
+		$("#defaultServeLevel").trigger("chosen:updated");
+		$("#defaultServeLevel").chosen(); 
+		$("#defaultServeLevel").next().css("width","60%");
+	}
+}
+
+function dns11_onkeyup() {
+  if($("#dns1One").val().length == 3){
+    	$("#dns1Two").focus();
+   }
+} 
+function dns12_onkeyup() {
+  if($("#dns1Two").val().length == 3){
+    	$("#dns1Thr").focus();
+   }
+}
+function dns13_onkeyup() {
+  if($("#dns1Thr").val().length == 3){
+     $("#dns1Four").focus();
+   }
+}
+
+function dns21_onkeyup() {
+  if($("#dns2One").val().length == 3){
+    	$("#dns2Two").focus();
+   }
+} 
+function dns22_onkeyup() {
+  if($("#dns2Two").val().length == 3){
+    	$("#dns2Thr").focus();
+   }
+}
+function dns23_onkeyup() {
+  if($("#dns2Thr").val().length == 3){
+    	$("#dns2Four").focus();
+   }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,511 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" rel="stylesheet" href="../../../pps/css/main.css" />
+<link rel="stylesheet" type="text/css" href="../../../pps/css/smart_wizard_vertical.css" />
+<link rel="stylesheet" href="../../css/pagination.css" />
+<link rel="stylesheet" href="../../css/reset.css" />
+<link rel="stylesheet" href="../../css/css/style.css">
+<link rel="stylesheet" href="../../css/css/jPages.css">
+<link rel="stylesheet" href="../../css/css/animate.css">
+<link rel="stylesheet" href="../../css/css/github.css">
+<style>
+	.clone{ 
+		position: absolute;
+		border: 1px solid rgba(221, 221, 221, 0.46);
+		text-align: -webkit-match-parent;
+		box-sizing: border-box;
+		list-style: none;
+		font-weight:normal;
+	}
+	.over{ border:1px solid black;}
+	.selected{ background:blue}		
+	.site{ 	
+		display:table;border:0px #95B8E7 solid;top: 50%; 
+		background-size:100% 100%;margin: 0; 
+		-moz-box-shadow:3px 3px 9px #333;
+		-webkit-box-shadow:3px 3px 9px #333;
+		box-shadow:3px 3px 9px #333;
+		position: absolute;text-align:center;
+	}
+	site:hover{border: 0px #fff solid;box-shadow: 3px 3px 3px #333;margin-left:0px;margin-top:0px;}
+	.site a { display:table-cell;border:0px #95B8E7 solid;}
+
+	.busSite{ 	
+		background-size:100% 100%;margin: 0; text-align: left;
+		-moz-box-shadow:3px 3px 9px #333;
+		-webkit-box-shadow:3px 3px 9px #333;
+		box-shadow:3px 3px 9px #333;
+		text-align:center;
+	}
+			
+	.imgUnSelected{
+		border: 4px solid transparent;
+	} 
+	.imgSelected{
+		border: 4px solid blue;
+	} 
+	.holder {
+		margin: 15px 0 0 0;
+	}
+	.holder a {
+		font-size: 32px;
+		cursor: pointer;
+		margin: 0 0 0 30px;
+		color: #333;
+	}
+	.holder a:hover {
+		background-color: #222;
+		color: #fff;
+	}
+	.holder a.jp-previous { margin-right: 15px; background:transparent;}
+	.holder a.jp-next { margin-left: 15px; background:transparent;}
+	.holder a.jp-current, a.jp-current:hover {
+		color: #FF4242;
+		font-weight: bold;
+	}
+	.holder a.jp-disabled, a.jp-disabled:hover {
+		color: #bbb;
+	}
+	.holder a.jp-current, a.jp-current:hover,
+	.holder a.jp-disabled, a.jp-disabled:hover {
+		cursor: default;
+		background: none;
+	}
+	.holder span { margin: 0 5px; }
+	form { float: right; margin-right: 10px; }
+	form label { margin-right: 5px; }
+
+	.table-c table{border-right:1px solid #dddddd;border-bottom:1px solid #dddddd;width:100%;} 
+	.table-c table tr{line-height:80px;}
+	.table-c table td{border-left:1px solid #dddddd;border-top:1px solid #dddddd;width:50%;color:#ffffff;font-family: Microsoft YaHei;font-size: 30px;font-weight:normal;text-align:center;} 
+	.table-c table th{padding:20px 0 20px 0;border-left:1px solid #dddddd;border-top:1px solid #dddddd;width:50%;color:#ffffff;font-family: Microsoft YaHei;font-size: 38px;font-weight:normal;text-align:center;} 
+	.table-c table td span{display:block;}
+	.table-c table th span{display:block;}
+</style>
+</head>
+<body  style="margin:0;padding:0;-moz-user-select:none;">  
+	<div id="main" style="margin:0px auto;position:relative;">
+        <div id="biz" style="z-index: 1000; position: absolute; left: 0px; top: 0px; overflow: hidden;display:block;">
+            <div name="biz" id="biz2" style="display:none;background-size: 100% 100%; float: left; position: relative; padding: 0px; margin: 0px; width: 100%; border: 0px solid rgb(5, 100, 152); height: 100%; background-image: url(../../images/background/11.jpg);">
+
+                <div name="bg" style="display:none;position: absolute; top: 0%; left: 0%; width: 100%; height: 100%; background-color: black; z-index:999; -moz-opacity: 0.7; opacity:.70; filter: alpha(opacity=70);overflow:hidden;">
+                </div>
+
+                <div class="site" onclick="back();" name="backBtn" style="cursor:pointer;z-index: 1000; background-size: 100% 100%; left: 820px; top: 1070px; width: 92px; height: 149px; box-shadow: none; transform: skew(0deg, 0deg) rotateZ(0deg); font-family: Microsoft YaHei; background-image:url(../../images/q/1/out.png); overflow: hidden;">
+                </div>
+
+                <div class="site" name="pageTimeout"
+                     style="background-size: 100% 100%; left: 650px; top: 70px; width: 300px; height: 90px; z-index: 10; box-shadow: none; transform: skew(0deg, 0deg) rotateZ(0deg); font-family: Microsoft YaHei; background-color: rgba(182, 215, 168, 0); overflow: hidden;">
+                    <li name="systemTime"
+                        style="display: table-cell; vertical-align: middle; background-size: 100% 100%; left: 0px; top: 0px; width: 100%; height: 100%; cursor: default; font-style: normal; font-weight: normal; font-size: 26px; color: #ffffff;">页面停留时间<span style="display:inline-block;width:60px;font-size:40px;color: rgba(134, 234, 234, 0.6);" id="pageTimeout">20</span>秒</li>
+                </div>
+
+                <div class="site" name="popRemind" style="position:absolute;z-index:1000;text-align:center;border-radius:16px;background-size: 100% 100%; left: 148px; top: 280px; width: 740px; box-shadow: none; transform: skew(0deg, 0deg) rotateZ(0deg); font-family: Microsoft YaHei; background-color: rgba(218, 231, 242, 1); overflow: hidden;padding-top:50px;padding-bottom:50px;">
+                    <li style="box-shadow:0 0 3px 3px rgba(235,190,240,0.6);border-radius:16px;background-size: 100% 100%;width:80%;display:inline-block; vertical-align: middle;font-size: 40px;text-align:center; background-color:rgba(194,231,240,1); color: #000000;padding:40px;">
+                        <label style="display:block;text-align:center;">分流提示</label>
+                        <label style="display:block;text-align:center;">Prompt for queue separation</label>
+                        <label style="display:block;text-align:left;font-size: 30px;margin-top:20px;">为了节省您的时间，如果您需要办理存款或者20000元以内取款业务，建议到我行自动取款机或者存取款一体机办理。</label>
+                        <label style="display:block;text-align:left;font-size: 26px;">To save your time, if you need to conduct deposit or withdrawal within RMB20,000, we suggest you conduct such business with the self-service ATM or CRS of ICBC.</label>
+                    </li>
+                    <li onclick="getTicket(this);" style="border-radius:8px;display:inline-block;width:50%;text-align:center;background-color:rgba(122,175,59,1);padding:20px;font-size:30px;margin-top:30px;">
+                        <label style="display:block;text-align:center;">继续取号</label>
+                        <label style="display:block;text-align:center;">Continue get No.</label>
+                    </li>
+                </div>
+
+                <!--第一排-->
+                <div class="site"
+                     style="background-size: 100% 100%; left:96px; top: 315px; width: 274px; height: 200px; position: absolute; box-shadow: none; transform: skew(0deg, 0deg) rotateZ(0deg); font-family: Microsoft YaHei; background-color: #eb6100; overflow: hidden;">
+                    <a style="transform: rotateZ(0deg); text-align:left;font-style: normal; font-weight: normal; color: rgb(255, 255, 255);" href="javascript:showFillDiv(this);">
+                        <li style="display:block; vertical-align: middle;font-size: 36px;text-align:left; padding:10px 15px 0px 15px;">无卡无折客户</li>
+                        <li style="display:block; font-size: 26px;text-align:left; padding-left:15px;padding-right:15px;">no card customers</li>
+                        <li style="display:block;background-size: 100% 100%; left: 165px; top: 100px; width: 100px; height: 100px; position: absolute;background-image: url(../../images/q/1/buzType/08.png);"></li>
+                    </a>
+                    <a href="javascript:alert(1111);" style="display:none;">
+                        <li style="z-index: 99;display:inline-block;line-height:225px;vertical-align: middle;text-align:center;font-style: normal; font-weight: bold; font-size: 30px;display:block;background-size: 100% 100%;width:100%;height:100%;position: absolute;left: 0px; top: 0px;color: rgba(255, 255, 255, 0.8); background-color: rgba(0, 0, 0, 0.8);">暂停服务</li>
+                    </a>
+                </div>
+
+                <div class="site"
+                     style="background-size: 100% 100%; left:376px; top: 315px; width: 274px; height: 200px; position: absolute; box-shadow: none; transform: skew(0deg, 0deg) rotateZ(0deg); font-family: Microsoft YaHei; background-color: #eb6100; overflow: hidden;">
+                    <a style="transform: rotateZ(0deg); text-align:left;font-style: normal; font-weight: normal; color: rgb(255, 255, 255);" href="javascript:showFillDiv(this);">
+                        <li style="display:block; vertical-align: middle;font-size: 36px;text-align:left; padding:10px 15px 0px 15px;">无卡无折客户</li>
+                        <li style="display:block; font-size: 26px;text-align:left; padding-left:15px;padding-right:15px;">no card customers</li>
+                        <li style="display:block;background-size: 100% 100%; left: 165px; top: 100px; width: 100px; height: 100px; position: absolute;background-image: url(../../images/q/1/buzType/08.png);"></li>
+                    </a>
+                    <a href="javascript:alert(1111);" style="display:none;">
+                        <li style="z-index: 99;display:inline-block;line-height:225px;vertical-align: middle;text-align:center;font-style: normal; font-weight: bold; font-size: 30px;display:block;background-size: 100% 100%;width:100%;height:100%;position: absolute;left: 0px; top: 0px;color: rgba(255, 255, 255, 0.8); background-color: rgba(0, 0, 0, 0.8);">暂停服务</li>
+                    </a>
+                </div>
+
+                <div class="site"
+                     style="background-size: 100% 100%; left:656px; top: 522px; width: 274px; height: 200px; position: absolute; box-shadow: none; transform: skew(0deg, 0deg) rotateZ(0deg); font-family: Microsoft YaHei; background-color: #eb6100; overflow: hidden;">
+                    <a style="transform: rotateZ(0deg); text-align:left;font-style: normal; font-weight: normal; color: rgb(255, 255, 255);" href="javascript:showFillDiv(this);">
+                        <li style="display:block; vertical-align: middle;font-size: 36px;text-align:left; padding:10px 15px 0px 15px;">无卡无折客户</li>
+                        <li style="display:block; font-size: 26px;text-align:left; padding-left:15px;padding-right:15px;">no card customers</li>
+                        <li style="display:block;background-size: 100% 100%; left: 165px; top: 100px; width: 100px; height: 100px; position: absolute;background-image: url(../../images/q/1/buzType/08.png);"></li>
+                    </a>
+                    <a href="javascript:alert(1111);" style="display:none;">
+                        <li style="z-index: 99;display:inline-block;line-height:225px;vertical-align: middle;text-align:center;font-style: normal; font-weight: bold; font-size: 30px;display:block;background-size: 100% 100%;width:100%;height:100%;position: absolute;left: 0px; top: 0px;color: rgba(255, 255, 255, 0.8); background-color: rgba(0, 0, 0, 0.8);">暂停服务</li>
+                    </a>
+                </div>
+                <!--第二排-->
+                <div class="site"
+                     style="background-size: 100% 100%; left:96px; top: 522px; width: 274px; height: 200px; position: absolute; box-shadow: none; transform: skew(0deg, 0deg) rotateZ(0deg); font-family: Microsoft YaHei; background-color: #eb6100; overflow: hidden;">
+                    <a style="transform: rotateZ(0deg); text-align:left;font-style: normal; font-weight: normal; color: rgb(255, 255, 255);" href="javascript:showFillDiv(this);">
+                        <li style="display:block; vertical-align: middle;font-size: 36px;text-align:left; padding:10px 15px 0px 15px;">无卡无折客户</li>
+                        <li style="display:block; font-size: 26px;text-align:left; padding-left:15px;padding-right:15px;">no card customers</li>
+                        <li style="display:block;background-size: 100% 100%; left: 165px; top: 100px; width: 100px; height: 100px; position: absolute;background-image: url(../../images/q/1/buzType/08.png);"></li>
+                    </a>
+                    <a href="javascript:alert(1111);" style="display:none;">
+                        <li style="z-index: 99;display:inline-block;line-height:225px;vertical-align: middle;text-align:center;font-style: normal; font-weight: bold; font-size: 30px;display:block;background-size: 100% 100%;width:100%;height:100%;position: absolute;left: 0px; top: 0px;color: rgba(255, 255, 255, 0.8); background-color: rgba(0, 0, 0, 0.8);">暂停服务</li>
+                    </a>
+                </div>
+
+                <div class="site"
+                     style="background-size: 100% 100%; left:376px; top: 522px; width: 274px; height: 200px; position: absolute; box-shadow: none; transform: skew(0deg, 0deg) rotateZ(0deg); font-family: Microsoft YaHei; background-color: #eb6100; overflow: hidden;">
+                    <a style="transform: rotateZ(0deg); text-align:left;font-style: normal; font-weight: normal; color: rgb(255, 255, 255);" href="javascript:showFillDiv(this);">
+                        <li style="display:block; vertical-align: middle;font-size: 36px;text-align:left; padding:10px 15px 0px 15px;">无卡无折客户</li>
+                        <li style="display:block; font-size: 26px;text-align:left; padding-left:15px;padding-right:15px;">no card customers</li>
+                        <li style="display:block;background-size: 100% 100%; left: 165px; top: 100px; width: 100px; height: 100px; position: absolute;background-image: url(../../images/q/1/buzType/08.png);"></li>
+                    </a>
+                    <a href="javascript:alert(1111);" style="display:none;">
+                        <li style="z-index: 99;display:inline-block;line-height:225px;vertical-align: middle;text-align:center;font-style: normal; font-weight: bold; font-size: 30px;display:block;background-size: 100% 100%;width:100%;height:100%;position: absolute;left: 0px; top: 0px;color: rgba(255, 255, 255, 0.8); background-color: rgba(0, 0, 0, 0.8);">暂停服务</li>
+                    </a>
+                </div>
+
+                <div class="site"
+                     style="background-size: 100% 100%; left:656px; top: 729px; width: 274px; height: 200px; position: absolute; box-shadow: none; transform: skew(0deg, 0deg) rotateZ(0deg); font-family: Microsoft YaHei; background-color: #eb6100; overflow: hidden;">
+                    <a style="transform: rotateZ(0deg); text-align:left;font-style: normal; font-weight: normal; color: rgb(255, 255, 255);" href="javascript:showFillDiv(this);">
+                        <li style="display:block; vertical-align: middle;font-size: 36px;text-align:left; padding:10px 15px 0px 15px;">无卡无折客户</li>
+                        <li style="display:block; font-size: 26px;text-align:left; padding-left:15px;padding-right:15px;">no card customers</li>
+                        <li style="display:block;background-size: 100% 100%; left: 165px; top: 100px; width: 100px; height: 100px; position: absolute;background-image: url(../../images/q/1/buzType/08.png);"></li>
+                    </a>
+                    <a href="javascript:alert(1111);" style="display:none;">
+                        <li style="z-index: 99;display:inline-block;line-height:225px;vertical-align: middle;text-align:center;font-style: normal; font-weight: bold; font-size: 30px;display:block;background-size: 100% 100%;width:100%;height:100%;position: absolute;left: 0px; top: 0px;color: rgba(255, 255, 255, 0.8); background-color: rgba(0, 0, 0, 0.8);">暂停服务</li>
+                    </a>
+                </div>
+
+
+                <!--第三排-->
+                <div class="site"
+                     style="background-size: 100% 100%; left:96px; top: 729px; width: 274px; height: 200px; position: absolute; box-shadow: none; transform: skew(0deg, 0deg) rotateZ(0deg); font-family: Microsoft YaHei; background-color: #eb6100; overflow: hidden;">
+                    <a style="transform: rotateZ(0deg); text-align:left;font-style: normal; font-weight: normal; color: rgb(255, 255, 255);" href="javascript:showFillDiv(this);">
+                        <li style="display:block; vertical-align: middle;font-size: 36px;text-align:left; padding:10px 15px 0px 15px;">无卡无折客户</li>
+                        <li style="display:block; font-size: 26px;text-align:left; padding-left:15px;padding-right:15px;">no card customers</li>
+                        <li style="display:block;background-size: 100% 100%; left: 165px; top: 100px; width: 100px; height: 100px; position: absolute;background-image: url(../../images/q/1/buzType/08.png);"></li>
+                    </a>
+                    <a href="javascript:alert(1111);" style="display:block;">
+                        <li style="z-index: 99;display:inline-block;line-height:225px;vertical-align: middle;text-align:center;font-style: normal; font-weight: bold; font-size: 30px;display:block;background-size: 100% 100%;width:100%;height:100%;position: absolute;left: 0px; top: 0px;color: rgba(255, 255, 255, 0.8); background-color: rgba(0, 0, 0, 0.8);">暂停服务</li>
+                    </a>
+                </div>
+
+                <div class="site"
+                     style="background-size: 100% 100%; left:376px; top: 729px; width: 274px; height: 200px; position: absolute; box-shadow: none; transform: skew(0deg, 0deg) rotateZ(0deg); font-family: Microsoft YaHei; background-color: #eb6100; overflow: hidden;">
+                    <a style="transform: rotateZ(0deg); text-align:left;font-style: normal; font-weight: normal; color: rgb(255, 255, 255);" href="javascript:showFillDiv(this);">
+                        <li style="display:block; vertical-align: middle;font-size: 36px;text-align:left; padding:10px 15px 0px 15px;">无卡无折客户</li>
+                        <li style="display:block; font-size: 26px;text-align:left; padding-left:15px;padding-right:15px;">no card customers</li>
+                        <li style="display:block;background-size: 100% 100%; left: 165px; top: 100px; width: 100px; height: 100px; position: absolute;background-image: url(../../images/q/1/buzType/08.png);"></li>
+                    </a>
+                    <a href="javascript:alert(1111);" style="display:none;">
+                        <li style="z-index: 99;display:inline-block;line-height:225px;vertical-align: middle;text-align:center;font-style: normal; font-weight: bold; font-size: 30px;display:block;background-size: 100% 100%;width:100%;height:100%;position: absolute;left: 0px; top: 0px;color: rgba(255, 255, 255, 0.8); background-color: rgba(0, 0, 0, 0.8);">暂停服务</li>
+                    </a>
+                </div>
+
+                <div class="site"
+                     style="background-size: 100% 100%; left:656px; top: 315px; width: 274px; height: 200px; position: absolute; box-shadow: none; transform: skew(0deg, 0deg) rotateZ(0deg); font-family: Microsoft YaHei; background-color: #eb6100; overflow: hidden;">
+                    <a style="transform: rotateZ(0deg); text-align:left;font-style: normal; font-weight: normal; color: rgb(255, 255, 255);" href="javascript:showFillDiv(this);">
+                        <li style="display:block; vertical-align: middle;font-size: 36px;text-align:left; padding:10px 15px 0px 15px;">无卡无折客户</li>
+                        <li style="display:block; font-size: 26px;text-align:left; padding-left:15px;padding-right:15px;">no card customers</li>
+                        <li style="display:block;background-size: 100% 100%; left: 165px; top: 100px; width: 100px; height: 100px; position: absolute;background-image: url(../../images/q/1/buzType/08.png);"></li>
+                    </a>
+                    <a href="javascript:alert(1111);" style="display:none;">
+                        <li style="z-index: 99;display:inline-block;line-height:225px;vertical-align: middle;text-align:center;font-style: normal; font-weight: bold; font-size: 30px;display:block;background-size: 100% 100%;width:100%;height:100%;position: absolute;left: 0px; top: 0px;color: rgba(255, 255, 255, 0.8); background-color: rgba(0, 0, 0, 0.8);">暂停服务</li>
+                    </a>
+                </div>
+            </div>
+            <!--首页菜单页面-->
+            <div name="biz" id="biz1" style="display:block;background-size: 100% 100%; float: left; position: relative; padding: 0px; margin: 0px; width: 100%; border: 0px solid rgb(5, 100, 152); height: 1280px; background-image: url(../../images/background/11.jpg);">
+                <!--系统时间-->
+                <div class="site"
+                     style="display:none;background-size: 100% 100%; left: 600px; top: 0px; width: 400px; height: 90px; z-index: 10; box-shadow: none; transform: skew(0deg, 0deg) rotateZ(0deg); font-family: Microsoft YaHei; background-color: rgba(182, 215, 168, 0); overflow: hidden;">
+                    <label name="systemTime"
+                           style="display: table-cell; vertical-align: middle; background-size: 100% 100%; left: 0px; top: 0px; width: 100%; height: 100%; cursor: default; font-style: normal; font-weight: normal; font-size: 20.1px; color: rgba(74, 134, 232, 0.87);">
+                        2016年12月19日
+                        21:43:57 星期一
+                    </label>
+                </div>
+                <!--登录-->
+                <div class="site" name="login" style="border: 0px solid #ffffff;display:block;background-size: 100% 100%; left: 200px; top: 150px; width: 600px; height: auto; z-index: 999; border-radius:16px;box-shadow: none; transform: skew(0deg, 0deg) rotateZ(0deg);font-size:40px;font-weight:bold;font-family: Microsoft YaHei; background-color: rgba(218, 231, 242, 1); overflow: hidden;padding-top:50px;padding-bottom:50px;">
+                    <li style="display:block;margin:0;padding:0;">密码键盘</li>
+                    <!--循环消息-->>
+                    <li id="loginError" style="display:none;margin-top:20px;box-shadow:0 0 3px 3px rgba(235,190,240,0.6);border-radius:16px;background-size: 100% 100%;width:80%; vertical-align: middle;font-size: 40px;text-align:center; background-color:rgba(194,231,240,1); color: #000000;padding:40px;">
+                        <label style="display:block;text-align:left;font-size: 30px;margin-top:20px;">为了节省您的时间，如果您需要办理存款或者20000元以内取款业务，建议到我行自动取款机或者存取款一体机办理。</label>
+                        <label style="display:none;text-align:left;font-size: 26px;">To save your time, if you need to conduct deposit or withdrawal within RMB20,000, we suggest you conduct such business with the self-service ATM or CRS of ICBC.</label>
+                    </li>
+                    <li style="display:block;box-sizing:border-box;margin:0;padding:0;margin-top:20px;"><input type="password" id="password" maxlength="11" style="font-weight:bold;margin:0px 1px 8px 1px;width:470px;height:80px;border-radius:8px;background-size: 100% 100%;background-color:rgba(194,231,240,1);" /></li>
+                    <li style="display:block;box-sizing:border-box;margin:0;padding:0;margin-top:20px;" name="keys">
+                        <input type="button" onclick="cal(this);" style="font-weight:bold;margin:0px 1px 8px 1px;width:150px;height:80px;border-radius:8px;background-size: 100% 100%;background-color:#4875f7;" value="1" />
+                        <input type="button" onclick="cal(this);" style="font-weight:bold;margin:0px 1px 8px 1px;width:150px;height:80px;border-radius:8px;background-size: 100% 100%;background-color:#4875f7;" value="2" />
+                        <input type="button" onclick="cal(this);" style="font-weight:bold;margin:0px 1px 8px 1px;width:150px;height:80px;border-radius:8px;background-size: 100% 100%;background-color:#4875f7;" value="3" />
+                        <input type="button" onclick="cal(this);" style="font-weight:bold;margin:0px 1px 8px 1px;width:150px;height:80px;border-radius:8px;background-size: 100% 100%;background-color:#4875f7;" value="4" />
+                        <input type="button" onclick="cal(this);" style="font-weight:bold;margin:0px 1px 8px 1px;width:150px;height:80px;border-radius:8px;background-size: 100% 100%;background-color:#4875f7;" value="5" />
+                        <input type="button" onclick="cal(this);" style="font-weight:bold;margin:0px 1px 8px 1px;width:150px;height:80px;border-radius:8px;background-size: 100% 100%;background-color:#4875f7;" value="6" />
+                        <input type="button" onclick="cal(this);" style="font-weight:bold;margin:0px 1px 8px 1px;width:150px;height:80px;border-radius:8px;background-size: 100% 100%;background-color:#4875f7;" value="7" />
+                        <input type="button" onclick="cal(this);" style="font-weight:bold;margin:0px 1px 8px 1px;width:150px;height:80px;border-radius:8px;background-size: 100% 100%;background-color:#4875f7;" value="8" />
+                        <input type="button" onclick="cal(this);" style="font-weight:bold;margin:0px 1px 8px 1px;width:150px;height:80px;border-radius:8px;background-size: 100% 100%;background-color:#4875f7;" value="9" />
+                        <input type="button" onclick="cal(this);" style="font-weight:bold;margin:0px 1px 8px 1px;width:150px;height:80px;border-radius:8px;background-size: 100% 100%;background-color:#4875f7;" value="清除" />
+                        <input type="button" onclick="cal(this);" style="font-weight:bold;margin:0px 1px 8px 1px;width:150px;height:80px;border-radius:8px;background-size: 100% 100%;background-color:#4875f7;" value="0" />
+                        <input type="button" onclick="login();" style="font-weight:bold;margin:0px 1px 8px 1px;width:150px;height:80px;border-radius:8px;background-size: 100% 100%;background-color:#4875f7;" value="确认" />
+                    </li>
+                    <li onclick="closeLogin(1);" style="border-radius:8px;display:inline-block;width:50%;text-align:center;background-color:rgba(122,175,59,1);padding:20px;font-size:30px;margin-top:30px;">
+                        <label style="display:block;text-align:center;">返回</label>
+                        <label style="display:none;text-align:center;">Close</label>
+                    </li>
+                </div>
+                <!--主机-->
+                <div class="site" name="status"
+                     style="background-size: 100% 100%; left: 650px; top: 50px; width: 350px; height: 50px; z-index: 10; box-shadow: none; transform: skew(0deg, 0deg) rotateZ(0deg); font-family: Microsoft YaHei; background-color: rgba(182, 215, 168, 0); overflow: hidden;">
+                    <li style="width:100%;display:inline-block; vertical-align: middle;font-size: 24px;text-align:center; color: #ffffff;">
+                        主机<img id="status1" style="width:20px;height:20px;" src="../../images/q/1/green.png" />&nbsp;|&nbsp;备机<img id="status2" style="width:20px;height:20px;" src="../../images/q/1/green.png" />&nbsp;|&nbsp;<span style="display:inline-block;" id="status3">联机</span>&nbsp;|&nbsp;<span style="display:inline-block;" id="status4">值守</span>
+                    </li>
+                </div>
+                <!--刷卡箭头-->
+                <div class="site" name="swipeTip"
+                     style="display:none;background-size: 100% 100%; left: 150px; top: 250px; width: 80%; height: 150px; z-index: 10; box-shadow: none; transform: skew(0deg, 0deg) rotateZ(0deg); font-family: Microsoft YaHei; background-color: rgba(182, 215, 168, 0); overflow: hidden;">
+                    <li style="width:80%;display:inline-block; vertical-align: middle;font-size: 40px;text-align:center; color: #ffffff;">
+                        <label style="display:block;text-align:left;">您好 , 个人客户请刷卡(折)取号!</label>
+                        <label style="display:block;text-align:left;">hello,personal customer,swipe your card(PB) to get No</label>
+                    </li>
+                    <li style="background-size: 100% 100%;width:18%;height:100px;background-image: url(../../../qms/images/q/1/jt.gif);display:inline-block; vertical-align: middle;">
+                    </li>
+                </div>
+                <!--提示信息-->
+                <div class="site" name="remind"
+                     style="background-size: 100% 100%; left: 0; top: 1000px; width: 1024px; height: 80px; z-index: 10; box-shadow: none; transform: skew(0deg, 0deg) rotateZ(0deg); font-family: Microsoft YaHei; background-color: rgba(50, 50, 50, 0.6); overflow: hidden;">
+                    <li style="width:100%;height:100%;display: table-cell;vertical-align: middle;font-size: 30px;text-align:center; color: #ffffff;">
+                        <marquee style="display: table-cell;vertical-align: middle;" width=100% height=100% scrollAmount="15" effect="marquee" scrollDelay=200 behavior="scroll" direction="left">提示 : 为了节省您的时间,2万元以下存取业务,请前往自助区域,为了节省您的时间,2万元以下存取业务,请前往自助区域,为了节省您的时间,2万元以下存取业务,请前往自助区域</marquee>
+                    </li>
+                </div>
+                <!--最下方提示-->
+                <div class="site" name="warmPrompt"
+                     style="background-size: 100% 100%; left: 250px; top: 1100px; width: 50%; height: 150px; z-index: 10; box-shadow: none; transform: skew(0deg, 0deg) rotateZ(0deg); font-family: Microsoft YaHei; background-color: rgba(182, 215, 168, 0); overflow: hidden;">
+                    <li style="width:100%;display:inline-block; vertical-align: middle;font-size: 26px;text-align:center; color: #ffffff;">
+                        <label style="display:block;text-align:left;">温馨提示 : 如有疑问 , 请咨询大堂经理</label>
+                        <label style="display:block;text-align:left;">warm prompt:for any questions,please consult the lobby manager</label>
+                    </li>
+                </div>
+                <!--排队号-->
+                <div class="site" name="queueNo"
+                     style="background-size: 100% 100%; left: 10px; top: 1240px; width: 250px; height: 50px; z-index: 10; box-shadow: none; transform: skew(0deg, 0deg) rotateZ(0deg); font-family: Microsoft YaHei; background-color: rgba(182, 215, 168, 0); overflow: hidden;">
+                    <li style="width:100%;display:inline-block; vertical-align: middle;font-size: 24px;text-align:center; color: #ffffff;">
+                        <label style="display:inline-block;text-align:left;">D0002</label>
+                        <label style="display:inline-block;text-align:left;"><span id="star">5</span>:<span id="code">000000000</span></label>
+                    </li>
+                </div>
+                <!--消息-->
+                <div class="site" name="message" style="background-size: 100% 100%; left: 100px; top: 350px; width: 80%; height: 150px; z-index: 10; box-shadow: none; transform: skew(0deg, 0deg) rotateZ(0deg); font-family: Microsoft YaHei; background-color: rgba(182, 215, 168, 0); overflow: hidden;">
+                    <li style="width:80%;display:inline-block; vertical-align: middle;font-size: 40px;text-align:center; color: #ffffff;">
+                        <label style="display:block;text-align:left;">排队机当前不允许脱机取号，请咨询大堂经理!</label>
+                        <label style="display:block;text-align:left;">Queuing machine is unavailable for obtaining the access number offline currently. Please consult the lobby manager.</label>
+                    </li>
+                </div>
+                <!--无卡无折户-->
+                <div class="site"
+                     style="background-size: 100% 100%; left:195px; top: 455px; width: 300px; height: 225px; position: absolute; box-shadow: none;
+                        transform: skew(0deg, 0deg) rotateZ(0deg); font-family: Microsoft YaHei; background-color: #eb6100; overflow: hidden;">
+                    <a style="transform: rotateZ(0deg); text-align:left;font-style: normal; font-weight: normal; color: rgb(255, 255, 255);"
+                       href="javascript:showFillDiv(this);">
+                        <li style="display:block; vertical-align: middle;font-size: 41px;text-align:left; padding:10px 15px 0px 15px;">无卡无折客户</li>
+                        <li style="display:block; font-size: 30px;text-align:left; padding-left:15px;padding-right:15px;">no card customers</li>
+                        <li style="display:block;background-size: 100% 100%; left: 165px; top: 100px; width: 100px; height: 100px;
+                        position: absolute;background-image: url(../../images/q/1/buzType/07.png);"></li>
+                    </a>
+                    <a href="javascript:alert(1111);" style="display:none;">
+                        <li style="z-index: 99;display:inline-block;line-height:225px;vertical-align: middle;text-align:center;font-style: normal; font-weight: bold; font-size: 30px;display:block;background-size: 100% 100%;width:100%;height:100%;position: absolute;left: 0px; top: 0px;color: rgba(255, 255, 255, 0.8); background-color: rgba(0, 0, 0, 0.8);">暂停服务</li>
+                    </a>
+                </div>
+                <!--对公-->
+                <div class="site"
+                     style="background-size: 100% 100%; left: 529px; top: 455px; width: 300px; height: 225px; position: absolute; box-shadow: none; transform: skew(0deg, 0deg) rotateZ(0deg); font-family: Microsoft YaHei; background-color: #ca4341; overflow: hidden;">
+                    <a style="transform: rotateZ(0deg); text-align:left;font-style: normal; font-weight: normal; color: rgb(255, 255, 255);" href="javascript:showFillDiv(this);">
+                        <li style="display:block; vertical-align: middle;font-size: 41px;text-align:left; padding:10px 15px 0px 15px;">对公业务</li>
+                        <li style="display:block; font-size: 30px;text-align:left; padding-left:15px;padding-right:15px;">corporate banking</li>
+                        <li style="display:block;background-size: 100% 100%; left: 165px; top: 100px; width: 100px; height: 100px; position: absolute;background-image: url(../../images/q/1/buzType/dgyw.png);"></li>
+                    </a>
+                    <a href="javascript:alert(1111);" style="display:none;">
+                        <li style="z-index: 99;display:inline-block;line-height:225px;vertical-align: middle;text-align:center;font-style: normal; font-weight: bold; font-size: 30px;display:block;background-size: 100% 100%;width:100%;height:100%;position: absolute;left: 0px; top: 0px;color: rgba(255, 255, 255, 0.8); background-color: rgba(0, 0, 0, 0.8);">暂停服务</li>
+                    </a>
+                </div>
+                <!--预约-->
+                <div class="site"
+                     style="background-size: 100% 100%; left:195px; top: 715px; width: 300px; height: 225px; position: absolute; box-shadow: none; transform: skew(0deg, 0deg) rotateZ(0deg); font-family: Microsoft YaHei; background-color: #4875f7; overflow: hidden;">
+                    <a style="transform: rotateZ(0deg); text-align:left;font-style: normal; font-weight: normal; color: rgb(255, 255, 255);" href="javascript:showFillDiv(this);">
+
+                        <li style="display:block; vertical-align: middle;font-size: 41px;text-align:left; padding:10px 15px 0px 15px;">预约客户	</li>
+                        <li style="display:block; font-size: 30px;text-align:left; padding-left:15px;padding-right:15px;">by appointment</li>
+                        <li style="display:block;background-size: 100% 100%; left: 165px; top: 100px; width: 100px; height: 100px; position: absolute;background-image: url(../../images/q/1/buzType/08.png);"></li>
+                    </a>
+                    <a href="javascript:alert(1111);" style="display:none;">
+                        <li style="z-index: 99;display:inline-block;line-height:225px;vertical-align: middle;text-align:center;font-style: normal; font-weight: bold; font-size: 30px;display:block;background-size: 100% 100%;width:100%;height:100%;position: absolute;left: 0px; top: 0px;color: rgba(255, 255, 255, 0.8); background-color: rgba(0, 0, 0, 0.8);">暂停服务</li>
+                    </a>
+                </div>
+                <!--其他-->
+                <div class="site"
+                     style="background-size: 100% 100%; left: 529px; top: 715px; width: 300px; height: 225px; position: absolute; box-shadow: none; transform: skew(0deg, 0deg) rotateZ(0deg); font-family: Microsoft YaHei; background-color: #1fbde5; overflow: hidden;">
+                    <a style="transform: rotateZ(0deg); text-align:left;font-style: normal; font-weight: normal; color: rgb(255, 255, 255);"
+                       href="javascript:showFillDiv(this);">
+
+                        <li style="display:block; vertical-align: middle;font-size: 41px;text-align:left; padding:10px 15px 0px 15px;">其他网点信息</li>
+                        <li style="display:block; font-size: 30px;text-align:left; padding-left:15px;padding-right:15px;">other services outlets</li>
+                        <li style="display:block;background-size: 100% 100%; left: 165px; top: 100px; width: 100px; height: 100px; position: absolute;background-image: url(../../images/q/1/buzType/03.png);"></li>
+                    </a>
+                    <a href="javascript:alert(1111);" style="display:none;">
+                        <li style="z-index: 99;display:inline-block;line-height:225px;vertical-align: middle;text-align:center;font-style: normal; font-weight: bold; font-size: 30px;display:block;background-size: 100% 100%;width:100%;height:100%;position: absolute;left: 0px; top: 0px;color: rgba(255, 255, 255, 0.8); background-color: rgba(0, 0, 0, 0.8);">暂停服务</li>
+                    </a>
+                </div>
+            </div>
+            <!--加载预约取号二级菜单页面-->>
+            <div name="biz" id="yyqh" style="display:none;background-size: 100% 100%; float: left; position: relative; padding: 0px; margin: 0px; width: 100%; border: 0px solid rgb(5, 100, 152); height: 1280px; background-image: url(../../images/background/11.jpg);">
+                <div class="site" onclick="back();" name="backBtn" style="cursor:pointer;z-index: 1000; background-size: 100% 100%; left: 820px; top: 1070px; width: 92px; height: 149px; box-shadow: none; transform: skew(0deg, 0deg) rotateZ(0deg); font-family: Microsoft YaHei; background-image:url(../../images/q/1/out.png); overflow: hidden;">
+                </div>
+                <div class="site" name="pageTimeout"
+                     style="background-size: 100% 100%; left: 650px; top: 70px; width: 300px; height: 90px; z-index: 10; box-shadow: none; transform: skew(0deg, 0deg) rotateZ(0deg); font-family: Microsoft YaHei; background-color: rgba(182, 215, 168, 0); overflow: hidden;">
+                    <li name="systemTime"
+                        style="display: table-cell; vertical-align: middle; background-size: 100% 100%; left: 0px; top: 0px; width: 100%; height: 100%; cursor: default; font-style: normal; font-weight: normal; font-size: 26px; color: #ffffff;">页面停留时间<span style="display:inline-block;width:60px;font-size:40px;color: rgba(134, 234, 234, 0.6);" id="pageTimeout">20</span>秒</li>
+                </div>
+                <div class="site" name="swipeTip" style="display:block;background-size: 100% 100%; left: 120px; top: 250px; width: 80%; height: auto; z-index: 10; box-shadow: none; transform: skew(0deg, 0deg) rotateZ(0deg); font-family: Microsoft YaHei; background-color: rgba(182, 215, 168, 0); overflow: hidden;">
+                    <li style="width:80%;display:inline-block; vertical-align: middle;font-size: 40px;text-align:center; color: #ffffff;">
+                        <label style="display:block;text-align:left;">请使用您的卡、存折或身份证进行取号 或请输入预约手机号取号</label>
+                        <label style="display:block;text-align:left;">Please use your card, passbook or ID to obtain an access number</label>
+                    </li>
+                    <li style="background-size: 100% 100%;width:18%;height:100px;background-image: url(../../../qms/images/q/1/jt.gif);display:inline-block; vertical-align: middle;">
+                    </li>
+                </div>
+                <div class="site" name="keybord" style="border: 0px solid #ffffff;display:block;background-size: 100% 100%; left: 200px; top: 550px; width: 600px; height: auto; z-index: 10; box-shadow: none; transform: skew(0deg, 0deg) rotateZ(0deg);font-size:40px;font-weight:bold;font-family: Microsoft YaHei; background-color: rgba(182, 215, 168, 0); overflow: hidden;">
+
+                    <li style="display:block;box-sizing:border-box;margin:0;padding:0;"><input id="phoneNo" type="text" maxlength="11" style="font-weight:bold;margin:0px 1px 8px 1px;width:92%;height:80px;border-radius:8px;background-size: 100% 100%;background-color:rgba(194,231,240,1);" /></li>
+                    <li style="display:block;box-sizing:border-box;margin:0;padding:0;margin-top:20px;" name="keys">
+                        <input type="button" onclick="cal(this);" style="font-weight:bold;margin:0px 1px 8px 1px;width:30%;height:80px;border-radius:8px;background-size: 100% 100%;background-color:rgba(194,231,240,1);" value="1" />
+                        <input type="button" onclick="cal(this);" style="font-weight:bold;margin:0px 1px 8px 1px;width:30%;height:80px;border-radius:8px;background-size: 100% 100%;background-color:rgba(194,231,240,1);" value="2" />
+                        <input type="button" onclick="cal(this);" style="font-weight:bold;margin:0px 1px 8px 1px;width:30%;height:80px;border-radius:8px;background-size: 100% 100%;background-color:rgba(194,231,240,1);" value="3" />
+                        <input type="button" onclick="cal(this);" style="font-weight:bold;margin:0px 1px 8px 1px;width:30%;height:80px;border-radius:8px;background-size: 100% 100%;background-color:rgba(194,231,240,1);" value="4" />
+                        <input type="button" onclick="cal(this);" style="font-weight:bold;margin:0px 1px 8px 1px;width:30%;height:80px;border-radius:8px;background-size: 100% 100%;background-color:rgba(194,231,240,1);" value="5" />
+                        <input type="button" onclick="cal(this);" style="font-weight:bold;margin:0px 1px 8px 1px;width:30%;height:80px;border-radius:8px;background-size: 100% 100%;background-color:rgba(194,231,240,1);" value="6" />
+                        <input type="button" onclick="cal(this);" style="font-weight:bold;margin:0px 1px 8px 1px;width:30%;height:80px;border-radius:8px;background-size: 100% 100%;background-color:rgba(194,231,240,1);" value="7" />
+                        <input type="button" onclick="cal(this);" style="font-weight:bold;margin:0px 1px 8px 1px;width:30%;height:80px;border-radius:8px;background-size: 100% 100%;background-color:rgba(194,231,240,1);" value="8" />
+                        <input type="button" onclick="cal(this);" style="font-weight:bold;margin:0px 1px 8px 1px;width:30%;height:80px;border-radius:8px;background-size: 100% 100%;background-color:rgba(194,231,240,1);" value="9" />
+                        <input type="button" onclick="cal(this);" style="font-weight:bold;margin:0px 1px 8px 1px;width:30%;height:80px;border-radius:8px;background-size: 100% 100%;background-color:rgba(194,231,240,1);" value="清除" />
+                        <input type="button" onclick="cal(this);" style="font-weight:bold;margin:0px 1px 8px 1px;width:30%;height:80px;border-radius:8px;background-size: 100% 100%;background-color:rgba(194,231,240,1);" value="0" />
+                        <input type="button" onclick="cal(this);" style="font-weight:bold;margin:0px 1px 8px 1px;width:30%;height:80px;border-radius:8px;background-size: 100% 100%;background-color:rgba(122,175,59,1);border-color: rgba(122,175,59,1);" value="确认" />
+                    </li>
+                </div>
+            </div>
+            <!--错误页面-->
+            <div name="biz" id="error" style="display:none;background-size: 100% 100%; float: left; position: relative; padding: 0px; margin: 0px; width: 100%; border: 0px solid rgb(5, 100, 152); height: 1280px; background-image: url(../../images/background/11.jpg);">
+                <div class="site" name="pageTimeout"
+                     style="background-size: 100% 100%; left: 650px; top: 70px; width: 300px; height: 90px; z-index: 10; box-shadow: none; transform: skew(0deg, 0deg) rotateZ(0deg); font-family: Microsoft YaHei; background-color: rgba(182, 215, 168, 0); overflow: hidden;">
+                    <li name="systemTime"
+                        style="display: table-cell; vertical-align: middle; background-size: 100% 100%; left: 0px; top: 0px; width: 100%; height: 100%; cursor: default; font-style: normal; font-weight: normal; font-size: 26px; color: #ffffff;">页面停留时间<span style="display:inline-block;width:60px;font-size:40px;color: rgba(134, 234, 234, 0.6);" id="pageTimeout">20</span>秒</li>
+                </div>
+                <div class="site" onclick="back();" name="backBtn" style="cursor:pointer;z-index: 1000; background-size: 100% 100%; left: 820px; top: 1070px; width: 92px; height: 149px; box-shadow: none; transform: skew(0deg, 0deg) rotateZ(0deg); font-family: Microsoft YaHei; background-image:url(../../images/q/1/out.png); overflow: hidden;">
+                </div>
+                <div class="site" name="errorMessage" style="background-size: 100% 100%; left: 100px; top: 350px; width: 80%; height: 150px; z-index: 10; box-shadow: none; transform: skew(0deg, 0deg) rotateZ(0deg); font-family: Microsoft YaHei; background-color: rgba(182, 215, 168, 0); overflow: hidden;">
+                    <li style="width:80%;display:inline-block; vertical-align: middle;font-size: 40px;text-align:center; color: #ffffff;">
+                        <label style="display:block;text-align:center;" id="errorMessage"></label>
+                        <label style="display:block;text-align:center;"></label>
+                    </li>
+                    <li style="border-radius:8px;display:inline-block;width:50%;text-align:center;background-color:rgba(122,175,59,1);padding:20px;font-size:30px;margin-top:30px;">
+                        <label style="display:block;text-align:center;" onclick="goGetTicket(this,1);" id="errorBtn1">取号并取消预约</label>
+                        <label style="display:block;text-align:center;">Continue get No.</label>
+                    </li>
+                    <li style="border-radius:8px;display:inline-block;width:50%;text-align:center;background-color:#4875f7;padding:20px;font-size:30px;margin-top:30px;">
+                        <label style="display:block;text-align:center;" onclick="goGetTicket(this,2);" id="errorBtn2">取号不取消预约</label>
+                        <label style="display:block;text-align:center;">Continue get No.</label>
+                    </li>
+                </div>
+            </div>
+            <!--二级菜单页面-->
+            <div name="biz" id="qtwdxx" style="display:none;background-size: 100% 100%; float: left; position: relative; padding: 0px; margin: 0px; width: 100%; border: 0px solid rgb(5, 100, 152); height: 1280px; background-image: url(../../images/background/11.jpg);">
+                <div class="site" onclick="back();" name="backBtn" style="cursor:pointer;z-index: 1000; background-size: 100% 100%; left: 820px; top: 1070px; width: 92px; height: 149px; box-shadow: none; transform: skew(0deg, 0deg) rotateZ(0deg); font-family: Microsoft YaHei; background-image:url(../../images/q/1/out.png); overflow: hidden;">
+                </div>
+                <div class="site" name="pageTimeout"
+                     style="background-size: 100% 100%; left: 650px; top: 70px; width: 300px; height: 90px; z-index: 10; box-shadow: none; transform: skew(0deg, 0deg) rotateZ(0deg); font-family: Microsoft YaHei; background-color: rgba(182, 215, 168, 0); overflow: hidden;">
+                    <li name="systemTime"
+                        style="display: table-cell; vertical-align: middle; background-size: 100% 100%; left: 0px; top: 0px; width: 100%; height: 100%; cursor: default; font-style: normal; font-weight: normal; font-size: 26px; color: #ffffff;">页面停留时间<span style="display:inline-block;width:60px;font-size:40px;color: rgba(134, 234, 234, 0.6);" id="pageTimeout">20</span>秒</li>
+                </div>
+                <div class="site" name="qtwdxx" style="background-size: 100% 100%; left: 100px; top: 250px;  z-index: 10; box-shadow: none; transform: skew(0deg, 0deg) rotateZ(0deg); background-color: rgba(182, 215, 168, 0); overflow: hidden;">
+                    <div style="color:#ffffff;font-family: Microsoft YaHei;text-align:center;font-size:45px;">附近网点</div>
+                    <div id="dataList" class="table-c" style="margin-top:20px;height:600px;">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>网点名称</th>
+                                    <th>等待客户数</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>北京网动行</td><td>1</td></tr>
+                                <tr><td>北京网动行</td><td>1</td></tr>
+                                <tr><td>北京网动行</td><td>1</td></tr>
+                                <tr><td>北京网动行</td><td>1</td></tr>
+                                <tr><td>北京网动行</td><td>1</td></tr>
+                                <tr><td>北京网动行</td><td>1</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="pages" style="display:block;">
+                        <div id="Pagination">
+                            <a href="#" class="first" data-action="first">&laquo;</a>
+                            <a href="#" class="previous" data-action="previous">上一页</a>
+                            <input type="text" readonly="readonly" data-max-page="40" />
+                            <a href="#" class="next" data-action="next">下一页</a>
+                        </div>
+                        <div class="searchPage" style="display:none;">
+                            <span class="page-sum">共<strong class="allPage">15</strong>页</span>
+                            <span class="page-go">跳转<input type="text">页</span>
+                            <a href="javascript:;" class="page-btn">GO</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<!--加载页面-->>
+		<div id="loading" style="display:block;position: absolute; top: 0%; left: 0%; width: 100%; height: 100%; background-color: black; z-index:1001; -moz-opacity: 0.7; opacity:.70; filter: alpha(opacity=70);overflow:hidden;">
+			<div class ="site" name="loading" style="position:absolute;z-index:1001;text-align:center;background-size: 100% 100%; left:10%; top: 40%; width: 80%; height: auto;box-shadow: none; transform: skew(0deg, 0deg) rotateZ(0deg); font-family: Microsoft YaHei; background-color: rgba(218, 231, 242, 0); overflow: hidden;">
+				<li style="background-size: 100% 100%; vertical-align: middle;display:inline-block;width:152px;height:152px;text-align:center;background-image: url(../../images/q/1/dd.gif);font-size:50px;color:#ffffff;" >
+				</li>
+				<li style="margin-top:50px;vertical-align: middle;display:inline-block;text-align:center;background-color:rgba(122,175,59,0);font-size:50px;color:#ffffff;" >
+					<label style="display:block;text-align:center;">正在处理中,请稍候......</label>
+					<label style="display:block;text-align:center;">Queuing parameters are being obtained. Please wait…</label>
+				</li>	
+			</div>	
+		</div>	
+		
+		<div id="forLogin" style="display:block;  center 0 no-repeat; position: absolute; top: 50px; left: 50px; z-index: 1000; font-size: 24px;">
+			<img style="width:auto;height:60px;" src="../../../images/logo.png" alt="" USEMAP="#SystemMap"/>
+			<MAP NAME="SystemMap">
+				<AREA SHAPE="rect" COORDS="0,0,100,60" onclick="showLogin(1);">
+			</MAP>
+		</div>
+	</div>
+  
+  
+	<script type="text/javascript" src="../../../js/lib/jquery/jquery.js"></script>
+	<script type="text/javascript" src="../../../js/lib/jquery/plugins/jquery.string.js"></script>
+	<script type="text/javascript" src="../../../js/lib/jquery/plugins/jquery.string.js"></script>
+	<script type="text/javascript" src="../../../js/lib/jquery/plugins/jquery.json.js"></script>
+	<script type="text/javascript" src="../../js/lib/jquery/plugins/jquery.pagination.js"></script>
+	<script type="text/javascript" src="../../../js/lib/date/date.js"></script>
+	<script type="text/javascript" src="../../../js/lib/date/date-zh-CN.js"></script>
+	<script type="text/javascript" src="../../../js/peripheral.js"></script>
+	<script type="text/javascript" src="../../js/ticket.js"></script>
+	<script type="text/javascript" src="../../js/validation.js"></script>
+	<script type="text/javascript" src="../../../js/lib/jquery/plugins/highlight.pack.js"></script>
+	<script type="text/javascript" src="../../../js/lib/jquery/plugins/tabifier.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+D:\智慧邮局\代码\clientsrc\Aoto.PPS.PeripheralTest\obj\x86\Debug\Aoto.PPS.PeripheralTest.csprojAssemblyReference.cache
+D:\智慧邮局\代码\clientsrc\Aoto.PPS.PeripheralTest\obj\x86\Debug\Aoto.PPS.PeripheralTest.FrmShell.resources
+D:\智慧邮局\代码\clientsrc\Aoto.PPS.PeripheralTest\obj\x86\Debug\Aoto.PPS.PeripheralTest.csproj.GenerateResource.cache
+D:\智慧邮局\代码\clientsrc\Aoto.PPS.PeripheralTest\obj\x86\Debug\Aoto.PPS.PeripheralTest.csproj.CoreCompileInputs.cache
+D:\智慧邮局\clientsrc\Aoto.PPS.PeripheralTest\obj\x86\Debug\Aoto.PPS.PeripheralTest.csprojAssemblyReference.cache
+D:\智慧邮局\clientsrc\Aoto.PPS.PeripheralTest\obj\x86\Debug\Aoto.PPS.PeripheralTest.FrmShell.resources
+D:\智慧邮局\clientsrc\Aoto.PPS.PeripheralTest\obj\x86\Debug\Aoto.PPS.PeripheralTest.csproj.GenerateResource.cache
+D:\智慧邮局\clientsrc\Aoto.PPS.PeripheralTest\obj\x86\Debug\Aoto.PPS.PeripheralTest.csproj.CoreCompileInputs.cache

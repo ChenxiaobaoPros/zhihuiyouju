@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E9F830B1-F0E1-4E76-9B6C-1AAE5553FF2F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Aoto.CQMS.Core</RootNamespace>
+    <AssemblyName>Aoto.CQMS.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Application\IAboutService.cs" />
+    <Compile Include="Application\IBasicconfigService.cs" />
+    <Compile Include="Application\IBiomqmscardbinService.cs" />
+    <Compile Include="Application\IBoxRestart.cs" />
+    <Compile Include="Application\IBrnocondsService.cs" />
+    <Compile Include="Application\IBusinesshallService.cs" />
+    <Compile Include="Application\ICounterconfigService.cs" />
+    <Compile Include="Application\ICustgetseqService.cs" />
+    <Compile Include="Application\IDeleteabolishNumberService.cs" />
+    <Compile Include="Application\IIcbcspecialuseService.cs" />
+    <Compile Include="Application\ILinkageshutdownService.cs" />
+    <Compile Include="Application\ILocalcardtypeService.cs" />
+    <Compile Include="Application\ILocalNumberQueryService.cs" />
+    <Compile Include="Application\ILogService.cs" />
+    <Compile Include="Application\Impl\AboutServiceImpl.cs" />
+    <Compile Include="Application\Impl\BasicconfigServiceImpl.cs" />
+    <Compile Include="Application\Impl\BoxRestartServiceImpl.cs" />
+    <Compile Include="Application\Impl\BrnocondsServiceImpl.cs" />
+    <Compile Include="Application\Impl\BusinesshallServiceImpl.cs" />
+    <Compile Include="Application\Impl\CounterconfigServiceImpl.cs" />
+    <Compile Include="Application\Impl\CustgetseqServiceImpl.cs" />
+    <Compile Include="Application\ILocalcardbinService.cs" />
+    <Compile Include="Application\Impl\DeleteabolishNumberServiceImpl.cs" />
+    <Compile Include="Application\Impl\IcbcspecialuseServiceImpl.cs" />
+    <Compile Include="Application\Impl\LinkageshutdownServiceImpl.cs" />
+    <Compile Include="Application\Impl\LocalcardbinServiceImpl.cs" />
+    <Compile Include="Application\Impl\LocalcardtypeServiceImpl.cs" />
+    <Compile Include="Application\Impl\LocalNumberQueryServiceImpl.cs" />
+    <Compile Include="Application\Impl\LogServiceImpl.cs" />
+    <Compile Include="Application\Impl\QcmConfigServiceImpl.cs" />
+    <Compile Include="Application\Impl\QmssignServiceImpl.cs" />
+    <Compile Include="Application\Impl\QueuequeryServiceImpl.cs" />
+    <Compile Include="Application\Impl\ReservationServiceImpl.cs" />
+    <Compile Include="Application\Impl\ServicequeryServiceImpl.cs" />
+    <Compile Include="Application\Impl\StateUpdateServiceImpl.cs" />
+    <Compile Include="Application\Impl\SystemServiceImpl.cs" />
+    <Compile Include="Application\Impl\TicketsconfigServiceImpl.cs" />
+    <Compile Include="Application\Impl\UpdateconfigServiceImpl.cs" />
+    <Compile Include="Application\Impl\VoiceconfigServiceImpl.cs" />
+    <Compile Include="Application\IQcmConfigService.cs" />
+    <Compile Include="Application\IQmssignService.cs" />
+    <Compile Include="Application\IQueuequeryService.cs" />
+    <Compile Include="Application\IReservationService.cs" />
+    <Compile Include="Application\IServicequeryService.cs" />
+    <Compile Include="Application\IStateUpdateService.cs" />
+    <Compile Include="Application\ISystemService.cs" />
+    <Compile Include="Application\ITicketsconfigService.cs" />
+    <Compile Include="Application\IUpdateconfigService.cs" />
+    <Compile Include="Application\IVoiceconfigService.cs" />
+    <Compile Include="Heartbeat.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShutdownSevice.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Aoto.PPS.Infrastructure\Aoto.PPS.Infrastructure.csproj">
+      <Project>{DDBCD277-84EC-443D-8D27-58C52E864466}</Project>
+      <Name>Aoto.PPS.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

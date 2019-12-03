@@ -1,0 +1,1115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5FE0DAD0-936D-4484-850C-7F3A7F527FFE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Aoto.PPS.Launcher</RootNamespace>
+    <AssemblyName>Aoto.PPS.Launcher</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\client\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\client\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Aoto.PPS.Launcher.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>E:\SVN\填单机\05编码\client\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>E:\SVN\填单机\05编码\client\Aoto.PFF.Launcher.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;F:\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;F:\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>E:\SVN\填单机\05编码\client\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>E:\SVN\填单机\05编码\client\Aoto.PFF.Launcher.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;F:\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;F:\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup>
+    <Win32Resource>
+    </Win32Resource>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|Itanium'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Itanium\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>Itanium</PlatformTarget>
+    <CodeAnalysisLogFile>..\..\client\Aoto.PFF.Launcher.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;F:\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;F:\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|Itanium'">
+    <OutputPath>bin\Itanium\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <PlatformTarget>Itanium</PlatformTarget>
+    <CodeAnalysisLogFile>E:\SVN\填单机\05编码\client\Aoto.PFF.Launcher.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;F:\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;F:\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Configuration, Version=3.3.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Autofac.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="AxInterop.EMVICAxLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>obj\Release\AxInterop.EMVICAxLib.dll</HintPath>
+    </Reference>
+    <Reference Include="AxInterop.IdcAxLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>obj\Release\AxInterop.IdcAxLib.dll</HintPath>
+    </Reference>
+    <Reference Include="AxInterop.PtrAxLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>obj\Release\AxInterop.PtrAxLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging">
+      <HintPath>..\lib\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging.Core">
+      <HintPath>..\lib\Common.Logging.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging.Log4Net1213">
+      <HintPath>..\lib\Common.Logging.Log4Net1213.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.94.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppInitializer.cs" />
+    <Compile Include="FrmSelfChecked.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSelfChecked.Designer.cs">
+      <DependentUpon>FrmSelfChecked.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmShell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmShell.Designer.cs">
+      <DependentUpon>FrmShell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="config\app.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <EmbeddedResource Include="Resources\bt.png" />
+    <None Include="config\quartz_jobs.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="config\q\1\1024x1280.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="web\js\lib\msdropdown___\icons\Thumbs.db" />
+    <None Include="web\js\lib\msdropdown___\images\Thumbs.db" />
+    <None Include="web\qms\css\contextmenu_css\images\contextmenu\.svn\all-wcprops" />
+    <None Include="web\qms\css\contextmenu_css\images\contextmenu\.svn\entries" />
+    <None Include="web\qms\css\contextmenu_css\images\contextmenu\.svn\prop-base\menu_bg.gif.svn-base" />
+    <None Include="web\qms\css\contextmenu_css\images\contextmenu\.svn\prop-base\m_arrow.gif.svn-base" />
+    <None Include="web\qms\css\contextmenu_css\images\contextmenu\.svn\prop-base\m_item.gif.svn-base" />
+    <None Include="web\qms\css\contextmenu_css\images\contextmenu\.svn\prop-base\m_splitLine.gif.svn-base" />
+    <None Include="web\qms\css\contextmenu_css\images\contextmenu\.svn\text-base\menu_bg.gif.svn-base" />
+    <None Include="web\qms\css\contextmenu_css\images\contextmenu\.svn\text-base\m_arrow.gif.svn-base" />
+    <None Include="web\qms\css\contextmenu_css\images\contextmenu\.svn\text-base\m_item.gif.svn-base" />
+    <None Include="web\qms\css\contextmenu_css\images\contextmenu\.svn\text-base\m_splitLine.gif.svn-base" />
+    <None Include="web\qms\css\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="web\qms\css\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="web\qms\css\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="web\qms\css\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="web\qms\css\icon-fonts\elusive-icons-2.0.0\fonts\Elusive-Icons.eot" />
+    <None Include="web\qms\css\icon-fonts\elusive-icons-2.0.0\fonts\Elusive-Icons.ttf" />
+    <None Include="web\qms\css\icon-fonts\elusive-icons-2.0.0\fonts\Elusive-Icons.woff" />
+    <None Include="web\qms\css\icon-fonts\font-awesome-4.0.0\fonts\fontawesome-webfont.eot" />
+    <None Include="web\qms\css\icon-fonts\font-awesome-4.0.0\fonts\fontawesome-webfont.ttf" />
+    <None Include="web\qms\css\icon-fonts\font-awesome-4.0.0\fonts\fontawesome-webfont.woff" />
+    <None Include="web\qms\css\icon-fonts\font-awesome-4.0.0\fonts\FontAwesome.otf" />
+    <None Include="web\qms\css\icon-fonts\font-awesome-4.1.0\fonts\fontawesome-webfont.eot" />
+    <None Include="web\qms\css\icon-fonts\font-awesome-4.1.0\fonts\fontawesome-webfont.ttf" />
+    <None Include="web\qms\css\icon-fonts\font-awesome-4.1.0\fonts\fontawesome-webfont.woff" />
+    <None Include="web\qms\css\icon-fonts\font-awesome-4.1.0\fonts\FontAwesome.otf" />
+    <None Include="web\qms\css\icon-fonts\font-awesome-4.2.0\fonts\fontawesome-webfont.eot" />
+    <None Include="web\qms\css\icon-fonts\font-awesome-4.2.0\fonts\fontawesome-webfont.ttf" />
+    <None Include="web\qms\css\icon-fonts\font-awesome-4.2.0\fonts\fontawesome-webfont.woff" />
+    <None Include="web\qms\css\icon-fonts\font-awesome-4.2.0\fonts\FontAwesome.otf" />
+    <None Include="web\qms\css\icon-fonts\font-awesome-4.3.0\fonts\fontawesome-webfont.eot" />
+    <None Include="web\qms\css\icon-fonts\font-awesome-4.3.0\fonts\fontawesome-webfont.ttf" />
+    <None Include="web\qms\css\icon-fonts\font-awesome-4.3.0\fonts\fontawesome-webfont.woff" />
+    <None Include="web\qms\css\icon-fonts\font-awesome-4.3.0\fonts\fontawesome-webfont.woff2" />
+    <None Include="web\qms\css\icon-fonts\font-awesome-4.3.0\fonts\FontAwesome.otf" />
+    <None Include="web\qms\css\icon-fonts\ionicons-1.5.2\fonts\ionicons.eot" />
+    <None Include="web\qms\css\icon-fonts\ionicons-1.5.2\fonts\ionicons.ttf" />
+    <None Include="web\qms\css\icon-fonts\ionicons-1.5.2\fonts\ionicons.woff" />
+    <None Include="web\qms\css\icon-fonts\map-icons-2.1.0\fonts\map-icons.eot" />
+    <None Include="web\qms\css\icon-fonts\map-icons-2.1.0\fonts\map-icons.ttf" />
+    <None Include="web\qms\css\icon-fonts\map-icons-2.1.0\fonts\map-icons.woff" />
+    <None Include="web\qms\css\icon-fonts\material-design-1.1.1\fonts\Material-Design-Iconic-Font.eot" />
+    <None Include="web\qms\css\icon-fonts\material-design-1.1.1\fonts\Material-Design-Iconic-Font.ttf" />
+    <None Include="web\qms\css\icon-fonts\material-design-1.1.1\fonts\Material-Design-Iconic-Font.woff" />
+    <None Include="web\qms\css\icon-fonts\octicons-2.1.2\fonts\octicons-local.ttf" />
+    <None Include="web\qms\css\icon-fonts\octicons-2.1.2\fonts\octicons.eot" />
+    <None Include="web\qms\css\icon-fonts\octicons-2.1.2\fonts\octicons.ttf" />
+    <None Include="web\qms\css\icon-fonts\octicons-2.1.2\fonts\octicons.woff" />
+    <None Include="web\qms\css\icon-fonts\typicons-2.0.6\fonts\typicons.eot" />
+    <None Include="web\qms\css\icon-fonts\typicons-2.0.6\fonts\typicons.ttf" />
+    <None Include="web\qms\css\icon-fonts\typicons-2.0.6\fonts\typicons.woff" />
+    <None Include="web\qms\css\icon-fonts\weather-icons-1.2.0\fonts\weathericons-regular-webfont.eot" />
+    <None Include="web\qms\css\icon-fonts\weather-icons-1.2.0\fonts\weathericons-regular-webfont.ttf" />
+    <None Include="web\qms\css\icon-fonts\weather-icons-1.2.0\fonts\weathericons-regular-webfont.woff" />
+    <None Include="web\qms\css\icon-fonts\weather-icons-1.2.0\fonts\WeatherIcons-Regular.otf" />
+    <None Include="web\qms\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="web\qms\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="web\qms\fonts\glyphicons-halflings-regular.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FrmSelfChecked.resx">
+      <DependentUpon>FrmSelfChecked.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmShell.resx">
+      <DependentUpon>FrmShell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Aoto.CQMS.Common\Aoto.CQMS.Common.csproj">
+      <Project>{852c2653-aed7-40b8-b6d5-842f3dd44eba}</Project>
+      <Name>Aoto.CQMS.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Aoto.CQMS.Core\Aoto.CQMS.Core.csproj">
+      <Project>{E9F830B1-F0E1-4E76-9B6C-1AAE5553FF2F}</Project>
+      <Name>Aoto.CQMS.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Aoto.PPS.Infrastructure\Aoto.PPS.Infrastructure.csproj">
+      <Project>{DDBCD277-84EC-443D-8D27-58C52E864466}</Project>
+      <Name>Aoto.PPS.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="EMVICAxLib">
+      <Guid>{D37B6831-5BF6-4DFC-B875-B52A84B188EC}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="IdcAxLib">
+      <Guid>{BB203D42-8303-4A7E-8486-8A96D44AD7B3}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="PtrAxLib">
+      <Guid>{8ADD66F8-F550-43C1-9189-B5CFFE15C5DA}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="config\q\2\" />
+    <Folder Include="config\q\3\" />
+    <Folder Include="web\qms\css\contextmenu_css\images\contextmenu\.svn\props\" />
+    <Folder Include="web\qms\css\contextmenu_css\images\contextmenu\.svn\tmp\prop-base\" />
+    <Folder Include="web\qms\css\contextmenu_css\images\contextmenu\.svn\tmp\props\" />
+    <Folder Include="web\qms\css\contextmenu_css\images\contextmenu\.svn\tmp\text-base\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="config\Midware.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="config\TermEmvApp.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sound\bankCard.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sound\bankCardFailure.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sound\idCard.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sound\idCardFailure.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="web\images\cancel.png" />
+    <Content Include="web\images\logo.bmp" />
+    <Content Include="web\images\logo.ico" />
+    <Content Include="web\images\logo.png" />
+    <Content Include="web\images\logo2.png" />
+    <Content Include="web\images\logo2_bak1.png" />
+    <Content Include="web\images\logo2_bak2.png" />
+    <Content Include="web\images\logo2___.png" />
+    <Content Include="web\images\logo_bak1.png" />
+    <Content Include="web\images\logo_bak3.png" />
+    <Content Include="web\images\logo___.png" />
+    <Content Include="web\images\ok.png" />
+    <Content Include="web\images\out.png" />
+    <Content Include="web\images\shouye_01.png" />
+    <Content Include="web\images\shouye_02.png" />
+    <Content Include="web\js\lib\date\bootstrap-datetimepicker.js" />
+    <Content Include="web\js\lib\date\bootstrap-datetimepicker.zh-CN.js" />
+    <Content Include="web\js\lib\date\date-zh-CN.js" />
+    <Content Include="web\js\lib\date\date.js" />
+    <Content Include="web\js\lib\easyui\easyloader.js" />
+    <Content Include="web\js\lib\easyui\jquery.easyui.js" />
+    <Content Include="web\js\lib\easyui\locale\easyui-lang-zh_CN.js" />
+    <Content Include="web\js\lib\easyui\plugins\jquery.draggable.js" />
+    <Content Include="web\js\lib\easyui\plugins\jquery.parser.js" />
+    <Content Include="web\js\lib\easyui\themes\color.css" />
+    <Content Include="web\js\lib\easyui\themes\default\easyui.css" />
+    <Content Include="web\js\lib\easyui\themes\default\images\accordion_arrows.png" />
+    <Content Include="web\js\lib\easyui\themes\default\images\blank.gif" />
+    <Content Include="web\js\lib\easyui\themes\default\images\calendar_arrows.png" />
+    <Content Include="web\js\lib\easyui\themes\default\images\combo_arrow.png" />
+    <Content Include="web\js\lib\easyui\themes\default\images\datagrid_icons.png" />
+    <Content Include="web\js\lib\easyui\themes\default\images\datebox_arrow.png" />
+    <Content Include="web\js\lib\easyui\themes\default\images\layout_arrows.png" />
+    <Content Include="web\js\lib\easyui\themes\default\images\linkbutton_bg.png" />
+    <Content Include="web\js\lib\easyui\themes\default\images\loading.gif" />
+    <Content Include="web\js\lib\easyui\themes\default\images\menu_arrows.png" />
+    <Content Include="web\js\lib\easyui\themes\default\images\messager_icons.png" />
+    <Content Include="web\js\lib\easyui\themes\default\images\pagination_icons.png" />
+    <Content Include="web\js\lib\easyui\themes\default\images\panel_tools.png" />
+    <Content Include="web\js\lib\easyui\themes\default\images\searchbox_button.png" />
+    <Content Include="web\js\lib\easyui\themes\default\images\slider_handle.png" />
+    <Content Include="web\js\lib\easyui\themes\default\images\spinner_arrows.png" />
+    <Content Include="web\js\lib\easyui\themes\default\images\tabs_icons.png" />
+    <Content Include="web\js\lib\easyui\themes\default\images\tree_icons.png" />
+    <Content Include="web\js\lib\easyui\themes\default\images\validatebox_warning.png" />
+    <Content Include="web\js\lib\easyui\themes\icon.css" />
+    <Content Include="web\js\lib\easyui\themes\icons\back.png" />
+    <Content Include="web\js\lib\easyui\themes\icons\blank.gif" />
+    <Content Include="web\js\lib\easyui\themes\icons\cancel.png" />
+    <Content Include="web\js\lib\easyui\themes\icons\cut.png" />
+    <Content Include="web\js\lib\easyui\themes\icons\edit_add.png" />
+    <Content Include="web\js\lib\easyui\themes\icons\edit_remove.png" />
+    <Content Include="web\js\lib\easyui\themes\icons\excel.png" />
+    <Content Include="web\js\lib\easyui\themes\icons\filesave.png" />
+    <Content Include="web\js\lib\easyui\themes\icons\filter.png" />
+    <Content Include="web\js\lib\easyui\themes\icons\help.png" />
+    <Content Include="web\js\lib\easyui\themes\icons\large_chart.png" />
+    <Content Include="web\js\lib\easyui\themes\icons\large_clipart.png" />
+    <Content Include="web\js\lib\easyui\themes\icons\large_picture.png" />
+    <Content Include="web\js\lib\easyui\themes\icons\large_shapes.png" />
+    <Content Include="web\js\lib\easyui\themes\icons\large_smartart.png" />
+    <Content Include="web\js\lib\easyui\themes\icons\mini_add.png" />
+    <Content Include="web\js\lib\easyui\themes\icons\mini_edit.png" />
+    <Content Include="web\js\lib\easyui\themes\icons\mini_refresh.png" />
+    <Content Include="web\js\lib\easyui\themes\icons\no.png" />
+    <Content Include="web\js\lib\easyui\themes\icons\ok.png" />
+    <Content Include="web\js\lib\easyui\themes\icons\pencil.png" />
+    <Content Include="web\js\lib\easyui\themes\icons\print.png" />
+    <Content Include="web\js\lib\easyui\themes\icons\redo.png" />
+    <Content Include="web\js\lib\easyui\themes\icons\reload.png" />
+    <Content Include="web\js\lib\easyui\themes\icons\search.png" />
+    <Content Include="web\js\lib\easyui\themes\icons\sum.png" />
+    <Content Include="web\js\lib\easyui\themes\icons\tip.png" />
+    <Content Include="web\js\lib\easyui\themes\icons\undo.png" />
+    <Content Include="web\js\lib\jquery\jquery.js" />
+    <Content Include="web\js\lib\jquery\plugins\highlight.pack.js" />
+    <Content Include="web\js\lib\jquery\plugins\jPages.js" />
+    <Content Include="web\js\lib\jquery\plugins\jPages.min.js" />
+    <Content Include="web\js\lib\jquery\plugins\jplayer.playlist.js" />
+    <Content Include="web\js\lib\jquery\plugins\jplayer.playlist.min.js" />
+    <Content Include="web\js\lib\jquery\plugins\jquery.cycle.js" />
+    <Content Include="web\js\lib\jquery\plugins\jquery.jplayer.js" />
+    <Content Include="web\js\lib\jquery\plugins\jquery.jplayer.min.js" />
+    <Content Include="web\js\lib\jquery\plugins\jquery.json.js" />
+    <Content Include="web\js\lib\jquery\plugins\jquery.lazyload.js" />
+    <Content Include="web\js\lib\jquery\plugins\jquery.nouislider.js" />
+    <Content Include="web\js\lib\jquery\plugins\jquery.smartWizard.js" />
+    <Content Include="web\js\lib\jquery\plugins\jquery.string.js" />
+    <Content Include="web\js\lib\jquery\plugins\jquery.ui.datepicker.js" />
+    <Content Include="web\js\lib\jquery\plugins\js.js" />
+    <Content Include="web\js\lib\jquery\plugins\tabifier.js" />
+    <Content Include="web\js\lib\jquery\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="web\js\lib\jquery\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="web\js\lib\jquery\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="web\js\lib\jquery\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="web\js\lib\jquery\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="web\js\lib\jquery\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="web\js\lib\jquery\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="web\js\lib\jquery\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="web\js\lib\jquery\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="web\js\lib\jquery\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="web\js\lib\jquery\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="web\js\lib\jquery\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="web\js\lib\jquery\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="web\js\lib\jquery\themes\base\jquery-ui.css" />
+    <Content Include="web\js\lib\jquery\themes\base\jquery.ui.accordion.css" />
+    <Content Include="web\js\lib\jquery\themes\base\jquery.ui.all.css" />
+    <Content Include="web\js\lib\jquery\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="web\js\lib\jquery\themes\base\jquery.ui.base.css" />
+    <Content Include="web\js\lib\jquery\themes\base\jquery.ui.button.css" />
+    <Content Include="web\js\lib\jquery\themes\base\jquery.ui.core.css" />
+    <Content Include="web\js\lib\jquery\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="web\js\lib\jquery\themes\base\jquery.ui.dialog.css" />
+    <Content Include="web\js\lib\jquery\themes\base\jquery.ui.menu.css" />
+    <Content Include="web\js\lib\jquery\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="web\js\lib\jquery\themes\base\jquery.ui.resizable.css" />
+    <Content Include="web\js\lib\jquery\themes\base\jquery.ui.selectable.css" />
+    <Content Include="web\js\lib\jquery\themes\base\jquery.ui.slider.css" />
+    <Content Include="web\js\lib\jquery\themes\base\jquery.ui.spinner.css" />
+    <Content Include="web\js\lib\jquery\themes\base\jquery.ui.tabs.css" />
+    <Content Include="web\js\lib\jquery\themes\base\jquery.ui.theme - 副本.css" />
+    <Content Include="web\js\lib\jquery\themes\base\jquery.ui.theme.css" />
+    <Content Include="web\js\lib\jquery\themes\base\jquery.ui.tooltip.css" />
+    <Content Include="web\js\lib\jquery\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="web\js\lib\jquery\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="web\js\lib\jquery\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="web\js\lib\jquery\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="web\js\lib\jquery\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="web\js\lib\jquery\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="web\js\lib\jquery\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="web\js\lib\jquery\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="web\js\lib\jquery\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="web\js\lib\jquery\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="web\js\lib\jquery\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="web\js\lib\jquery\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="web\js\lib\jquery\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="web\js\lib\jquery\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="web\js\lib\jquery\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="web\js\lib\jquery\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="web\js\lib\jquery\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="web\js\lib\jquery\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="web\js\lib\jquery\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="web\js\lib\jquery\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="web\js\lib\jquery\themes\base\minified\jquery.ui.menu.min.css" />
+    <Content Include="web\js\lib\jquery\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="web\js\lib\jquery\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="web\js\lib\jquery\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="web\js\lib\jquery\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="web\js\lib\jquery\themes\base\minified\jquery.ui.spinner.min.css" />
+    <Content Include="web\js\lib\jquery\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="web\js\lib\jquery\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="web\js\lib\jquery\themes\base\minified\jquery.ui.tooltip.min.css" />
+    <Content Include="web\js\lib\jquery\themes\jplayer\skin\blue.monday\jplayer.blue.monday.css" />
+    <Content Include="web\js\lib\jquery\themes\jplayer\skin\blue.monday\jplayer.blue.monday.jpg" />
+    <Content Include="web\js\lib\jquery\themes\jplayer\skin\blue.monday\jplayer.blue.monday.seeking.gif" />
+    <Content Include="web\js\lib\jquery\themes\jplayer\skin\blue.monday\jplayer.blue.monday.video.play.png" />
+    <Content Include="web\js\lib\jquery\themes\jplayer\skin\blue.monday\mustache\jplayer.blue.monday.audio.playlist.html" />
+    <Content Include="web\js\lib\jquery\themes\jplayer\skin\blue.monday\mustache\jplayer.blue.monday.audio.single.html" />
+    <Content Include="web\js\lib\jquery\themes\jplayer\skin\blue.monday\mustache\jplayer.blue.monday.audio.stream.html" />
+    <Content Include="web\js\lib\jquery\themes\jplayer\skin\blue.monday\mustache\jplayer.blue.monday.video.playlist.html" />
+    <Content Include="web\js\lib\jquery\themes\jplayer\skin\blue.monday\mustache\jplayer.blue.monday.video.single.html" />
+    <Content Include="web\js\lib\jquery\themes\jplayer\skin\circle.player\bgr.jpg" />
+    <Content Include="web\js\lib\jquery\themes\jplayer\skin\circle.player\buffer.png" />
+    <Content Include="web\js\lib\jquery\themes\jplayer\skin\circle.player\circle.player.css" />
+    <Content Include="web\js\lib\jquery\themes\jplayer\skin\circle.player\controls.jpg" />
+    <Content Include="web\js\lib\jquery\themes\jplayer\skin\circle.player\progress.png" />
+    <Content Include="web\js\lib\jquery\themes\jplayer\skin\circle.player\progress_sprite.jpg" />
+    <Content Include="web\js\lib\jquery\themes\jplayer\skin\pink.flag\jplayer.pink.flag.css" />
+    <Content Include="web\js\lib\jquery\themes\jplayer\skin\pink.flag\jplayer.pink.flag.jpg" />
+    <Content Include="web\js\lib\jquery\themes\jplayer\skin\pink.flag\jplayer.pink.flag.seeking.gif" />
+    <Content Include="web\js\lib\jquery\themes\jplayer\skin\pink.flag\jplayer.pink.flag.video.play.png" />
+    <Content Include="web\js\lib\jquery\themes\jplayer\skin\pink.flag\mustache\jplayer.pink.flag.audio.playlist.html" />
+    <Content Include="web\js\lib\jquery\themes\jplayer\skin\pink.flag\mustache\jplayer.pink.flag.audio.single.html" />
+    <Content Include="web\js\lib\jquery\themes\jplayer\skin\pink.flag\mustache\jplayer.pink.flag.audio.stream.html" />
+    <Content Include="web\js\lib\jquery\themes\jplayer\skin\pink.flag\mustache\jplayer.pink.flag.video.playlist.html" />
+    <Content Include="web\js\lib\jquery\themes\jplayer\skin\pink.flag\mustache\jplayer.pink.flag.video.single.html" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\images\ui-icons_222222_256x240.png" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\jquery-ui.css" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\jquery.ui.accordion.css" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\jquery.ui.all.css" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\jquery.ui.autocomplete.css" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\jquery.ui.base.css" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\jquery.ui.button.css" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\jquery.ui.core.css" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\jquery.ui.datepicker.css" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\jquery.ui.dialog.css" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\jquery.ui.menu.css" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\jquery.ui.progressbar.css" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\jquery.ui.resizable.css" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\jquery.ui.selectable.css" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\jquery.ui.slider.css" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\jquery.ui.spinner.css" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\jquery.ui.tabs.css" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\jquery.ui.theme.css" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\jquery.ui.tooltip.css" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\minified\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\minified\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\minified\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\minified\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\minified\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\minified\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\minified\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\minified\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\minified\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\minified\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\minified\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\minified\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\minified\jquery-ui.min.css" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\minified\jquery.ui.accordion.min.css" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\minified\jquery.ui.button.min.css" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\minified\jquery.ui.core.min.css" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\minified\jquery.ui.dialog.min.css" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\minified\jquery.ui.menu.min.css" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\minified\jquery.ui.resizable.min.css" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\minified\jquery.ui.selectable.min.css" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\minified\jquery.ui.slider.min.css" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\minified\jquery.ui.spinner.min.css" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\minified\jquery.ui.tabs.min.css" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\minified\jquery.ui.theme.min.css" />
+    <Content Include="web\js\lib\jquery\themes\ui-lightness\minified\jquery.ui.tooltip.min.css" />
+    <Content Include="web\js\lib\msdropdown___\css\dd.css" />
+    <Content Include="web\js\lib\msdropdown___\icons\1273404841_tick_16.png" />
+    <Content Include="web\js\lib\msdropdown___\icons\button-large.gif" />
+    <Content Include="web\js\lib\msdropdown___\icons\demoaction.jpg" />
+    <Content Include="web\js\lib\msdropdown___\icons\enabled.gif" />
+    <Content Include="web\js\lib\msdropdown___\icons\giftlelo_dot_com.jpg" />
+    <Content Include="web\js\lib\msdropdown___\icons\icon_calendar.gif" />
+    <Content Include="web\js\lib\msdropdown___\icons\icon_cart.gif" />
+    <Content Include="web\js\lib\msdropdown___\icons\icon_cd.gif" />
+    <Content Include="web\js\lib\msdropdown___\icons\icon_email.gif" />
+    <Content Include="web\js\lib\msdropdown___\icons\icon_faq.gif" />
+    <Content Include="web\js\lib\msdropdown___\icons\icon_games.gif" />
+    <Content Include="web\js\lib\msdropdown___\icons\icon_lockopen.gif" />
+    <Content Include="web\js\lib\msdropdown___\icons\icon_music.gif" />
+    <Content Include="web\js\lib\msdropdown___\icons\icon_phone.gif" />
+    <Content Include="web\js\lib\msdropdown___\icons\icon_sales.gif" />
+    <Content Include="web\js\lib\msdropdown___\icons\icon_secure.gif" />
+    <Content Include="web\js\lib\msdropdown___\icons\icon_video.gif" />
+    <Content Include="web\js\lib\msdropdown___\icons\jquery-msdropdown.gif" />
+    <Content Include="web\js\lib\msdropdown___\icons\msDropDown.gif" />
+    <Content Include="web\js\lib\msdropdown___\icons\preview.gif" />
+    <Content Include="web\js\lib\msdropdown___\icons\sprite.gif" />
+    <Content Include="web\js\lib\msdropdown___\icons\sprite.jpg" />
+    <Content Include="web\js\lib\msdropdown___\icons\tick.gif" />
+    <Content Include="web\js\lib\msdropdown___\images\icon-arrow.gif" />
+    <Content Include="web\js\lib\msdropdown___\images\icon-ok.gif" />
+    <Content Include="web\js\lib\msdropdown___\images\msDropDown.gif" />
+    <Content Include="web\js\lib\msdropdown___\jquery.dd.js" />
+    <Content Include="web\js\peripheral.js" />
+    <Content Include="web\maintenance.html" />
+    <Content Include="web\qms\css\animate.min.css" />
+    <Content Include="web\qms\css\bootstrap-11.min.css" />
+    <Content Include="web\qms\css\bootstrap-12.min.css" />
+    <Content Include="web\qms\css\bootstrap-13.min.css" />
+    <Content Include="web\qms\css\bootstrap-14.min.css" />
+    <Content Include="web\qms\css\bootstrap-cerulean.min.css" />
+    <Content Include="web\qms\css\bootstrap-cyborg.min.css" />
+    <Content Include="web\qms\css\bootstrap-darkly.min.css" />
+    <Content Include="web\qms\css\bootstrap-datetimepicker.css" />
+    <Content Include="web\qms\css\bootstrap-iconpicker.css" />
+    <Content Include="web\qms\css\bootstrap-lumen.min.css" />
+    <Content Include="web\qms\css\bootstrap-multiselect.css" />
+    <Content Include="web\qms\css\bootstrap-simplex.min.css" />
+    <Content Include="web\qms\css\bootstrap-slate.min.css" />
+    <Content Include="web\qms\css\bootstrap-spacelab.min.css" />
+    <Content Include="web\qms\css\bootstrap-tour.min.css" />
+    <Content Include="web\qms\css\bootstrap-united.min.css" />
+    <Content Include="web\qms\css\button.css" />
+    <Content Include="web\qms\css\charisma-app.css" />
+    <Content Include="web\qms\css\chosen.min.css" />
+    <Content Include="web\qms\css\colorbox.css" />
+    <Content Include="web\qms\css\common.css" />
+    <Content Include="web\qms\css\commonlist.css" />
+    <Content Include="web\qms\css\contextmenu_css\contextmenu.css" />
+    <Content Include="web\qms\css\contextmenu_css\images\contextmenu\menu_bg.gif" />
+    <Content Include="web\qms\css\contextmenu_css\images\contextmenu\m_arrow.gif" />
+    <Content Include="web\qms\css\contextmenu_css\images\contextmenu\m_item.gif" />
+    <Content Include="web\qms\css\contextmenu_css\images\contextmenu\m_splitLine.gif" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\ac0036-16.gif" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\backward_nav.gif" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\blank.gif" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\blank.png" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\book.gif" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\cal.gif" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\cancel.png" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\Clear.gif" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\cpyqual_menu.gif" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\cut.png" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\edit_add.png" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\edit_remove.png" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\ei0021-16.gif" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\excel.png" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\filesave.png" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\filter.png" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\fit.gif" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\forward_nav.gif" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\help.png" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\ie.gif" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\impl_co.gif" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\light.gif" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\message_error.gif" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\new.gif" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\next.png" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\next_nav.gif" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\no.png" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\ok.png" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\page.css" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\paste.gif" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\pencil.gif" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\pencil.png" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\pin_editor.gif" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\pre.png" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\Preview.gif" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\prev_nav.gif" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\print.png" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\readme.txt" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\redo.png" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\reload.png" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\saveall_edit.gif" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\save_edit.gif" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\search.png" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\show-hide.gif" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\sum.png" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\tip.png" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\trash.gif" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\undo.png" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\watch.gif" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\wi0009-16.gif" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\wi0054-16.gif" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\wi0111-16.gif" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\wi0124-16.gif" />
+    <Content Include="web\qms\css\contextmenu_css\sample-css\wi0126-16.gif" />
+    <Content Include="web\qms\css\css\animate.css" />
+    <Content Include="web\qms\css\css\github.css" />
+    <Content Include="web\qms\css\css\jPages.css" />
+    <Content Include="web\qms\css\css\style.css" />
+    <Content Include="web\qms\css\elfinder.min.css" />
+    <Content Include="web\qms\css\elfinder.theme.css" />
+    <Content Include="web\qms\css\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="web\qms\css\icheck\aero%402x.png" />
+    <Content Include="web\qms\css\icheck\aero.css" />
+    <Content Include="web\qms\css\icheck\aero.png" />
+    <Content Include="web\qms\css\icheck\blue%402x.png" />
+    <Content Include="web\qms\css\icheck\blue.css" />
+    <Content Include="web\qms\css\icheck\blue.png" />
+    <Content Include="web\qms\css\icheck\green%402x.png" />
+    <Content Include="web\qms\css\icheck\green.css" />
+    <Content Include="web\qms\css\icheck\green.png" />
+    <Content Include="web\qms\css\icheck\grey%402x.png" />
+    <Content Include="web\qms\css\icheck\grey.css" />
+    <Content Include="web\qms\css\icheck\grey.png" />
+    <Content Include="web\qms\css\icheck\minimal%402x.png" />
+    <Content Include="web\qms\css\icheck\minimal.css" />
+    <Content Include="web\qms\css\icheck\minimal.png" />
+    <Content Include="web\qms\css\icheck\orange%402x.png" />
+    <Content Include="web\qms\css\icheck\orange.css" />
+    <Content Include="web\qms\css\icheck\orange.png" />
+    <Content Include="web\qms\css\icheck\pink%402x.png" />
+    <Content Include="web\qms\css\icheck\pink.css" />
+    <Content Include="web\qms\css\icheck\pink.png" />
+    <Content Include="web\qms\css\icheck\purple%402x.png" />
+    <Content Include="web\qms\css\icheck\purple.css" />
+    <Content Include="web\qms\css\icheck\purple.png" />
+    <Content Include="web\qms\css\icheck\red%402x.png" />
+    <Content Include="web\qms\css\icheck\red.css" />
+    <Content Include="web\qms\css\icheck\red.png" />
+    <Content Include="web\qms\css\icheck\yellow%402x.png" />
+    <Content Include="web\qms\css\icheck\yellow.css" />
+    <Content Include="web\qms\css\icheck\yellow.png" />
+    <Content Include="web\qms\css\icheck\_all.css" />
+    <Content Include="web\qms\css\icon-fonts\elusive-icons-2.0.0\css\elusive-icons.css" />
+    <Content Include="web\qms\css\icon-fonts\elusive-icons-2.0.0\css\elusive-icons.min.css" />
+    <Content Include="web\qms\css\icon-fonts\elusive-icons-2.0.0\fonts\Elusive-Icons.svg" />
+    <Content Include="web\qms\css\icon-fonts\font-awesome-4.0.0\css\font-awesome.css" />
+    <Content Include="web\qms\css\icon-fonts\font-awesome-4.0.0\css\font-awesome.min.css" />
+    <Content Include="web\qms\css\icon-fonts\font-awesome-4.0.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="web\qms\css\icon-fonts\font-awesome-4.1.0\css\font-awesome.css" />
+    <Content Include="web\qms\css\icon-fonts\font-awesome-4.1.0\css\font-awesome.min.css" />
+    <Content Include="web\qms\css\icon-fonts\font-awesome-4.1.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="web\qms\css\icon-fonts\font-awesome-4.2.0\css\font-awesome.css" />
+    <Content Include="web\qms\css\icon-fonts\font-awesome-4.2.0\css\font-awesome.min.css" />
+    <Content Include="web\qms\css\icon-fonts\font-awesome-4.2.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="web\qms\css\icon-fonts\font-awesome-4.3.0\css\font-awesome.css" />
+    <Content Include="web\qms\css\icon-fonts\font-awesome-4.3.0\css\font-awesome.min.css" />
+    <Content Include="web\qms\css\icon-fonts\font-awesome-4.3.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="web\qms\css\icon-fonts\ionicons-1.5.2\css\ionicons.css" />
+    <Content Include="web\qms\css\icon-fonts\ionicons-1.5.2\css\ionicons.min.css" />
+    <Content Include="web\qms\css\icon-fonts\ionicons-1.5.2\fonts\ionicons.svg" />
+    <Content Include="web\qms\css\icon-fonts\map-icons-2.1.0\css\map-icons.css" />
+    <Content Include="web\qms\css\icon-fonts\map-icons-2.1.0\css\map-icons.min.css" />
+    <Content Include="web\qms\css\icon-fonts\map-icons-2.1.0\fonts\map-icons.dev.svg" />
+    <Content Include="web\qms\css\icon-fonts\map-icons-2.1.0\fonts\map-icons.svg" />
+    <Content Include="web\qms\css\icon-fonts\material-design-1.1.1\css\material-design-iconic-font.css" />
+    <Content Include="web\qms\css\icon-fonts\material-design-1.1.1\css\material-design-iconic-font.min.css" />
+    <Content Include="web\qms\css\icon-fonts\material-design-1.1.1\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="web\qms\css\icon-fonts\octicons-2.1.2\css\octicons.css" />
+    <Content Include="web\qms\css\icon-fonts\octicons-2.1.2\css\octicons.min.css" />
+    <Content Include="web\qms\css\icon-fonts\octicons-2.1.2\fonts\octicons.svg" />
+    <Content Include="web\qms\css\icon-fonts\typicons-2.0.6\css\typicons.css" />
+    <Content Include="web\qms\css\icon-fonts\typicons-2.0.6\css\typicons.min.css" />
+    <Content Include="web\qms\css\icon-fonts\typicons-2.0.6\fonts\typicons.svg" />
+    <Content Include="web\qms\css\icon-fonts\weather-icons-1.2.0\css\weather-icons.css" />
+    <Content Include="web\qms\css\icon-fonts\weather-icons-1.2.0\css\weather-icons.min.css" />
+    <Content Include="web\qms\css\icon-fonts\weather-icons-1.2.0\fonts\weathericons-regular-webfont.svg" />
+    <Content Include="web\qms\css\image-picker.css" />
+    <Content Include="web\qms\css\jquery-ui-1.8.21.custom.css" />
+    <Content Include="web\qms\css\jquery.iphone.toggle.css" />
+    <Content Include="web\qms\css\jquery.noty.css" />
+    <Content Include="web\qms\css\jquery.ui.all.css" />
+    <Content Include="web\qms\css\noty_theme_default.css" />
+    <Content Include="web\qms\css\pagination.css" />
+    <Content Include="web\qms\css\reset.css" />
+    <Content Include="web\qms\css\responsive-tables.css" />
+    <Content Include="web\qms\css\spectrum.css" />
+    <Content Include="web\qms\css\uploadify.css" />
+    <Content Include="web\qms\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="web\qms\html\admin\about.html" />
+    <Content Include="web\qms\html\admin\basic-gsyhzy.html" />
+    <Content Include="web\qms\html\admin\basic-update.html" />
+    <Content Include="web\qms\html\admin\basic.html" />
+    <Content Include="web\qms\html\admin\bus.html" />
+    <Content Include="web\qms\html\admin\custLevel.html" />
+    <Content Include="web\qms\html\admin\custNumber.html" />
+    <Content Include="web\qms\html\admin\index.html" />
+    <Content Include="web\qms\html\admin\logManage.html" />
+    <Content Include="web\qms\html\admin\machine.html" />
+    <Content Include="web\qms\html\admin\qmsconfig.html" />
+    <Content Include="web\qms\html\admin\tellerWin.html" />
+    <Content Include="web\qms\html\admin\ticket.html" />
+    <Content Include="web\qms\html\admin\timeout.html" />
+    <Content Include="web\qms\html\admin\welcome.html" />
+    <Content Include="web\qms\html\admin\yj-yysz.html" />
+    <Content Include="web\qms\html\q\q1.html" />
+    <Content Include="web\qms\html\q\q2.html" />
+    <Content Include="web\qms\html\q\q3.html" />
+    <Content Include="web\qms\html\q\sign.html" />
+    <Content Include="web\qms\images\ajax-loaders\ajax-loader-1.gif" />
+    <Content Include="web\qms\images\ajax-loaders\ajax-loader-2.gif" />
+    <Content Include="web\qms\images\ajax-loaders\ajax-loader-3.gif" />
+    <Content Include="web\qms\images\ajax-loaders\ajax-loader-4.gif" />
+    <Content Include="web\qms\images\ajax-loaders\ajax-loader-5.gif" />
+    <Content Include="web\qms\images\ajax-loaders\ajax-loader-6.gif" />
+    <Content Include="web\qms\images\ajax-loaders\ajax-loader-7.gif" />
+    <Content Include="web\qms\images\ajax-loaders\ajax-loader-8.gif" />
+    <Content Include="web\qms\images\background\11.jpg" />
+    <Content Include="web\qms\images\chosen\chosen-sprite%402x.png" />
+    <Content Include="web\qms\images\chosen\chosen-sprite.png" />
+    <Content Include="web\qms\images\down.png" />
+    <Content Include="web\qms\images\favicon.ico" />
+    <Content Include="web\qms\images\iphone-style-checkboxes\off.png" />
+    <Content Include="web\qms\images\iphone-style-checkboxes\on.png" />
+    <Content Include="web\qms\images\iphone-style-checkboxes\slider.png" />
+    <Content Include="web\qms\images\iphone-style-checkboxes\slider_center.png" />
+    <Content Include="web\qms\images\iphone-style-checkboxes\slider_left.png" />
+    <Content Include="web\qms\images\iphone-style-checkboxes\slider_right.png" />
+    <Content Include="web\qms\images\left.png" />
+    <Content Include="web\qms\images\loading.gif" />
+    <Content Include="web\qms\images\logo20.png" />
+    <Content Include="web\qms\images\q\1\buzType\03.png" />
+    <Content Include="web\qms\images\q\1\buzType\04.png" />
+    <Content Include="web\qms\images\q\1\buzType\06.png" />
+    <Content Include="web\qms\images\q\1\buzType\08.png" />
+    <Content Include="web\qms\images\q\1\buzType\cqk.png" />
+    <Content Include="web\qms\images\q\1\buzType\dgkh.png" />
+    <Content Include="web\qms\images\q\1\buzType\dglc.png" />
+    <Content Include="web\qms\images\q\1\buzType\dgwkh.png" />
+    <Content Include="web\qms\images\q\1\buzType\dgyw.png" />
+    <Content Include="web\qms\images\q\1\buzType\grwkzh.png" />
+    <Content Include="web\qms\images\q\1\buzType\jf.png" />
+    <Content Include="web\qms\images\q\1\buzType\kxh.png" />
+    <Content Include="web\qms\images\q\1\buzType\lc.png" />
+    <Content Include="web\qms\images\q\1\buzType\lcgw.png" />
+    <Content Include="web\qms\images\q\1\buzType\qtwdxx.png" />
+    <Content Include="web\qms\images\q\1\buzType\qtyw.png" />
+    <Content Include="web\qms\images\q\1\buzType\wb.png" />
+    <Content Include="web\qms\images\q\1\buzType\yyqh.png" />
+    <Content Include="web\qms\images\q\1\buzType\zzhk.png" />
+    <Content Include="web\qms\images\q\1\dd.gif" />
+    <Content Include="web\qms\images\q\1\gray.png" />
+    <Content Include="web\qms\images\q\1\green.png" />
+    <Content Include="web\qms\images\q\1\jt.gif" />
+    <Content Include="web\qms\images\q\1\out.png" />
+    <Content Include="web\qms\images\q\1\out_bak.png" />
+    <Content Include="web\qms\images\q\1\pop.png" />
+    <Content Include="web\qms\images\q\1\provice_btn.png" />
+    <Content Include="web\qms\images\q\1\provice_btn02.png" />
+    <Content Include="web\qms\images\q\1\red.png" />
+    <Content Include="web\qms\images\q\1\sh.png" />
+    <Content Include="web\qms\images\right.png" />
+    <Content Include="web\qms\images\star-half.png" />
+    <Content Include="web\qms\images\star-off.png" />
+    <Content Include="web\qms\images\star-on.png" />
+    <Content Include="web\qms\images\thumb.png" />
+    <Content Include="web\qms\images\up.png" />
+    <Content Include="web\qms\images\uploadify-cancel.png" />
+    <Content Include="web\qms\js\bar.js" />
+    <Content Include="web\qms\js\bootbox.js" />
+    <Content Include="web\qms\js\bootstrap-iconpicker.js" />
+    <Content Include="web\qms\js\bootstrap-multiselect.js" />
+    <Content Include="web\qms\js\bootstrap-tour.min.js" />
+    <Content Include="web\qms\js\bootstrap.colorpickersliders.js" />
+    <Content Include="web\qms\js\bootstrap.min.js" />
+    <Content Include="web\qms\js\charisma.js" />
+    <Content Include="web\qms\js\chosen.jquery.min.js" />
+    <Content Include="web\qms\js\common.js" />
+    <Content Include="web\qms\js\hashMap.js" />
+    <Content Include="web\qms\js\iconset\iconset-all.min.js" />
+    <Content Include="web\qms\js\iconset\iconset-elusiveicon-2.0.0.js" />
+    <Content Include="web\qms\js\iconset\iconset-elusiveicon-2.0.0.min.js" />
+    <Content Include="web\qms\js\iconset\iconset-fontawesome-4.0.0.js" />
+    <Content Include="web\qms\js\iconset\iconset-fontawesome-4.0.0.min.js" />
+    <Content Include="web\qms\js\iconset\iconset-fontawesome-4.1.0.js" />
+    <Content Include="web\qms\js\iconset\iconset-fontawesome-4.1.0.min.js" />
+    <Content Include="web\qms\js\iconset\iconset-fontawesome-4.2.0.js" />
+    <Content Include="web\qms\js\iconset\iconset-fontawesome-4.2.0.min.js" />
+    <Content Include="web\qms\js\iconset\iconset-fontawesome-4.3.0.js" />
+    <Content Include="web\qms\js\iconset\iconset-fontawesome-4.3.0.min.js" />
+    <Content Include="web\qms\js\iconset\iconset-glyphicon.js" />
+    <Content Include="web\qms\js\iconset\iconset-glyphicon.min.js" />
+    <Content Include="web\qms\js\iconset\iconset-ionicon-1.5.2.js" />
+    <Content Include="web\qms\js\iconset\iconset-ionicon-1.5.2.min.js" />
+    <Content Include="web\qms\js\iconset\iconset-mapicon-2.1.0.js" />
+    <Content Include="web\qms\js\iconset\iconset-mapicon-2.1.0.min.js" />
+    <Content Include="web\qms\js\iconset\iconset-materialdesign-1.1.1.js" />
+    <Content Include="web\qms\js\iconset\iconset-materialdesign-1.1.1.min.js" />
+    <Content Include="web\qms\js\iconset\iconset-octicon-2.1.2.js" />
+    <Content Include="web\qms\js\iconset\iconset-octicon-2.1.2.min.js" />
+    <Content Include="web\qms\js\iconset\iconset-typicon-2.0.6.js" />
+    <Content Include="web\qms\js\iconset\iconset-typicon-2.0.6.min.js" />
+    <Content Include="web\qms\js\iconset\iconset-weathericon-1.2.0.js" />
+    <Content Include="web\qms\js\iconset\iconset-weathericon-1.2.0.min.js" />
+    <Content Include="web\qms\js\image-picker.min.js" />
+    <Content Include="web\qms\js\index.js" />
+    <Content Include="web\qms\js\init-chart.js" />
+    <Content Include="web\qms\js\jquery.autogrow-textarea.js" />
+    <Content Include="web\qms\js\jquery.colorbox-min.js" />
+    <Content Include="web\qms\js\jquery.contextmenu.js" />
+    <Content Include="web\qms\js\jquery.cookie.js" />
+    <Content Include="web\qms\js\jquery.dataTables.min.js" />
+    <Content Include="web\qms\js\jquery.history.js" />
+    <Content Include="web\qms\js\jquery.iphone.toggle.js" />
+    <Content Include="web\qms\js\jquery.metadata.js" />
+    <Content Include="web\qms\js\jquery.noty.js" />
+    <Content Include="web\qms\js\jquery.raty.min.js" />
+    <Content Include="web\qms\js\jquery.ui.core.js" />
+    <Content Include="web\qms\js\jquery.ui.draggable.js" />
+    <Content Include="web\qms\js\jquery.ui.mouse.js" />
+    <Content Include="web\qms\js\jquery.ui.resizable.js" />
+    <Content Include="web\qms\js\jquery.ui.sortable.js" />
+    <Content Include="web\qms\js\jquery.ui.widget.js" />
+    <Content Include="web\qms\js\jquery.uploadify-3.1.min.js" />
+    <Content Include="web\qms\js\jquery.validate.js" />
+    <Content Include="web\qms\js\jquery.validate.min.js" />
+    <Content Include="web\qms\js\lib\date\date-zh-CN.js" />
+    <Content Include="web\qms\js\lib\date\date.js" />
+    <Content Include="web\qms\js\lib\easyui\easyloader.js" />
+    <Content Include="web\qms\js\lib\easyui\jquery.easyui.js" />
+    <Content Include="web\qms\js\lib\easyui\locale\easyui-lang-zh_CN.js" />
+    <Content Include="web\qms\js\lib\easyui\plugins\jquery.draggable.js" />
+    <Content Include="web\qms\js\lib\easyui\plugins\jquery.parser.js" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\accordion.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\calendar.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\combo.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\combobox.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\datagrid.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\datebox.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\dialog.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\easyui.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\images\accordion_arrows.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\images\blank.gif" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\images\calendar_arrows.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\images\combo_arrow.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\images\datagrid_icons.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\images\datebox_arrow.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\images\layout_arrows.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\images\linkbutton_bg.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\images\loading.gif" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\images\menu_arrows.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\images\messager_icons.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\images\pagination_icons.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\images\panel_tools.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\images\searchbox_button.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\images\slider_handle.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\images\spinner_arrows.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\images\tabs_icons.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\images\tree_icons.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\images\validatebox_warning.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\layout.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\linkbutton.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\menu.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\menubutton.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\messager.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\numberbox.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\pagination.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\panel.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\progressbar.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\propertygrid.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\searchbox.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\slider.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\spinner.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\splitbutton.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\tabs.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\textbox.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\tooltip.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\tree.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\validatebox.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\bootstrap\window.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\color.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\default\easyui.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\default\images\accordion_arrows.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\default\images\blank.gif" />
+    <Content Include="web\qms\js\lib\easyui\themes\default\images\calendar_arrows.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\default\images\combo_arrow.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\default\images\datagrid_icons.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\default\images\datebox_arrow.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\default\images\layout_arrows.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\default\images\linkbutton_bg.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\default\images\loading.gif" />
+    <Content Include="web\qms\js\lib\easyui\themes\default\images\menu_arrows.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\default\images\messager_icons.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\default\images\pagination_icons.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\default\images\panel_tools.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\default\images\searchbox_button.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\default\images\slider_handle.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\default\images\spinner_arrows.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\default\images\tabs_icons.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\default\images\tree_icons.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\default\images\validatebox_warning.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\icon.css" />
+    <Content Include="web\qms\js\lib\easyui\themes\icons\back.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\icons\blank.gif" />
+    <Content Include="web\qms\js\lib\easyui\themes\icons\cancel.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\icons\cut.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\icons\edit_add.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\icons\edit_remove.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\icons\excel.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\icons\filesave.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\icons\filter.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\icons\help.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\icons\large_chart.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\icons\large_clipart.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\icons\large_picture.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\icons\large_shapes.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\icons\large_smartart.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\icons\mini_add.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\icons\mini_edit.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\icons\mini_refresh.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\icons\no.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\icons\ok.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\icons\pencil.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\icons\print.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\icons\redo.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\icons\reload.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\icons\search.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\icons\sum.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\icons\tip.png" />
+    <Content Include="web\qms\js\lib\easyui\themes\icons\undo.png" />
+    <Content Include="web\qms\js\lib\jquery.validate.min.js" />
+    <Content Include="web\qms\js\lib\jquery\icheck\jquery.icheck.js" />
+    <Content Include="web\qms\js\lib\jquery\jquery.js" />
+    <Content Include="web\qms\js\lib\jquery\jquery.min.js" />
+    <Content Include="web\qms\js\lib\jquery\plugins\jquery.cycle.js" />
+    <Content Include="web\qms\js\lib\jquery\plugins\jquery.json.js" />
+    <Content Include="web\qms\js\lib\jquery\plugins\jquery.nouislider.js" />
+    <Content Include="web\qms\js\lib\jquery\plugins\jquery.pagination.js" />
+    <Content Include="web\qms\js\lib\jquery\plugins\jquery.smartWizard.js" />
+    <Content Include="web\qms\js\lib\jquery\plugins\jquery.string.js" />
+    <Content Include="web\qms\js\map-printsettiings.js" />
+    <Content Include="web\qms\js\map.js" />
+    <Content Include="web\qms\js\messages_zh.js" />
+    <Content Include="web\qms\js\messages_zh.min.js" />
+    <Content Include="web\qms\js\moment.min.js" />
+    <Content Include="web\qms\js\multiselect.js" />
+    <Content Include="web\qms\js\multiselect.min.js" />
+    <Content Include="web\qms\js\outlook.js" />
+    <Content Include="web\qms\js\peripheral.js" />
+    <Content Include="web\qms\js\prettify.min.js" />
+    <Content Include="web\qms\js\qmsVld.js" />
+    <Content Include="web\qms\js\receipt.js" />
+    <Content Include="web\qms\js\responsive-tables.js" />
+    <Content Include="web\qms\js\spectrum.js" />
+    <Content Include="web\qms\js\ticket.js" />
+    <Content Include="web\qms\js\tinycolor-min.js" />
+    <Content Include="web\qms\js\tinycolor.js" />
+    <Content Include="web\qms\js\validation.js" />
+    <Content Include="web\qms\js\welcome.js" />
+    <Content Include="web\welcome.html" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy /e /s /h /i /y $(ProjectDir)web $(TargetDir)web</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

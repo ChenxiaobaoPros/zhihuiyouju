@@ -1,0 +1,9 @@
+D:\多功能业务柜\Aoto.EMS\Aoto.EMS.Core\bin\Debug\Aoto.EMS.Core.dll
+D:\多功能业务柜\Aoto.EMS\Aoto.EMS.Core\bin\Debug\Aoto.EMS.Core.pdb
+D:\多功能业务柜\Aoto.EMS\Aoto.EMS.Core\obj\Debug\Aoto.EMS.Core.csproj.CoreCompileInputs.cache
+D:\多功能业务柜\Aoto.EMS\Aoto.EMS.Core\obj\Debug\Aoto.EMS.Core.dll
+D:\多功能业务柜\Aoto.EMS\Aoto.EMS.Core\obj\Debug\Aoto.EMS.Core.pdb
+D:\多功能业务柜\Aoto.EMS\Aoto.EMS.Core\bin\Debug\Newtonsoft.Json.dll
+D:\多功能业务柜\Aoto.EMS\Aoto.EMS.Core\bin\Debug\Newtonsoft.Json.xml
+D:\多功能业务柜\Aoto.EMS\Aoto.EMS.Core\obj\Debug\Aoto.EMS.Core.csproj.CopyComplete
+D:\多功能业务柜\Aoto.EMS\Aoto.EMS.Core\obj\Debug\Aoto.EMS.Core.csprojAssemblyReference.cache

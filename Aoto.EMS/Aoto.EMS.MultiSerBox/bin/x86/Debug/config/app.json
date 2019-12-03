@@ -1,0 +1,142 @@
+﻿{
+  "name": "邮政多功能业务系统",
+  "device": {
+    "supplier": "aoto",
+    "no": "1234",
+    "orgCode": "1",
+    "id": 1,
+    "orgId": 2468,
+    "orgName": "邮政"
+  },
+  "webServer": {
+    "host": "localhost",
+    "port": 8080,
+    "contextPath": "/iqms_inf",
+    "timeout": 30000
+  },
+  "peripheral": {
+    "dir": "aoto",
+    "statusInterval": 30000,
+    "type": 7,
+    "barScreen": {
+      "dll": "AOTO_BERR_2014.dll",
+      "timeout": 10000,
+      "enabled": true,
+      "logLevel": 0
+    },
+    "compScreen": {
+      "dll": "AOTO_COMP_2014.dll",
+      "timeout": 10000,
+      "enabled": true,
+      "logLevel": 0
+    },
+    "evaluator": {
+      "dll": "AOTO_APPR_2014.dll",
+      "timeout": 10000,
+      "enabled": true,
+      "logLevel": 0
+    },
+    "caller": {
+      "dll": "AOTO_CALL_2014.dll",
+      "timeout": 10000,
+      "enabled": true,
+      "logLevel": 0
+    },
+    "icCardReaderWriter": {
+      "dll": "AOTO_ICCR_2014_USB.dll",
+      "timeout": 10000,
+      "enabled": true,
+      "logLevel": 0,
+      "index": 1
+    },
+    "idCardReader": {
+      "dll": "AOTO_IDCR_2014.dll",
+      "timeout": 10000,
+      "enabled": true,
+      "logLevel": 0,
+      "index": 0
+    },
+    "magneticCardReaderWriter": {
+      "dll": "AOTO_CRDR_2014_COM.dll",
+      "timeout": 10000,
+      "enabled": true,
+      "logLevel": 0,
+      "track": 23
+    },
+    "needlePrinter": {
+      "dll": "HWXPrinterLib.dll",
+      "timeout": 10000,
+      "enabled": true,
+      "name": "EPSON LQ-90KP ESC/P2"
+    },
+    "thermalPrinter": {
+      "dll": "",
+      "timeout": 10000,
+      "enabled": true,
+      "name": "BT-T080R(U) 1"
+    },
+    "voicePlayer": {
+      "dll": "AOTO_VOIC_2014.dll",
+      "timeout": 10000,
+      "enabled": true,
+      "logLevel": 0
+    },
+    "writingBoard": {
+      "dll": "PPSignToolSDK.dll",
+      "timeout": 10000,
+      "enabled": true,
+      "logLevel": 0
+    }
+
+  },
+  "custRec": {
+    "online": false,
+    "url": ""
+  },
+  "runMode": {
+    "model": "single",
+    "webServer": {
+        "host": "+",
+        "port": 80,
+        "contextPath": "/qms",
+        "timeout": 5000
+    },
+    "mappings":[
+        {"path": "/services/tickets/fetch", "id":"ticketService", "method": "GetTicket"},
+        {"path": "/services/tickets/call", "id":"ticketService", "method": "CallTicket"},
+        {"path": "/services/tickets/recall", "id":"ticketService", "method": "RecallTicket"},
+        {"path": "/services/tickets/rate", "id":"ticketService", "method": "RateCallback"},
+        {"path": "/services/tickets/signin", "id":"ticketService", "method": "Signin"},
+        {"path": "/services/tickets/signout", "id":"ticketService", "method": "Signout"},
+        {"path": "/services/tickets/transfer", "id":"ticketService", "method": "TransferTicket"},
+        {"path": "/services/tickets/aptcall", "id":"ticketService", "method": "AptcallTicket"},
+        {"path": "/services/tickets/delay", "id":"ticketService", "method": "DelayTicket"},
+        {"path": "/services/tickets/lock", "id":"ticketService", "method": "LockTicket"},
+        {"path": "/services/tickets/unlock", "id":"ticketService", "method": "UnlockTicket"},
+        {"path": "/services/tickets/isEffectQueueNo", "id":"ticketService", "method": "IsEffectQueueNo"},
+        {"path": "/services/tickets/waiting", "id":"ticketService", "method": "GetWaitingCount"},
+        {"path": "/services/tickets/todayBizReport", "id":"ticketService", "method": "TodayBizReport"},
+        {"path": "/services/tickets/yesterdayBizReport", "id":"ticketService", "method": "YesterdayBizReport"},
+		{"path": "/services/tickets/pause", "id":"ticketService", "method": "Pause"}
+    ]
+  },
+  "heartbeatInterval": 30,
+  "online": true,
+  "timeout": 12000,
+  "callLang": "MANDARIN",
+  "ticketTimeout": 5,
+  "ticketBtnTimeout": 2,
+  "ppsPopUpTimeout":3,
+  "screenResolution":"1024x1280",
+  "mode": 2,
+  "topMost": false,
+  "delayedStartTime":"3",
+  "tickePrintModTime":"2017-01-01 12:12:12",
+  "webBrowser": {
+    "scriptErrorsSuppressed": true,
+    "scrollBarsEnabled": false
+  },
+  "delLogDate":1,
+  "opacity": 0.75,
+  "version": "2.2"
+}
