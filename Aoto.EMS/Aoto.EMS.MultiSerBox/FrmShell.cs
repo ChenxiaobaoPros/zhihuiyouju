@@ -171,8 +171,8 @@ namespace Aoto.EMS.MultiSerBox
 
         private void FrmShell_Load(object sender, EventArgs e)
         {
-            //webBrowser.Navigate(Path.Combine(Config.AppRoot, "web\\qms\\html\\admin\\index.html"));
-            webBrowser.Navigate(AppState.WelcomeUrl);
+            webBrowser.Navigate(Path.Combine(Config.AppRoot, "web\\qms\\html\\admin\\index.html"));
+            //webBrowser.Navigate(AppState.WelcomeUrl);
         }
 
 
@@ -219,6 +219,14 @@ namespace Aoto.EMS.MultiSerBox
             JObject jo = new JObject();
             iDCardReader.Read(jo);
             return jo.ToString();
+        }
+        MoveCard moveCard;
+        public string loadMoveCard()
+        {
+            if(moveCard ==null)
+                moveCard = new MoveCard();
+            moveCard.BackCard();
+            return null;
         }
         private void FrmShell_FormClosing(object sender, FormClosingEventArgs e)
         {

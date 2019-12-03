@@ -50,6 +50,7 @@
     <Compile Include="Default\Finger.cs" />
     <Compile Include="Default\IDCardReader.cs" />
     <Compile Include="Default\MoveCard.cs" />
+    <Compile Include="KeyBoard.cs" />
     <Compile Include="PeripheralManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Default\QRCode.cs" />

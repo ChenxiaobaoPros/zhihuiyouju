@@ -1,12 +1,16 @@
-﻿using System;
+﻿using Aoto.EMS.Infrastructure;
+using Aoto.EMS.Infrastructure.Configuration;
+using log4net;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 
 namespace Aoto.EMS.Peripheral
 {
-    public class MoveCard
+    public class MoveCard 
     {
 
         #region 托管接口
@@ -50,11 +54,11 @@ namespace Aoto.EMS.Peripheral
         [UnmanagedFunctionPointer(CallingConvention.StdCall)]
         public delegate int MC_ReadTrack(UInt32 ComHandle, byte _Mode, byte _track, ref int _TrackDataLen, byte[] _TrackData);
         //IC CARD POWER ON
-        [DllImport("CRT_310.dll")]
-        public static extern int CRT_IC_CardOpen(UInt32 ComHandle);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        public delegate int CRT_IC_CardOpen(UInt32 ComHandle);
         //IC CARD POWER OFF
-        [DllImport("CRT_310.dll")]
-        public static extern int CRT_IC_CardClose(UInt32 ComHandle);
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        public delegate int CRT_IC_CardClose(UInt32 ComHandle);
 
         [DllImport("CRT_310.dll")]
         public static extern int CRT_R_DetectCard(UInt32 ComHandle, ref byte _CardType, ref byte _CardInfor);
@@ -139,9 +143,115 @@ namespace Aoto.EMS.Peripheral
         public static extern int RF_Decrement(UInt32 ComHandle, byte _Sec, byte _Block, byte _DataLen, byte[] _Data);
         #endregion
 
+        private CommOpen commOpen;
+        private CommClose commClose;
+        private CRT310_Reset cRT310_Reset;//复位读卡机
+        private CRT310_MovePosition cRT310_MovePosition;//移动卡
+        private CRT310_CardSetting cRT310_CardSetting;//进卡控制
+        private CRT310_GetStatus cRT310_GetStatus;//从读卡机读取状态信息
+        private CRT310_SensorStatus cRT310_SensorStatus;//从读卡机读取传感器信息
+        private MC_ReadTrack mC_ReadTrack;//读磁轨数据
+        private CRT_IC_CardClose cRT_IC_CardClose;//IC卡关
+        private CRT_IC_CardOpen cRT_IC_CardOpen;//IC开
+
+
+
+        private static readonly ILog log = LogManager.GetLogger("moveCard");
+        private IntPtr intPtr;
+
+        protected string name;
+        protected string dll;
+        protected int timeout;
+
+        protected bool enabled;
+        protected bool isBusy;
+        protected bool cancelled;
+
+        public bool Cancelled { get { return cancelled; } set { cancelled = value; } }
+        public bool Enabled { get { return enabled; } }
+        public bool IsBusy { get { return isBusy; } }
         public MoveCard()
         {
+            isBusy = false;
+            cancelled = false;
+
+            this.dll = Config.App.Peripheral["moveCard"].Value<string>("dll");
+            this.timeout = Config.App.Peripheral["moveCard"].Value<int>("timeout");
+            this.enabled = Config.App.Peripheral["moveCard"].Value<bool>("enabled");
+            this.name = Config.App.Peripheral["moveCard"].Value<string>("name");
+
+            Initialize();
+        }
+        UInt32 Hdle = 0;
+        byte CPUType = 2;
+        public void Initialize()
+        {
+            log.Debug("begin");
+
+            if (!enabled)
+            {
+                return;
+            }
+
+            string dllPath = Path.Combine(Config.PeripheralAbsolutePath, PeripheralManager.Dir, dll);
+
+            if (!File.Exists(dllPath))
+            {
+                dllPath = Path.Combine(Config.PeripheralAbsolutePath, PeripheralManager.Dir, "MoveCardLib", dll);
+            }
+
+            intPtr = Win32ApiInvoker.LoadLibrary(dllPath);
+            log.InfoFormat("LoadLibrary: dllPath = {0}, ptr = {1}", dllPath, intPtr);
+
+            IntPtr api = Win32ApiInvoker.GetProcAddress(intPtr, "CommOpen");
+            commOpen = (CommOpen)Marshal.GetDelegateForFunctionPointer(api, typeof(CommOpen));
+
+            api = Win32ApiInvoker.GetProcAddress(intPtr, "CommClose");
+            commClose = (CommClose)Marshal.GetDelegateForFunctionPointer(api, typeof(CommClose));
+
+            api = Win32ApiInvoker.GetProcAddress(intPtr, "CRT310_MovePosition");
+            cRT310_MovePosition = (CRT310_MovePosition)Marshal.GetDelegateForFunctionPointer(api, typeof(CRT310_MovePosition));
+
+            Hdle = commOpen("COM3");
 
         }
+        /// <summary>
+        /// 退卡
+        /// </summary>
+        public void BackCard()
+        {
+            if (Hdle != 0)
+            {
+                int i = cRT310_MovePosition(Hdle, 0x01);
+                if (i == 0)
+                {
+                    //MessageBox.Show("Move Card OK", "Move Card");
+                }
+                else if (i == 69)
+                {
+                   //MessageBox.Show("No Card In", "Move Card");
+                }
+                else if (i == 87)
+                {
+                    //MessageBox.Show("The card is not on the card operation position", "Move Card");
+                }
+                else if (i == 78)
+                {
+                    //MessageBox.Show("Move card Error", "Move Card");
+                }
+                else
+                {
+                    //MessageBox.Show("unknow Error", "Move Card");
+                }
+            }
+            else
+            {
+                //MessageBox.Show("Comm. port is not Opened", "Caution");
+            }
+
+
+        }
+
+
     }
 }

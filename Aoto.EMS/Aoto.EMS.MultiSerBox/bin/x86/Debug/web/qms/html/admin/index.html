@@ -86,6 +86,7 @@
     <p onclick="loadfinger()">指纹识别</p>
     <p onclick="loadQRCode()">扫码</p><p onclick="closeQRCode()">关闭</p>
     <p onclick="loadIDCard()">读身份证</p>
+    <p onclick="loadMoveCard()">吸卡器</p>
 </body>
 </html>
 <script type="text/javascript">
@@ -104,5 +105,8 @@
     }
     function loadIDCard() {
         window.external.ReadIDCard();
+    }
+    function loadMoveCard() {
+        window.external.loadMoveCard();
     }
 </script>

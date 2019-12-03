@@ -98,6 +98,12 @@
       "timeout": 10000,
       "enabled": true,
       "logLevel": 0
+    },
+    "moveCard": {
+      "dll": "CRT_310.dll",
+      "timeout": 10000,
+      "enabled": true,
+      "logLevel": 0
     }
   },
   "custRec": {
