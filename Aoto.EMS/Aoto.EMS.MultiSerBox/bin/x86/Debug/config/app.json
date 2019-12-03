@@ -86,8 +86,19 @@
       "timeout": 10000,
       "enabled": true,
       "logLevel": 0
+    },
+    "finger": {
+      "dll": "libFPDev_zz.dll",
+      "timeout": 10000,
+      "enabled": true,
+      "logLevel": 0
+    },
+    "readQRCode": {
+      "dll": "HID_API.dll",
+      "timeout": 10000,
+      "enabled": true,
+      "logLevel": 0
     }
-
   },
   "custRec": {
     "online": false,

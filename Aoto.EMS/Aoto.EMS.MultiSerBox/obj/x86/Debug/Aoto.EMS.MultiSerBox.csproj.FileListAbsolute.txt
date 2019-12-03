@@ -41,3 +41,6 @@ D:\Multiclient\config\app.json
 D:\Multiclient\Aoto.EMS.MultiSerBox.exe.config
 D:\Multiclient\Aoto.EMS.MultiSerBox.exe
 D:\Multiclient\Aoto.EMS.MultiSerBox.pdb
+D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug\Aoto.EMS.Common.dll
+D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug\Aoto.EMS.Common.pdb
+D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug\duogong\html\index.html

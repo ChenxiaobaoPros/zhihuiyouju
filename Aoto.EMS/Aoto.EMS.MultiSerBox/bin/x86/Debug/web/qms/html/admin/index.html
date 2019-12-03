@@ -82,15 +82,23 @@
 
 </head>
 <body>
-   <p onclick="loadborad()">手写板</p>
-   <p onclick="loadfinger()">指纹识别</p>
+    <p onclick="loadborad()">手写板</p>
+    <p onclick="loadfinger()">指纹识别</p>
+    <p onclick="loadQRCode()">扫码</p><p onclick="closeQRCode()">关闭</p>
 </body>
 </html>
 <script type="text/javascript">
     function loadborad() {
+        window.external.GetInfo();
         window.external.LoadBorad();
     }
     function loadfinger() {
         window.external.loadFinger();
+    }
+    function loadQRCode() {
+        window.external.loadQRCode();
+    }
+    function closeQRCode() {
+        window.external.closeQRCode();
     }
 </script>

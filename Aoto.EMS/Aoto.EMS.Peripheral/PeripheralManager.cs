@@ -79,6 +79,7 @@ namespace Aoto.EMS.Peripheral
     {
 
     }
+
     public class PeripheralManager
     {
         private string peripheralStatus;

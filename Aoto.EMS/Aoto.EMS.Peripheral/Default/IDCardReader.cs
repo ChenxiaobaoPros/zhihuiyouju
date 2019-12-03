@@ -11,7 +11,7 @@ using Aoto.EMS.Infrastructure.Configuration;
 using log4net;
 using Newtonsoft.Json.Linq;
 
-namespace Aoto.PPS.Peripheral.Default
+namespace Aoto.EMS.Peripheral
 {
     /*
     3001	PB_IDCR_PORT_OPEN_ERROR	端口打开失败
