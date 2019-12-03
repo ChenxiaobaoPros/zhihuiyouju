@@ -1,8 +1,0 @@
-D:\工行银行\clientsrc\Aoto.CQMS.Core\bin\Debug\Aoto.PPS.CQMS.Core.dll
-D:\工行银行\clientsrc\Aoto.CQMS.Core\bin\Debug\Aoto.PPS.CQMS.Core.pdb
-D:\工行银行\clientsrc\Aoto.CQMS.Core\bin\Debug\IBatisNet.Common.dll
-D:\工行银行\clientsrc\Aoto.CQMS.Core\bin\Debug\IBatisNet.DataMapper.dll
-D:\工行银行\clientsrc\Aoto.CQMS.Core\bin\Debug\log4net.dll
-D:\工行银行\clientsrc\Aoto.CQMS.Core\bin\Debug\Newtonsoft.Json.dll
-D:\工行银行\clientsrc\Aoto.CQMS.Core\obj\Debug\Aoto.PPS.CQMS.Core.dll
-D:\工行银行\clientsrc\Aoto.CQMS.Core\obj\Debug\Aoto.PPS.CQMS.Core.pdb
