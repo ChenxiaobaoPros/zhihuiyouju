@@ -273,13 +273,6 @@
 				　　	$(".Insurance_opt").append("<option>"+Insurance_type[i]+"</option>");
 				}
                 var last = Insurance_list;//获取保险列表数据
-                last = {
-                     BusinessType :"车辆保险",
-                        BusinessName : "sdsdsd",
-                        BusinessNameNo : "sdsd",
-                        RealBusiness : "sds"
-                }
-
                 var html = '';
 				//渲染列表
                 for ( var i = 0; i < last.businesslist.length; i++) {//循环json对象，拼接tr,td的html
@@ -301,9 +294,15 @@
                         "age" : $(this).parents("tr").find(".bbb").text(),
                         "sex" : $(this).parents("tr").find(".ccc").text()
                     })
-                    alert(result)
+                    //alert(result)
+
+                    var Insurance_list4 =  window.external.HandleBuss(result);
+                    var last=JSON.parse(Insurance_list4);//获取保险列表数据
+                    alert(last)
+
+
                     $(".index_content").hide();//隐藏首页
-                    $(".Insurance").hide();//显示保险工具页
+                    //$(".Insurance").hide();//显示保险工具页
                     //$(".shib").show();//显示身份识别页
                 });
 
@@ -320,11 +319,29 @@
 		$(function(){
 			$(".loader-button").click(function(){
 				var Insurance_val= $('.Insurance_opt').val();//获取数据类型值
-                alert(Insurance_val)
+                var Insurance_list2 =  window.external.SeachBuss(Insurance_val);
+                var last=JSON.parse(Insurance_list2);//获取保险列表数据
+                //var last = Insurance_list2;//获取保险列表数据
+                if(last.length==""){
+                    // alert("该数据不存在")
+                    // var html2 = '';
+                    // html2 = html2 + '<div class="tou_td aaa">' + 该数据不存在+ '</div>';
+                    $('.ge').html("<div style='font-size: 30px;text-align: center;margin-top: 50px;'>该数据不存在</div>");
+                }else {
+                    var html = '';
+                    //渲染列表
+                    for ( var i = 0; i < last.length; i++) {//循环json对象，拼接tr,td的html
+                        html = html + '<tr class="banse">';
+                        html = html + '<td class="tou_td aaa">' + last[i].BusinessNameNo + '</td>';
+                        html = html + '<td class="tou_td bbb">' + last[i].BusinessName  + '</td>';
+                        html = html + '<td class="tou_td ccc">' + last[i].RealBusiness  + '</td>';
+                        html = html + '<td class="tou_td2"><div> <button class="loader-button3"> <img src="../img/ban.png" />办 理</button></div>  </td>';
 
-                var ret = window.external.cho(Insurance_val)
+                        html = html + '</tr>';
+                    }
+                    $('.ge').html(html);//通过jquery方式获取table，并把tr,td的html输出到table中
+                }
 
-    
 			});
 		})
         $(function(){

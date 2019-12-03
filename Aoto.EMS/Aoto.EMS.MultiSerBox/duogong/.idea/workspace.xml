@@ -21,7 +21,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/img" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -34,8 +34,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\duogong\js" />
       <recent name="E:\duogong\img" />
+      <recent name="E:\duogong\js" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -63,7 +63,9 @@
       <workItem from="1574755945447" duration="9185000" />
       <workItem from="1574814504946" duration="22061000" />
       <workItem from="1574900879578" duration="28885000" />
-      <workItem from="1574987206627" duration="8936000" />
+      <workItem from="1574987206627" duration="18848000" />
+      <workItem from="1575161307332" duration="2418000" />
+      <workItem from="1575246092424" duration="246000" />
     </task>
     <servers />
   </component>
