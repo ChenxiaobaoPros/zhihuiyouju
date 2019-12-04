@@ -83,10 +83,20 @@
 </head>
 <body>
     <p onclick="loadborad()">手写板</p>
+    <p />
     <p onclick="loadfinger()">指纹识别</p>
-    <p onclick="loadQRCode()">扫码</p><p onclick="closeQRCode()">关闭</p>
+    <p />
+    <p onclick="loadQRCode()">扫码</p>
+    <p onclick="closeQRCode()">关闭</p>
+    <p />
     <p onclick="loadIDCard()">读身份证</p>
+    <p />
     <p onclick="loadMoveCard()">吸卡器</p>
+    <p />
+    <p onclick="loadKeyBoard()">明文键盘</p><input type="text" id="text"/>
+    <p onclick="">密文键盘</p>
+    <p onclick="">解密</p>
+    <p />
 </body>
 </html>
 <script type="text/javascript">
@@ -108,5 +118,9 @@
     }
     function loadMoveCard() {
         window.external.loadMoveCard();
+    }
+    function loadKeyBoard() {
+        var oTxt = document.getElementById('text').focus();
+        window.external.loadKeyBoard();
     }
 </script>

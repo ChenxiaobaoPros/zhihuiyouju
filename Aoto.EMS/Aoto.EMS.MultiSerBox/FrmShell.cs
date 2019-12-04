@@ -228,6 +228,9 @@ namespace Aoto.EMS.MultiSerBox
             moveCard.BackCard();
             return null;
         }
+        public void loadKeyBoard()
+        {
+        }
         private void FrmShell_FormClosing(object sender, FormClosingEventArgs e)
         {
 

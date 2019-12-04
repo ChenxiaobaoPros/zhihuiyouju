@@ -104,6 +104,12 @@
       "timeout": 10000,
       "enabled": true,
       "logLevel": 0
+    },
+    "keyBoard": {
+      "dll": "XZ_F31_API.dll",
+      "timeout": 10000,
+      "enabled": true,
+      "logLevel": 0
     }
   },
   "custRec": {

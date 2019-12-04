@@ -93,9 +93,9 @@
     <p />
     <p onclick="loadMoveCard()">吸卡器</p>
     <p />
-    <p onclick="loadMoveCard()">明文键盘</p>
-    <p onclick="loadMoveCard()">密文键盘</p>
-    <p onclick="loadMoveCard()">解密</p>
+    <p onclick="loadKeyBoard()">明文键盘</p><input type="text" id="text"/>
+    <p onclick="">密文键盘</p>
+    <p onclick="">解密</p>
     <p />
 </body>
 </html>
@@ -118,5 +118,13 @@
     }
     function loadMoveCard() {
         window.external.loadMoveCard();
+    }
+    function loadKeyBoard() {
+        var oTxt = document.getElementById('text').focus();
+        window.external.loadKeyBoard();
+    }
+    function readBoard(str) {
+        var oTxt = document.getElementById('text');
+        oTxt.value += str;
     }
 </script>

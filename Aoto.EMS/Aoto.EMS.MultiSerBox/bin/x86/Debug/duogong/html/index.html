@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -265,7 +265,8 @@
             $(".baoxian").click(function(){
                 $(".index_content").hide();//隐藏首页
                 $(".Insurance").show();//显示保险工具页
-				var ret = window.external.GetInfo();//获取保险工具数据方法
+                var ret = window.external.GetInfo();//获取保险工具数据方法
+                alert(ret);
 				var Insurance_list=JSON.parse(ret);//获取保险列表数据
 				var Insurance_type=Insurance_list.InsuranceType;//获取保险类型数据
 				//渲染数据类型
