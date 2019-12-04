@@ -10,7 +10,7 @@ using System.Text;
 
 namespace Aoto.EMS.Peripheral
 {
-    public class MoveCard 
+    public class HybridCardReader
     {
 
         #region 托管接口
@@ -170,7 +170,7 @@ namespace Aoto.EMS.Peripheral
         public bool Cancelled { get { return cancelled; } set { cancelled = value; } }
         public bool Enabled { get { return enabled; } }
         public bool IsBusy { get { return isBusy; } }
-        public MoveCard()
+        public HybridCardReader()
         {
             isBusy = false;
             cancelled = false;

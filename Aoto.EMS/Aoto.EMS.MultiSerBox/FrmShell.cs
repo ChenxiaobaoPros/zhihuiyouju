@@ -167,13 +167,18 @@ namespace Aoto.EMS.MultiSerBox
         #endregion
 
         #region 指纹
+        Finger finger;
         public void loadFinger()
         {
-            DialogResult dialogResult = FrmFinger.Instance.ShowDialog();
-            if (DialogResult.OK != dialogResult)
-            {
-                return;
-            }
+            if(finger==null)
+                finger = new Finger();
+
+            finger.Initialize();
+            //DialogResult dialogResult = FrmFinger.Instance.ShowDialog();
+            //if (DialogResult.OK != dialogResult)
+            //{
+            //    return;
+            //}
 
         }
         #endregion
@@ -197,12 +202,12 @@ namespace Aoto.EMS.MultiSerBox
         #endregion
 
         #region 吸卡器
-        MoveCard moveCard;
+        HybridCardReader hybridCardReader;
         public string loadMoveCard()
         {
-            if(moveCard ==null)
-                moveCard = new MoveCard();
-            moveCard.BackCard();
+            if(hybridCardReader == null)
+                hybridCardReader = new HybridCardReader();
+            hybridCardReader.BackCard();
             return null;
         }
         #endregion

@@ -4,7 +4,6 @@ D:\多功能业务柜\Aoto.EMS\Aoto.EMS.Peripheral\obj\Debug\Aoto.EMS.Peripheral
 D:\多功能业务柜\Aoto.EMS\Aoto.EMS.Peripheral\obj\Debug\Aoto.EMS.Peripheral.csproj.CoreCompileInputs.cache
 D:\多功能业务柜\Aoto.EMS\Aoto.EMS.Peripheral\obj\Debug\Aoto.EMS.Peripheral.dll
 D:\多功能业务柜\Aoto.EMS\Aoto.EMS.Peripheral\obj\Debug\Aoto.EMS.Peripheral.pdb
-D:\多功能业务柜\Aoto.EMS\Aoto.EMS.Peripheral\bin\Debug\Aoto.EMS.Peripheral.dll.config
 D:\多功能业务柜\Aoto.EMS\Aoto.EMS.Peripheral\bin\Debug\Aoto.EMS.Infrastructure.dll
 D:\多功能业务柜\Aoto.EMS\Aoto.EMS.Peripheral\bin\Debug\log4net.dll
 D:\多功能业务柜\Aoto.EMS\Aoto.EMS.Peripheral\bin\Debug\Newtonsoft.Json.dll

@@ -14,7 +14,6 @@ D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug\ICSharpCode.Sh
 D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug\Aoto.EMS.Infrastructure.pdb
 D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug\Aoto.EMS.Infrastructure.dll.config
 D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug\Aoto.EMS.Peripheral.pdb
-D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug\Aoto.EMS.Peripheral.dll.config
 D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug\Newtonsoft.Json.xml
 D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\obj\x86\Debug\Aoto.EMS.MultiSerBox.csprojAssemblyReference.cache
 D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\obj\x86\Debug\Aoto.EMS.MultiSerBox.FrmBoard.resources

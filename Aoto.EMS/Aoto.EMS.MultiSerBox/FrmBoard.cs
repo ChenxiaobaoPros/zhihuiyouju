@@ -27,12 +27,12 @@ namespace Aoto.EMS.MultiSerBox
             }
         }
 
-        private IWritingBoard writingBoard;
+        private ISignaturePlate writingBoard;
 
         public FrmBoard()
         {
             InitializeComponent();
-            writingBoard = AutofacContainer.ResolveNamed<IWritingBoard>("writingBoard");
+            writingBoard = AutofacContainer.ResolveNamed<ISignaturePlate>("writingBoard");
         }
         private void BtnSave_Click(object sender, EventArgs e)
         {

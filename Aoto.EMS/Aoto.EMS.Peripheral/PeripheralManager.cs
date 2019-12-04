@@ -11,6 +11,9 @@ using Newtonsoft.Json.Linq;
 
 namespace Aoto.EMS.Peripheral
 {
+    /// <summary>
+    /// 声音
+    /// </summary>
     public interface IVoicePlayer : IDisposable
     {
         void Play(string wav);
@@ -19,7 +22,9 @@ namespace Aoto.EMS.Peripheral
 
         void PlayAsync(IList<string> list);
     }
-
+    /// <summary>
+    /// 外设
+    /// </summary>
     public interface IPeripheral : IDisposable
     {
         bool IsBusy { get; }
@@ -29,42 +34,57 @@ namespace Aoto.EMS.Peripheral
         void Initialize();
         event RunCompletedEventHandler RunCompletedEvent;
     }
-
+    /// <summary>
+    /// 呼叫
+    /// </summary>
     public interface ICaller : IReader, IWriter
     {
 
     }
-
+    /// <summary>
+    /// 计算器
+    /// </summary>
     public interface IEvaluator : IReader, IWriter
     {
 
     }
-    
+    /// <summary>
+    /// 读
+    /// </summary>
     public interface IReader : IPeripheral
     {
         void Read(JObject jo);
         void ReadAsync(JObject jo);
     }
-
+    /// <summary>
+    /// 写
+    /// </summary>
     public interface IWriter : IPeripheral
     {
         void Write(JObject jo);
         void WriteAsync(JObject jo);
     }
-
+    /// <summary>
+    /// 打印机
+    /// </summary>
     public interface IPrinter : IPeripheral
     {
         void Print(JObject jo);
         void PrintAsync(JObject jo);
         void Execute(int command);
     }
-
-    public interface IWritingBoard : IDisposable
+    /// <summary>
+    /// 签字版
+    /// </summary>
+    public interface ISignaturePlate : IDisposable
     {
         void Initialize(IntPtr panlePtr, int high, int wide);
         void SaveBoard();
         void Clear();
     }
+    /// <summary>
+    /// 指纹
+    /// </summary>
     public interface IFinger : IDisposable
     {
         FingerType FingerType { get; set; }
@@ -74,12 +94,30 @@ namespace Aoto.EMS.Peripheral
         StringBuilder MakeFeatureToTemplate(List<StringBuilder> stringBuilders);
         event RunCompletedEventHandler RunCompletedEvent;
     }
-
-    public interface IReadQRCode : IDisposable
+    /// <summary>
+    /// 二维码
+    /// </summary>
+    public interface IQRCode : IDisposable
     {
 
     }
+    /// <summary>
+    /// 高拍仪
+    /// </summary>
+    public interface IHighMeter
+    {
 
+    }
+    /// <summary>
+    /// 混合读卡器(吸卡器)
+    /// </summary>
+    public interface IHybridCardReader
+    {
+
+    }
+    /// <summary>
+    /// 金属键盘
+    /// </summary>
     public interface IKeyBoard {
         void Initialize();
         void Read(JObject jo);
@@ -99,13 +137,15 @@ namespace Aoto.EMS.Peripheral
         private IWriter barScreen;
         private IWriter compScreen;
         private IVoicePlayer voicePlayer;
-        private IWritingBoard writingBoard;
 
 
+        private ISignaturePlate signaturePlate;
         private IKeyBoard keyBoard;
-
-
-        // private IReader mifareCardReader;
+        private IQRCode qRCode;
+        private IHighMeter highMeter;
+        private IHybridCardReader hybridCardReader;
+        private IFinger finger;
+        //private IReader mifareCardReader;
 
         private static readonly ILog log = LogManager.GetLogger("peripheral");
         public static readonly string Dir = Config.App.Peripheral.Value<string>("dir");
@@ -123,14 +163,13 @@ namespace Aoto.EMS.Peripheral
             barScreen = AutofacContainer.ResolveNamed<IWriter>("barScreen");
             compScreen = AutofacContainer.ResolveNamed<IWriter>("compScreen");
             caller = AutofacContainer.ResolveNamed<ICaller>("caller");
-
-            writingBoard = AutofacContainer.ResolveNamed<IWritingBoard>("writingBoard");
-
-            //金属键盘
-            keyBoard = AutofacContainer.ResolveNamed<IKeyBoard>("keyBoard");
-
             //mifareCardReader = AutofacContainer.ResolveNamed<IReader>("mifareCardReader");
 
+            //签字板
+            signaturePlate = AutofacContainer.ResolveNamed<ISignaturePlate>("signaturePlate");
+            //金属键盘
+            keyBoard = AutofacContainer.ResolveNamed<IKeyBoard>("keyBoard");
+            //金属键盘数据返回
             keyBoard.RunCompletedEvent += new RunCompletedEventHandler(ReadKeyBoardCompletedEvent);
 
             magneticCardReaderWriter.RunCompletedEvent += new RunCompletedEventHandler(ReadCardCompletedEvent);

@@ -13,7 +13,7 @@ using Newtonsoft.Json.Linq;
 
 namespace Aoto.EMS.Peripheral
 {
-    public class ReadQRCode : IReadQRCode
+    public class ReadQRCode : IQRCode
     {
         public delegate int P_HID_POS_RECEIVE_NOTIFY(String data, int len, String noused, String lpparam); //定义一个委托
 
@@ -29,6 +29,7 @@ namespace Aoto.EMS.Peripheral
         private P_HID_POS_RECEIVE_NOTIFY callback;
 
         private static readonly ILog log = LogManager.GetLogger("readQRCode");
+        private IScriptInvoker scriptInvoker;
         private IntPtr intPtr;
         private IntPtr openApi;
         private IntPtr CcloseApi;
@@ -56,7 +57,7 @@ namespace Aoto.EMS.Peripheral
             this.name = Config.App.Peripheral["readQRCode"].Value<string>("name");
 
             callback = new P_HID_POS_RECEIVE_NOTIFY(ShowMessage);
-
+            scriptInvoker = AutofacContainer.ResolveNamed<IScriptInvoker>("scriptInvoker");
             Initialize();
         }
 
@@ -104,9 +105,14 @@ namespace Aoto.EMS.Peripheral
             //IntPtr ptr = Marshal.AllocHGlobal(125);
             open_Hid_Ex(callback, null);
         }
-        public static int ShowMessage(String data, int len, String noused, String lpparam)
+        public int ShowMessage(String data, int len, String noused, String lpparam)
         {
-            MessageBox.Show(data.ToString());
+            JObject jo = new JObject();
+            jo["retCode"] = 0;
+            jo["data"] = data;
+            jo["callback"] = "getQRCodeData";
+            scriptInvoker.ScriptInvoke(jo);
+
             return 0;
         }
     }

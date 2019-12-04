@@ -10,7 +10,7 @@ using System.Text;
 
 namespace Aoto.EMS.Peripheral
 {
-    public class WritingBoard : IWritingBoard
+    public class SignaturePlate : ISignaturePlate
     {
         #region L398
         /// <summary>
@@ -219,7 +219,7 @@ namespace Aoto.EMS.Peripheral
         public int high { get; set; }
         public int wide { get; set; }
 
-        public WritingBoard()
+        public SignaturePlate()
         {
             isBusy = false;
             cancelled = false;

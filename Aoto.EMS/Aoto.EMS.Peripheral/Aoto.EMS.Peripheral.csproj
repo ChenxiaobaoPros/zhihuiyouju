@@ -49,22 +49,18 @@
   <ItemGroup>
     <Compile Include="Default\Finger.cs" />
     <Compile Include="Default\IDCardReader.cs" />
-    <Compile Include="Default\MoveCard.cs" />
-    <Compile Include="KeyBoard.cs" />
+    <Compile Include="Default\HybridCardReader.cs" />
+    <Compile Include="Default\KeyBoard.cs" />
     <Compile Include="PeripheralManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Default\QRCode.cs" />
-    <Compile Include="Default\WritingBoard.cs" />
+    <Compile Include="Default\SignaturePlate.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Aoto.EMS.Infrastructure\Aoto.EMS.Infrastructure.csproj">
       <Project>{8628fbf1-a1e2-4b06-b506-ece2e116fa53}</Project>
       <Name>Aoto.EMS.Infrastructure</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="app.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

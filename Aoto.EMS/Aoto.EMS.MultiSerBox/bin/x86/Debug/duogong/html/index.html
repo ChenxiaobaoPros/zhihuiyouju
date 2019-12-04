@@ -154,32 +154,32 @@
                     <div class="zhhu clearfix">
                         <div class="zhhu_hao clearfix">
                             <p>账户号:</p>
-                            <input type="text" value="1234567" readonly="readonly"/>
+                            <input class="accountNo" type="text" readonly="readonly"/>
                         </div>
                         <div class="zhhu_hao clearfix">
                             <p>办理时间:</p>
-                            <input type="text" value="2019-11-28" readonly="readonly"/>
+                            <input class="date" type="text" readonly="readonly"/>
                         </div>
                     </div>
                     <div class="zhhu2 clearfix">
                         <div class="zhhu_hao clearfix">
                             <p>业务名称:</p>
-                            <input type="text" value="业务名称" readonly="readonly" />
+                            <input class="enterpriseName" type="text" readonly="readonly" />
                         </div>
                         <div class="zhhu_hao clearfix">
                             <p>办理类型:</p>
-                            <input type="text" value="办理类型" readonly="readonly" />
+                            <input class="bussisType" type="text" readonly="readonly" />
                         </div>
                     </div>
                     <h3 class="details_box_h3">个人资料</h3>
                     <div class="zhhu clearfix">
                         <div class="zhhu_hao clearfix">
                             <p>真实姓名:</p>
-                            <input type="text" value="张三" readonly="readonly"/>
+                            <input class="name" type="text" readonly="readonly"/>
                         </div>
                         <div class="zhhu_hao clearfix">
                             <p>身份证号:</p>
-                            <input type="text" value="123123456423456742" readonly="readonly"/>
+                            <input class="idNo" type="text" readonly="readonly"/>
                         </div>
                     </div>
                     <div class="zhhu2 clearfix">
@@ -204,8 +204,8 @@
                     </div>
                     <div class="rlxb clearfix">
                         <p>人脸识别成功</p>
-                        <p>指纹识别成功</p>
-                        <p>二维码扫码</p>
+                        <p class="finger">指纹识别成功</p>
+                        <p class="qrtcode">二维码扫码</p>
                     </div>
                     <div class="rlxb2 clearfix">
                         <p>双摄监控正常</p>
@@ -369,25 +369,52 @@
         })
         $(function(){
 
-            $(".loader-button5").click(function(){
-                //var aaa=window.external.InitIDCard();
-                // alert(aaa)
-                // //在保险业务办理页里点击首页按钮隐藏保险业务办理显示首页
-                // $(".details").hide();//隐藏保险业务办理
-                // $(".index_content").hide();//显示首页
-                // $(".shib").hide();//显示身份识别页details
-                //
-                // $(".details").show();//显示身份识别页
-
-
-
+            $(".qrtcode").click(function () {
+                window.external.loadQRCode()
             });
         });
+         $(function(){
 
+            $(".finger").click(function () {
+                window.external.loadFinger()
+            });
+        });
     });
     function identity(str) {
-        $(".abc").html(str)
 
+        var data=JSON.parse(str);
+        var retCode=data.retCode;
+        var accountNo=data.accountNo;
+        var time=data.date;
+        var enterpriseName=data.enterpriseName;
+        var bussisType=data.bussisType;
+        var name=data.name;
+        var idNo=data.idNo;
+
+        var d = new Date(time);
+        var times=d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate() + ' ' + d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds();
+
+        if(retCode==0){
+            $(".shib").hide();
+            $(".details").show();
+            $(".accountNo").val(accountNo);
+            $(".date").val(times);
+            $(".enterpriseName").val(enterpriseName);
+            $(".bussisType").val(bussisType);
+            $(".name").val(name);
+            $(".idNo").val(idNo);
+        }
+
+
+    }
+
+    function getQRCodeData(str)
+    {
+        alert(str);
+    }
+      function getFinger(str)
+    {
+        alert(str);
     }
 </script>
 </body>

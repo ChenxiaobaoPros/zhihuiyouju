@@ -111,6 +111,7 @@ namespace Aoto.EMS.Peripheral
 
         private static readonly ILog log = LogManager.GetLogger("finger");
         private IntPtr intPtr;
+        private IScriptInvoker scriptInvoker;
 
         protected string name;
         protected string dll;
@@ -131,7 +132,7 @@ namespace Aoto.EMS.Peripheral
         {
             isBusy = false;
             cancelled = false;
-
+            scriptInvoker = AutofacContainer.ResolveNamed<IScriptInvoker>("scriptInvoker");
             this.dll = Config.App.Peripheral["finger"].Value<string>("dll");
             this.timeout = Config.App.Peripheral["finger"].Value<int>("timeout");
             this.enabled = Config.App.Peripheral["finger"].Value<bool>("enabled");
@@ -221,7 +222,12 @@ namespace Aoto.EMS.Peripheral
                     {
                         //图片
                         int re = fpiGetImageData(iamgeBytes, ref len);
-                        RunCompletedEvent?.Invoke(version, new RunCompletedEventArgs(iamgeBytes));
+                        //RunCompletedEvent?.Invoke(version, new RunCompletedEventArgs(iamgeBytes));
+                        JObject jo = new JObject();
+                        jo["retCode"] = 0;
+                        jo["imageData"] = iamgeBytes;
+                        jo["callback"] = "getFinger";
+                        scriptInvoker.ScriptInvoke(jo);
                     }
                 }
                 catch (Exception e)
