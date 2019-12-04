@@ -95,8 +95,6 @@ namespace Aoto.EMS.Peripheral
             KeyBoardMode = KeyBoardMode.Plaintext;
 
             asyncCaller = new RunAsyncCaller(Read);
-
-
             Initialize();
         }
         int nOpend = 0;
@@ -142,14 +140,6 @@ namespace Aoto.EMS.Peripheral
 
             }
 
-        }
-        /// <summary>
-        /// 明文模式
-        /// </summary>
-        /// <param name="jo"></param>
-        private int UseEppPlainTextMode(int PlaintextLength, int AutoEnd, StringBuilder ReturnInfo)
-        {
-            throw new NotImplementedException();
         }
 
         public void Initialize()
@@ -203,7 +193,6 @@ namespace Aoto.EMS.Peripheral
                 //成功
             }
         }
-
     }
 
     public enum KeyBoardMode

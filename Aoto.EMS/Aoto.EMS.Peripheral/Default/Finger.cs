@@ -16,6 +16,7 @@ namespace Aoto.EMS.Peripheral
 {
     public class Finger : IFinger
     {
+        #region 托管接口
         /// <summary>
         /// 检测设备
         /// </summary>
@@ -96,6 +97,7 @@ namespace Aoto.EMS.Peripheral
         /// <returns>0：成功； <0：失败</returns>
         [UnmanagedFunctionPointer(CallingConvention.StdCall)]
         private delegate int FPIFpMatch(StringBuilder pRegBuf, StringBuilder pVerBuf,ref int nLevel);
+        #endregion
 
         private FPIDevDetect fpiDevDetect;//设备检测
         private FPIGetFeature fpiGetFeature;//获取指纹特征
@@ -111,8 +113,8 @@ namespace Aoto.EMS.Peripheral
 
         private static readonly ILog log = LogManager.GetLogger("finger");
         private IntPtr intPtr;
-        private IScriptInvoker scriptInvoker;
-
+        private RunAsyncCaller asyncCaller;
+        public event RunCompletedEventHandler RunCompletedEvent;
         protected string name;
         protected string dll;
         protected int timeout;
@@ -132,11 +134,13 @@ namespace Aoto.EMS.Peripheral
         {
             isBusy = false;
             cancelled = false;
-            scriptInvoker = AutofacContainer.ResolveNamed<IScriptInvoker>("scriptInvoker");
             this.dll = Config.App.Peripheral["finger"].Value<string>("dll");
             this.timeout = Config.App.Peripheral["finger"].Value<int>("timeout");
             this.enabled = Config.App.Peripheral["finger"].Value<bool>("enabled");
             this.name = Config.App.Peripheral["finger"].Value<string>("name");
+
+            asyncCaller = new RunAsyncCaller(Read);
+            Initialize();
         }
         public void Initialize()
         {
@@ -184,30 +188,18 @@ namespace Aoto.EMS.Peripheral
 
             api = Win32ApiInvoker.GetProcAddress(intPtr, "FPICancel");
             fpiCance = (FPICancel)Marshal.GetDelegateForFunctionPointer(api, typeof(FPICancel));
-            
 
             int re = fpiDevDetect(0);
-
-
-
-            captureThread = new Thread(new ThreadStart(DoCapture));
-            captureThread.IsBackground = true;
-            captureThread.Start();
-            bIsTimeToDie = false;
-
 
             log.DebugFormat("GetProcAddress: ptr = {0}, entryPoint = PPL398_InitialDevice", intPtr);
 
             log.Debug("end");
         }
-        Thread captureThread;
-        bool bIsTimeToDie = false;
 
-        public event RunCompletedEventHandler RunCompletedEvent;
 
-        private void DoCapture()
+        public void Read(JObject jo)
         {
-            while (!bIsTimeToDie)
+            while (true)
             {
                 StringBuilder message = new StringBuilder(100);
                 StringBuilder version = new StringBuilder(1000);
@@ -222,12 +214,11 @@ namespace Aoto.EMS.Peripheral
                     {
                         //图片
                         int re = fpiGetImageData(iamgeBytes, ref len);
-                        //RunCompletedEvent?.Invoke(version, new RunCompletedEventArgs(iamgeBytes));
-                        JObject jo = new JObject();
+                       
                         jo["retCode"] = 0;
                         jo["imageData"] = iamgeBytes;
                         jo["callback"] = "getFinger";
-                        scriptInvoker.ScriptInvoke(jo);
+                        RunCompletedEvent(this,new RunCompletedEventArgs(iamgeBytes));
                     }
                 }
                 catch (Exception e)
@@ -252,13 +243,6 @@ namespace Aoto.EMS.Peripheral
 
         public void Dispose()
         {
-            //Task task = new Task(() =>
-            //{
-            //    captureThread.Abort();
-            //});
-            //task.Start();
-            captureThread.Abort();
-
             //关闭指纹
             fpiCance();
             //卸载dll

@@ -17,6 +17,7 @@ namespace Aoto.EMS.MultiSerBox
     [ComVisible(true)]
     public partial class FrmShell : Form, IScriptInvoker
     {
+        private PeripheralManager peripheralManager;
         public FrmShell()
         {
             InitializeComponent();
@@ -65,6 +66,8 @@ namespace Aoto.EMS.MultiSerBox
         {
             //webBrowser.Navigate(Path.Combine(Config.AppRoot, "web\\qms\\html\\admin\\index.html"));
             webBrowser.Navigate(AppState.WelcomeUrl);
+            peripheralManager = new PeripheralManager();//也可以用反射
+
         }
 
         #region 页面数据
@@ -121,75 +124,40 @@ namespace Aoto.EMS.MultiSerBox
         IDCardReader iDCardReader;
         public void InitIDCard()
         {
-            if (iDCardReader == null)
-            {
-                iDCardReader = new IDCardReader();
-                iDCardReader.RunCompletedEvent += new RunCompletedEventHandler(IDCallBack);
-            }
-            iDCardReader.ReadAsync(new JObject());//参数暂时无用，结合项目使用
-        }
-
-        private void IDCallBack(object sender, RunCompletedEventArgs e)
-        {
-            JObject ret = (JObject)e.Result;
-            JObject jo = new JObject();
-            jo["accountNo"] = "123123123";
-            jo["date"] = DateTime.Now;
-            jo["enterpriseName"] = "企业名称";
-            jo["bussisType"] = bussisType;
-
-            jo["name"] = ret.Value<string>("certName");
-            jo["idNo"] = ret.Value<string>("certNo");
-
-            jo["retCode"] = 0;
-            jo["callback"] = "identity";
-            ScriptInvoke(jo);
+            peripheralManager.IDCardReader.ReadAsync(new JObject());
         }
         #endregion
 
         #region 二维码
-        ReadQRCode readQRCode;
         public void loadQRCode()
         {
-            readQRCode = new ReadQRCode();
-
-            readQRCode.Initialize();
-
+            //创建就开启了
+            //peripheralManager.QRCode.Read(new JObject());
         }
         public void closeQRCode()
         {
-            if (readQRCode != null)
-                readQRCode.CloseQRCode();
-
+           
         }
 
 
         #endregion
 
         #region 指纹
-        Finger finger;
         public void loadFinger()
         {
-            if(finger==null)
-                finger = new Finger();
-
-            finger.Initialize();
-            //DialogResult dialogResult = FrmFinger.Instance.ShowDialog();
-            //if (DialogResult.OK != dialogResult)
-            //{
-            //    return;
-            //}
-
+            peripheralManager.Finger.Read(new JObject());
         }
         #endregion
 
         #region 键盘
-        KeyBoard KeyBoard;
         public void loadKeyBoard()
         {
-            if (KeyBoard == null)
-                KeyBoard = new KeyBoard();
+            peripheralManager.KeyBoard.Read(new JObject());
         }
+
+        #endregion
+
+        #region 签字板
         public void LoadBorad()
         {
             DialogResult dialogResult = FrmBoard.Instance.ShowDialog();

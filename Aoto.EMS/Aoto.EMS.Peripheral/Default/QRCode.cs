@@ -13,7 +13,7 @@ using Newtonsoft.Json.Linq;
 
 namespace Aoto.EMS.Peripheral
 {
-    public class ReadQRCode : IQRCode
+    public class QRCode : IQRCode
     {
         public delegate int P_HID_POS_RECEIVE_NOTIFY(String data, int len, String noused, String lpparam); //定义一个委托
 
@@ -29,7 +29,7 @@ namespace Aoto.EMS.Peripheral
         private P_HID_POS_RECEIVE_NOTIFY callback;
 
         private static readonly ILog log = LogManager.GetLogger("readQRCode");
-        private IScriptInvoker scriptInvoker;
+        public event RunCompletedEventHandler RunCompletedEvent;
         private IntPtr intPtr;
         private IntPtr openApi;
         private IntPtr CcloseApi;
@@ -46,7 +46,7 @@ namespace Aoto.EMS.Peripheral
         public bool Enabled { get { return enabled; } }
         public bool IsBusy { get { return isBusy; } }
 
-        public ReadQRCode()
+        public QRCode()
         {
             isBusy = false;
             cancelled = false;
@@ -57,11 +57,10 @@ namespace Aoto.EMS.Peripheral
             this.name = Config.App.Peripheral["readQRCode"].Value<string>("name");
 
             callback = new P_HID_POS_RECEIVE_NOTIFY(ShowMessage);
-            scriptInvoker = AutofacContainer.ResolveNamed<IScriptInvoker>("scriptInvoker");
+
+
             Initialize();
-        }
-
-
+        }  
 
         public void Dispose()
         {
@@ -111,7 +110,7 @@ namespace Aoto.EMS.Peripheral
             jo["retCode"] = 0;
             jo["data"] = data;
             jo["callback"] = "getQRCodeData";
-            scriptInvoker.ScriptInvoke(jo);
+            RunCompletedEvent(this,new RunCompletedEventArgs(jo));
 
             return 0;
         }

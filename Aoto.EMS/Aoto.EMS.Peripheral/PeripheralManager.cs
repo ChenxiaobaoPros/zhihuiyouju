@@ -11,6 +11,9 @@ using Newtonsoft.Json.Linq;
 
 namespace Aoto.EMS.Peripheral
 {
+    /*
+     操作外设分: 读 写 回调
+         */
     /// <summary>
     /// 声音
     /// </summary>
@@ -90,6 +93,7 @@ namespace Aoto.EMS.Peripheral
         FingerType FingerType { get; set; }
         void Initialize();
         void SaveBoard();
+        void Read(JObject jo);
         void Clear();
         StringBuilder MakeFeatureToTemplate(List<StringBuilder> stringBuilders);
         event RunCompletedEventHandler RunCompletedEvent;
@@ -99,7 +103,8 @@ namespace Aoto.EMS.Peripheral
     /// </summary>
     public interface IQRCode : IDisposable
     {
-
+        void Initialize();
+        event RunCompletedEventHandler RunCompletedEvent;
     }
     /// <summary>
     /// 高拍仪
@@ -153,16 +158,16 @@ namespace Aoto.EMS.Peripheral
         public PeripheralManager()
         {
             scriptInvoker = AutofacContainer.ResolveNamed<IScriptInvoker>("scriptInvoker");
-            voicePlayer = AutofacContainer.ResolveNamed<IVoicePlayer>("voicePlayer");
-            magneticCardReaderWriter = AutofacContainer.ResolveNamed<IReader>("magneticCardReaderWriter");
-            icCardReaderWriter = AutofacContainer.ResolveNamed<IReader>("icCardReaderWriter");
+            //voicePlayer = AutofacContainer.ResolveNamed<IVoicePlayer>("voicePlayer");
+            //magneticCardReaderWriter = AutofacContainer.ResolveNamed<IReader>("magneticCardReaderWriter");
+            //icCardReaderWriter = AutofacContainer.ResolveNamed<IReader>("icCardReaderWriter");
             idCardReader = AutofacContainer.ResolveNamed<IReader>("idCardReader");
-            needlePrinter = AutofacContainer.ResolveNamed<IPrinter>("needlePrinter");
-            thermalPrinter = AutofacContainer.ResolveNamed<IPrinter>("thermalPrinter");
-            evaluator = AutofacContainer.ResolveNamed<IEvaluator>("evaluator");
-            barScreen = AutofacContainer.ResolveNamed<IWriter>("barScreen");
-            compScreen = AutofacContainer.ResolveNamed<IWriter>("compScreen");
-            caller = AutofacContainer.ResolveNamed<ICaller>("caller");
+            //needlePrinter = AutofacContainer.ResolveNamed<IPrinter>("needlePrinter");
+            //thermalPrinter = AutofacContainer.ResolveNamed<IPrinter>("thermalPrinter");
+            //evaluator = AutofacContainer.ResolveNamed<IEvaluator>("evaluator");
+            //barScreen = AutofacContainer.ResolveNamed<IWriter>("barScreen");
+            //compScreen = AutofacContainer.ResolveNamed<IWriter>("compScreen");
+            //caller = AutofacContainer.ResolveNamed<ICaller>("caller");
             //mifareCardReader = AutofacContainer.ResolveNamed<IReader>("mifareCardReader");
 
             //签字板
@@ -171,15 +176,22 @@ namespace Aoto.EMS.Peripheral
             keyBoard = AutofacContainer.ResolveNamed<IKeyBoard>("keyBoard");
             //金属键盘数据返回
             keyBoard.RunCompletedEvent += new RunCompletedEventHandler(ReadKeyBoardCompletedEvent);
+            //指纹
+            finger = AutofacContainer.ResolveNamed<IFinger>("finger");
+            finger.RunCompletedEvent += new RunCompletedEventHandler(ReadFingerCompletedEvent);
+            //二维码
+            qRCode = AutofacContainer.ResolveNamed<IQRCode>("qRCode");
+            qRCode.RunCompletedEvent += new RunCompletedEventHandler(ReadQRCodeCompletedEvent);
 
-            magneticCardReaderWriter.RunCompletedEvent += new RunCompletedEventHandler(ReadCardCompletedEvent);
-            icCardReaderWriter.RunCompletedEvent += new RunCompletedEventHandler(ReadCardCompletedEvent);
+
+            //magneticCardReaderWriter.RunCompletedEvent += new RunCompletedEventHandler(ReadCardCompletedEvent);
+            //icCardReaderWriter.RunCompletedEvent += new RunCompletedEventHandler(ReadCardCompletedEvent);
             idCardReader.RunCompletedEvent += new RunCompletedEventHandler(ReadCardCompletedEvent);
-            needlePrinter.RunCompletedEvent += new RunCompletedEventHandler(PrintCompletedEvent);
-
+            //needlePrinter.RunCompletedEvent += new RunCompletedEventHandler(PrintCompletedEvent);
             //mifareCardReader.RunCompletedEvent += new RunCompletedEventHandler(ReadCardCompletedEvent);
 
         }
+
 
         public string PeripheralStatus { get { return peripheralStatus; } set { peripheralStatus = value; } }
         public IReader MagneticCardReaderWriter { get { return magneticCardReaderWriter; } }
@@ -193,13 +205,26 @@ namespace Aoto.EMS.Peripheral
         public IPrinter ThermalPrinter { get { return thermalPrinter; } }
         public IEvaluator Evaluator { get { return evaluator; } }
 
+        public IKeyBoard KeyBoard { get { return keyBoard; } }
+        public IFinger Finger { get { return finger; } }
+        public IQRCode QRCode { get { return qRCode; } }
+
         private static object lockedObject = new object();
         private static string res = String.Empty;
 
 
+        private void ReadQRCodeCompletedEvent(object sender, RunCompletedEventArgs e)
+        {
+            scriptInvoker.ScriptInvoke((JObject)e.Result);
+        }
+        private void ReadFingerCompletedEvent(object sender, RunCompletedEventArgs e)
+        {
+            scriptInvoker.ScriptInvoke((JObject)e.Result);
+        }
+
         private void ReadKeyBoardCompletedEvent(object sender, RunCompletedEventArgs e)
         {
-            throw new NotImplementedException();
+            scriptInvoker.ScriptInvoke((JObject)e.Result);
         }
         private void ReadCardCompletedEvent(object sender, RunCompletedEventArgs e)
         {

@@ -11,6 +11,5 @@ D:\多功能业务柜\Aoto.EMS\Aoto.EMS.Peripheral\bin\Debug\Autofac.dll
 D:\多功能业务柜\Aoto.EMS\Aoto.EMS.Peripheral\bin\Debug\Autofac.Configuration.dll
 D:\多功能业务柜\Aoto.EMS\Aoto.EMS.Peripheral\bin\Debug\ICSharpCode.SharpZipLib.dll
 D:\多功能业务柜\Aoto.EMS\Aoto.EMS.Peripheral\bin\Debug\Aoto.EMS.Infrastructure.pdb
-D:\多功能业务柜\Aoto.EMS\Aoto.EMS.Peripheral\bin\Debug\Aoto.EMS.Infrastructure.dll.config
 D:\多功能业务柜\Aoto.EMS\Aoto.EMS.Peripheral\bin\Debug\Newtonsoft.Json.xml
 D:\多功能业务柜\Aoto.EMS\Aoto.EMS.Peripheral\obj\Debug\Aoto.EMS.Peripheral.csproj.CopyComplete
