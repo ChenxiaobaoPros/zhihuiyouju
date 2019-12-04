@@ -105,6 +105,8 @@
         window.external.LoadBorad();
     }
     function loadfinger() {
+               var str = window.external.GetIDCard();
+        alert(str);
         window.external.loadFinger();
     }
     function loadQRCode() {
@@ -122,5 +124,9 @@
     function loadKeyBoard() {
         var oTxt = document.getElementById('text').focus();
         window.external.loadKeyBoard();
+    }
+    function readBoard(str) {
+        var oTxt = document.getElementById('text');
+        oTxt.value += str;
     }
 </script>

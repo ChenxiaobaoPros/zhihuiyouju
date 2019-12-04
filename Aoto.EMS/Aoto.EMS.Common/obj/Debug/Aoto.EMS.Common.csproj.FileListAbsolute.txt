@@ -7,4 +7,3 @@ D:\多功能业务柜\Aoto.EMS\Aoto.EMS.Common\bin\Debug\Newtonsoft.Json.dll
 D:\多功能业务柜\Aoto.EMS\Aoto.EMS.Common\bin\Debug\ThoughtWorks.QRCode.dll
 D:\多功能业务柜\Aoto.EMS\Aoto.EMS.Common\bin\Debug\Newtonsoft.Json.xml
 D:\多功能业务柜\Aoto.EMS\Aoto.EMS.Common\obj\Debug\Aoto.EMS.Common.csproj.CopyComplete
-D:\多功能业务柜\Aoto.EMS\Aoto.EMS.Common\obj\Debug\Aoto.EMS.Common.csprojAssemblyReference.cache

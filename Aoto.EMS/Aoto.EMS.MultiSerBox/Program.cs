@@ -1,5 +1,4 @@
 ﻿using Aoto.EMS.Common;
-using Aoto.EMS.Common.RequestJsonObject;
 using Aoto.EMS.Infrastructure;
 using Aoto.EMS.Infrastructure.Configuration;
 using log4net;

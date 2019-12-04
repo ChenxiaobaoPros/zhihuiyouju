@@ -48,10 +48,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ImageUtility.cs" />
-    <Compile Include="RequestJsonObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QrCodeFactory.cs" />
-    <Compile Include="ResponseJsonObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

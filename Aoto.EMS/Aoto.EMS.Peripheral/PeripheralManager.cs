@@ -80,6 +80,11 @@ namespace Aoto.EMS.Peripheral
 
     }
 
+    public interface IKeyBoard {
+        void Initialize();
+        void Read(JObject jo);
+        event RunCompletedEventHandler RunCompletedEvent;
+    }
     public class PeripheralManager
     {
         private string peripheralStatus;
@@ -95,6 +100,9 @@ namespace Aoto.EMS.Peripheral
         private IWriter compScreen;
         private IVoicePlayer voicePlayer;
         private IWritingBoard writingBoard;
+
+
+        private IKeyBoard keyBoard;
 
 
         // private IReader mifareCardReader;
@@ -118,7 +126,12 @@ namespace Aoto.EMS.Peripheral
 
             writingBoard = AutofacContainer.ResolveNamed<IWritingBoard>("writingBoard");
 
+            //金属键盘
+            keyBoard = AutofacContainer.ResolveNamed<IKeyBoard>("keyBoard");
+
             //mifareCardReader = AutofacContainer.ResolveNamed<IReader>("mifareCardReader");
+
+            keyBoard.RunCompletedEvent += new RunCompletedEventHandler(ReadKeyBoardCompletedEvent);
 
             magneticCardReaderWriter.RunCompletedEvent += new RunCompletedEventHandler(ReadCardCompletedEvent);
             icCardReaderWriter.RunCompletedEvent += new RunCompletedEventHandler(ReadCardCompletedEvent);
@@ -144,6 +157,11 @@ namespace Aoto.EMS.Peripheral
         private static object lockedObject = new object();
         private static string res = String.Empty;
 
+
+        private void ReadKeyBoardCompletedEvent(object sender, RunCompletedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
         private void ReadCardCompletedEvent(object sender, RunCompletedEventArgs e)
         {
             lock (lockedObject)

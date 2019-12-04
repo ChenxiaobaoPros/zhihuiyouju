@@ -10,4 +10,3 @@ D:\多功能业务柜\Aoto.EMS\Aoto.EMS.Infrastructure\obj\Debug\Aoto.EMS.Infras
 D:\多功能业务柜\Aoto.EMS\Aoto.EMS.Infrastructure\bin\Debug\Aoto.EMS.Infrastructure.dll.config
 D:\多功能业务柜\Aoto.EMS\Aoto.EMS.Infrastructure\bin\Debug\Newtonsoft.Json.dll
 D:\多功能业务柜\Aoto.EMS\Aoto.EMS.Infrastructure\bin\Debug\Newtonsoft.Json.xml
-D:\多功能业务柜\Aoto.EMS\Aoto.EMS.Infrastructure\obj\Debug\Aoto.EMS.Infrastructure.csprojAssemblyReference.cache

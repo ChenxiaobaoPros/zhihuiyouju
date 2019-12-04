@@ -136,9 +136,9 @@
                     <p class="Insurance_top_p2">身份识别</p>
                 </div>
                 <div class="clearfix shenzheng">
-                    <button class="loader-button4"> 请插入邮政储蓄卡</button>
                     <button class="loader-button5"> 读取身份证</button>
                 </div>
+                <div class="abc"></div>
             </div>
         </div>
         <!--身份识别结束-->
@@ -265,63 +265,43 @@
             $(".baoxian").click(function(){
                 $(".index_content").hide();//隐藏首页
                 $(".Insurance").show();//显示保险工具页
-                var ret = window.external.GetInfo();//获取保险工具数据方法
-                alert(ret);
-				var Insurance_list=JSON.parse(ret);//获取保险列表数据
-				var Insurance_type=Insurance_list.InsuranceType;//获取保险类型数据
-				//渲染数据类型
-				$(".Insurance_opt").prepend("<option value='0'>请选择</option>");//添加第一个option值
-				for (var i = 0; i < Insurance_type.length; i++) {				
-				　　	$(".Insurance_opt").append("<option>"+Insurance_type[i]+"</option>");
-				}
-                var last = Insurance_list;//获取保险列表数据
-                var html = '';
-				//渲染列表
-                for ( var i = 0; i < last.businesslist.length; i++) {//循环json对象，拼接tr,td的html
-                    html = html + '<tr class="banse">';
-                    html = html + '<td class="tou_td BusinessNameNo">' + last.businesslist[i].BusinessNameNo + '</td>';
-                    html = html + '<td class="tou_td BusinessName">' + last.businesslist[i].BusinessName  + '</td>';
-                    html = html + '<td class="tou_td RealBusiness">' + last.businesslist[i].RealBusiness  + '</td>';
-                    html = html + '<td class="tou_td2"><div> <button class="loader-button3"> <img src="../img/ban.png" />办 理</button></div>  </td>';
-
-                    html = html + '</tr>';
-                }
-                $('.ge').html(html);//通过jquery方式获取table，并把tr,td的html输出到table中
-                $('.ge').on('click','.loader-button3',function (){//获取每一行的数据
-                    // var userName = $(this).parents("tr").find(".aaa").text();
-
-                    // var result = []; // 数组,存储每一行数据
-                    // result.push({
-                    //     "name" : $(this).parents("tr").find(".aaa").text(),
-                    //     "age" : $(this).parents("tr").find(".bbb").text(),
-                    //     "sex" : $(this).parents("tr").find(".ccc").text()
-                    // })
-                    // alert(typeof result)
-                    var result = {}; // 数组,存储每一行数据
-                    result.BusinessNameNo=$(this).parents("tr").find(".BusinessNameNo").text();
-                    result.BusinessName=$(this).parents("tr").find(".BusinessName").text();
-                    result.RealBusiness=$(this).parents("tr").find(".RealBusiness").text();
-                    var Root = JSON.stringify(result);
-                    var Insurance_list4 =  window.external.HandleBuss(Root);
-                    //var last=JSON.parse(Insurance_list4);//获取保险列表数据
-                    alert(Insurance_list4)
-
-
-                    $(".index_content").hide();//隐藏首页
-                    //$(".Insurance").hide();//显示保险工具页
-                    //$(".shib").show();//显示身份识别页
-                });
-
-                $(".banse:even").css("background","#fff");//隔行变色
-                $(".banse:odd").css("background","#f2f8f6");//隔行变色
-                var ge = $(".ge").height();
-                if(ge >= 1093){
-                    //判断保险工具页面表格数据超出总高度显示滚动条
-                    $(".biaoge").css("overflow-y","scroll");
-                }
             });
 			
-        })
+        });
+        $(function(){
+            var ret = window.external.LoadBussisPage();//获取保险工具数据方法
+            var Insurance_list=JSON.parse(ret);//获取保险列表数据
+            var Insurance_type=Insurance_list.BussisTypes;//获取保险类型数据
+
+            //渲染数据类型
+            $(".Insurance_opt").prepend("<option value='0'>请选择</option>");//添加第一个option值
+            for (var i = 0; i < Insurance_type.length; i++) {
+
+                $(".Insurance_opt").append("<option>"+Insurance_type[i]+"</option>");
+            }
+            var last = Insurance_list;//获取保险列表数据
+            var html = '';
+            //渲染列表
+            for ( var i = 0; i < last.businesslist.length; i++) {//循环json对象，拼接tr,td的html
+                html = html + '<tr class="banse">';
+                html = html + '<td class="tou_td BusinessNameNo">' + last.businesslist[i].BusinessNameNo + '</td>';
+                html = html + '<td class="tou_td BusinessName">' + last.businesslist[i].BusinessName  + '</td>';
+                html = html + '<td class="tou_td RealBusiness">' + last.businesslist[i].RealBusiness  + '</td>';
+                html = html + '<td class="tou_td2"><div> <button class="loader-button3"> <img src="../img/ban.png" />办 理</button></div>  </td>';
+
+                html = html + '</tr>';
+            }
+            $('.ge').html(html);//通过jquery方式获取table，并把tr,td的html输出到table中
+
+
+            $(".banse:even").css("background","#fff");//隔行变色
+            $(".banse:odd").css("background","#f2f8f6");//隔行变色
+            var ge = $(".ge").height();
+            if(ge >= 1093){
+                //判断保险工具页面表格数据超出总高度显示滚动条
+                $(".biaoge").css("overflow-y","scroll");
+            }
+        });
 		$(function(){
 			$(".loader-button").click(function(){
 				var Insurance_val= $('.Insurance_opt').val();//获取数据类型值
@@ -329,48 +309,86 @@
                 var last=JSON.parse(Insurance_list2);//获取保险列表数据
                 //var last = Insurance_list2;//获取保险列表数据
                 if(last.length==""){
-                    // alert("该数据不存在")
-                    // var html2 = '';
-                    // html2 = html2 + '<div class="tou_td aaa">' + 该数据不存在+ '</div>';
                     $('.ge').html("<div style='font-size: 30px;text-align: center;margin-top: 50px;'>该数据不存在</div>");
                 }else {
                     var html = '';
                     //渲染列表
                     for ( var i = 0; i < last.length; i++) {//循环json对象，拼接tr,td的html
                         html = html + '<tr class="banse">';
-                        html = html + '<td class="tou_td aaa">' + last[i].BusinessNameNo + '</td>';
-                        html = html + '<td class="tou_td bbb">' + last[i].BusinessName  + '</td>';
-                        html = html + '<td class="tou_td ccc">' + last[i].RealBusiness  + '</td>';
+                        html = html + '<td class="tou_td BusinessNameNo">' + last[i].BusinessNameNo + '</td>';
+                        html = html + '<td class="tou_td BusinessName">' + last[i].BusinessName  + '</td>';
+                        html = html + '<td class="tou_td RealBusiness">' + last[i].RealBusiness  + '</td>';
                         html = html + '<td class="tou_td2"><div> <button class="loader-button3"> <img src="../img/ban.png" />办 理</button></div>  </td>';
 
                         html = html + '</tr>';
                     }
                     $('.ge').html(html);//通过jquery方式获取table，并把tr,td的html输出到table中
+
                 }
 
 			});
 		})
         $(function(){
+            $('.ge').on('click','.loader-button3',function (){//获取每一行的数据
+                var result = {}; // 数组,存储每一行数据
+                result.BusinessNameNo=$(this).parents("tr").find(".BusinessNameNo").text();
+                result.BusinessName=$(this).parents("tr").find(".BusinessName").text();
+                result.RealBusiness=$(this).parents("tr").find(".RealBusiness").text();
+                var Root = JSON.stringify(result);
 
+                var Insurance_list4 =  window.external.HandleBuss(Root);
+                if(Insurance_list4==0){
+                    $(".index_content").hide();//隐藏首页
+                    $(".Insurance").hide();//显示保险工具页
+                    $(".shib").show();//显示身份识别页
+                    //调用身份证
+                     window.external.InitIDCard();
 
+                }
+            });
+        })
+        $(function(){
             $(".Insurance_top_p1").click(function(){
                 //在保险工具页里点击首页按钮隐藏保险工具页显示首页
                 $(".Insurance").hide();//隐藏保险工具页
                 $(".index_content").show();//显示首页
+
             });
             $(".Insurance_top_p3").click(function(){
                 //在身份证识别页里点击首页按钮隐藏保险工具页显示首页
                 $(".shib").hide();//隐藏身份识别页
                 $(".index_content").show();//显示首页
+
             });
             $(".Insurance_top_p4").click(function(){
                 //在保险业务办理页里点击首页按钮隐藏保险业务办理显示首页
                 $(".details").hide();//隐藏保险业务办理
                 $(".index_content").show();//显示首页
+
             });
         })
+        $(function(){
+
+            $(".loader-button5").click(function(){
+                //var aaa=window.external.InitIDCard();
+                // alert(aaa)
+                // //在保险业务办理页里点击首页按钮隐藏保险业务办理显示首页
+                // $(".details").hide();//隐藏保险业务办理
+                // $(".index_content").hide();//显示首页
+                // $(".shib").hide();//显示身份识别页details
+                //
+                // $(".details").show();//显示身份识别页
+
+
+
+            });
+        });
 
     });
+    function identity(str) {
+        $(".abc").html(str)
+
+    }
 </script>
 </body>
 </html>

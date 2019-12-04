@@ -13,7 +13,7 @@ using System.Threading;
 
 namespace Aoto.EMS.Peripheral
 {
-    public class KeyBoard
+    public class KeyBoard : IKeyBoard
     {
         #region 托管接口
         //
@@ -203,7 +203,7 @@ namespace Aoto.EMS.Peripheral
                 //成功
             }
         }
- 
+
     }
 
     public enum KeyBoardMode
