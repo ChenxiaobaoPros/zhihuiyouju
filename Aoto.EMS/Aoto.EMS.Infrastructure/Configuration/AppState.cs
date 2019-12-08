@@ -65,7 +65,6 @@ namespace Aoto.EMS.Infrastructure.Configuration
         //public static string WelcomeUrl = Path.Combine(Config.AppRoot, "web\\qms\\html\\admin\\index.html");
         //public static string MaintenanceUrl = Path.Combine(Config.AppRoot, "web\\maintenance.html");
         public static string WelcomeUrl = Path.Combine(Config.AppRoot, "duogong\\html\\index.html");
-        public static string MaintenanceUrl = Path.Combine(Config.AppRoot, "web\\maintenance.html");
 
         static AppState()
         {

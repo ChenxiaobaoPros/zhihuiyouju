@@ -247,8 +247,9 @@
 
             </div>
         </div>
+        
     </div>
-
+    <div class="abc"></div>
 </div>
 <script>
     window.onresize = function(){
@@ -264,6 +265,14 @@
     })
 </script>
 <script>
+    var info = window.external.GetDeiveList();
+    var jj = JSON.parse(info);
+    //alert(jj.deives);
+    alert(jj.token.accessToken);
+    $(".abc").html(jj )
+
+
+
     $('.toggle').click(function(e){
         //开启设备
         e.preventDefault(); // The flicker is a codepen thing
