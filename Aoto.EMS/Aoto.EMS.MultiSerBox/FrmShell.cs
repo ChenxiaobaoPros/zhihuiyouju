@@ -24,6 +24,7 @@ namespace Aoto.EMS.MultiSerBox
             webBrowser.ObjectForScripting = this;
             webBrowser.ScriptErrorsSuppressed = true;
             webBrowser.ScrollBarsEnabled = true ;
+            LoadBussisPage();
         }
         public void Shut()
         {
@@ -67,7 +68,7 @@ namespace Aoto.EMS.MultiSerBox
             //webBrowser.Navigate(Path.Combine(Config.AppRoot, "web\\qms\\html\\admin\\index.html"));
             webBrowser.Navigate(AppState.WelcomeUrl);
             peripheralManager = new PeripheralManager();//也可以用反射
-
+ 
         }
 
         #region 页面数据
@@ -98,7 +99,8 @@ namespace Aoto.EMS.MultiSerBox
         }
         public string LoadBussisPage()
         {
-            return JsonConvert.SerializeObject(PageData);
+            string str = JsonConvert.SerializeObject(PageData);
+            return str;
         }
         #endregion
 
@@ -121,7 +123,6 @@ namespace Aoto.EMS.MultiSerBox
         #endregion
 
         #region 身份证读取
-        IDCardReader iDCardReader;
         public void InitIDCard()
         {
             peripheralManager.IDCardReader.ReadAsync(new JObject());
