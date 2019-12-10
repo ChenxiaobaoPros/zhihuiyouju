@@ -172,3 +172,99 @@
 [2019-12-08 15:54:10.066][Aoto.EMS.MultiSerBox.exe][6344]---使用EPP仿真键盘---
 [2019-12-08 15:54:10.066][Aoto.EMS.MultiSerBox.exe][6344]SUNSON_UseEppPlainTextMode, PlaintextLength = 8,AutoEnd = 01
 [2019-12-08 15:54:10.066][Aoto.EMS.MultiSerBox.exe][6344]SUNSON_UseEppPlainTextMode,failure! errorinfo = 0x0
+[2019-12-08 16:14:23.544][Aoto.EMS.MultiSerBox.exe][17460]---打开串口---
+[2019-12-08 16:14:23.544][Aoto.EMS.MultiSerBox.exe][17460]SUNSON_OpenCom,nPortId = 3,nBaudrate = 9600
+[2019-12-08 16:14:23.545][Aoto.EMS.MultiSerBox.exe][17460]SUNSON_OpenCom,failure!
+[2019-12-08 16:14:23.545][Aoto.EMS.MultiSerBox.exe][17460]---使用EPP仿真键盘---
+[2019-12-08 16:14:23.545][Aoto.EMS.MultiSerBox.exe][17460]SUNSON_UseEppPlainTextMode, PlaintextLength = 8,AutoEnd = 01
+[2019-12-08 16:14:23.545][Aoto.EMS.MultiSerBox.exe][17460]SUNSON_UseEppPlainTextMode,failure! errorinfo = 0x0
+[2019-12-08 16:14:49.059][Aoto.EMS.MultiSerBox.exe][17528]---打开串口---
+[2019-12-08 16:14:49.059][Aoto.EMS.MultiSerBox.exe][17528]SUNSON_OpenCom,nPortId = 3,nBaudrate = 9600
+[2019-12-08 16:14:49.059][Aoto.EMS.MultiSerBox.exe][17528]SUNSON_OpenCom,failure!
+[2019-12-08 16:14:49.060][Aoto.EMS.MultiSerBox.exe][17528]---使用EPP仿真键盘---
+[2019-12-08 16:14:49.060][Aoto.EMS.MultiSerBox.exe][17528]SUNSON_UseEppPlainTextMode, PlaintextLength = 8,AutoEnd = 01
+[2019-12-08 16:14:49.060][Aoto.EMS.MultiSerBox.exe][17528]SUNSON_UseEppPlainTextMode,failure! errorinfo = 0x0
+[2019-12-08 16:15:31.249][Aoto.EMS.MultiSerBox.exe][1224]---打开串口---
+[2019-12-08 16:15:31.250][Aoto.EMS.MultiSerBox.exe][1224]SUNSON_OpenCom,nPortId = 3,nBaudrate = 9600
+[2019-12-08 16:15:31.250][Aoto.EMS.MultiSerBox.exe][1224]SUNSON_OpenCom,failure!
+[2019-12-08 16:15:31.250][Aoto.EMS.MultiSerBox.exe][1224]---使用EPP仿真键盘---
+[2019-12-08 16:15:31.250][Aoto.EMS.MultiSerBox.exe][1224]SUNSON_UseEppPlainTextMode, PlaintextLength = 8,AutoEnd = 01
+[2019-12-08 16:15:31.250][Aoto.EMS.MultiSerBox.exe][1224]SUNSON_UseEppPlainTextMode,failure! errorinfo = 0x0
+[2019-12-08 16:16:07.457][Aoto.EMS.MultiSerBox.exe][5416]---打开串口---
+[2019-12-08 16:16:07.457][Aoto.EMS.MultiSerBox.exe][5416]SUNSON_OpenCom,nPortId = 3,nBaudrate = 9600
+[2019-12-08 16:16:07.458][Aoto.EMS.MultiSerBox.exe][5416]SUNSON_OpenCom,failure!
+[2019-12-08 16:16:07.458][Aoto.EMS.MultiSerBox.exe][5416]---使用EPP仿真键盘---
+[2019-12-08 16:16:07.458][Aoto.EMS.MultiSerBox.exe][5416]SUNSON_UseEppPlainTextMode, PlaintextLength = 8,AutoEnd = 01
+[2019-12-08 16:16:07.458][Aoto.EMS.MultiSerBox.exe][5416]SUNSON_UseEppPlainTextMode,failure! errorinfo = 0x0
+[2019-12-08 16:16:23.855][Aoto.EMS.MultiSerBox.exe][9160]---打开串口---
+[2019-12-08 16:16:23.855][Aoto.EMS.MultiSerBox.exe][9160]SUNSON_OpenCom,nPortId = 3,nBaudrate = 9600
+[2019-12-08 16:16:23.855][Aoto.EMS.MultiSerBox.exe][9160]SUNSON_OpenCom,failure!
+[2019-12-08 16:16:23.856][Aoto.EMS.MultiSerBox.exe][9160]---使用EPP仿真键盘---
+[2019-12-08 16:16:23.856][Aoto.EMS.MultiSerBox.exe][9160]SUNSON_UseEppPlainTextMode, PlaintextLength = 8,AutoEnd = 01
+[2019-12-08 16:16:23.856][Aoto.EMS.MultiSerBox.exe][9160]SUNSON_UseEppPlainTextMode,failure! errorinfo = 0x0
+[2019-12-08 16:17:48.669][Aoto.EMS.MultiSerBox.exe][10092]---打开串口---
+[2019-12-08 16:17:48.670][Aoto.EMS.MultiSerBox.exe][10092]SUNSON_OpenCom,nPortId = 3,nBaudrate = 9600
+[2019-12-08 16:17:48.670][Aoto.EMS.MultiSerBox.exe][10092]SUNSON_OpenCom,failure!
+[2019-12-08 16:17:48.670][Aoto.EMS.MultiSerBox.exe][10092]---使用EPP仿真键盘---
+[2019-12-08 16:17:48.670][Aoto.EMS.MultiSerBox.exe][10092]SUNSON_UseEppPlainTextMode, PlaintextLength = 8,AutoEnd = 01
+[2019-12-08 16:17:48.671][Aoto.EMS.MultiSerBox.exe][10092]SUNSON_UseEppPlainTextMode,failure! errorinfo = 0x0
+[2019-12-08 16:21:29.579][Aoto.EMS.MultiSerBox.exe][15948]---打开串口---
+[2019-12-08 16:21:29.579][Aoto.EMS.MultiSerBox.exe][15948]SUNSON_OpenCom,nPortId = 3,nBaudrate = 9600
+[2019-12-08 16:21:29.579][Aoto.EMS.MultiSerBox.exe][15948]SUNSON_OpenCom,failure!
+[2019-12-08 16:21:29.579][Aoto.EMS.MultiSerBox.exe][15948]---使用EPP仿真键盘---
+[2019-12-08 16:21:29.579][Aoto.EMS.MultiSerBox.exe][15948]SUNSON_UseEppPlainTextMode, PlaintextLength = 8,AutoEnd = 01
+[2019-12-08 16:21:29.580][Aoto.EMS.MultiSerBox.exe][15948]SUNSON_UseEppPlainTextMode,failure! errorinfo = 0x0
+[2019-12-08 16:22:08.670][Aoto.EMS.MultiSerBox.exe][3544]---打开串口---
+[2019-12-08 16:22:08.670][Aoto.EMS.MultiSerBox.exe][3544]SUNSON_OpenCom,nPortId = 3,nBaudrate = 9600
+[2019-12-08 16:22:08.670][Aoto.EMS.MultiSerBox.exe][3544]SUNSON_OpenCom,failure!
+[2019-12-08 16:22:08.670][Aoto.EMS.MultiSerBox.exe][3544]---使用EPP仿真键盘---
+[2019-12-08 16:22:08.670][Aoto.EMS.MultiSerBox.exe][3544]SUNSON_UseEppPlainTextMode, PlaintextLength = 8,AutoEnd = 01
+[2019-12-08 16:22:08.670][Aoto.EMS.MultiSerBox.exe][3544]SUNSON_UseEppPlainTextMode,failure! errorinfo = 0x0
+[2019-12-08 16:25:29.669][Aoto.EMS.MultiSerBox.exe][7460]---打开串口---
+[2019-12-08 16:25:29.669][Aoto.EMS.MultiSerBox.exe][7460]SUNSON_OpenCom,nPortId = 3,nBaudrate = 9600
+[2019-12-08 16:25:29.670][Aoto.EMS.MultiSerBox.exe][7460]SUNSON_OpenCom,failure!
+[2019-12-08 16:25:29.670][Aoto.EMS.MultiSerBox.exe][7460]---使用EPP仿真键盘---
+[2019-12-08 16:25:29.670][Aoto.EMS.MultiSerBox.exe][7460]SUNSON_UseEppPlainTextMode, PlaintextLength = 8,AutoEnd = 01
+[2019-12-08 16:25:29.670][Aoto.EMS.MultiSerBox.exe][7460]SUNSON_UseEppPlainTextMode,failure! errorinfo = 0x0
+[2019-12-08 16:25:57.187][Aoto.EMS.MultiSerBox.exe][17012]---打开串口---
+[2019-12-08 16:25:57.188][Aoto.EMS.MultiSerBox.exe][17012]SUNSON_OpenCom,nPortId = 3,nBaudrate = 9600
+[2019-12-08 16:25:57.188][Aoto.EMS.MultiSerBox.exe][17012]SUNSON_OpenCom,failure!
+[2019-12-08 16:25:57.188][Aoto.EMS.MultiSerBox.exe][17012]---使用EPP仿真键盘---
+[2019-12-08 16:25:57.188][Aoto.EMS.MultiSerBox.exe][17012]SUNSON_UseEppPlainTextMode, PlaintextLength = 8,AutoEnd = 01
+[2019-12-08 16:25:57.188][Aoto.EMS.MultiSerBox.exe][17012]SUNSON_UseEppPlainTextMode,failure! errorinfo = 0x0
+[2019-12-08 16:26:12.947][Aoto.EMS.MultiSerBox.exe][20296]---打开串口---
+[2019-12-08 16:26:12.947][Aoto.EMS.MultiSerBox.exe][20296]SUNSON_OpenCom,nPortId = 3,nBaudrate = 9600
+[2019-12-08 16:26:12.947][Aoto.EMS.MultiSerBox.exe][20296]SUNSON_OpenCom,failure!
+[2019-12-08 16:26:12.948][Aoto.EMS.MultiSerBox.exe][20296]---使用EPP仿真键盘---
+[2019-12-08 16:26:12.948][Aoto.EMS.MultiSerBox.exe][20296]SUNSON_UseEppPlainTextMode, PlaintextLength = 8,AutoEnd = 01
+[2019-12-08 16:26:12.948][Aoto.EMS.MultiSerBox.exe][20296]SUNSON_UseEppPlainTextMode,failure! errorinfo = 0x0
+[2019-12-08 16:26:23.228][Aoto.EMS.MultiSerBox.exe][1484]---打开串口---
+[2019-12-08 16:26:23.228][Aoto.EMS.MultiSerBox.exe][1484]SUNSON_OpenCom,nPortId = 3,nBaudrate = 9600
+[2019-12-08 16:26:23.228][Aoto.EMS.MultiSerBox.exe][1484]SUNSON_OpenCom,failure!
+[2019-12-08 16:26:23.228][Aoto.EMS.MultiSerBox.exe][1484]---使用EPP仿真键盘---
+[2019-12-08 16:26:23.229][Aoto.EMS.MultiSerBox.exe][1484]SUNSON_UseEppPlainTextMode, PlaintextLength = 8,AutoEnd = 01
+[2019-12-08 16:26:23.229][Aoto.EMS.MultiSerBox.exe][1484]SUNSON_UseEppPlainTextMode,failure! errorinfo = 0x0
+[2019-12-08 16:30:16.299][Aoto.EMS.MultiSerBox.exe][12116]---打开串口---
+[2019-12-08 16:30:16.299][Aoto.EMS.MultiSerBox.exe][12116]SUNSON_OpenCom,nPortId = 3,nBaudrate = 9600
+[2019-12-08 16:30:16.299][Aoto.EMS.MultiSerBox.exe][12116]SUNSON_OpenCom,failure!
+[2019-12-08 16:30:16.299][Aoto.EMS.MultiSerBox.exe][12116]---使用EPP仿真键盘---
+[2019-12-08 16:30:16.299][Aoto.EMS.MultiSerBox.exe][12116]SUNSON_UseEppPlainTextMode, PlaintextLength = 8,AutoEnd = 01
+[2019-12-08 16:30:16.299][Aoto.EMS.MultiSerBox.exe][12116]SUNSON_UseEppPlainTextMode,failure! errorinfo = 0x0
+[2019-12-08 16:35:19.419][Aoto.EMS.MultiSerBox.exe][8532]---打开串口---
+[2019-12-08 16:35:19.420][Aoto.EMS.MultiSerBox.exe][8532]SUNSON_OpenCom,nPortId = 3,nBaudrate = 9600
+[2019-12-08 16:35:19.420][Aoto.EMS.MultiSerBox.exe][8532]SUNSON_OpenCom,failure!
+[2019-12-08 16:35:19.420][Aoto.EMS.MultiSerBox.exe][8532]---使用EPP仿真键盘---
+[2019-12-08 16:35:19.420][Aoto.EMS.MultiSerBox.exe][8532]SUNSON_UseEppPlainTextMode, PlaintextLength = 8,AutoEnd = 01
+[2019-12-08 16:35:19.420][Aoto.EMS.MultiSerBox.exe][8532]SUNSON_UseEppPlainTextMode,failure! errorinfo = 0x0
+[2019-12-08 16:36:00.545][Aoto.EMS.MultiSerBox.exe][18724]---打开串口---
+[2019-12-08 16:36:00.546][Aoto.EMS.MultiSerBox.exe][18724]SUNSON_OpenCom,nPortId = 3,nBaudrate = 9600
+[2019-12-08 16:36:00.546][Aoto.EMS.MultiSerBox.exe][18724]SUNSON_OpenCom,failure!
+[2019-12-08 16:36:00.546][Aoto.EMS.MultiSerBox.exe][18724]---使用EPP仿真键盘---
+[2019-12-08 16:36:00.546][Aoto.EMS.MultiSerBox.exe][18724]SUNSON_UseEppPlainTextMode, PlaintextLength = 8,AutoEnd = 01
+[2019-12-08 16:36:00.546][Aoto.EMS.MultiSerBox.exe][18724]SUNSON_UseEppPlainTextMode,failure! errorinfo = 0x0
+[2019-12-08 16:37:18.350][Aoto.EMS.MultiSerBox.exe][12096]---打开串口---
+[2019-12-08 16:37:18.350][Aoto.EMS.MultiSerBox.exe][12096]SUNSON_OpenCom,nPortId = 3,nBaudrate = 9600
+[2019-12-08 16:37:18.350][Aoto.EMS.MultiSerBox.exe][12096]SUNSON_OpenCom,failure!
+[2019-12-08 16:37:18.351][Aoto.EMS.MultiSerBox.exe][12096]---使用EPP仿真键盘---
+[2019-12-08 16:37:18.351][Aoto.EMS.MultiSerBox.exe][12096]SUNSON_UseEppPlainTextMode, PlaintextLength = 8,AutoEnd = 01
+[2019-12-08 16:37:18.351][Aoto.EMS.MultiSerBox.exe][12096]SUNSON_UseEppPlainTextMode,failure! errorinfo = 0x0

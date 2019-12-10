@@ -96,7 +96,6 @@
                     </select>
                     <div class="Insurance_opt_btn">
                         <button class="loader-button">查 询</button>
-                        <button class="loader-button2">取 消</button>
                     </div>
                 </div>
                <table class="aaa">
@@ -214,27 +213,51 @@
                     </div>
                     <div>
 
-                        <div class="hua">
-                            <div class="imgDiv">
-                                <span id="sign_show"></span>
-                            </div>
+                        <div class="hua clearfix">
+                            <p style="width: 100px;height: 40px;font-size: 20px;color: #595959;line-height: 40px;">电子签名：</p>
+                            <div style="width: 880px;" class="clearfix">
+                                <div class="canvasDiv">
+                                    <div id="editing_area">
+                                        <canvas width="400" height="200" id="canvasEdit"></canvas>
+                                    </div>
 
+                                </div>
+                                <div class="imgDiv">
+                                    <span id="sign_show"></span>
+                                </div>
+
+                            </div>
                             <div class="btnDiv">
-                                <a id="sign_clear" class="clearBtn">清除</a>
-                                <a id="sign_ok" class="okBtn">确认</a>
+                                <a id="sign_ok" class="okBtn">确 认</a>
+                                <a id="sign_clear" class="clearBtn">清 除</a>
                             </div>
                         </div>
-                        <div class="canvasDiv">
-                            <div id="editing_area">
-                                <canvas width="400" height="200" id="canvasEdit"></canvas>
-                            </div>
 
-                        </div>
                     </div>
+                </div>
+                <div class="clearfix" style="width: 240px; height: 40px;margin: 35px auto 0;" >
+                    <button class="btn_btn">提 交</button>
+                    <button class="btn_btn2">取 消</button>
                 </div>
             </div>
         </div>
         <!--保险业务办理页结束-->
+        <!-- 支付成功页       -->
+        <div class="cheng">
+            <div class="choshou clearfix">
+                <p class="Insurance_top_p4">首页</p>
+                <p class="Insurance_top_p2">保险办理</p>
+            </div>
+            <div class="chg">
+                <div class="clearfix chg_div ">
+                    <span class="zhifu_span"></span>
+                    <div class="huidan">
+                        <p>扣款成功</p>
+                        <p>回单已打印成功，请及时领取</p>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!--首页底部-->
         <div class="index-bottom"></div>
     </div>
@@ -342,8 +365,7 @@
                     $(".Insurance").hide();//显示保险工具页
                     $(".shib").show();//显示身份识别页
                     //调用身份证
-                    window.external.InitIDCard();
-                    window.external.loadKeyBoard();
+                     window.external.InitIDCard();
 
                 }
             });
@@ -381,8 +403,16 @@
             });
         });
     });
-    function identity(str) {
+    $(function () {
 
+        $(".btn_btn").click(function(){
+            $(".details").hide();
+            $(".cheng").show();
+        });
+
+    });
+    function identity(str) {
+//获取详情数据
         var data=JSON.parse(str);
         var retCode=data.retCode;
         var accountNo=data.accountNo;
@@ -409,13 +439,24 @@
 
     }
 
+
     function getQRCodeData(str)
-    {
-        alert(str);
+    {   //二维码扫码
+        var retCode=JSON.parse(str);
+        var rvm = retCode.retCode
+        if(rvm==0){
+            $(".qrtcode").css({"background":"#007e3e"})
+            $(".qrtcode").css({"color":"#ffffff"})
+        }
     }
       function getFinger(str)
-    {
-        alert(str);
+    {   //指纹
+        var finger=JSON.parse(str);
+        var zw = finger.retCode
+        if(zw==0){
+            $(".finger").css({"background":"#007e3e"})
+            $(".finger").css({"color":"#ffffff"})
+        }
     }
 </script>
 </body>

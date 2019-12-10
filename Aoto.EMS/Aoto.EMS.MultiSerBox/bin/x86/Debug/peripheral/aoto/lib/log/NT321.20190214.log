@@ -1,7 +1,0 @@
-<<09:36:53.975#信息>>[ReadCardInfo] SN=[{"ATR":"3B680000007304C10015411A","CODE":"0","SLOT":"2","SLOT_NAME":"Contact"}]
-<<11:16:30.256#信息>>[ReadCardInfo] SN=[{"ATR":"3B680000007304C10015411A","CODE":"0","SLOT":"2","SLOT_NAME":"Contact"}]
-<<11:16:33.397#信息>>[ReadCardInfo] SN=[{"ATR":"3B680000007304C10015411A","CODE":"0","SLOT":"2","SLOT_NAME":"Contact"}]
-<<11:16:35.711#信息>>[ReadCardInfo] SN=[{"ATR":"0D78007102007304C10015411A","CODE":"0","SLOT":"1","SLOT_NAME":"Contactless","UID":"87353859"}]
-<<11:16:35.711#信息>>HaltAerial ret=0 message={"CODE":"0"}
-<<11:16:35.929#信息>>GetInformation ret=0 message={"CODE":"0","CardNumber":"6221550710020698"}
-<<11:16:35.929#信息>>GetInformationmessage=6221550710020698

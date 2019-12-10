@@ -269,23 +269,36 @@ namespace Aoto.EMS.Peripheral
                 }
                 else if (idCardReader == sender)
                 {
-                    jo["allCompleted"] = allCompleted |= 4;
+                    //jo["allCompleted"] = allCompleted |= 4;
 
-                    if (ErrorCode.Success == result || ErrorCode.Failure == result)
-                    {
-                        magneticCardReaderWriter.Cancelled = true;
-                        icCardReaderWriter.Cancelled = true;
+                    //if (ErrorCode.Success == result || ErrorCode.Failure == result)
+                    //{
+                    //    idCardReader.Cancelled = true;
+                    //    idCardReader.Cancelled = true;
 
-                        if (ErrorCode.Success == result)
-                        {
-                            res = jo.ToString(Formatting.None);
-                        }
-                    }
+                    //    if (ErrorCode.Success == result)
+                    //    {
+                    //        res = jo.ToString(Formatting.None);
+                    //    }
+                    //}
+                    JObject ret = (JObject)e.Result;
+                    JObject joo = new JObject();
+                    joo["accountNo"] = "123123123";
+                    joo["date"] = DateTime.Now;
+                    joo["enterpriseName"] = "企业名称";
+                    //jo["bussisType"] = bussisType;
+
+                    joo["name"] = ret.Value<string>("certName");
+                    joo["idNo"] = ret.Value<string>("certNo");
+
+                    joo["retCode"] = 0;
+                    joo["callback"] = "identity";
+                    scriptInvoker.ScriptInvoke(joo);
                 }
 
                 log.DebugFormat("type = {0}", type);
                 log.DebugFormat("allCompleted = {0}", allCompleted);
-                log.DebugFormat("res = {0}", res);
+                log.DebugFormat("res = {0}", res);  
 
                 if (type == allCompleted)
                 {
