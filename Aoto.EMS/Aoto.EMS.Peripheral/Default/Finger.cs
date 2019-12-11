@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -114,6 +115,7 @@ namespace Aoto.EMS.Peripheral
         private static readonly ILog log = LogManager.GetLogger("finger");
         private IntPtr intPtr;
         private RunAsyncCaller asyncCaller;
+        private IScriptInvoker scriptInvoker;
         public event RunCompletedEventHandler RunCompletedEvent;
         protected string name;
         protected string dll;
@@ -138,7 +140,7 @@ namespace Aoto.EMS.Peripheral
             this.timeout = Config.App.Peripheral["finger"].Value<int>("timeout");
             this.enabled = Config.App.Peripheral["finger"].Value<bool>("enabled");
             this.name = Config.App.Peripheral["finger"].Value<string>("name");
-
+            scriptInvoker = AutofacContainer.ResolveNamed<IScriptInvoker>("scriptInvoker");
             asyncCaller = new RunAsyncCaller(Read);
             Initialize();
         }
@@ -196,7 +198,6 @@ namespace Aoto.EMS.Peripheral
             log.Debug("end");
         }
 
-
         public void Read(JObject jo)
         {
             while (true)
@@ -218,8 +219,9 @@ namespace Aoto.EMS.Peripheral
                         jo["retCode"] = 0;
                         jo["imageData"] = iamgeBytes;
                         jo["callback"] = "getFinger";
-                        RunCompletedEvent(this,new RunCompletedEventArgs(iamgeBytes));
+                        break;
                     }
+                   
                 }
                 catch (Exception e)
                 {
@@ -228,6 +230,72 @@ namespace Aoto.EMS.Peripheral
                 //特征
                
                 Thread.Sleep(200);
+            }
+        }
+
+        public void ReadAsync(JObject jo)
+        {
+            log.DebugFormat("begin, args: jo = {0}", jo);
+
+            if (!enabled)
+            {
+                return;
+            }
+
+            if (isBusy)
+            {
+                jo["result"] = ErrorCode.Busy;
+                log.InfoFormat("end, isBusy = {0}", isBusy);
+                return;
+            }
+
+            isBusy = true;
+            asyncCaller.BeginInvoke(jo, new AsyncCallback(ReadCallback), jo);
+            log.Debug("end");
+        }
+
+        private void ReadCallback(IAsyncResult ar)
+        {
+            JObject jo = (JObject)ar.AsyncState;
+
+            try
+            {
+                ((RunAsyncCaller)((AsyncResult)ar).AsyncDelegate).EndInvoke(ar);
+            }
+            catch (Exception e)
+            {
+                jo["result"] = ErrorCode.Failure;
+                log.Error("Error", e);
+            }
+            finally
+            {
+                isBusy = false;
+                int t = jo.Value<int>("timeout");
+
+                if (864000000 == t)
+                {
+                    if (ErrorCode.Offline != jo.Value<int>("result"))
+                    {
+                        scriptInvoker.ScriptInvoke(jo);
+                    }
+
+                    if (!cancelled)
+                    {
+                        Thread.Sleep(200);
+
+                        JObject joo = new JObject();
+                        joo["objId"] = jo["objId"];
+                        joo["callback"] = jo["callback"];
+                        joo["tag"] = jo["tag"];
+                        joo["type"] = jo["type"];
+                        joo["timeout"] = t;
+                        ReadAsync(joo);
+                    }
+                }
+                else
+                {
+                    RunCompletedEvent(this, new RunCompletedEventArgs(jo));
+                }
             }
         }
 

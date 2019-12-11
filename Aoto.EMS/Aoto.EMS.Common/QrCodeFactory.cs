@@ -43,6 +43,32 @@ namespace Aoto.EMS.Common
                 return null;
             }
         }
+        public static Bitmap CreateQRCode(string content,int scale)
+        {
+            try
+            {
+                QRCodeEncoder qrEncoder = new QRCodeEncoder();
+                //二维码类型
+                qrEncoder.QRCodeEncodeMode = QRCodeEncoder.ENCODE_MODE.BYTE;
+                //二维码尺寸
+                qrEncoder.QRCodeScale = scale;
+                //二维码版本
+                qrEncoder.QRCodeVersion = 7;
+                //二维码容错程度
+                qrEncoder.QRCodeErrorCorrect = QRCodeEncoder.ERROR_CORRECTION.M;
+                //字体与背景颜色
+                qrEncoder.QRCodeBackgroundColor = Color.White;
+                qrEncoder.QRCodeForegroundColor = Color.Black;
+                //UTF-8编码类型
+                Bitmap qrcode = qrEncoder.Encode(content, Encoding.UTF8);
+
+                return qrcode;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
         /// <summary>
         /// 生成带logo二维码
         /// </summary>

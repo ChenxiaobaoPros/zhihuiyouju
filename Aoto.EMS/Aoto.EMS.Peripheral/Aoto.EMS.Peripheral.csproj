@@ -61,6 +61,10 @@
     <Compile Include="Default\SignaturePlate.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Aoto.EMS.Common\Aoto.EMS.Common.csproj">
+      <Project>{B48B4D2E-5B2B-45DF-BC61-84415323D6FA}</Project>
+      <Name>Aoto.EMS.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Aoto.EMS.Infrastructure\Aoto.EMS.Infrastructure.csproj">
       <Project>{8628fbf1-a1e2-4b06-b506-ece2e116fa53}</Project>
       <Name>Aoto.EMS.Infrastructure</Name>

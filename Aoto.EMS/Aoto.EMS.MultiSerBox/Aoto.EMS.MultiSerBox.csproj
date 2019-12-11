@@ -175,6 +175,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="image\邮政.png" />
     <Content Include="web\images\logo.bmp" />
     <Content Include="web\images\logo.ico" />
     <Content Include="web\images\logo.png" />

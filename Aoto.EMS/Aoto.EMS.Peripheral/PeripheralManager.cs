@@ -94,6 +94,7 @@ namespace Aoto.EMS.Peripheral
         void Initialize();
         void SaveBoard();
         void Read(JObject jo);
+        void ReadAsync(JObject jo);
         void Clear();
         StringBuilder MakeFeatureToTemplate(List<StringBuilder> stringBuilders);
         event RunCompletedEventHandler RunCompletedEvent;

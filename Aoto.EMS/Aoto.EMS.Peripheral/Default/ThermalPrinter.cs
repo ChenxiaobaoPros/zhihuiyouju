@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Concurrent;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Drawing.Printing;
 using System.IO;
 using System.Runtime.InteropServices;
 using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading;
+using Aoto.EMS.Common;
 using Aoto.EMS.Infrastructure.ComponentModel;
 using Aoto.EMS.Infrastructure.Configuration;
 using log4net;
@@ -437,13 +439,19 @@ namespace Aoto.EMS.Peripheral
             finally
             {
                 isBusy = false;
+                jt["callback"] = "pintback";
                 RunCompletedEvent(this, new RunCompletedEventArgs(jt));
             }
         }
 
         private void PrintPage(object sender, PrintPageEventArgs ev)
         {
-            SetInvoiceData(ev.Graphics);
+            //打印文本
+            //SetInvoiceData(ev.Graphics);
+            //打印图文
+            Bitmap image = QrCodeFactory.CreateQRCode("gfdfbvghf",1);
+            GetPrintPicture(image, ev);
+
             #region 其他打印
             //JObject jo = null;
 
@@ -559,6 +567,7 @@ namespace Aoto.EMS.Peripheral
         private void SetInvoiceData(Graphics g)
         {
             Font InvoiceFont = new Font("Arial", 8, FontStyle.Bold);
+            g.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;//反锯齿
             SolidBrush GrayBrush = new SolidBrush(Color.Gray);
             g.DrawString(GetPrintStr(), InvoiceFont, GrayBrush, 5, 5);
             g.Dispose();
@@ -626,6 +635,62 @@ namespace Aoto.EMS.Peripheral
             }
 
             return fontStyle;
+        }
+        public static void GetPrintPicture(Bitmap image, PrintPageEventArgs g)
+        {
+            int height = 5;
+            Font font = new Font("宋体", 10f);
+            Brush brush = new SolidBrush(Color.Black);
+            g.Graphics.SmoothingMode = SmoothingMode.HighQuality;
+            int interval = 15;
+            int pointX = 5;
+            Rectangle destRect = new Rectangle(130, 10, image.Width, image.Height);
+            g.Graphics.DrawImage(image, destRect, 0, 0, image.Width, image.Height, GraphicsUnit.Pixel);
+            height += 8;
+            RectangleF layoutRectangle = new RectangleF(pointX, height, 260f, 85f);
+            g.Graphics.DrawString("资产编号:" + 11111, font, brush, layoutRectangle);
+
+            height += interval;
+            layoutRectangle = new RectangleF(pointX, height, 230f, 85f);
+            g.Graphics.DrawString("资产名称:" + 22222, font, brush, layoutRectangle);
+
+            height += interval;
+            layoutRectangle = new RectangleF(pointX, height, 230f, 85f);
+            g.Graphics.DrawString("类    别:" + 33333, font, brush, layoutRectangle);
+
+            height += interval;
+            layoutRectangle = new RectangleF(pointX, height, 230f, 85f);
+            g.Graphics.DrawString("规格型号:" + 44444, font, brush, layoutRectangle);
+
+            height += interval;
+            layoutRectangle = new RectangleF(pointX, height, 230f, 85f);
+            g.Graphics.DrawString("生产厂家:" + 55555, font, brush, layoutRectangle);
+
+
+            height += interval;
+            layoutRectangle = new RectangleF(pointX, height, 230f, 85f);
+            g.Graphics.DrawString("启用时间:" + 66666, font, brush, layoutRectangle);
+
+            height += interval;
+            layoutRectangle = new RectangleF(pointX, height, 230f, 85f);
+            g.Graphics.DrawString("资产价格:" + 77777, font, brush, layoutRectangle);
+
+            height += interval;
+            layoutRectangle = new RectangleF(pointX, height, 230f, 85f);
+            g.Graphics.DrawString("保管单位:" + 88888, font, brush, layoutRectangle);
+
+            //height += interval;
+            layoutRectangle = new RectangleF(pointX + 150, height, 230f, 85f);
+            g.Graphics.DrawString("保管人:" + 99999, font, brush, layoutRectangle);
+
+            height += interval;
+            layoutRectangle = new RectangleF(pointX, height, 230f, 85f);
+            g.Graphics.DrawString("存放地点:" + 090909, font, brush, layoutRectangle);
+
+            height += interval;
+            layoutRectangle = new RectangleF(pointX, height, 240f, 85f);
+            g.Graphics.DrawString("备    注:" + 080808, font, brush, layoutRectangle);
+
         }
     }
 }

@@ -93,10 +93,10 @@
     <p />
     <p onclick="loadMoveCard()">吸卡器</p>
     <p />
-    <p onclick="loadKeyBoard()">明文键盘</p><input type="text" id="text"/>
+    <p onclick="loadKeyBoard()">明文键盘</p><input type="text" id="text" />
     <p onclick="">密文键盘</p>
     <p onclick="">解密</p>
-    <p />
+    <p onclick="wulianwang()">物联网</p>
 </body>
 </html>
 <script type="text/javascript">
@@ -105,8 +105,6 @@
         window.external.LoadBorad();
     }
     function loadfinger() {
-               var str = window.external.GetIDCard();
-        alert(str);
         window.external.loadFinger();
     }
     function loadQRCode() {
@@ -129,4 +127,5 @@
         var oTxt = document.getElementById('text');
         oTxt.value += str;
     }
+    function wulianwang() { var str = window.external.LoadOverView(); alert(str); }
 </script>

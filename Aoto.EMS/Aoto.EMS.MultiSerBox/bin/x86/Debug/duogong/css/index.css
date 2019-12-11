@@ -198,6 +198,56 @@
     /*box-shadow: -2px 0px 5px 1px #ccc,0px -2px 5px 1px #ccc,2px 0px 5px 1px #ccc,0px 2px 5px 1px #ccc;*/
     box-shadow: 2px 0px 5px 1px #ccc,0px 2px 5px 1px #ccc;
 }
+.Insurance_top3{
+    width: 888px;
+    height: 1200px;
+    background: #ffffff;
+    border-radius: 10px;
+    margin: 0px auto;
+    position: relative;
+    /*box-shadow: -2px 0px 5px 1px #ccc,0px -2px 5px 1px #ccc,2px 0px 5px 1px #ccc,0px 2px 5px 1px #ccc;*/
+    box-shadow: 2px 0px 5px 1px #ccc,0px 2px 5px 1px #ccc;
+}
+.py{
+    width: 100px;
+    height: 80px;
+    position: absolute;
+    top: 480px;
+    right: 0;
+    /*transform:translateX(100px);*/
+    animation: fadeInOut 5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+
+}
+@-webkit-keyframes fadeInOut {
+    0% {
+        right: 0;
+        opacity: 1;
+    }
+    25% {
+        right: 70px;
+        opacity: 0.8;
+    }
+    50% {
+        right: 140px;
+        opacity: 0.5;
+    }
+    75% {
+        right: 220px;
+        opacity: 0.3;
+    }
+    100% {
+        right: 300px;
+        opacity: 0;
+    }
+}
+
+
+.py img{
+    width: 100px;
+    height: 80px;
+}
 .Insurance_top_div{
     width: 100%;
     height: 74px;
@@ -392,25 +442,13 @@ select:focus { outline: none; }
 }
 .shenzheng{
     width: 888px;
-    height: 150px;
-    margin-top: 40px;
+    height: 1000px;
+
 }
-.shenzheng button{
-    width: 240px;
-    height: 60px;
-    background: -moz-linear-gradient(top, #53a786 0%, #087d53 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#53a786), color-stop(100%,#087d53));
-    background: -webkit-linear-gradient(top, #53a786 0%,#087d53 100%);
-    background: -o-linear-gradient(top, #53a786 0%,#087d53 100%);
-    background: -ms-linear-gradient(top, #53a786 0%,#087d53 100%);
-    background: linear-gradient(to bottom, #53a786 0%,#087d53 100%);
-    color: #fff;
-    font-size: 20px;
-    line-height: 60px;
-    border-radius: 6px;
-    box-shadow: 1px 0px 1px rgba(0, 0, 0, 0.7);
-    outline: none;
-    margin-left: 144px;
+.shenzheng img{
+    width:800px;
+    height: 960px;
+
 }
 /*身份识别结束*/
 /*保险业务办理页开始*/
@@ -444,6 +482,7 @@ select:focus { outline: none; }
 .details_box{
     width: 886px;
     height: 1280px;
+    position: relative;
     background: #fff;
     margin: 0 auto;
     box-shadow: 1px 0px 5px 1px #ccc,0px 1px 5px 1px #ccc;
@@ -739,7 +778,6 @@ s{position:absolute;top:54px;right:0;width:32px;height:32px;background:url("../i
 .cheng{
     width: 1080px;
     height: 1280px;
-
    background: #f6f6f6;
     padding-top: 100px;
     display: none;

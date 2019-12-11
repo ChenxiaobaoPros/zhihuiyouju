@@ -12,3 +12,6 @@ D:\多功能业务柜\Aoto.EMS\Aoto.EMS.Peripheral\bin\Debug\ICSharpCode.SharpZi
 D:\多功能业务柜\Aoto.EMS\Aoto.EMS.Peripheral\bin\Debug\Aoto.EMS.Infrastructure.pdb
 D:\多功能业务柜\Aoto.EMS\Aoto.EMS.Peripheral\obj\Debug\Aoto.EMS.Peripheral.csproj.CopyComplete
 D:\多功能业务柜\Aoto.EMS\Aoto.EMS.Peripheral\bin\Debug\CoreAudioApi.dll
+D:\多功能业务柜\Aoto.EMS\Aoto.EMS.Peripheral\bin\Debug\Aoto.EMS.Common.dll
+D:\多功能业务柜\Aoto.EMS\Aoto.EMS.Peripheral\bin\Debug\ThoughtWorks.QRCode.dll
+D:\多功能业务柜\Aoto.EMS\Aoto.EMS.Peripheral\bin\Debug\Aoto.EMS.Common.pdb
