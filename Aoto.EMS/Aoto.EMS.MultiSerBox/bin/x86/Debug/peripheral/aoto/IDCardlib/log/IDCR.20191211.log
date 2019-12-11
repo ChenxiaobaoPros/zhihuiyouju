@@ -868,3 +868,230 @@
 <<11:51:02.729#信息>>[IDCR_CancelRead]返回值：0(成功)
 <<11:51:02.729#信息>>[IDCR_CancelRead]调用结束
 
+<<12:02:00.092#信息>>[InitializeData]日志保存天数：[30]
+<<12:02:00.092#信息>>[InitializeData]GetModuleFileName：[D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug\]
+<<12:02:00.092#信息>>[InitializeData]GetCurrentDirectory：[D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug]
+<<12:02:00.095#信息>>[InitializeData]调用结束
+<<12:02:00.097#信息>>[IDCR_Initialize]去掉入参非法字符前lpszConfigXml=<?xml version ="1.0" encoding="utf-8"?><Device>  <DeviceId>IDCard001</DeviceId>  <LogLevel>3</LogLevel></Device>
+<<12:02:00.097#信息>>[IDCR_Initialize]去掉入参非法字符后lpszConfigXml=<?xml version ="1.0" encoding="utf-8"?><Device>  <DeviceId>IDCard001</DeviceId>  <LogLevel>3</LogLevel></Device>
+<<12:02:00.097#信息>>[IDCR_Initialize]设备标识为：IDCard001,日志级别为：3
+<<12:02:00.098#信息>>[IDCR_Initialize]读取串口信息：Com3
+<<12:02:23.248#信息>>[InitializeData]日志保存天数：[30]
+<<12:02:23.248#信息>>[InitializeData]GetModuleFileName：[D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug\]
+<<12:02:23.248#信息>>[InitializeData]GetCurrentDirectory：[D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug]
+<<12:02:23.250#信息>>[InitializeData]调用结束
+<<12:02:23.252#信息>>[IDCR_Initialize]去掉入参非法字符前lpszConfigXml=<?xml version ="1.0" encoding="utf-8"?><Device>  <DeviceId>IDCard001</DeviceId>  <LogLevel>3</LogLevel></Device>
+<<12:02:23.252#信息>>[IDCR_Initialize]去掉入参非法字符后lpszConfigXml=<?xml version ="1.0" encoding="utf-8"?><Device>  <DeviceId>IDCard001</DeviceId>  <LogLevel>3</LogLevel></Device>
+<<12:02:23.252#信息>>[IDCR_Initialize]设备标识为：IDCard001,日志级别为：3
+<<12:02:23.253#信息>>[IDCR_Initialize]读取串口信息：Com3
+<<12:02:33.812#信息>>[IDCR_Initialize]获取身份证阅读器波特率失败, [SDT_GetCOMBaud]返回值：[0X05]
+<<12:40:40.821#信息>>[InitializeData]日志保存天数：[30]
+<<12:40:40.822#信息>>[InitializeData]GetModuleFileName：[D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug\]
+<<12:40:40.822#信息>>[InitializeData]GetCurrentDirectory：[D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug]
+<<12:40:40.824#信息>>[InitializeData]调用结束
+<<12:40:40.825#信息>>[IDCR_Initialize]去掉入参非法字符前lpszConfigXml=<?xml version ="1.0" encoding="utf-8"?><Device>  <DeviceId>IDCard001</DeviceId>  <LogLevel>3</LogLevel></Device>
+<<12:40:40.825#信息>>[IDCR_Initialize]去掉入参非法字符后lpszConfigXml=<?xml version ="1.0" encoding="utf-8"?><Device>  <DeviceId>IDCard001</DeviceId>  <LogLevel>3</LogLevel></Device>
+<<12:40:40.825#信息>>[IDCR_Initialize]设备标识为：IDCard001,日志级别为：3
+<<12:40:40.826#信息>>[IDCR_Initialize]读取串口信息：Com3
+<<12:41:36.374#信息>>[InitializeData]日志保存天数：[30]
+<<12:41:36.375#信息>>[InitializeData]GetModuleFileName：[D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug\]
+<<12:41:36.375#信息>>[InitializeData]GetCurrentDirectory：[D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug]
+<<12:41:36.377#信息>>[InitializeData]调用结束
+<<12:41:36.379#信息>>[IDCR_Initialize]去掉入参非法字符前lpszConfigXml=<?xml version ="1.0" encoding="utf-8"?><Device>  <DeviceId>IDCard001</DeviceId>  <LogLevel>3</LogLevel></Device>
+<<12:41:36.380#信息>>[IDCR_Initialize]去掉入参非法字符后lpszConfigXml=<?xml version ="1.0" encoding="utf-8"?><Device>  <DeviceId>IDCard001</DeviceId>  <LogLevel>3</LogLevel></Device>
+<<12:41:36.380#信息>>[IDCR_Initialize]设备标识为：IDCard001,日志级别为：3
+<<12:41:36.380#信息>>[IDCR_Initialize]读取串口信息：Com3
+<<12:44:08.299#信息>>[InitializeData]日志保存天数：[30]
+<<12:44:08.300#信息>>[InitializeData]GetModuleFileName：[D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug\]
+<<12:44:08.300#信息>>[InitializeData]GetCurrentDirectory：[D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug]
+<<12:44:08.302#信息>>[InitializeData]调用结束
+<<12:44:08.304#信息>>[IDCR_Initialize]去掉入参非法字符前lpszConfigXml=<?xml version ="1.0" encoding="utf-8"?><Device>  <DeviceId>IDCard001</DeviceId>  <LogLevel>3</LogLevel></Device>
+<<12:44:08.304#信息>>[IDCR_Initialize]去掉入参非法字符后lpszConfigXml=<?xml version ="1.0" encoding="utf-8"?><Device>  <DeviceId>IDCard001</DeviceId>  <LogLevel>3</LogLevel></Device>
+<<12:44:08.304#信息>>[IDCR_Initialize]设备标识为：IDCard001,日志级别为：3
+<<12:44:08.304#信息>>[IDCR_Initialize]读取串口信息：Com3
+<<12:44:18.866#信息>>[IDCR_Initialize]获取身份证阅读器波特率失败, [SDT_GetCOMBaud]返回值：[0X05]
+<<12:45:17.166#信息>>[InitializeData]日志保存天数：[30]
+<<12:45:17.166#信息>>[InitializeData]GetModuleFileName：[D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug\]
+<<12:45:17.166#信息>>[InitializeData]GetCurrentDirectory：[D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug]
+<<12:45:17.169#信息>>[InitializeData]调用结束
+<<12:45:17.170#信息>>[IDCR_Initialize]去掉入参非法字符前lpszConfigXml=<?xml version ="1.0" encoding="utf-8"?><Device>  <DeviceId>IDCard001</DeviceId>  <LogLevel>3</LogLevel></Device>
+<<12:45:17.170#信息>>[IDCR_Initialize]去掉入参非法字符后lpszConfigXml=<?xml version ="1.0" encoding="utf-8"?><Device>  <DeviceId>IDCard001</DeviceId>  <LogLevel>3</LogLevel></Device>
+<<12:45:17.171#信息>>[IDCR_Initialize]设备标识为：IDCard001,日志级别为：3
+<<12:45:17.171#信息>>[IDCR_Initialize]读取串口信息：Com3
+<<12:45:27.730#信息>>[IDCR_Initialize]获取身份证阅读器波特率失败, [SDT_GetCOMBaud]返回值：[0X05]
+<<12:45:29.842#信息>>[IDCR_Initialize]设置身份证阅读器波特率失败, [SDT_SetCOMBaud]返回值：[0X02]
+<<12:45:29.854#信息>>[IDCR_Initialize]返回值：0(成功)
+<<12:45:29.854#信息>>[IDCR_Initialize]调用开始
+
+<<12:45:46.913#信息>>[IDCR_CancelRead]调用开始
+<<12:45:46.914#信息>>[IDCR_CancelRead]返回值：0(成功)
+<<12:45:46.915#信息>>[IDCR_CancelRead]调用结束
+
+<<12:47:19.794#信息>>[IDCR_CancelRead]调用开始
+<<12:47:19.794#信息>>[IDCR_CancelRead]返回值：0(成功)
+<<12:47:19.794#信息>>[IDCR_CancelRead]调用结束
+
+<<12:49:04.582#信息>>[IDCR_CancelRead]调用开始
+<<12:49:04.582#信息>>[IDCR_CancelRead]返回值：0(成功)
+<<12:49:04.582#信息>>[IDCR_CancelRead]调用结束
+
+<<12:49:45.821#信息>>[IDCR_CancelRead]调用开始
+<<12:49:45.822#信息>>[IDCR_CancelRead]返回值：0(成功)
+<<12:49:45.822#信息>>[IDCR_CancelRead]调用结束
+
+<<12:50:03.245#信息>>[IDCR_CancelRead]调用开始
+<<12:50:03.245#信息>>[IDCR_CancelRead]返回值：0(成功)
+<<12:50:03.245#信息>>[IDCR_CancelRead]调用结束
+
+<<12:52:45.497#信息>>[InitializeData]日志保存天数：[30]
+<<12:52:45.497#信息>>[InitializeData]GetModuleFileName：[D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug\]
+<<12:52:45.497#信息>>[InitializeData]GetCurrentDirectory：[D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug]
+<<12:52:45.500#信息>>[InitializeData]调用结束
+<<12:52:45.502#信息>>[IDCR_Initialize]去掉入参非法字符前lpszConfigXml=<?xml version ="1.0" encoding="utf-8"?><Device>  <DeviceId>IDCard001</DeviceId>  <LogLevel>3</LogLevel></Device>
+<<12:52:45.502#信息>>[IDCR_Initialize]去掉入参非法字符后lpszConfigXml=<?xml version ="1.0" encoding="utf-8"?><Device>  <DeviceId>IDCard001</DeviceId>  <LogLevel>3</LogLevel></Device>
+<<12:52:45.502#信息>>[IDCR_Initialize]设备标识为：IDCard001,日志级别为：3
+<<12:52:45.503#信息>>[IDCR_Initialize]读取串口信息：Com3
+<<12:52:56.067#信息>>[IDCR_Initialize]获取身份证阅读器波特率失败, [SDT_GetCOMBaud]返回值：[0X05]
+<<12:52:58.178#信息>>[IDCR_Initialize]设置身份证阅读器波特率失败, [SDT_SetCOMBaud]返回值：[0X02]
+<<12:52:58.190#信息>>[IDCR_Initialize]返回值：0(成功)
+<<12:52:58.190#信息>>[IDCR_Initialize]调用开始
+
+<<12:53:21.813#信息>>[IDCR_CancelRead]调用开始
+<<12:53:21.813#信息>>[IDCR_CancelRead]返回值：0(成功)
+<<12:53:21.813#信息>>[IDCR_CancelRead]调用结束
+
+<<12:54:52.975#信息>>[InitializeData]日志保存天数：[30]
+<<12:54:52.975#信息>>[InitializeData]GetModuleFileName：[D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug\]
+<<12:54:52.975#信息>>[InitializeData]GetCurrentDirectory：[D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug]
+<<12:54:52.978#信息>>[InitializeData]调用结束
+<<12:54:52.980#信息>>[IDCR_Initialize]去掉入参非法字符前lpszConfigXml=<?xml version ="1.0" encoding="utf-8"?><Device>  <DeviceId>IDCard001</DeviceId>  <LogLevel>3</LogLevel></Device>
+<<12:54:52.980#信息>>[IDCR_Initialize]去掉入参非法字符后lpszConfigXml=<?xml version ="1.0" encoding="utf-8"?><Device>  <DeviceId>IDCard001</DeviceId>  <LogLevel>3</LogLevel></Device>
+<<12:54:52.980#信息>>[IDCR_Initialize]设备标识为：IDCard001,日志级别为：3
+<<12:54:52.981#信息>>[IDCR_Initialize]读取串口信息：Com3
+<<12:55:03.527#信息>>[IDCR_Initialize]获取身份证阅读器波特率失败, [SDT_GetCOMBaud]返回值：[0X05]
+<<12:55:05.637#信息>>[IDCR_Initialize]设置身份证阅读器波特率失败, [SDT_SetCOMBaud]返回值：[0X02]
+<<12:55:05.649#信息>>[IDCR_Initialize]返回值：0(成功)
+<<12:55:05.650#信息>>[IDCR_Initialize]调用开始
+
+<<12:55:35.494#信息>>[InitializeData]日志保存天数：[30]
+<<12:55:35.494#信息>>[InitializeData]GetModuleFileName：[D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug\]
+<<12:55:35.494#信息>>[InitializeData]GetCurrentDirectory：[D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug]
+<<12:55:35.497#信息>>[InitializeData]调用结束
+<<12:55:35.498#信息>>[IDCR_Initialize]去掉入参非法字符前lpszConfigXml=<?xml version ="1.0" encoding="utf-8"?><Device>  <DeviceId>IDCard001</DeviceId>  <LogLevel>3</LogLevel></Device>
+<<12:55:35.499#信息>>[IDCR_Initialize]去掉入参非法字符后lpszConfigXml=<?xml version ="1.0" encoding="utf-8"?><Device>  <DeviceId>IDCard001</DeviceId>  <LogLevel>3</LogLevel></Device>
+<<12:55:35.499#信息>>[IDCR_Initialize]设备标识为：IDCard001,日志级别为：3
+<<12:55:35.499#信息>>[IDCR_Initialize]读取串口信息：Com3
+<<12:55:46.044#信息>>[IDCR_Initialize]获取身份证阅读器波特率失败, [SDT_GetCOMBaud]返回值：[0X05]
+<<12:56:10.526#信息>>[InitializeData]日志保存天数：[30]
+<<12:56:10.526#信息>>[InitializeData]GetModuleFileName：[D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug\]
+<<12:56:10.527#信息>>[InitializeData]GetCurrentDirectory：[D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug]
+<<12:56:10.529#信息>>[InitializeData]调用结束
+<<12:56:10.531#信息>>[IDCR_Initialize]去掉入参非法字符前lpszConfigXml=<?xml version ="1.0" encoding="utf-8"?><Device>  <DeviceId>IDCard001</DeviceId>  <LogLevel>3</LogLevel></Device>
+<<12:56:10.531#信息>>[IDCR_Initialize]去掉入参非法字符后lpszConfigXml=<?xml version ="1.0" encoding="utf-8"?><Device>  <DeviceId>IDCard001</DeviceId>  <LogLevel>3</LogLevel></Device>
+<<12:56:10.532#信息>>[IDCR_Initialize]设备标识为：IDCard001,日志级别为：3
+<<12:56:10.532#信息>>[IDCR_Initialize]读取串口信息：Com3
+<<12:56:25.571#信息>>[InitializeData]日志保存天数：[30]
+<<12:56:25.571#信息>>[InitializeData]GetModuleFileName：[D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug\]
+<<12:56:25.572#信息>>[InitializeData]GetCurrentDirectory：[D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug]
+<<12:56:25.574#信息>>[InitializeData]调用结束
+<<12:56:25.576#信息>>[IDCR_Initialize]去掉入参非法字符前lpszConfigXml=<?xml version ="1.0" encoding="utf-8"?><Device>  <DeviceId>IDCard001</DeviceId>  <LogLevel>3</LogLevel></Device>
+<<12:56:25.576#信息>>[IDCR_Initialize]去掉入参非法字符后lpszConfigXml=<?xml version ="1.0" encoding="utf-8"?><Device>  <DeviceId>IDCard001</DeviceId>  <LogLevel>3</LogLevel></Device>
+<<12:56:25.576#信息>>[IDCR_Initialize]设备标识为：IDCard001,日志级别为：3
+<<12:56:25.576#信息>>[IDCR_Initialize]读取串口信息：Com3
+<<12:56:36.150#信息>>[IDCR_Initialize]获取身份证阅读器波特率失败, [SDT_GetCOMBaud]返回值：[0X05]
+<<12:56:38.261#信息>>[IDCR_Initialize]设置身份证阅读器波特率失败, [SDT_SetCOMBaud]返回值：[0X02]
+<<12:56:38.274#信息>>[IDCR_Initialize]返回值：0(成功)
+<<12:56:38.274#信息>>[IDCR_Initialize]调用开始
+
+<<12:58:38.849#信息>>[InitializeData]日志保存天数：[30]
+<<12:58:38.849#信息>>[InitializeData]GetModuleFileName：[D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug\]
+<<12:58:38.849#信息>>[InitializeData]GetCurrentDirectory：[D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug]
+<<12:58:38.853#信息>>[InitializeData]调用结束
+<<12:58:38.855#信息>>[IDCR_Initialize]去掉入参非法字符前lpszConfigXml=<?xml version ="1.0" encoding="utf-8"?><Device>  <DeviceId>IDCard001</DeviceId>  <LogLevel>3</LogLevel></Device>
+<<12:58:38.855#信息>>[IDCR_Initialize]去掉入参非法字符后lpszConfigXml=<?xml version ="1.0" encoding="utf-8"?><Device>  <DeviceId>IDCard001</DeviceId>  <LogLevel>3</LogLevel></Device>
+<<12:58:38.855#信息>>[IDCR_Initialize]设备标识为：IDCard001,日志级别为：3
+<<12:58:38.856#信息>>[IDCR_Initialize]读取串口信息：Com3
+<<12:58:49.440#信息>>[IDCR_Initialize]获取身份证阅读器波特率失败, [SDT_GetCOMBaud]返回值：[0X05]
+<<12:58:51.551#信息>>[IDCR_Initialize]设置身份证阅读器波特率失败, [SDT_SetCOMBaud]返回值：[0X02]
+<<12:58:51.562#信息>>[IDCR_Initialize]返回值：0(成功)
+<<12:58:51.563#信息>>[IDCR_Initialize]调用开始
+
+<<13:07:35.044#信息>>[InitializeData]日志保存天数：[30]
+<<13:07:35.044#信息>>[InitializeData]GetModuleFileName：[D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug\]
+<<13:07:35.044#信息>>[InitializeData]GetCurrentDirectory：[D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug]
+<<13:07:35.047#信息>>[InitializeData]调用结束
+<<13:07:35.049#信息>>[IDCR_Initialize]去掉入参非法字符前lpszConfigXml=<?xml version ="1.0" encoding="utf-8"?><Device>  <DeviceId>IDCard001</DeviceId>  <LogLevel>3</LogLevel></Device>
+<<13:07:35.049#信息>>[IDCR_Initialize]去掉入参非法字符后lpszConfigXml=<?xml version ="1.0" encoding="utf-8"?><Device>  <DeviceId>IDCard001</DeviceId>  <LogLevel>3</LogLevel></Device>
+<<13:07:35.049#信息>>[IDCR_Initialize]设备标识为：IDCard001,日志级别为：3
+<<13:07:35.050#信息>>[IDCR_Initialize]读取串口信息：Com3
+<<13:07:45.607#信息>>[IDCR_Initialize]获取身份证阅读器波特率失败, [SDT_GetCOMBaud]返回值：[0X05]
+<<13:07:47.717#信息>>[IDCR_Initialize]设置身份证阅读器波特率失败, [SDT_SetCOMBaud]返回值：[0X02]
+<<13:07:47.729#信息>>[IDCR_Initialize]返回值：0(成功)
+<<13:07:47.729#信息>>[IDCR_Initialize]调用开始
+
+<<13:08:44.732#信息>>[InitializeData]日志保存天数：[30]
+<<13:08:44.733#信息>>[InitializeData]GetModuleFileName：[D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug\]
+<<13:08:44.733#信息>>[InitializeData]GetCurrentDirectory：[D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug]
+<<13:08:44.737#信息>>[InitializeData]调用结束
+<<13:08:44.739#信息>>[IDCR_Initialize]去掉入参非法字符前lpszConfigXml=<?xml version ="1.0" encoding="utf-8"?><Device>  <DeviceId>IDCard001</DeviceId>  <LogLevel>3</LogLevel></Device>
+<<13:08:44.739#信息>>[IDCR_Initialize]去掉入参非法字符后lpszConfigXml=<?xml version ="1.0" encoding="utf-8"?><Device>  <DeviceId>IDCard001</DeviceId>  <LogLevel>3</LogLevel></Device>
+<<13:08:44.739#信息>>[IDCR_Initialize]设备标识为：IDCard001,日志级别为：3
+<<13:08:44.739#信息>>[IDCR_Initialize]读取串口信息：Com3
+<<13:09:11.195#信息>>[InitializeData]日志保存天数：[30]
+<<13:09:11.195#信息>>[InitializeData]GetModuleFileName：[D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug\]
+<<13:09:11.196#信息>>[InitializeData]GetCurrentDirectory：[D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug]
+<<13:09:11.198#信息>>[InitializeData]调用结束
+<<13:09:11.200#信息>>[IDCR_Initialize]去掉入参非法字符前lpszConfigXml=<?xml version ="1.0" encoding="utf-8"?><Device>  <DeviceId>IDCard001</DeviceId>  <LogLevel>3</LogLevel></Device>
+<<13:09:11.200#信息>>[IDCR_Initialize]去掉入参非法字符后lpszConfigXml=<?xml version ="1.0" encoding="utf-8"?><Device>  <DeviceId>IDCard001</DeviceId>  <LogLevel>3</LogLevel></Device>
+<<13:09:11.200#信息>>[IDCR_Initialize]设备标识为：IDCard001,日志级别为：3
+<<13:09:11.201#信息>>[IDCR_Initialize]读取串口信息：Com3
+<<13:09:55.114#信息>>[InitializeData]日志保存天数：[30]
+<<13:09:55.114#信息>>[InitializeData]GetModuleFileName：[D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug\]
+<<13:09:55.114#信息>>[InitializeData]GetCurrentDirectory：[D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug]
+<<13:09:55.117#信息>>[InitializeData]调用结束
+<<13:09:55.119#信息>>[IDCR_Initialize]去掉入参非法字符前lpszConfigXml=<?xml version ="1.0" encoding="utf-8"?><Device>  <DeviceId>IDCard001</DeviceId>  <LogLevel>3</LogLevel></Device>
+<<13:09:55.119#信息>>[IDCR_Initialize]去掉入参非法字符后lpszConfigXml=<?xml version ="1.0" encoding="utf-8"?><Device>  <DeviceId>IDCard001</DeviceId>  <LogLevel>3</LogLevel></Device>
+<<13:09:55.120#信息>>[IDCR_Initialize]设备标识为：IDCard001,日志级别为：3
+<<13:09:55.120#信息>>[IDCR_Initialize]读取串口信息：Com3
+<<13:10:05.696#信息>>[IDCR_Initialize]获取身份证阅读器波特率失败, [SDT_GetCOMBaud]返回值：[0X05]
+<<13:10:07.807#信息>>[IDCR_Initialize]设置身份证阅读器波特率失败, [SDT_SetCOMBaud]返回值：[0X02]
+<<13:10:07.819#信息>>[IDCR_Initialize]返回值：0(成功)
+<<13:10:07.819#信息>>[IDCR_Initialize]调用开始
+
+<<13:12:35.059#信息>>[InitializeData]日志保存天数：[30]
+<<13:12:35.060#信息>>[InitializeData]GetModuleFileName：[D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug\]
+<<13:12:35.060#信息>>[InitializeData]GetCurrentDirectory：[D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug]
+<<13:12:35.064#信息>>[InitializeData]调用结束
+<<13:12:35.066#信息>>[IDCR_Initialize]去掉入参非法字符前lpszConfigXml=<?xml version ="1.0" encoding="utf-8"?><Device>  <DeviceId>IDCard001</DeviceId>  <LogLevel>3</LogLevel></Device>
+<<13:12:35.066#信息>>[IDCR_Initialize]去掉入参非法字符后lpszConfigXml=<?xml version ="1.0" encoding="utf-8"?><Device>  <DeviceId>IDCard001</DeviceId>  <LogLevel>3</LogLevel></Device>
+<<13:12:35.067#信息>>[IDCR_Initialize]设备标识为：IDCard001,日志级别为：3
+<<13:12:35.067#信息>>[IDCR_Initialize]读取串口信息：Com3
+<<13:13:02.446#信息>>[InitializeData]日志保存天数：[30]
+<<13:13:02.446#信息>>[InitializeData]GetModuleFileName：[D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug\]
+<<13:13:02.446#信息>>[InitializeData]GetCurrentDirectory：[D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug]
+<<13:13:02.449#信息>>[InitializeData]调用结束
+<<13:13:02.450#信息>>[IDCR_Initialize]去掉入参非法字符前lpszConfigXml=<?xml version ="1.0" encoding="utf-8"?><Device>  <DeviceId>IDCard001</DeviceId>  <LogLevel>3</LogLevel></Device>
+<<13:13:02.450#信息>>[IDCR_Initialize]去掉入参非法字符后lpszConfigXml=<?xml version ="1.0" encoding="utf-8"?><Device>  <DeviceId>IDCard001</DeviceId>  <LogLevel>3</LogLevel></Device>
+<<13:13:02.450#信息>>[IDCR_Initialize]设备标识为：IDCard001,日志级别为：3
+<<13:13:02.451#信息>>[IDCR_Initialize]读取串口信息：Com3
+<<13:13:06.593#信息>>[InitializeData]日志保存天数：[30]
+<<13:13:06.594#信息>>[InitializeData]GetModuleFileName：[D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug\]
+<<13:13:06.594#信息>>[InitializeData]GetCurrentDirectory：[D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug]
+<<13:13:06.596#信息>>[InitializeData]调用结束
+<<13:13:06.598#信息>>[IDCR_Initialize]去掉入参非法字符前lpszConfigXml=<?xml version ="1.0" encoding="utf-8"?><Device>  <DeviceId>IDCard001</DeviceId>  <LogLevel>3</LogLevel></Device>
+<<13:13:06.598#信息>>[IDCR_Initialize]去掉入参非法字符后lpszConfigXml=<?xml version ="1.0" encoding="utf-8"?><Device>  <DeviceId>IDCard001</DeviceId>  <LogLevel>3</LogLevel></Device>
+<<13:13:06.598#信息>>[IDCR_Initialize]设备标识为：IDCard001,日志级别为：3
+<<13:13:06.598#信息>>[IDCR_Initialize]读取串口信息：Com3
+<<13:19:15.502#信息>>[InitializeData]日志保存天数：[30]
+<<13:19:15.502#信息>>[InitializeData]GetModuleFileName：[D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug\]
+<<13:19:15.503#信息>>[InitializeData]GetCurrentDirectory：[D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug]
+<<13:19:15.505#信息>>[InitializeData]调用结束
+<<13:19:15.507#信息>>[IDCR_Initialize]去掉入参非法字符前lpszConfigXml=<?xml version ="1.0" encoding="utf-8"?><Device>  <DeviceId>IDCard001</DeviceId>  <LogLevel>3</LogLevel></Device>
+<<13:19:15.507#信息>>[IDCR_Initialize]去掉入参非法字符后lpszConfigXml=<?xml version ="1.0" encoding="utf-8"?><Device>  <DeviceId>IDCard001</DeviceId>  <LogLevel>3</LogLevel></Device>
+<<13:19:15.507#信息>>[IDCR_Initialize]设备标识为：IDCard001,日志级别为：3
+<<13:19:15.507#信息>>[IDCR_Initialize]读取串口信息：Com3
+<<13:19:26.059#信息>>[IDCR_Initialize]获取身份证阅读器波特率失败, [SDT_GetCOMBaud]返回值：[0X05]
+<<13:19:28.170#信息>>[IDCR_Initialize]设置身份证阅读器波特率失败, [SDT_SetCOMBaud]返回值：[0X02]
+<<13:19:28.181#信息>>[IDCR_Initialize]返回值：0(成功)
+<<13:19:28.181#信息>>[IDCR_Initialize]调用开始
+

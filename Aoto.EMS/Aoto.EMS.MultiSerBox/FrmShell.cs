@@ -24,8 +24,7 @@ namespace Aoto.EMS.MultiSerBox
             webBrowser.ObjectForScripting = this;
             webBrowser.ScriptErrorsSuppressed = true;
             webBrowser.ScrollBarsEnabled = true;
-
-            //SetDeiveState("LoRaPlug",new string[]{ "GEK9320663" },"1");
+           
         }
         public void Shut()
         {
@@ -66,12 +65,13 @@ namespace Aoto.EMS.MultiSerBox
 
         private void FrmShell_Load(object sender, EventArgs e)
         {
-            //webBrowser.Navigate(Path.Combine(Config.AppRoot, "web\\qms\\html\\admin\\index.html"));
-            webBrowser.Navigate(AppState.WelcomeUrl);
+            //peripheralManager = AutofacContainer.ResolveNamed<PeripheralManager>("peripheralManager"); //也可以用反射
+            peripheralManager = new PeripheralManager();
+            webBrowser.Navigate(Path.Combine(Config.AppRoot, "web\\qms\\html\\admin\\index.html"));
+            //webBrowser.Navigate(AppState.WelcomeUrl);
             //webBrowser.Navigate(Path.Combine(Config.AppRoot, "wulianwang\\html\\inde.html"));
-            peripheralManager = new PeripheralManager();//也可以用反射
 
-            peripheralManager.ThermalPrinter.PrintAsync(new JObject());
+            //peripheralManager.ThermalPrinter.PrintAsync(new JObject());
         }
 
         #region 多功能业务柜
@@ -278,7 +278,7 @@ namespace Aoto.EMS.MultiSerBox
             return JObject.Parse(jsonResponse);
 
         }
-
+        //SetDeiveState("LoRaPlug",new string[]{ "GEK9320663" },"1");
         public string SetDeiveState(string typeNmae,string[] idArray,string code)
         {
             string url = "api/v1/device/setStatus";

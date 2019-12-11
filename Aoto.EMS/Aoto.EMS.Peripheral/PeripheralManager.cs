@@ -172,11 +172,11 @@ namespace Aoto.EMS.Peripheral
             //mifareCardReader = AutofacContainer.ResolveNamed<IReader>("mifareCardReader");
 
             //签字板
-            signaturePlate = AutofacContainer.ResolveNamed<ISignaturePlate>("signaturePlate");
-            //金属键盘
-            keyBoard = AutofacContainer.ResolveNamed<IKeyBoard>("keyBoard");
-            //金属键盘数据返回
-            keyBoard.RunCompletedEvent += new RunCompletedEventHandler(ReadKeyBoardCompletedEvent);
+            //signaturePlate = AutofacContainer.ResolveNamed<ISignaturePlate>("signaturePlate");
+            ////金属键盘
+            //keyBoard = AutofacContainer.ResolveNamed<IKeyBoard>("keyBoard");
+            ////金属键盘数据返回
+            //keyBoard.RunCompletedEvent += new RunCompletedEventHandler(ReadKeyBoardCompletedEvent);
             //指纹
             finger = AutofacContainer.ResolveNamed<IFinger>("finger");
             finger.RunCompletedEvent += new RunCompletedEventHandler(ReadFingerCompletedEvent);

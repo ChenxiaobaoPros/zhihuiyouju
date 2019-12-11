@@ -80,7 +80,7 @@ namespace Aoto.EMS.Peripheral
             this.logLevel = Config.App.Peripheral["idCardReader"].Value<int>("logLevel");
             this.index = Config.App.Peripheral["idCardReader"].Value<int>("index");
 
-            scriptInvoker = AutofacContainer.ResolveNamed<IScriptInvoker>("scriptInvoker");
+            //scriptInvoker = AutofacContainer.ResolveNamed<IScriptInvoker>("scriptInvoker");
             readAsyncCaller = new RunAsyncCaller(Read);
 
             Initialize();
@@ -205,7 +205,7 @@ namespace Aoto.EMS.Peripheral
                     break;
                 }
 
-                
+
                 code = idcrDataAvailable(out available);
                 log.DebugFormat("invoke {0} -> IDCR_DataAvailable, args: available = {1}, return = {2}", dll, available, code);
 
