@@ -130,7 +130,9 @@ namespace Aoto.EMS.MultiSerBox
         #region 身份证读取
         public void InitIDCard()
         {
-            peripheralManager.IDCardReader.ReadAsync(new JObject());
+            JObject jo = new JObject();
+            jo["bussisType"] = bussisType;
+            peripheralManager.IDCardReader.ReadAsync(jo);
         }
         #endregion
 

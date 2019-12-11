@@ -282,15 +282,14 @@ namespace Aoto.EMS.Peripheral
                     //        res = jo.ToString(Formatting.None);
                     //    }
                     //}
-                    JObject ret = (JObject)e.Result;
                     JObject joo = new JObject();
                     joo["accountNo"] = "123123123";
                     joo["date"] = DateTime.Now;
                     joo["enterpriseName"] = "企业名称";
-                    //jo["bussisType"] = bussisType;
+                    joo["bussisType"] = jo["bussisType"];
 
-                    joo["name"] = ret.Value<string>("certName");
-                    joo["idNo"] = ret.Value<string>("certNo");
+                    joo["name"] = jo.Value<string>("certName");
+                    joo["idNo"] = jo.Value<string>("certNo");
 
                     joo["retCode"] = 0;
                     joo["callback"] = "identity";
@@ -301,27 +300,27 @@ namespace Aoto.EMS.Peripheral
                 log.DebugFormat("allCompleted = {0}", allCompleted);
                 log.DebugFormat("res = {0}", res);  
 
-                if (type == allCompleted)
-                {
-                    if (String.IsNullOrEmpty(res))
-                    {
-                        if (ErrorCode.Success == result || ErrorCode.Failure == result || ErrorCode.Timeout == result)
-                        {
-                            scriptInvoker.ScriptInvoke(jo);
-                            log.DebugFormat("ScriptInvoke jo = {0}", jo);
-                        }
-                        else
-                        {
-                            log.DebugFormat("no ScriptInvoke");
-                        }
-                    }
-                    else
-                    {
-                        scriptInvoker.ScriptInvoke(JObject.Parse(res));
-                        log.DebugFormat("ScriptInvoke jo = {0}", res);
-                        res = String.Empty;
-                    }
-                }
+                //if (type == allCompleted)
+                //{
+                //    if (String.IsNullOrEmpty(res))
+                //    {
+                //        if (ErrorCode.Success == result || ErrorCode.Failure == result || ErrorCode.Timeout == result)
+                //        {
+                //            scriptInvoker.ScriptInvoke(jo);
+                //            log.DebugFormat("ScriptInvoke jo = {0}", jo);
+                //        }
+                //        else
+                //        {
+                //            log.DebugFormat("no ScriptInvoke");
+                //        }
+                //    }
+                //    else
+                //    {
+                //        scriptInvoker.ScriptInvoke(JObject.Parse(res));
+                //        log.DebugFormat("ScriptInvoke jo = {0}", res);
+                //        res = String.Empty;
+                //    }
+                //}
             }
         }
 
