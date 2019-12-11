@@ -67,8 +67,8 @@ namespace Aoto.EMS.MultiSerBox
         {
             //peripheralManager = AutofacContainer.ResolveNamed<PeripheralManager>("peripheralManager"); //也可以用反射
             peripheralManager = new PeripheralManager();
-            webBrowser.Navigate(Path.Combine(Config.AppRoot, "web\\qms\\html\\admin\\index.html"));
-            //webBrowser.Navigate(AppState.WelcomeUrl);
+            //webBrowser.Navigate(Path.Combine(Config.AppRoot, "web\\qms\\html\\admin\\index.html"));
+            webBrowser.Navigate(AppState.WelcomeUrl);
             //webBrowser.Navigate(Path.Combine(Config.AppRoot, "wulianwang\\html\\inde.html"));
 
             //peripheralManager.ThermalPrinter.PrintAsync(new JObject());

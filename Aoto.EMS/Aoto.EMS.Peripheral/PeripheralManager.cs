@@ -290,10 +290,12 @@ namespace Aoto.EMS.Peripheral
 
                     joo["name"] = jo.Value<string>("certName");
                     joo["idNo"] = jo.Value<string>("certNo");
-
-                    joo["retCode"] = 0;
-                    joo["callback"] = "identity";
-                    scriptInvoker.ScriptInvoke(joo);
+                    if (joo["idNo"].ToString() != "")
+                    {
+                        joo["retCode"] = 0;
+                        joo["callback"] = "identity";
+                        scriptInvoker.ScriptInvoke(joo);
+                    }
                 }
 
                 log.DebugFormat("type = {0}", type);
