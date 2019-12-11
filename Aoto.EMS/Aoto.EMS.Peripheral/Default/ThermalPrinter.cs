@@ -144,8 +144,8 @@ namespace Aoto.EMS.Peripheral
             //设置边距
             //Margins margin = new Margins(20, 20, 20, 20);
             //pd.DefaultPageSettings.Margins = margin;
-            ////纸张设置默认
-            //PaperSize pageSize = new PaperSize("PaperSize", 200, 600);
+            //纸张设置默认
+            //PaperSize pageSize = new PaperSize("PaperSize", 200, 800);
             //printDocument.DefaultPageSettings.PaperSize = pageSize;
             printDocument.PrintPage += new PrintPageEventHandler(this.PrintPage);
 
@@ -569,32 +569,55 @@ namespace Aoto.EMS.Peripheral
         }
         public void GetPrintPage(Graphics g)
         {
-            Font InvoiceFont = new Font("Arial", 8, FontStyle.Bold);
+            int pintX = 20;
+            int pintY = 0;
+            //Font InvoiceFont = new Font(new FontFamily("仿宋"), 10, FontStyle.Bold);
+            //Font InvoiceFont = new Font(new FontFamily("黑体"), 10);
+            Font InvoiceFont = new Font(new FontFamily("仿宋"), 12);
             //反锯齿
             g.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
             //定义单色画笔.画笔用于填充图形形状，如矩形、椭圆、扇形、多边形和封闭路径
-            SolidBrush GrayBrush = new SolidBrush(Color.Gray);
+            SolidBrush GrayBrush = new SolidBrush(Color.Black);
             //图标
             string imagePath =Path.Combine(Application.StartupPath, "image\\邮政.png");
             Bitmap bitmap = new Bitmap(imagePath);
-            Rectangle bitmapRect = new Rectangle(20, 0, bitmap.Width, bitmap.Height);
+            Rectangle bitmapRect = new Rectangle(pintX, pintY, bitmap.Width, bitmap.Height);
             g.DrawImage(bitmap, bitmapRect, 0, 0, bitmap.Width, bitmap.Height, GraphicsUnit.Pixel);
             //文本
             StringBuilder sb = new StringBuilder();
             sb.Append("业务名称:保险产品业务\n");
+            sb.Append("\n");
             sb.Append("业务状态:已经办理成功\n");
+            sb.Append("\n");
             sb.Append("客户姓名:童**\n");
+            sb.Append("\n");
             sb.Append("身份证号:110********778\n");
+            sb.Append("\n");
             sb.Append("办理时间:"+DateTime .Now.ToString("yyyy:mm:hh:ss")+ "\n");
-            g.DrawString(sb.ToString(), InvoiceFont, GrayBrush, 5, 5);
+            sb.Append("-----------------------\n");
+            sb.Append("        测试支行\n");
+            sb.Append("-----------------------\n");
+            sb.Append("\n");
+
+            pintX += 20;
+            pintY += bitmap.Height+15;
+            g.DrawString(sb.ToString(), InvoiceFont, GrayBrush, pintX, pintY);
             //二维码
-            Bitmap QRCodeimage = QrCodeFactory.CreateQRCode("中国邮政", 2);
-            Rectangle QRCodeRect = new Rectangle(20, 0, QRCodeimage.Width, QRCodeimage.Height);
+            Bitmap QRCodeimage = QrCodeFactory.CreateQRCode("中国邮政", 3);
+            pintX += 30;
+            pintY += 230;
+            Rectangle QRCodeRect = new Rectangle(pintX, pintY, QRCodeimage.Width, QRCodeimage.Height);
             g.DrawImage(QRCodeimage, QRCodeRect, 0, 0, QRCodeimage.Width, QRCodeimage.Height, GraphicsUnit.Pixel);
-            //RectangleF layoutRectangle = new RectangleF(pointX, height, 260f, 85f);
-            //g.DrawString("扫码关注公众号", InvoiceFont, GrayBrush, layoutRectangle);
+            pintX += 8;
+            pintY += QRCodeimage.Height;
+            pintY += 5;
+            g.DrawString("扫码关注公众号", InvoiceFont, GrayBrush, pintX, pintY);
             g.Dispose();
         }
+
+
+
+
 
         private void SetInvoiceData(Graphics g)
         {

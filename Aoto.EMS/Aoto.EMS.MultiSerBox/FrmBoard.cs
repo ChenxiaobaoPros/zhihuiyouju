@@ -32,7 +32,8 @@ namespace Aoto.EMS.MultiSerBox
         public FrmBoard()
         {
             InitializeComponent();
-            writingBoard = AutofacContainer.ResolveNamed<ISignaturePlate>("writingBoard");
+            
+            writingBoard = AutofacContainer.ResolveNamed<ISignaturePlate>("signaturePlate");
         }
         private void BtnSave_Click(object sender, EventArgs e)
         {
@@ -47,11 +48,20 @@ namespace Aoto.EMS.MultiSerBox
 
         private void FrmBoard_Load(object sender, EventArgs e)
         {
+            //this.Left = 0;
+            //this.Top = 0;
+            this.Left = 1920 - Width;
+            this.Top = 1080 - Height;
             BoardPanel.Show();
             writingBoard.Initialize(BoardPanel.Handle, BoardPanel.ClientSize.Height, BoardPanel.ClientSize.Width);
         }
 
         private void FrmBoard_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+        }
+
+        private void FrmBoard_MouseLeave(object sender, EventArgs e)
         {
 
         }

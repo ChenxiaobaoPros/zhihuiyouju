@@ -43,6 +43,7 @@
             this.btnSave.TabIndex = 2;
             this.btnSave.Text = "保存";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Visible = false;
             // 
             // btnClear
             // 
@@ -53,6 +54,7 @@
             this.btnClear.TabIndex = 1;
             this.btnClear.Text = "清空";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Visible = false;
             // 
             // BoardPanel
             // 
@@ -60,20 +62,21 @@
             this.BoardPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BoardPanel.Location = new System.Drawing.Point(0, 0);
             this.BoardPanel.Name = "BoardPanel";
-            this.BoardPanel.Size = new System.Drawing.Size(800, 450);
+            this.BoardPanel.Size = new System.Drawing.Size(400, 200);
             this.BoardPanel.TabIndex = 3;
             // 
             // FrmBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(400, 200);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.BoardPanel);
             this.Name = "FrmBoard";
             this.Text = "手写板";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmBoard_FormClosing);
             this.Load += new System.EventHandler(this.FrmBoard_Load);
+            this.MouseLeave += new System.EventHandler(this.FrmBoard_MouseLeave);
             this.BoardPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 

@@ -69,8 +69,8 @@ namespace Aoto.EMS.MultiSerBox
             peripheralManager = new PeripheralManager();
             //webBrowser.Navigate(AppState.WelcomeUrl);
 
-            webBrowser.Navigate(Path.Combine(Config.AppRoot, "web\\mySelf\\qms\\html\\admin\\index.html"));
-            //webBrowser.Navigate(Path.Combine(Config.AppRoot, "web\\duogong\\html\\index.html"));
+            //webBrowser.Navigate(Path.Combine(Config.AppRoot, "web\\mySelf\\qms\\html\\admin\\index.html"));
+            webBrowser.Navigate(Path.Combine(Config.AppRoot, "web\\duogong\\html\\index.html"));
             //webBrowser.Navigate(Path.Combine(Config.AppRoot, "web\\wulianwang\\html\\inde.html"));
         }
 
