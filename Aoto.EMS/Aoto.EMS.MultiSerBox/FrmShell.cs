@@ -67,11 +67,11 @@ namespace Aoto.EMS.MultiSerBox
         {
             //peripheralManager = AutofacContainer.ResolveNamed<PeripheralManager>("peripheralManager"); //也可以用反射
             peripheralManager = new PeripheralManager();
-            //webBrowser.Navigate(Path.Combine(Config.AppRoot, "web\\qms\\html\\admin\\index.html"));
-            webBrowser.Navigate(AppState.WelcomeUrl);
-            //webBrowser.Navigate(Path.Combine(Config.AppRoot, "wulianwang\\html\\inde.html"));
+            //webBrowser.Navigate(AppState.WelcomeUrl);
 
-            //peripheralManager.ThermalPrinter.PrintAsync(new JObject());
+            webBrowser.Navigate(Path.Combine(Config.AppRoot, "web\\mySelf\\qms\\html\\admin\\index.html"));
+            //webBrowser.Navigate(Path.Combine(Config.AppRoot, "web\\duogong\\html\\index.html"));
+            //webBrowser.Navigate(Path.Combine(Config.AppRoot, "web\\wulianwang\\html\\inde.html"));
         }
 
         #region 多功能业务柜
@@ -192,6 +192,13 @@ namespace Aoto.EMS.MultiSerBox
 
         #endregion
 
+        #region 打印
+        public void PrintWorke()
+        {
+            peripheralManager.ThermalPrinter.PrintAsync(new JObject());
+        }
+        #endregion
+
         #endregion
 
         #region 物联网    尚未加锁
@@ -224,9 +231,8 @@ namespace Aoto.EMS.MultiSerBox
         {
             url = "api/v1/accessToken";
             //jsonRequest = "{\"api_token\": \"39e58bd22275ccca486a3c3a9e00e578\"}";
-            JObject requestJo = new JObject(
-                new JProperty("api_token", api_token));
-            jsonRequest = requestJo.ToString();
+            JObject requestJo = new JObject(new JProperty("api_token", api_token));
+            jsonRequest = requestJo.ToString(Formatting.None);
             jsonResponse = HttpClient.IOTPost(url, jsonRequest);
 
             accessTokenJo = JObject.Parse(jsonResponse);
@@ -380,32 +386,54 @@ namespace Aoto.EMS.MultiSerBox
 
             //        foreach (JProperty jdp in jDevProperties)
             //        {
-            //           IEnumerable<App> querylist= appList.Where(j => j.appID == jdp.Value.Value<int>("app_id"));
-            //            if (querylist != null && querylist.Count()>0)
+            //            IEnumerable<App> querylist = appList.Where(j => j.appID == jdp.Value.Value<int>("app_id"));
+
+            //            Deive deive = new Deive()
             //            {
-            //                querylist.FirstOrDefault().deiveList.Add(new Deive()
+            //                deviceId = jdp.Path.Split('.')[1],
+            //                deviceName = jdp.Value.Value<string>("name"),
+            //                typeName = jp.Path,
+            //            };
+            //            string state = jdp.Value.Value<string>("states");
+            //            App app = null;
+            //            if (querylist != null && querylist.Count() > 0)
+            //            {
+            //                app = querylist.FirstOrDefault();
+            //                app.all++;
+
+            //                if (state == "offline")
             //                {
-            //                    deviceId = jdp.Path.Split('.')[1],
-            //                    deviceName = jdp.Value.Value<string>("name"),
-            //                    typeName = jp.Path,
-            //                    state = jdp.Value.Value<string>("states")
-            //                });
+            //                    deive.state = "离线";
+            //                }
+            //                else if (state == "online")
+            //                {
+            //                    deive.state = "在线";
+            //                    app.online++;
+            //                }
+            //                app.deiveList.Add(deive);
             //            }
             //            else
             //            {
-            //                App app = new App()
+            //                app = new App()
             //                {
             //                    appID = jdp.Value.Value<int>("app_id"),
             //                    appName = jdp.Value.Value<string>("app_name"),
+            //                    date = DateTime.Now.ToString("yyyy:mm:dd:hh:ss"),
+            //                    all = 1,
+
             //                    deiveList = new List<Deive>()
             //                };
-            //                app.deiveList.Add(new Deive()
+            //                if (state == "offline")
             //                {
-            //                    deviceId = jdp.Path.Split('.')[1],
-            //                    deviceName = jdp.Value.Value<string>("name"),
-            //                    typeName = jp.Path,
-            //                    state = jdp.Value.Value<string>("states")
-            //                });
+            //                    deive.state = "离线";
+            //                    app.online = 0;
+            //                }
+            //                else if (state == "online")
+            //                {
+            //                    deive.state = "在线";
+            //                    app.online = 1;
+            //                }
+            //                app.deiveList.Add(deive);
             //                appList.Add(app);
             //            }
             //        }
@@ -415,20 +443,7 @@ namespace Aoto.EMS.MultiSerBox
             //string jsonStr = JsonConvert.SerializeObject(appList);
             #endregion
 
-            return "{[" +
-                "{\"appID\":2,\"appName\":\"奥拓电子\",\"" +
-                    "deiveList\":" +
-                        "[" +
-                            "{\"deviceId\":\"LoRaAirPanel.GIK8330011\",\"deviceName\":\"空调面板\",\"state\":\"offline\",\"typeName\":\"LoRaAirPanel\"}," +
-                            "{\"deviceId\":\"LoRaPlug.GEK9320663\",\"deviceName\":\"智能排插\",\"state\":\"online\",\"typeName\":\"LoRaPlug\"}," +
-                            "{\"deviceId\":\"LoRaPlug.GEK9320715\",\"deviceName\":\"智能排插2\",\"state\":\"online\",\"typeName\":\"LoRaPlug\"}," +
-                            "{\"deviceId\":\"LoRaPlug.GMK8501686\",\"deviceName\":\"智能插座\",\"state\":\"offline\",\"typeName\":\"LoRaPlug\"}," +
-                            "{\"deviceId\":\"LoRaPlug.GMK8502203\",\"deviceName\":\"智能插座2\",\"state\":\"offline\",\"typeName\":\"LoRaPlug\"}," +
-                            "{\"deviceId\":\"LoRaTempHumid.GJK9291964\",\"deviceName\":\"温湿度传感器\",\"state\":\"online\",\"typeName\":\"LoRaTempHumid\"}," +
-                            "{\"deviceId\":\"SmokeSensor.GQK9320712 - 3 - 1\",\"deviceName\":\"烟雾传感器\",\"state\":\"offline\",\"typeName\":\"SmokeSensor\"}," +
-                            "{\"deviceId\":\"YBL-SingleFireThreeKeySwitch.ybl_DD3A0300\",\"deviceName\":\"单火三路\",\"state\":\"online\",\"typeName\":\"YBL-SingleFireThreeKeySwitch\"}," +
-                            "{\"deviceId\":\"human-detection.GLK8500117\",\"deviceName\":\"红外人体感应\",\"state\":\"offline\",\"typeName\":\"human-detection\"}," +
-                            "{\"deviceId\":\"human-detection.GLK8500320\",\"deviceName\":\"红外人体感应2\",\"state\":\"online\",\"typeName\":\"human-detection\"}]}]}";
+            return "[{\"appID\":2,\"appName\":\"奥拓电子\",\"date\":\"2019:28:11:04:06\",\"online\":10,\"all\":30,\"deiveList\":[{\"deviceId\":\"GIK8330011\",\"deviceName\":\"空调面板\",\"state\":\"离线\",\"typeName\":\"LoRaAirPanel\"},{\"deviceId\":\"GEK9320663\",\"deviceName\":\"智能排插\",\"state\":\"在线\",\"typeName\":\"LoRaPlug\"},{\"deviceId\":\"GEK9320715\",\"deviceName\":\"智能排插2\",\"state\":\"在线\",\"typeName\":\"LoRaPlug\"},{\"deviceId\":\"GMK8501686\",\"deviceName\":\"智能插座\",\"state\":\"离线\",\"typeName\":\"LoRaPlug\"},{\"deviceId\":\"GMK8502203\",\"deviceName\":\"智能插座2\",\"state\":\"离线\",\"typeName\":\"LoRaPlug\"},{\"deviceId\":\"GJK9291964\",\"deviceName\":\"温湿度传感器\",\"state\":\"离线\",\"typeName\":\"LoRaTempHumid\"},{\"deviceId\":\"GQK9320712-3-1\",\"deviceName\":\"烟雾传感器\",\"state\":\"离线\",\"typeName\":\"SmokeSensor\"},{\"deviceId\":\"ybl_DD3A0300\",\"deviceName\":\"单火三路\",\"state\":\"在线\",\"typeName\":\"YBL - SingleFireThreeKeySwitch\"},{\"deviceId\":\"GLK8500117\",\"deviceName\":\"红外人体感应\",\"state\":\"离线\",\"typeName\":\"human-detection\"},{\"deviceId\":\"GLK8500320\",\"deviceName\":\"红外人体感应2\",\"state\":\"离线\",\"typeName\":\"human-detection\"}]},{\"appID\":3,\"appName\":\"奥拓电子11\",\"date\":\"2019:28:11:04:06\",\"online\":10,\"all\":30,\"deiveList\":[{\"deviceId\":\"GIK8330011\",\"deviceName\":\"空调面板1\",\"state\":\"离线\",\"typeName\":\"LoRaAirPanel\"},{\"deviceId\":\"GEK9320663\",\"deviceName\":\"智能排插1\",\"state\":\"在线\",\"typeName\":\"LoRaPlug\"},{\"deviceId\":\"GEK9320715\",\"deviceName\":\"智能排插2\",\"state\":\"在线\",\"typeName\":\"LoRaPlug\"},{\"deviceId\":\"GMK8501686\",\"deviceName\":\"智能插座23\",\"state\":\"离线\",\"typeName\":\"LoRaPlug\"},{\"deviceId\":\"GMK8502203\",\"deviceName\":\"智能插座2\",\"state\":\"离线\",\"typeName\":\"LoRaPlug\"},{\"deviceId\":\"GJK9291964\",\"deviceName\":\"温湿度传感器\",\"state\":\"离线\",\"typeName\":\"LoRaTempHumid\"},{\"deviceId\":\"GQK9320712-3-1\",\"deviceName\":\"烟雾传感器\",\"state\":\"离线\",\"typeName\":\"SmokeSensor\"},{\"deviceId\":\"ybl_DD3A0300\",\"deviceName\":\"单火三路\",\"state\":\"在线\",\"typeName\":\"YBL - SingleFireThreeKeySwitch\"},{\"deviceId\":\"GLK8500117\",\"deviceName\":\"红外人体感应\",\"state\":\"离线\",\"typeName\":\"human-detection\"},{\"deviceId\":\"GLK8500320\",\"deviceName\":\"红外人体感应2\",\"state\":\"离线\",\"typeName\":\"human-detection\"}]}]";
 
 
         }
@@ -462,7 +477,7 @@ namespace Aoto.EMS.MultiSerBox
 
             //appList = new List<App>();
 
-            //this.requestJo = new JObject();
+            //this.responseJo = new JObject();
             //foreach (JProperty jp in jTypeProperties)
             //{
             //    if (jp.Value.Count() != 0)
@@ -505,7 +520,13 @@ namespace Aoto.EMS.MultiSerBox
             //                    deiveJo.Add(new JProperty("设备ID", jdp.Path));
             //                    deiveJo.Add(new JProperty("设备名称", jdp.Value["name"]));
             //                    deiveJo.Add(new JProperty("设备类型", jp.Path));
-            //                    deiveJo.Add(new JProperty("设备状态", jdp.Value["states"]));
+                               
+            //                    string state = jdp.Value.Value<string>("states");
+            //                    if (state == "offline")
+            //                        deiveJo.Add(new JProperty("设备状态", "离线"));
+            //                    else if (state == "online")
+            //                        deiveJo.Add(new JProperty("设备状态", "在线"));
+
             //                    string i = jdp.Value["data"]["cloud_state"]["DEV_SWITCH_STA"].ToObject<string>();
             //                    if (i != "" && i == "0.00")
             //                        deiveJo.Add(new JProperty("开启/关闭", "关闭"));
@@ -531,7 +552,11 @@ namespace Aoto.EMS.MultiSerBox
             //                    deiveJo.Add(new JProperty("设备ID", jdp.Path));
             //                    deiveJo.Add(new JProperty("设备名称", jdp.Value["name"]));
             //                    deiveJo.Add(new JProperty("设备类型", jp.Path));
-            //                    deiveJo.Add(new JProperty("设备状态", jdp.Value["states"]));
+            //                    string state = jdp.Value.Value<string>("states");
+            //                    if (state == "offline")
+            //                        deiveJo.Add(new JProperty("设备状态", "离线"));
+            //                    else if (state == "online")
+            //                        deiveJo.Add(new JProperty("设备状态", "在线"));
 
             //                    deiveJo.Add(new JProperty("温度", jdp.Value["data"]["DEV_LORADBM"]));
             //                    deiveJo.Add(new JProperty("湿度", jdp.Value["data"]["DEV_MOISTURE"]));
@@ -560,7 +585,11 @@ namespace Aoto.EMS.MultiSerBox
             //                    deiveJo.Add(new JProperty("设备ID", jdp.Path));
             //                    deiveJo.Add(new JProperty("设备名称", jdp.Value["name"]));
             //                    deiveJo.Add(new JProperty("设备类型", jp.Path));
-            //                    deiveJo.Add(new JProperty("设备状态", jdp.Value["states"]));
+            //                    string state = jdp.Value.Value<string>("states");
+            //                    if (state == "offline")
+            //                        deiveJo.Add(new JProperty("设备状态", "离线"));
+            //                    else if (state == "online")
+            //                        deiveJo.Add(new JProperty("设备状态", "在线"));
             //                    string i = jdp.Value["data"]["cloud_state"]["DEV_SWITCH_STA"].ToObject<string>();
             //                    if (i == "" && i == "0.00")
             //                        deiveJo.Add(new JProperty("开启/关闭", "关闭"));
@@ -591,7 +620,11 @@ namespace Aoto.EMS.MultiSerBox
             //                    deiveJo.Add(new JProperty("设备ID", jdp.Path));
             //                    deiveJo.Add(new JProperty("设备名称", jdp.Value["name"]));
             //                    deiveJo.Add(new JProperty("设备类型", jp.Path));
-            //                    deiveJo.Add(new JProperty("设备状态", jdp.Value["states"]));
+            //                    string state = jdp.Value.Value<string>("states");
+            //                    if (state == "offline")
+            //                        deiveJo.Add(new JProperty("设备状态", "离线"));
+            //                    else if (state == "online")
+            //                        deiveJo.Add(new JProperty("设备状态", "在线"));
             //                    string i = jdp.Value["data"]["HUMAN_STATUS"].ToObject<string>();
             //                    if (i != "" && i == "0.00")
             //                        deiveJo.Add(new JProperty("人体感应", "无人"));
@@ -605,17 +638,14 @@ namespace Aoto.EMS.MultiSerBox
             //                break;
             //        }
 
-            //        this.requestJo.Add(new JProperty(jp.Path, deiveListJo));
+            //        this.responseJo.Add(new JProperty(jp.Path, deiveListJo));
 
             //    }
 
             //}
+            //jsonResponse = responseJo.ToString(Formatting.None);
 
-            #region 假数据
-
-            #endregion
-
-            return "{{\"LoRaAirPanel\": {\"LoRaAirPanel.GIK8330011\": {\"设备ID\": \"LoRaAirPanel.GIK8330011\",\"设备名称\": \"空调面板\",\"设备类型\": \"LoRaAirPanel\",\"设备状态\": \"offline\",\"开启/关闭\": \"开启\",\"当前温度\": \"\"}},\"LoRaPlug\": {\"LoRaPlug.GEK9320663\": {\"设备ID\": \"LoRaPlug.GEK9320663\",\"设备名称\": \"智能排插\",\"设备类型\": \"LoRaPlug\",\"设备状态\": \"online\",\"开启/关闭\": \"开启\",\"按键灯状态\": \"关闭\"},\"LoRaPlug.GEK9320715\": {\"设备ID\": \"LoRaPlug.GEK9320715\",\"设备名称\": \"智能排插2\",\"设备类型\": \"LoRaPlug\",\"设备状态\": \"online\",\"开启/关闭\": \"开启\",\"按键灯状态\": \"开启\"},\"LoRaPlug.GMK8501686\": {\"设备ID\": \"LoRaPlug.GMK8501686\",\"设备名称\": \"智能插座\",\"设备类型\": \"LoRaPlug\",\"设备状态\": \"offline\",\"开启/关闭\": \"开启\",\"按键灯状态\": \"开启\"},\"LoRaPlug.GMK8502203\": {\"设备ID\": \"LoRaPlug.GMK8502203\",\"设备名称\": \"智能插座2\",\"设备类型\": \"LoRaPlug\",\"设备状态\": \"offline\",\"开启/关闭\": \"开启\",\"按键灯状态\": \"开启\"}},\"LoRaTempHumid\": {\"LoRaTempHumid.GJK9291964\": {\"设备ID\": \"LoRaTempHumid.GJK9291964\",\"设备名称\": \"温湿度传感器\",\"设备类型\": \"LoRaTempHumid\",\"设备状态\": \"online\",\"温度\": \"-49.00\",\"湿度\": \"46.60\",\"光照强度\": \"186.60\"}},\"SmokeSensor\": { },\"YBL-SingleFireThreeKeySwitch\": { },\"human-detection\": {\"human-detection.GLK8500117\": {\"设备ID\": \"human-detection.GLK8500117\",\"设备名称\": \"红外人体感应\",\"设备类型\": \"human-detection\",\"设备状态\": \"offline\",\"人体感应\": \"有人\"},\"human-detection.GLK8500320\": {\"设备ID\": \"human-detection.GLK8500320\",\"设备名称\": \"红外人体感应2\",\"设备类型\": \"human-detection\",\"设备状态\": \"online\",\"人体感应\": \"无人\"}}}}";
+            return "{\"LoRaAirPanel\":{\"LoRaAirPanel.GIK8330011\":{\"设备ID\":\"LoRaAirPanel.GIK8330011\",\"设备名称\":\"空调面板\",\"设备类型\":\"LoRaAirPanel\",\"设备状态\":\"离线\",\"开启 / 关闭\":\"开启\",\"当前温度\":\"\"}},\"LoRaPlug\":{\"LoRaPlug.GEK9320663\":{\"设备ID\":\"LoRaPlug.GEK9320663\",\"设备名称\":\"智能排插\",\"设备类型\":\"LoRaPlug\",\"设备状态\":\"在线\",\"开启 / 关闭\":\"开启\",\"按键灯状态\":\"关闭\"},\"LoRaPlug.GEK9320715\":{\"设备ID\":\"LoRaPlug.GEK9320715\",\"设备名称\":\"智能排插2\",\"设备类型\":\"LoRaPlug\",\"设备状态\":\"在线\",\"开启 / 关闭\":\"开启\",\"按键灯状态\":\"关闭\"},\"LoRaPlug.GMK8501686\":{\"设备ID\":\"LoRaPlug.GMK8501686\",\"设备名称\":\"智能插座\",\"设备类型\":\"LoRaPlug\",\"设备状态\":\"离线\",\"开启 / 关闭\":\"开启\",\"按键灯状态\":\"开启\"},\"LoRaPlug.GMK8502203\":{\"设备ID\":\"LoRaPlug.GMK8502203\",\"设备名称\":\"智能插座2\",\"设备类型\":\"LoRaPlug\",\"设备状态\":\"离线\",\"开启 / 关闭\":\"开启\",\"按键灯状态\":\"开启\"}},\"LoRaTempHumid\":{\"LoRaTempHumid.GJK9291964\":{\"设备ID\":\"LoRaTempHumid.GJK9291964\",\"设备名称\":\"温湿度传感器\",\"设备类型\":\"LoRaTempHumid\",\"设备状态\":\"离线\",\"温度\":\"\",\"湿度\":\"\",\"光照强度\":\"\"}},\"SmokeSensor\":{},\"YBL - SingleFireThreeKeySwitch\":{},\"human - detection\":{\"human - detection.GLK8500117\":{\"设备ID\":\"human - detection.GLK8500117\",\"设备名称\":\"红外人体感应\",\"设备类型\":\"human - detection\",\"设备状态\":\"离线\",\"人体感应\":\"有人\"},\"human - detection.GLK8500320\":{\"设备ID\":\"human - detection.GLK8500320\",\"设备名称\":\"红外人体感应2\",\"设备类型\":\"human - detection\",\"设备状态\":\"离线\",\"人体感应\":\"有人\"}}}";
         }
 
         #endregion
@@ -649,6 +679,9 @@ namespace Aoto.EMS.MultiSerBox
     {
         public int appID { get; set; }
         public string appName { get; set; }
+        public string date { get; set; }
+        public int online { get; set; }
+        public int all { get; set; }
         public List<Deive> deiveList { get; set; }
     }
     public class Deive

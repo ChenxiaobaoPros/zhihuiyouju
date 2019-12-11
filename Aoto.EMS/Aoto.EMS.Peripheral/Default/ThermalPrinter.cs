@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading;
+using System.Windows.Forms;
 using Aoto.EMS.Common;
 using Aoto.EMS.Infrastructure.ComponentModel;
 using Aoto.EMS.Infrastructure.Configuration;
@@ -138,14 +139,14 @@ namespace Aoto.EMS.Peripheral
             printDocument = new PrintDocument();
             printDocument.PrintController = new StandardPrintController();
             printDocument.PrinterSettings.PrinterName = name;
-            printDocument.PrinterSettings.DefaultPageSettings.Margins.Left = 30;
+            printDocument.PrinterSettings.DefaultPageSettings.Margins.Left = 0;
             printDocument.PrinterSettings.DefaultPageSettings.Margins.Top = 0;
             //设置边距
             //Margins margin = new Margins(20, 20, 20, 20);
             //pd.DefaultPageSettings.Margins = margin;
             ////纸张设置默认
-            PaperSize pageSize = new PaperSize("First custom size", getYc(58), 600);
-            printDocument.DefaultPageSettings.PaperSize = pageSize;
+            //PaperSize pageSize = new PaperSize("PaperSize", 200, 600);
+            //printDocument.DefaultPageSettings.PaperSize = pageSize;
             printDocument.PrintPage += new PrintPageEventHandler(this.PrintPage);
 
             Initialize();
@@ -446,11 +447,17 @@ namespace Aoto.EMS.Peripheral
 
         private void PrintPage(object sender, PrintPageEventArgs ev)
         {
-            //打印文本
+            //【1】打印文本
             //SetInvoiceData(ev.Graphics);
-            //打印图文
-            Bitmap image = QrCodeFactory.CreateQRCode("gfdfbvghf",1);
-            GetPrintPicture(image, ev);
+
+            //【2】打印图文
+            //Bitmap image = QrCodeFactory.CreateQRCode("gfdfbvghf",1);
+            //GetPrintPicture(image, ev);
+
+            //【3】综合打印
+            GetPrintPage(ev.Graphics);
+
+
 
             #region 其他打印
             //JObject jo = null;
@@ -560,10 +567,35 @@ namespace Aoto.EMS.Peripheral
 
             #endregion
         }
-        private int getYc(double cm)
+        public void GetPrintPage(Graphics g)
         {
-            return (int)(cm / 25.4) * 100;
+            Font InvoiceFont = new Font("Arial", 8, FontStyle.Bold);
+            //反锯齿
+            g.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
+            //定义单色画笔.画笔用于填充图形形状，如矩形、椭圆、扇形、多边形和封闭路径
+            SolidBrush GrayBrush = new SolidBrush(Color.Gray);
+            //图标
+            string imagePath =Path.Combine(Application.StartupPath, "image\\邮政.png");
+            Bitmap bitmap = new Bitmap(imagePath);
+            Rectangle bitmapRect = new Rectangle(20, 0, bitmap.Width, bitmap.Height);
+            g.DrawImage(bitmap, bitmapRect, 0, 0, bitmap.Width, bitmap.Height, GraphicsUnit.Pixel);
+            //文本
+            StringBuilder sb = new StringBuilder();
+            sb.Append("业务名称:保险产品业务\n");
+            sb.Append("业务状态:已经办理成功\n");
+            sb.Append("客户姓名:童**\n");
+            sb.Append("身份证号:110********778\n");
+            sb.Append("办理时间:"+DateTime .Now.ToString("yyyy:mm:hh:ss")+ "\n");
+            g.DrawString(sb.ToString(), InvoiceFont, GrayBrush, 5, 5);
+            //二维码
+            Bitmap QRCodeimage = QrCodeFactory.CreateQRCode("中国邮政", 2);
+            Rectangle QRCodeRect = new Rectangle(20, 0, QRCodeimage.Width, QRCodeimage.Height);
+            g.DrawImage(QRCodeimage, QRCodeRect, 0, 0, QRCodeimage.Width, QRCodeimage.Height, GraphicsUnit.Pixel);
+            //RectangleF layoutRectangle = new RectangleF(pointX, height, 260f, 85f);
+            //g.DrawString("扫码关注公众号", InvoiceFont, GrayBrush, layoutRectangle);
+            g.Dispose();
         }
+
         private void SetInvoiceData(Graphics g)
         {
             Font InvoiceFont = new Font("Arial", 8, FontStyle.Bold);

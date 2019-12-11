@@ -56,7 +56,7 @@ namespace Aoto.EMS.MultiSerBox
             }
             catch (System.Exception ex)
             {
-                return null;
+                throw ex;
             }
         }
         public StringBuilder regStringBuilder;

@@ -14,7 +14,7 @@ namespace Aoto.EMS.Infrastructure.Configuration
         private static AppConfig appConfig;
 
         private const string appFileName = "app.json";
-        public const string ConfigRelativePath = "config";
+        public const string ConfigRelativePath = "appconfig";
         public const string LauncherExe = "Aoto.EMS.MultiSerBox.exe";
         public const string UpdateExe = "Aoto.PPS.Update.exe";
 
