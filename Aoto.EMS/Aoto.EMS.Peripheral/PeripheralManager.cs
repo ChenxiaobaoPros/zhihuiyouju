@@ -163,7 +163,7 @@ namespace Aoto.EMS.Peripheral
             //icCardReaderWriter = AutofacContainer.ResolveNamed<IReader>("icCardReaderWriter");
             idCardReader = AutofacContainer.ResolveNamed<IReader>("idCardReader");
             //needlePrinter = AutofacContainer.ResolveNamed<IPrinter>("needlePrinter");
-            //thermalPrinter = AutofacContainer.ResolveNamed<IPrinter>("thermalPrinter");
+            thermalPrinter = AutofacContainer.ResolveNamed<IPrinter>("thermalPrinter");
             //evaluator = AutofacContainer.ResolveNamed<IEvaluator>("evaluator");
             //barScreen = AutofacContainer.ResolveNamed<IWriter>("barScreen");
             //compScreen = AutofacContainer.ResolveNamed<IWriter>("compScreen");
@@ -187,7 +187,7 @@ namespace Aoto.EMS.Peripheral
             //magneticCardReaderWriter.RunCompletedEvent += new RunCompletedEventHandler(ReadCardCompletedEvent);
             //icCardReaderWriter.RunCompletedEvent += new RunCompletedEventHandler(ReadCardCompletedEvent);
             idCardReader.RunCompletedEvent += new RunCompletedEventHandler(ReadCardCompletedEvent);
-            //needlePrinter.RunCompletedEvent += new RunCompletedEventHandler(PrintCompletedEvent);
+            thermalPrinter.RunCompletedEvent += new RunCompletedEventHandler(PrintCompletedEvent);
             //mifareCardReader.RunCompletedEvent += new RunCompletedEventHandler(ReadCardCompletedEvent);
 
         }

@@ -71,6 +71,7 @@ namespace Aoto.EMS.MultiSerBox
             //webBrowser.Navigate(Path.Combine(Config.AppRoot, "wulianwang\\html\\inde.html"));
             peripheralManager = new PeripheralManager();//也可以用反射
 
+            peripheralManager.ThermalPrinter.PrintAsync(new JObject());
         }
 
         #region 多功能业务柜
