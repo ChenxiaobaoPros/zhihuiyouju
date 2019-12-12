@@ -112,7 +112,9 @@ namespace Aoto.EMS.Peripheral
     /// </summary>
     public interface IHighMeter
     {
-
+        void Initialize(IntPtr panlePtr);
+        void Photograph();
+        void CloseCamera();
     }
     /// <summary>
     /// 混合读卡器(吸卡器)
@@ -120,6 +122,11 @@ namespace Aoto.EMS.Peripheral
     public interface IHybridCardReader
     {
 
+    }
+    public interface IFaceCamera
+    {
+        int InitCamera(IntPtr dvrHandle);
+        string DisplayDVR();
     }
     /// <summary>
     /// 金属键盘

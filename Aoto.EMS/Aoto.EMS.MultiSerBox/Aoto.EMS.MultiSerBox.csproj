@@ -97,11 +97,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmBoard.cs">
+    <Compile Include="FrmFaceCamera.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmBoard.Designer.cs">
-      <DependentUpon>FrmBoard.cs</DependentUpon>
+    <Compile Include="FrmFaceCamera.Designer.cs">
+      <DependentUpon>FrmFaceCamera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSignaturePlate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSignaturePlate.Designer.cs">
+      <DependentUpon>FrmSignaturePlate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHighMeter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHighMeter.Designer.cs">
+      <DependentUpon>FrmHighMeter.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmFinger.cs">
       <SubType>Form</SubType>
@@ -117,8 +129,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrmBoard.resx">
-      <DependentUpon>FrmBoard.cs</DependentUpon>
+    <EmbeddedResource Include="FrmFaceCamera.resx">
+      <DependentUpon>FrmFaceCamera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSignaturePlate.resx">
+      <DependentUpon>FrmSignaturePlate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHighMeter.resx">
+      <DependentUpon>FrmHighMeter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmFinger.resx">
       <DependentUpon>FrmFinger.cs</DependentUpon>

@@ -216,8 +216,8 @@ namespace Aoto.EMS.Peripheral
         public bool IsBusy { get { return isBusy; } }
 
         public IntPtr panlePtr { get; set; }
-        public int high { get; set; }
-        public int wide { get; set; }
+        public int heigh { get; set; }
+        public int width { get; set; }
 
         public SignaturePlate()
         {
@@ -236,8 +236,8 @@ namespace Aoto.EMS.Peripheral
                 return;
 
             this.panlePtr = panlePtr;
-            this.high = high;
-            this.wide = wide;
+            this.heigh = high;
+            this.width = wide;
 
             bool result = PPL398_InitialDevice(DEVICE_TYPE_ID.PPL398_DEVICE, panlePtr, 0, 0, wide, high);
             if (result == false)

@@ -52,7 +52,7 @@
     <Compile Include="Default\IDCardReader.cs" />
     <Compile Include="Default\HybridCardReader.cs" />
     <Compile Include="Default\KeyBoard.cs" />
-    <Compile Include="Default\HidCmCapture.cs" />
+    <Compile Include="Default\HighMeter.cs" />
     <Compile Include="Default\FaceCamera.cs" />
     <Compile Include="Default\ThermalPrinter.cs" />
     <Compile Include="PeripheralManager.cs" />

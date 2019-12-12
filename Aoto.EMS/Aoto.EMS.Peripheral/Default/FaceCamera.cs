@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace Aoto.EMS.Peripheral
 {
-    public class FaceCamera
+    public class FaceCamera : IFaceCamera
     {
         /// <summary>
         /// 登录设备
@@ -104,7 +104,8 @@ namespace Aoto.EMS.Peripheral
 
         //参数
         private NET_DVR_DEVICEINFO_V30 deviceInfo;
-        private string dvrIPAddress;
+        private string dvrIPAddress1;
+        private string dvrIPAddress2;
         private Int16 dvrPortNumber;
         private string dvrUserName;
         private string dvrPassword;
@@ -126,7 +127,8 @@ namespace Aoto.EMS.Peripheral
         public FaceCamera()
         {
             deviceInfo = new NET_DVR_DEVICEINFO_V30();
-            dvrIPAddress = "172.16.210.240"; //设备IP地址或者域名
+            dvrIPAddress1 = "172.16.210.240"; //设备IP地址或者域名
+            dvrIPAddress2 = "172.16.210.241"; //设备IP地址或者域名
             dvrPortNumber = Int16.Parse("8000");//设备服务端口号
             dvrUserName = "admin";//设备登录用户名
             dvrPassword = "aoto@123";//设备登录密码
@@ -134,8 +136,8 @@ namespace Aoto.EMS.Peripheral
 
         public int InitCamera(IntPtr dvrHandle)
         {
-            string logPath = Path.Combine(Application.StartupPath, "SdkLog");
-            string dllPath = Path.Combine(Application.StartupPath, "HCNetSDK.dll");
+            string logPath = Path.Combine(Application.StartupPath, "peripheral", "aoto", "FaceCamLib", "SdkLog");
+            string dllPath = Path.Combine(Application.StartupPath, "peripheral", "aoto", "FaceCamLib", "HCNetSDK.dll");
             intPtr = Win32ApiInvoker.LoadLibrary(dllPath);
 
             IntPtr api = Win32ApiInvoker.GetProcAddress(intPtr, "NET_DVR_Init");
@@ -184,7 +186,7 @@ namespace Aoto.EMS.Peripheral
             //初始化摄像机
             if (m_UserID < 0)
             {
-                m_UserID = login(dvrIPAddress, dvrPortNumber, dvrUserName, dvrPassword, ref deviceInfo);
+                m_UserID = login(dvrIPAddress2, dvrPortNumber, dvrUserName, dvrPassword, ref deviceInfo);
 
                 iLastErr = lastError();
                 if (m_UserID == 0)

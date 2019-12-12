@@ -11,7 +11,6 @@ D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug\ICSharpCode.Sh
 D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug\Aoto.EMS.Infrastructure.pdb
 D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug\Aoto.EMS.Peripheral.pdb
 D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\obj\x86\Debug\Aoto.EMS.MultiSerBox.csprojAssemblyReference.cache
-D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\obj\x86\Debug\Aoto.EMS.MultiSerBox.FrmBoard.resources
 D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\obj\x86\Debug\Aoto.EMS.MultiSerBox.FrmFinger.resources
 D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\obj\x86\Debug\Aoto.EMS.MultiSerBox.FrmShell.resources
 D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\obj\x86\Debug\Aoto.EMS.MultiSerBox.Properties.Resources.resources
@@ -41,3 +40,6 @@ D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug\CoreAudioApi.d
 D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug\App.config
 D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug\appconfig\app.json
 D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug\web\mySelf\qms\html\admin\index.html
+D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\obj\x86\Debug\Aoto.EMS.MultiSerBox.FrmSignaturePlate.resources
+D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\obj\x86\Debug\Aoto.EMS.MultiSerBox.FrmHighMeter.resources
+D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\obj\x86\Debug\Aoto.EMS.MultiSerBox.FrmFaceCamera.resources

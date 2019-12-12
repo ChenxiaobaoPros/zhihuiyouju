@@ -97,7 +97,9 @@
     <p onclick="">密文键盘</p>
     <p onclick="">解密</p>
     <p onclick="wulianwang()">物联网</p>
-    <p onclick="prunt()">打印</p>
+    <p onclick="highMeter()">高拍仪</p>
+    <p onclick="print()">打印</p>
+    <p onclick="faceCam()">人脸识别</p>
 </body>
 </html>
 <script type="text/javascript">
@@ -129,16 +131,24 @@
     }
     function wulianwang()
     {
-        var str = window.external.LoadOverView();
-        var info = JSON.parse(str);
-        alert(info[0].online); 
-        alert(info[0].appName); 
-        //var str1 = window.external.LoadManager(2);
-        //var info1 = JSON.parse(str1);
-        //alert(info1.LoRaAirPanel); 
+        //var str = window.external.LoadOverView();
+        //var info = JSON.parse(str);
+        //alert(info[0].online); 
+        //alert(info[0].appName); 
+        var str1 = window.external.LoadManager(2);
+        var info1 = JSON.parse(str1);
+        alert(info1.LoRaAirPanel.GIK8330011.data.deive_name); 
     }
-    function prunt()
+    function print()
     {
         window.external.PrintWorke();
     }
+    function highMeter()
+    {
+        window.external.LoadHighMeter();
+    }
+    function faceCam() {
+        window.external.LoadFaceCam();
+    }
+
 </script>
