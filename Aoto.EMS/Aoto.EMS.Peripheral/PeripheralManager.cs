@@ -132,6 +132,7 @@ namespace Aoto.EMS.Peripheral
     {
         void Initialize();
         void StartingMotor(int index);
+        void Inspecting();
     }
     /// <summary>
     /// 金属键盘

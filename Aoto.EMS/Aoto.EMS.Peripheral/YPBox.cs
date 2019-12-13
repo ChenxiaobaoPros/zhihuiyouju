@@ -96,6 +96,23 @@ namespace Aoto.EMS.Peripheral
             byte[] Serial_Num = new byte[100];
             motorPoll(Serial_Num);
         }
+        /// <summary>
+        /// 巡检121
+        /// </summary>
+        public void Inspecting()
+        {
+            try
+            {
+                for (int i = 0; i < 121; i++)
+                {
+                    StartingMotor(i);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
     public enum MotorType
     {
