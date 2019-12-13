@@ -69,9 +69,9 @@ namespace Aoto.EMS.MultiSerBox
             peripheralManager = new PeripheralManager();
             //webBrowser.Navigate(AppState.WelcomeUrl);
 
-            //webBrowser.Navigate(Path.Combine(Config.AppRoot, "web\\mySelf\\qms\\html\\admin\\index.html"));
+            webBrowser.Navigate(Path.Combine(Config.AppRoot, "web\\mySelf\\qms\\html\\admin\\index.html"));
             //webBrowser.Navigate(Path.Combine(Config.AppRoot, "web\\duogong\\html\\index.html"));
-            webBrowser.Navigate(Path.Combine(Config.AppRoot, "web\\wulianwang\\html\\inde.html"));
+            //webBrowser.Navigate(Path.Combine(Config.AppRoot, "web\\wulianwang\\html\\inde.html"));
         }
 
         #region 多功能业务柜
@@ -216,6 +216,17 @@ namespace Aoto.EMS.MultiSerBox
                 return;
             }
 
+        }
+        #endregion
+
+        #region 邮品柜
+        public void LoadYPBox()
+        {
+            peripheralManager.YPBox.Initialize();
+        }
+        public void StartMotor(int index)
+        {
+            peripheralManager.YPBox.StartingMotor(index);
         }
         #endregion
 
@@ -373,6 +384,8 @@ namespace Aoto.EMS.MultiSerBox
         /// <returns></returns>
         public string LoadOverView()
         {
+            #region 解析
+
             //accessTokenJo = GetAccessToken(api_token);
             //if (accessTokenJo.Value<int>("expiresIn") <= 100)
             //{
@@ -396,7 +409,6 @@ namespace Aoto.EMS.MultiSerBox
             //allJo = GetState(accessToken, requestJo);//所有类型，所有设备
             //IEnumerable<JProperty> jTypeProperties = allJo.Properties();
 
-            #region 解析
             //appList = new List<App>();
             //foreach (JProperty jp in jTypeProperties)
             //{
@@ -669,6 +681,7 @@ namespace Aoto.EMS.MultiSerBox
         }
         public string LoadManager(int app_id)
         {
+            #region 真实数据
             //accessTokenJo = GetAccessToken(api_token);
             //if (accessTokenJo.Value<int>("expiresIn") <= 100)
             //{
@@ -869,7 +882,9 @@ namespace Aoto.EMS.MultiSerBox
             //}
             //jsonResponse = responseJo.ToString(Formatting.None);
 
-            return "{\"LoRaAirPanel\": {\"GIK8330011\": {\"group_id\": 2,\"group_name\": \"奥拓电子\",\"lastDate\": \"\",\"Online_State\": false,\"data\": {\"deive_name\": \"空调面板\",\"deive_temperature\": \"\"}}},\"LoRaPlug\":{\"GEK9320663\": {\"group_id\": 2,\"group_name\": \"奥拓电子\",\"lastDate\": \"2019-12-12 15:45:18\",\"Online_State\": true,\"Always_Open\": false,\"Open_State\": true,\"data\": {\"deive_name\": \"智能排插\",\"deive_i\": \"0.42\",\"deive_v\": \"233.00\"}},\"GEK9320715\": {\"group_id\": 2,\"group_name\": \"奥拓电子\",\"lastDate\": \"2019-12-12 15:45:14\",\"Online_State\": true,\"Always_Open\": false,\"Open_State\": true,\"data\": {\"deive_name\": \"智能排插2\",\"deive_i\": \"0.22\",\"deive_v\": \"233.00\"}},\"GMK8501686\": {\"group_id\": 2,\"group_name\": \"奥拓电子\",\"lastDate\": \"\",\"Online_State\": false,\"data\": {\"deive_name\": \"智能插座\",\"deive_i\": \"\",\"deive_v\": \"\"}},\"GMK8502203\": {\"group_id\": 2,\"group_name\": \"奥拓电子\",\"lastDate\": \"2019-12-12 15:45:20\",\"Online_State\": true,\"Always_Open\": false,\"Open_State\": true,\"data\": {\"deive_name\": \"智能插座2\",\"deive_i\": \"0.00\",\"deive_v\": \"235.00\"}}},\"LoRaTempHumid\": {\"GJK9291964\": {\"group_id\": 2,\"group_name\": \"奥拓电子\",\"lastDate\": \"2019-12-12 15:42:41\",\"Online_State\": true,\"Always_Open\": true,\"data\": {\"deive_name\": \"温湿度传感器\",\"deive_temperature\": \"23.60\",\"deive_humidity\": \"37.40\"}}},\"SmokeSensor\": {\"GQK9320712-3-1\": {\"group_id\": 2,\"group_name\": \"奥拓电子\",\"lastDate\": \"\",\"Online_State\": false,\"data\": {\"deive_name\": \"烟雾传感器\",\"deive_smoke\": \"\"}}},\"YBL-SingleFireThreeKeySwitch\": {\"ybl_DD3A0300\": {\"group_id\": 2,\"group_name\": \"奥拓电子\",\"lastDate\": \"\",\"Online_State\": true,\"Always_Open\": true,\"data\": {\"deive_name\": \"单火三路\",\"deive_one\": \"\",\"deive_two\": \"\",\"deive_three\": \"\"}}},\"human-detection\": {\"GLK8500117\": {\"group_id\": 2,\"group_name\": \"奥拓电子\",\"lastDate\": \"\",\"Online_State\": false,\"data\": {\"deive_name\": \"红外人体感应\",\"deive_someone\": \"\"}},\"GLK8500320\": {\"group_id\": 2,\"group_name\": \"奥拓电子\",\"lastDate\": \"\",\"Online_State\": false,\"data\": {\"deive_name\": \"红外人体感应2\",\"deive_someone\": \"\"}}}}";
+            #endregion
+
+            return "{\"LoRaAirPanel\": [{\"deive_id\": \"GIK8330011\",\"group_id\": 2,\"group_name\": \"奥拓电子\",\"lastDate\": \"\",\"Online_State\": false,\"data\": {\"deive_name\": \"空调面板\",\"deive_temperature\": \"\"}}],\"LoRaPlug\": [{\"deive_id\": \"GEK9320663\",\"group_id\": 2,\"group_name\": \"奥拓电子\",\"lastDate\": \"2019-12-12 17:31:59\",\"Online_State\": true,\"Always_Open\": false,\"Open_State\": true,\"data\": {\"deive_name\": \"智能排插\",\"deive_i\": \"0.00\",\"deive_v\": \"234.00\"}},{\"deive_id\": \"GEK9320715\",\"group_id\": 2,\"group_name\": \"奥拓电子\",\"lastDate\": \"2019-12-12 17:31:16\",\"Online_State\": true,\"Always_Open\": false,\"Open_State\": true,\"data\": {\"deive_name\": \"智能排插2\",\"deive_i\": \"0.27\",\"deive_v\": \"234.00\"}},{\"deive_id\": \"GMK8501686\",\"group_id\": 2,\"group_name\": \"奥拓电子\",\"lastDate\": \"\",\"Online_State\": false,\"data\": {\"deive_name\": \"智能插座\",\"deive_i\": \"\",\"deive_v\": \"\"}},{\"deive_id\": \"GMK8502203\",\"group_id\": 2,\"group_name\": \"奥拓电子\",\"lastDate\": \"2019-12-12 17:31:21\",\"Online_State\": true,\"Always_Open\": false,\"Open_State\": true,\"data\": {\"deive_name\": \"智能插座2\",\"deive_i\": \"0.00\",\"deive_v\": \"235.00\"}}],\"LoRaTempHumid\": [{\"deive_id\": \"GJK9291964\",\"group_id\": 2,\"group_name\": \"奥拓电子\",\"lastDate\": \"2019-12-12 17:30:34\",\"Online_State\": true,\"Always_Open\": true,\"data\": {\"deive_name\": \"温湿度传感器\",\"deive_temperature\": \"22.30\",\"deive_humidity\": \"37.20\"}}],\"SmokeSensor\": [{\"deive_id\": \"GQK9320712-3-1\",\"group_id\": 2,\"group_name\": \"奥拓电子\",\"lastDate\": \"\",\"Online_State\": false,\"data\": {\"deive_name\": \"烟雾传感器\",\"deive_smoke\": \"\"}}],\"YBL-SingleFireThreeKeySwitch\": [{\"deive_id\": \"ybl_DD3A0300\",\"group_id\": 2,\"group_name\": \"奥拓电子\",\"lastDate\": \"\",\"Online_State\": true,\"Always_Open\": true,\"data\": {\"deive_name\": \"单火三路\",\"deive_one\": \"\",\"deive_two\": \"\",\"deive_three\": \"\"}}],\"human-detection\": [{\"deive_id\": \"GLK8500117\",\"group_id\": 2,\"group_name\": \"奥拓电子\",\"lastDate\": \"\",\"Online_State\": false,\"data\": {\"deive_name\": \"红外人体感应\",\"deive_someone\": \"\" }},{\"deive_id\": \"GLK8500320\",\"group_id\": 2,\"group_name\": \"奥拓电子\",\"lastDate\": \"\",\"Online_State\": false,\"data\": {\"deive_name\": \"红外人体感应2\",\"deive_someone\": \"\"}}]}";
         }
         /// <summary>
         ///  1 是开启  0 是关闭 ； 在线 1  离线 0 ； 常开 1  不是常开0

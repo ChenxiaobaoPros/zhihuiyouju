@@ -575,13 +575,16 @@ namespace Aoto.EMS.Peripheral
             //Font InvoiceFont = new Font(new FontFamily("黑体"), 10);
             Font InvoiceFont = new Font(new FontFamily("仿宋"), 12);
             //反锯齿
-            g.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
+            //g.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
             //定义单色画笔.画笔用于填充图形形状，如矩形、椭圆、扇形、多边形和封闭路径
             SolidBrush GrayBrush = new SolidBrush(Color.Black);
             //图标
-            string imagePath =Path.Combine(Application.StartupPath, "image\\邮政.png");
+            string imagePath =Path.Combine(Application.StartupPath, "image\\邮政0.png");
             Bitmap bitmap = new Bitmap(imagePath);
+            //bitmap = new Bitmap(bitmap, 220, 70);//缩放
             Rectangle bitmapRect = new Rectangle(pintX, pintY, bitmap.Width, bitmap.Height);
+            //g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor;
+            //g.PixelOffsetMode = System.Drawing.Drawing2D.PixelOffsetMode.Half;
             g.DrawImage(bitmap, bitmapRect, 0, 0, bitmap.Width, bitmap.Height, GraphicsUnit.Pixel);
             //文本
             StringBuilder sb = new StringBuilder();

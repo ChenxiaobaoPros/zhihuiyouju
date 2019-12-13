@@ -100,6 +100,7 @@
     <p onclick="highMeter()">高拍仪</p>
     <p onclick="print()">打印</p>
     <p onclick="faceCam()">人脸识别</p>
+    <p onclick="ypbox()">邮品柜</p>
 </body>
 </html>
 <script type="text/javascript">
@@ -136,8 +137,9 @@
         //alert(info[0].online); 
         //alert(info[0].appName); 
         var str1 = window.external.LoadManager(2);
+        alert(str1);
         var info1 = JSON.parse(str1);
-        alert(info1.LoRaAirPanel.GIK8330011.data.deive_name); 
+        alert(info1.LoRaAirPanel[0].data.deive_name); 
     }
     function print()
     {
@@ -150,5 +152,9 @@
     function faceCam() {
         window.external.LoadFaceCam();
     }
-
+    function ypbox()
+    {
+        window.external.LoadYPBox();
+        window.external.StartMotor(0);
+    }
 </script>

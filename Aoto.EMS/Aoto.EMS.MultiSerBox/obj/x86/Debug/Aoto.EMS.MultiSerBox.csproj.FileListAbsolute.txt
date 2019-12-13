@@ -43,3 +43,4 @@ D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug\web\mySelf\qms
 D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\obj\x86\Debug\Aoto.EMS.MultiSerBox.FrmSignaturePlate.resources
 D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\obj\x86\Debug\Aoto.EMS.MultiSerBox.FrmHighMeter.resources
 D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\obj\x86\Debug\Aoto.EMS.MultiSerBox.FrmFaceCamera.resources
+D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug\image\邮政.png

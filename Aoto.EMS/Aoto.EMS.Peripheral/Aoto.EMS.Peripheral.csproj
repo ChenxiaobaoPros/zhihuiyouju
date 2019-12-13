@@ -59,6 +59,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Default\QRCode.cs" />
     <Compile Include="Default\SignaturePlate.cs" />
+    <Compile Include="YPBox.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Aoto.EMS.Common\Aoto.EMS.Common.csproj">

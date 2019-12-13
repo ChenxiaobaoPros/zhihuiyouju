@@ -128,6 +128,11 @@ namespace Aoto.EMS.Peripheral
         int InitCamera(IntPtr dvrHandle);
         string DisplayDVR();
     }
+    public interface IYPBox
+    {
+        void Initialize();
+        void StartingMotor(int index);
+    }
     /// <summary>
     /// 金属键盘
     /// </summary>
@@ -158,6 +163,7 @@ namespace Aoto.EMS.Peripheral
         private IHighMeter highMeter;
         private IHybridCardReader hybridCardReader;
         private IFinger finger;
+        private IYPBox ypBox;
         //private IReader mifareCardReader;
 
         private static readonly ILog log = LogManager.GetLogger("peripheral");
@@ -190,7 +196,8 @@ namespace Aoto.EMS.Peripheral
             //二维码
             qRCode = AutofacContainer.ResolveNamed<IQRCode>("qRCode");
             qRCode.RunCompletedEvent += new RunCompletedEventHandler(ReadQRCodeCompletedEvent);
-
+            //邮品柜
+            ypBox = AutofacContainer.ResolveNamed<IYPBox>("ypBox");
 
             //magneticCardReaderWriter.RunCompletedEvent += new RunCompletedEventHandler(ReadCardCompletedEvent);
             //icCardReaderWriter.RunCompletedEvent += new RunCompletedEventHandler(ReadCardCompletedEvent);
@@ -216,7 +223,7 @@ namespace Aoto.EMS.Peripheral
         public IKeyBoard KeyBoard { get { return keyBoard; } }
         public IFinger Finger { get { return finger; } }
         public IQRCode QRCode { get { return qRCode; } }
-
+        public IYPBox YPBox { get { return ypBox; } }
         private static object lockedObject = new object();
         private static string res = String.Empty;
 

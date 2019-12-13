@@ -193,7 +193,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="image\邮政.png" />
+    <Content Include="image\邮政.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="web\mySelf\images\logo.bmp" />
     <Content Include="web\mySelf\images\logo.ico" />
     <Content Include="web\mySelf\images\logo.png" />
