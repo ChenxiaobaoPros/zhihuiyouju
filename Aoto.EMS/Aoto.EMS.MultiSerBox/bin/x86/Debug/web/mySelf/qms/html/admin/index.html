@@ -118,9 +118,19 @@
     <p onclick="ypbox()">&ensp;--邮品柜</p>
     <p>RFID</p>
     <p onclick="rfid()">&ensp;--RFID</p>
+
+    <p onclick="test()">测试</p>
 </body>
 </html>
 <script type="text/javascript">
+    function test() {
+        var retStr = window.external.GetProductList();
+        var list = JSON.parse(retStr);
+        alert(list.bodyList[0].ProductNmae);
+        var ret = window.external.GetProductInfoByName("1");
+        var obj = JSON.parse(ret);
+        alert(obj.body.Price);
+    }
     function loadborad() {
         window.external.LoadBorad();
     }

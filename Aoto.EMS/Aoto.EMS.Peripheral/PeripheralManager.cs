@@ -139,7 +139,6 @@ namespace Aoto.EMS.Peripheral
         void Initialize();
         void Read(JObject jo);
         void ReadAsync(JObject jo);
-        void GetReadResult();
         void Inspection();
     }
     /// <summary>

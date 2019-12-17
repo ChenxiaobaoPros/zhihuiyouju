@@ -1,0 +1,24 @@
+[2019-12-17 09:43:57.271][Aoto.EMS.MultiSerBox.exe][7552]---打开串口---
+[2019-12-17 09:43:57.272][Aoto.EMS.MultiSerBox.exe][7552]SUNSON_OpenCom,nPortId = 6,nBaudrate = 9600
+[2019-12-17 09:43:57.272][Aoto.EMS.MultiSerBox.exe][7552]SUNSON_OpenCom,failure!
+[2019-12-17 09:44:27.605][Aoto.EMS.MultiSerBox.exe][11100]---打开串口---
+[2019-12-17 09:44:27.605][Aoto.EMS.MultiSerBox.exe][11100]SUNSON_OpenCom,nPortId = 6,nBaudrate = 9600
+[2019-12-17 09:44:27.605][Aoto.EMS.MultiSerBox.exe][11100]SUNSON_OpenCom,failure!
+[2019-12-17 09:44:57.594][Aoto.EMS.MultiSerBox.exe][11960]---打开串口---
+[2019-12-17 09:44:57.594][Aoto.EMS.MultiSerBox.exe][11960]SUNSON_OpenCom,nPortId = 6,nBaudrate = 9600
+[2019-12-17 09:44:57.601][Aoto.EMS.MultiSerBox.exe][11960]SUNSON_OpenCom,failure!
+[2019-12-17 09:45:14.085][Aoto.EMS.MultiSerBox.exe][8820]---打开串口---
+[2019-12-17 09:45:14.085][Aoto.EMS.MultiSerBox.exe][8820]SUNSON_OpenCom,nPortId = 6,nBaudrate = 9600
+[2019-12-17 09:45:14.086][Aoto.EMS.MultiSerBox.exe][8820]SUNSON_OpenCom,failure!
+[2019-12-17 09:47:24.388][Aoto.EMS.MultiSerBox.exe][12544]---打开串口---
+[2019-12-17 09:47:24.389][Aoto.EMS.MultiSerBox.exe][12544]SUNSON_OpenCom,nPortId = 6,nBaudrate = 9600
+[2019-12-17 09:47:24.389][Aoto.EMS.MultiSerBox.exe][12544]SUNSON_OpenCom,failure!
+[2019-12-17 09:48:07.776][Aoto.EMS.MultiSerBox.exe][14952]---打开串口---
+[2019-12-17 09:48:07.776][Aoto.EMS.MultiSerBox.exe][14952]SUNSON_OpenCom,nPortId = 6,nBaudrate = 9600
+[2019-12-17 09:48:07.777][Aoto.EMS.MultiSerBox.exe][14952]SUNSON_OpenCom,failure!
+[2019-12-17 09:51:01.862][Aoto.EMS.MultiSerBox.exe][5848]---打开串口---
+[2019-12-17 09:51:01.863][Aoto.EMS.MultiSerBox.exe][5848]SUNSON_OpenCom,nPortId = 6,nBaudrate = 9600
+[2019-12-17 09:51:01.863][Aoto.EMS.MultiSerBox.exe][5848]SUNSON_OpenCom,failure!
+[2019-12-17 09:52:30.584][Aoto.EMS.MultiSerBox.exe][12532]---打开串口---
+[2019-12-17 09:52:30.585][Aoto.EMS.MultiSerBox.exe][12532]SUNSON_OpenCom,nPortId = 6,nBaudrate = 9600
+[2019-12-17 09:52:30.585][Aoto.EMS.MultiSerBox.exe][12532]SUNSON_OpenCom,failure!

@@ -462,10 +462,6 @@ namespace Aoto.EMS.Peripheral
             HashSet<string> hs = new HashSet<string>(list); //此时已经去掉重复的数据保存在hashset中
             List<string> ii = hs.ToList();
         }
-        public void GetReadResult()
-        {
-            
-        }
 
         #region 硬件相关
         /// <summary>

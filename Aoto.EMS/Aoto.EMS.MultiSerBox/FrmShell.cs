@@ -25,8 +25,6 @@ namespace Aoto.EMS.MultiSerBox
             webBrowser.ScriptErrorsSuppressed = true;
             webBrowser.ScrollBarsEnabled = true;
 
-            //pictureBoxQRCode.Image = QrCodeFactory.CreateQRCode(@"http://api.pho.so/photo.aspx?type=3");
-
         }
         public void Shut()
         {
@@ -198,7 +196,7 @@ namespace Aoto.EMS.MultiSerBox
         {
             if (hybridCardReader == null)
                 hybridCardReader = new HybridCardReader();
-           
+
         }
         public void HalfBacnk()
         {
@@ -230,11 +228,11 @@ namespace Aoto.EMS.MultiSerBox
         }
         public void MRead()
         {
-            hybridCardReader.MRead(); 
+            hybridCardReader.MRead();
         }
         public void CPURead()
         {
-            hybridCardReader.CPURead(); 
+            hybridCardReader.CPURead();
         }
         #endregion
 
@@ -273,6 +271,40 @@ namespace Aoto.EMS.MultiSerBox
 
         #region 邮品柜
 
+        #region 页面数据
+
+        private Root ResponseRoot { get; set; }
+        public string GetProductList()
+        {
+            ResponseRoot = new Root();
+            ResponseRoot.head = new Head();
+            ResponseRoot.head.retCode = 0;
+            ResponseRoot.bodyList = new List<Body>();
+            ResponseRoot.bodyList.Add(new Body() { ProductNmae = "1", Url = @"../img/1.png", Price = 0.00, Stock = 20 });
+            ResponseRoot.bodyList.Add(new Body() { ProductNmae = "2", Url = @"../img/1.png", Price = 0.00, Stock = 20 });
+            ResponseRoot.bodyList.Add(new Body() { ProductNmae = "3", Url = @"../img/1.png", Price = 0.00, Stock = 20 });
+            ResponseRoot.bodyList.Add(new Body() { ProductNmae = "4", Url = @"../img/1.png", Price = 0.00, Stock = 20 });
+
+            return JsonConvert.SerializeObject(ResponseRoot);
+        }
+
+        public string GetProductInfoByName(string name)
+        {
+            Body body = ResponseRoot.bodyList.Where(p => p.ProductNmae == name).FirstOrDefault();
+            JObject jo = new JObject(
+             new JProperty("head", new JObject(
+                 new JProperty("retCode", 0))),
+             new JProperty("body", new JObject(
+                 new JProperty("ProductNmae", body.ProductNmae),
+                 new JProperty("Url", body.Url),
+                 new JProperty("Price", body.Price),
+                 new JProperty("Stock", body.Stock))));
+
+            return jo.ToString(Formatting.None);
+        }
+
+        #endregion
+
         #region 邮品柜
 
         public void LoadYPBox()
@@ -293,11 +325,6 @@ namespace Aoto.EMS.MultiSerBox
         {
             peripheralManager.RFID.Initialize();
             peripheralManager.RFID.Inspection();
-        }
-        public void GetRFID()
-        {
-            //peripheralManager.RFID.GetInspectionResult();
-            peripheralManager.RFID.GetReadResult();
         }
         #endregion
 
@@ -387,7 +414,7 @@ namespace Aoto.EMS.MultiSerBox
 
         }
         //SetDeiveState("LoRaPlug",new string[]{ "GEK9320663" },"1");
-        public string SetDeiveState(string typeNmae,string[] idArray,string code)
+        public string SetDeiveState(string typeNmae, string[] idArray, string code)
         {
             string url = "api/v1/device/setStatus";
             accessTokenJo = GetAccessToken(api_token);
@@ -996,7 +1023,7 @@ namespace Aoto.EMS.MultiSerBox
         }
         public JObject CreateDeiveInfo(JProperty jdp)
         {
-            return  new JObject(
+            return new JObject(
                             new JProperty("deive_id", jdp.Path.Split('.')[1]),
                             new JProperty("group_id", jdp.Value["group_id"]),
                             new JProperty("group_name", jdp.Value["group_name"]),
@@ -1048,6 +1075,22 @@ namespace Aoto.EMS.MultiSerBox
     #endregion
 
     #region 邮品柜
-
+    public class Root
+    {
+        public Head head { get; set; }
+        public List<Body> bodyList { get; set; }
+    }
+    public class Head  //一般放操作状态等提示
+    {
+        public int retCode { get; set; }
+    }
+    public class Body //一般放数据主体
+    {
+        public string ProductNmae { get; set; }
+        public string Url { get; set; }
+        public double Price { get; set; }
+        public int Stock { get; set; }
+    }
     #endregion
+
 }
