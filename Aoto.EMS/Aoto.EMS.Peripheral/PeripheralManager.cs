@@ -105,6 +105,8 @@ namespace Aoto.EMS.Peripheral
     public interface IQRCode : IDisposable
     {
         void Initialize();
+        int CloseQRCode();
+        int OpenQRCode();
         event RunCompletedEventHandler RunCompletedEvent;
     }
     /// <summary>

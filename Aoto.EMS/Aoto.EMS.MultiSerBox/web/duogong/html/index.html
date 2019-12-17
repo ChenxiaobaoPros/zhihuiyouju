@@ -1,0 +1,486 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="../css/base.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/virtualkeyboard.css">
+    <script type="text/javascript" src="../js/index.js"></script>
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/Popt.js"></script>
+    <script type="text/javascript" src="../js/city.json.js"></script>
+    <script type="text/javascript" src="../js/citySet.js"></script>
+</head>
+<body>
+<div style="margin: 0 auto; width: 1080px;overflow: hidden;">
+    <div class="intex_top">
+        <div class="logo">
+            <img src="../img/LOGO.png" />
+        </div>
+        <p class="logo_p">欢迎您使用多功能业务柜</p>
+    </div>
+    <!-- 首页内容开始   -->
+    <div class="index_content">
+        <div class="kong"></div>
+        <div class="content_fff">
+            <div class="content_div clearfix">
+                <ul class="content_ul">
+                    <li class="content_li clearfix">
+                        <span class="content_li_span"></span>
+                        <p class="content_li_p">预约业务</p>
+                    </li>
+                    <li class="content_li2 clearfix">
+                        <span class="content_li_span2"></span>
+                        <p class="content_li_p">物流信息</p>
+                    </li>
+                    <li class="content_li clearfix">
+                        <span class="content_li_span3"></span>
+                        <p class="content_li_p">邮品资费</p>
+                    </li>
+                    <li class="content_li2 clearfix">
+                        <span class="content_li_span4"></span>
+                        <p class="content_li_p">邮票查询</p>
+                    </li>
+                    <li class="content_li clearfix" style="border-bottom: none;">
+                        <span class="content_li_span5"></span>
+                        <p class="content_li_p">理财产品</p>
+                    </li>
+                </ul>
+                <ul class="content_ul2">
+                    <li class="content_li clearfix">
+                        <span class="content_li_span6"></span>
+                        <p class="content_li_p">热销商品</p>
+                    </li>
+                    <li class="content_li2 clearfix">
+                        <span class="content_li_span7"></span>
+                        <p class="content_li_p">周边网点</p>
+                    </li>
+                    <li class="content_li clearfix">
+                        <span class="content_li_span8"></span>
+                        <p class="content_li_p">电子报刊</p>
+                    </li>
+                    <li class="content_li2 clearfix baoxian">
+                        <span class="content_li_span9"></span>
+                        <p class="content_li_p">保险工具</p>
+                    </li>
+                    <li class="content_li clearfix" style="border-bottom: none;">
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--首页内容结束    -->
+    <!--保险业务开始    -->
+    <div class="Insurance">
+        <div class="Insurance_top">
+            <div class="Insurance_top_div clearfix">
+                <p class="Insurance_top_p1">首页</p>
+                <p class="Insurance_top_p2">保险工具</p>
+            </div>
+            <div class="clearfix">
+                <p class="Insurance_type">保险类型:</p>
+                <select name="请选择" class="Insurance_opt">
+                    <!-- <option>请选择</option>
+                    <option>人寿保险</option>
+                    <option >养老保险</option>
+                    <option>车辆保险</option>
+                    <option>年金保险</option> -->
+                </select>
+                <div class="Insurance_opt_btn">
+                    <button class="loader-button">查 询</button>
+                </div>
+            </div>
+            <table class="aaa">
+                <tr class="tou">
+                    <th class="border-r border-rr">产品代码</th>
+                    <th class="border-r">产品名称</th>
+                    <th class="border-r">产品实际</th>
+                    <th class="border-r border-l">操作</th>
+                </tr>
+            </table>
+            <div class="biaoge">
+                <table class="ge">
+                    <!--                        <tr class="banse">-->
+                    <!--                            <td class="tou_td">11111</td>-->
+                    <!--                            <td class="tou_td">22222</td>-->
+                    <!--                            <td class="tou_td">33333</td>-->
+                    <!--                            <td class="tou_td2">-->
+                    <!--                                <div>-->
+                    <!--                                    <button class="loader-button3">-->
+                    <!--                                        <img src="../img/ban.png" />-->
+                    <!--                                        办 理-->
+                    <!--                                    </button>-->
+                    <!--                                </div>-->
+                    <!--                            </td>-->
+                    <!--                        </tr>-->
+                </table>
+
+            </div>
+        </div>
+    </div>
+    <!-- 保险列表页结束-->
+    <!-- 身份识别开始-->
+    <div class="shib">
+        <div class="Insurance_top3">
+            <div class="Insurance_top_div clearfix">
+                <p class="Insurance_top_p3">首页</p>
+                <p class="Insurance_top_p2">身份识别</p>
+            </div>
+            <div class="clearfix shenzheng">
+                <img src="../img/shuaka.png" />
+            </div>
+        </div>
+    </div>
+    <!--身份识别结束-->
+    <!--保险业务办理页开始-->
+
+    <div class="details">
+        <div class="details_top">
+            <div class="Insurance_top_div clearfix">
+                <p class="Insurance_top_p4">首页</p>
+                <p class="Insurance_top_p2">保险办理</p>
+            </div>
+            <div class="details_box">
+                <h3 class="details_box_h3">账户资料</h3>
+                <div class="zhhu clearfix">
+                    <div class="zhhu_hao clearfix">
+                        <p>账户号:</p>
+                        <input class="accountNo" type="text" readonly="readonly"/>
+                    </div>
+                    <div class="zhhu_hao clearfix">
+                        <p>办理时间:</p>
+                        <input class="date" type="text" readonly="readonly"/>
+                    </div>
+                </div>
+                <div class="zhhu2 clearfix">
+                    <div class="zhhu_hao clearfix">
+                        <p>业务名称:</p>
+                        <input class="enterpriseName" type="text" readonly="readonly" />
+                    </div>
+                    <div class="zhhu_hao clearfix">
+                        <p>办理类型:</p>
+                        <input class="bussisType" type="text" readonly="readonly" />
+                    </div>
+                </div>
+                <h3 class="details_box_h3">个人资料</h3>
+                <div class="zhhu clearfix">
+                    <div class="zhhu_hao clearfix">
+                        <p>真实姓名:</p>
+                        <input class="name" type="text" readonly="readonly"/>
+                    </div>
+                    <div class="zhhu_hao clearfix">
+                        <p>身份证号:</p>
+                        <input class="idNo" type="text" readonly="readonly"/>
+                    </div>
+                </div>
+                <div class="zhhu2 clearfix">
+                    <div class="zhhu_hao clearfix">
+                        <p>现居住地址:</p>
+                        <div class="wrap"><input class="input" name="" id="city" type="text" placeholder="请选择" autocomplete="off" readonly="true"><s></s></div>
+                    </div>
+                    <div class="zhhu_hao clearfix">
+                        <p>详细地址:</p>
+                        <!--                            <input type="text" placeholder="请输入详细地址" />-->
+                        <input type="text" id="input_val">
+                    </div>
+                </div>
+
+                <div class="rlxb clearfix">
+                    <p style="background:#007e3e;color:#fff;">身份认证正常</p>
+                    <p class="finger">指纹识别成功</p>
+                    <p class="qrtcode">二维码扫码</p>
+
+                </div>
+
+                <div>
+
+                    <div class="hua clearfix">
+                        <p style="width: 100px;height: 40px;font-size: 20px;color: #595959;line-height: 40px;">电子签名：</p>
+                        <div style="width: 880px;" class="clearfix">
+                            <div class="canvasDiv">
+                                <div id="editing_area">
+                                    <canvas width="400" height="200" id="canvasEdit"></canvas>
+                                </div>
+
+                            </div>
+                            <div class="imgDiv">
+                                <span id="sign_show"></span>
+                            </div>
+
+                        </div>
+                        <div class="btnDiv">
+                            <a id="sign_ok" class="okBtn">确 认</a>
+                            <a id="sign_clear" class="clearBtn">清 除</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="clearfix" style="width: 240px; height: 40px;margin: 35px auto 0;" >
+                <button class="btn_btn">提 交</button>
+                <button class="btn_btn2">取 消</button>
+            </div>
+        </div>
+    </div>
+    <!--保险业务办理页结束-->
+    <!-- 支付成功页       -->
+    <div class="cheng">
+        <div class="choshou clearfix">
+            <p class="Insurance_top_p4">首页</p>
+            <p class="Insurance_top_p2">保险办理</p>
+        </div>
+        <div class="chg">
+            <div class="clearfix chg_div ">
+                <span class="zhifu_span"></span>
+                <div class="huidan">
+                    <p>扣款成功</p>
+                    <p>回单已打印成功，请及时领取</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--首页底部-->
+    <div class="index-bottom"></div>
+</div>
+
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/virtualkeyboard.js"></script>
+<script type="text/javascript" src="../js/esign.js"></script>
+<script type="text/javascript">
+    $("#input_val").virtualkeyboard()
+</script>
+<script type="text/javascript">
+
+    $(function () {
+        //初始化动作，根据DOM的ID不同进行自定义，如果不写则内部默认取这四个
+        $(".imgDiv").esign("canvasEdit", "sign_show", "sign_clear", "sign_ok");
+    });
+</script>
+<script>
+    $(document).ready(function(){
+        //地区选择
+        $("#city").click(function (e) {
+            SelCity(this,e);
+        });
+        $("s").click(function (e) {
+            SelCity(document.getElementById("city"),e);
+        });
+
+        $("#input_val").virtualkeyboard();
+        $("#input_val2").virtualkeyboard()
+
+        $(function () {
+            //首页点击保险工具隐藏首页显示保险工具页
+            $(".baoxian").click(function(){
+                $(".index_content").hide();//隐藏首页
+                $(".Insurance").show();//显示保险工具页
+            });
+
+        });
+        $(function(){
+            var ret = window.external.LoadBussisPage();//获取保险工具数据方法
+            var Insurance_list=JSON.parse(ret);//获取保险列表数据
+            var Insurance_type=Insurance_list.BussisTypes;//获取保险类型数据
+
+            //渲染数据类型
+            $(".Insurance_opt").prepend("<option value='0'>请选择</option>");//添加第一个option值
+            for (var i = 0; i < Insurance_type.length; i++) {
+
+                $(".Insurance_opt").append("<option>"+Insurance_type[i]+"</option>");
+            }
+            var last = Insurance_list;//获取保险列表数据
+            var html = '';
+            //渲染列表
+            for ( var i = 0; i < last.businesslist.length; i++) {//循环json对象，拼接tr,td的html
+                html = html + '<tr class="banse">';
+                html = html + '<td class="tou_td BusinessNameNo">' + last.businesslist[i].BusinessNameNo + '</td>';
+                html = html + '<td class="tou_td BusinessName">' + last.businesslist[i].BusinessName  + '</td>';
+                html = html + '<td class="tou_td RealBusiness">' + last.businesslist[i].RealBusiness  + '</td>';
+                html = html + '<td class="tou_td2"><div> <button class="loader-button3"> <img src="../img/ban.png" />办 理</button></div>  </td>';
+
+                html = html + '</tr>';
+            }
+            $('.ge').html(html);//通过jquery方式获取table，并把tr,td的html输出到table中
+
+
+            $(".banse:even").css("background","#fff");//隔行变色
+            $(".banse:odd").css("background","#f2f8f6");//隔行变色
+            var ge = $(".ge").height();
+            if(ge >= 1093){
+                //判断保险工具页面表格数据超出总高度显示滚动条
+                $(".biaoge").css("overflow-y","scroll");
+            }
+        });
+        $(function(){
+            $(".loader-button").click(function(){
+                var Insurance_val= $('.Insurance_opt').val();//获取数据类型值
+                var Insurance_list2 =  window.external.SeachBuss(Insurance_val);
+                var last=JSON.parse(Insurance_list2);//获取保险列表数据
+                //var last = Insurance_list2;//获取保险列表数据
+                if(last.length==""){
+                    // $('.ge').html("<div style='font-size: 30px;text-align: center;margin-top: 50px;'>该数据不存在</div>");
+                    var ret = window.external.LoadBussisPage();//获取保险工具数据方法
+                    var Insurance_list=JSON.parse(ret);//获取保险列表数据
+                    var last = Insurance_list;//获取保险列表数据
+                    var html = '';
+                    //渲染列表
+                    for ( var i = 0; i < last.businesslist.length; i++) {//循环json对象，拼接tr,td的html
+                        html = html + '<tr class="banse">';
+                        html = html + '<td class="tou_td BusinessNameNo">' + last.businesslist[i].BusinessNameNo + '</td>';
+                        html = html + '<td class="tou_td BusinessName">' + last.businesslist[i].BusinessName  + '</td>';
+                        html = html + '<td class="tou_td RealBusiness">' + last.businesslist[i].RealBusiness  + '</td>';
+                        html = html + '<td class="tou_td2"><div> <button class="loader-button3"> <img src="../img/ban.png" />办 理</button></div>  </td>';
+
+                        html = html + '</tr>';
+                    }
+                    $('.ge').html(html);//通过jquery方式获取table，并把tr,td的html输出到table中
+
+                }else {
+                    var html = '';
+                    //渲染列表
+                    for ( var i = 0; i < last.length; i++) {//循环json对象，拼接tr,td的html
+                        html = html + '<tr class="banse">';
+                        html = html + '<td class="tou_td BusinessNameNo">' + last[i].BusinessNameNo + '</td>';
+                        html = html + '<td class="tou_td BusinessName">' + last[i].BusinessName  + '</td>';
+                        html = html + '<td class="tou_td RealBusiness">' + last[i].RealBusiness  + '</td>';
+                        html = html + '<td class="tou_td2"><div> <button class="loader-button3"> <img src="../img/ban.png" />办 理</button></div>  </td>';
+
+                        html = html + '</tr>';
+                    }
+                    $('.ge').html(html);//通过jquery方式获取table，并把tr,td的html输出到table中
+
+                }
+
+            });
+        })
+        $(function(){
+            $('.ge').on('click','.loader-button3',function (){//获取每一行的数据
+                var result = {}; // 数组,存储每一行数据
+                result.BusinessNameNo=$(this).parents("tr").find(".BusinessNameNo").text();
+                result.BusinessName=$(this).parents("tr").find(".BusinessName").text();
+                result.RealBusiness=$(this).parents("tr").find(".RealBusiness").text();
+                var Root = JSON.stringify(result);
+
+                var Insurance_list4 =  window.external.HandleBuss(Root);
+                if(Insurance_list4==0){
+                    $(".index_content").hide();//隐藏首页
+                    $(".Insurance").hide();//显示保险工具页
+                    $(".shib").show();//显示身份识别页
+                    //调用身份证
+                    window.external.InitIDCard();
+
+                };
+
+            });
+        })
+
+        $(function(){
+            $(".Insurance_top_p1").click(function(){
+                //在保险工具页里点击首页按钮隐藏保险工具页显示首页
+                $(".Insurance").hide();//隐藏保险工具页
+                $(".index_content").show();//显示首页
+
+            });
+            $(".Insurance_top_p3").click(function(){
+                //在身份证识别页里点击首页按钮隐藏保险工具页显示首页
+                $(".shib").hide();//隐藏身份识别页
+                $(".index_content").show();//显示首页
+
+            });
+            $(".Insurance_top_p4").click(function(){
+                //在保险业务办理页里点击首页按钮隐藏保险业务办理显示首页
+                $(".details").hide();//隐藏保险业务办理
+                $(".cheng").hide();//隐藏保险业务办理
+                $(".index_content").show();//显示首页
+                $(".qrtcode").css({"background":"#fbfdf8"});
+                $(".qrtcode").css({"color":"#595959"});
+                $(".finger").css({"background":"#fbfdf8"});
+                $(".finger").css({"color":"#595959"});
+
+            });
+        })
+        // $(function(){
+        //
+        //     $(".qrtcode").click(function () {
+        //         window.external.loadQRCode()
+        //     });
+        // });
+        // $(function(){
+        //
+        //     $(".finger").click(function () {
+        //         window.external.loadFinger()
+        //     });
+        // });
+    });
+    $(function () {
+
+        $(".btn_btn").click(function(){
+            $(".details").hide();
+            $(".cheng").show();
+            $(".qrtcode").css({"background":"#fbfdf8"});
+            $(".qrtcode").css({"color":"#595959"});
+            $(".finger").css({"background":"#fbfdf8"});
+            $(".finger").css({"color":"#595959"});
+            $("#sign_show").html(" ");
+            $("#input_val").val(" ");
+            $("#city").val(" ");
+        });
+
+    });
+    function identity(str) {
+//获取详情数据
+        var data=JSON.parse(str);
+        var retCode=data.retCode;
+        var accountNo=data.accountNo;
+        var time=data.date;
+        var enterpriseName=data.enterpriseName;
+        var bussisType=data.bussisType;
+        var name=data.name;
+        var idNo=data.idNo;
+
+        var d = new Date(time);
+        var times=d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate() + ' ' + d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds();
+
+        if(retCode==0){
+            $(".shib").hide();
+            $(".details").show();
+            $(".accountNo").val(accountNo);
+            $(".date").val(times);
+            $(".enterpriseName").val(enterpriseName);
+            $(".bussisType").val(bussisType);
+            $(".name").val(name);
+            $(".idNo").val(idNo);
+            //调取指纹
+            window.external.loadFinger();
+            //调取二维码
+             window.external.loadQRCode();
+        }
+
+
+    }
+
+
+    function getQRCodeData(str)
+    {   //二维码扫码
+        var retCode=JSON.parse(str);
+        var rvm = retCode.retCode
+        if(rvm==0){
+            $(".qrtcode").css({"background":"#007e3e"})
+            $(".qrtcode").css({"color":"#ffffff"})
+        }
+    }
+    function getFinger(str)
+    {   //指纹
+        var finger=JSON.parse(str);
+        var zw = finger.retCode
+        if(zw==0){
+            $(".finger").css({"background":"#007e3e"})
+            $(".finger").css({"color":"#ffffff"})
+        }
+    }
+</script>
+</body>
+</html>

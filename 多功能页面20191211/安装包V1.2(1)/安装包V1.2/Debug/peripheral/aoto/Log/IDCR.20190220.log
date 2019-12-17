@@ -1,0 +1,32 @@
+<<11:25:00.321#信息>>[InitInstance] 动态库文件路径：C:\Users\Administrator\Desktop\client\peripheral\aoto\lib\MT321.dll
+<<11:25:00.337#信息>>[IDCR_Initialize] 调用开始 ，lpszConfigXml=<Device><DeviceId>IDCR001</DeviceId><LogLevel>0</LogLevel></Device>
+<<11:25:00.337#错误>>[IDCR_Initialize]串口号为：3
+<<11:25:00.337#信息>>[IDCR_Initialize]设备标识为：IDCR001,日志级别为：0
+<<11:26:22.165#信息>>[IDCR_ReadData] 调用开始,dwIndex = 0 ,dwBufferSize =256
+<<11:26:22.165#信息>>[IDCR_ReadData] 调用开始,dwIndex = 1 ,dwBufferSize =5000
+<<11:26:22.165#信息>>[IDCR_ReadData] 调用开始,dwIndex = 2 ,dwBufferSize =5000
+<<11:26:22.165#信息>>[IDCR_ReadData] 调用开始,dwIndex = 3 ,dwBufferSize =5000
+<<11:26:22.181#信息>>[IDCR_ReadData] 调用开始,dwIndex = 4 ,dwBufferSize =5000
+<<11:26:22.181#信息>>[IDCR_ReadData] 调用开始,dwIndex = 5 ,dwBufferSize =5000
+<<11:26:22.181#信息>>[IDCR_ReadData] 调用开始,dwIndex = 6 ,dwBufferSize =5000
+<<11:26:22.181#信息>>[IDCR_ReadData] 调用开始,dwIndex = 7 ,dwBufferSize =5000
+<<11:26:22.197#信息>>[IDCR_ReadData] 调用开始,dwIndex = 8 ,dwBufferSize =5000
+<<11:26:22.197#信息>>[IDCR_ReadData] 调用开始,dwIndex = 9 ,dwBufferSize =5000
+<<11:26:25.728#信息>>[IDCR_ReadData] 调用开始,dwIndex = 0 ,dwBufferSize =256
+<<11:26:25.728#信息>>[IDCR_ReadData] 调用开始,dwIndex = 1 ,dwBufferSize =5000
+<<11:26:25.728#信息>>[IDCR_ReadData] 调用开始,dwIndex = 2 ,dwBufferSize =5000
+<<11:26:25.728#信息>>[IDCR_ReadData] 调用开始,dwIndex = 3 ,dwBufferSize =5000
+<<11:26:25.728#信息>>[IDCR_ReadData] 调用开始,dwIndex = 4 ,dwBufferSize =5000
+<<11:26:25.728#信息>>[IDCR_ReadData] 调用开始,dwIndex = 5 ,dwBufferSize =5000
+<<11:26:25.743#信息>>[IDCR_ReadData] 调用开始,dwIndex = 6 ,dwBufferSize =5000
+<<11:26:25.743#信息>>[IDCR_ReadData] 调用开始,dwIndex = 7 ,dwBufferSize =5000
+<<11:26:25.743#信息>>[IDCR_ReadData] 调用开始,dwIndex = 8 ,dwBufferSize =5000
+<<11:26:25.743#信息>>[IDCR_ReadData] 调用开始,dwIndex = 9 ,dwBufferSize =5000
+<<14:31:07.406#信息>>[InitInstance] 动态库文件路径：C:\Users\Administrator\Desktop\client\peripheral\aoto\lib\MT321.dll
+<<14:31:07.422#信息>>[IDCR_Initialize] 调用开始 ，lpszConfigXml=<Device><DeviceId>IDCR001</DeviceId><LogLevel>0</LogLevel></Device>
+<<14:31:07.422#错误>>[IDCR_Initialize]串口号为：3
+<<14:31:07.437#信息>>[IDCR_Initialize]设备标识为：IDCR001,日志级别为：0
+<<14:55:49.591#信息>>[InitInstance] 动态库文件路径：C:\Users\Administrator\Desktop\client\peripheral\aoto\lib\MT321.dll
+<<14:55:49.591#信息>>[IDCR_Initialize] 调用开始 ，lpszConfigXml=<Device><DeviceId>IDCR001</DeviceId><LogLevel>0</LogLevel></Device>
+<<14:55:49.591#错误>>[IDCR_Initialize]串口号为：3
+<<14:55:49.607#信息>>[IDCR_Initialize]设备标识为：IDCR001,日志级别为：0

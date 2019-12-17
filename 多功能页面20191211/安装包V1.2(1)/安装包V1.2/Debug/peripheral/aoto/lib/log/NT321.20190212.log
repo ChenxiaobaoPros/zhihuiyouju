@@ -1,0 +1,20 @@
+<<16:32:30.641#信息>>[LoadLib] H003driver 动态库文件路径：C:\Users\Administrator\Desktop\client\peripheral\aoto\lib\H003driver.dll
+<<16:32:30.641#信息>>[LoadLib] WltRS 动态库文件路径：C:\Users\Administrator\Desktop\client\peripheral\aoto\lib\WltRS.dll
+<<16:32:30.641#错误>>[LoadLib] 加载动态库：C:\Users\Administrator\Desktop\client\peripheral\aoto\lib\H003driver.dll 成功
+<<16:32:30.826#信息>>[InitDevice] 已存在副本
+<<16:32:54.265#信息>>[LoadLib] H003driver 动态库文件路径：C:\Users\Administrator\Desktop\client\peripheral\aoto\lib\H003driver.dll
+<<16:32:54.265#信息>>[LoadLib] WltRS 动态库文件路径：C:\Users\Administrator\Desktop\client\peripheral\aoto\lib\WltRS.dll
+<<16:32:54.265#错误>>[LoadLib] 加载动态库：C:\Users\Administrator\Desktop\client\peripheral\aoto\lib\H003driver.dll 成功
+<<16:32:54.464#信息>>[InitDevice] 已存在副本
+<<16:33:51.030#信息>>[LoadLib] H003driver 动态库文件路径：C:\Users\Administrator\Desktop\client\peripheral\aoto\lib\H003driver.dll
+<<16:33:51.046#信息>>[LoadLib] WltRS 动态库文件路径：C:\Users\Administrator\Desktop\client\peripheral\aoto\lib\WltRS.dll
+<<16:33:51.046#错误>>[LoadLib] 加载动态库：C:\Users\Administrator\Desktop\client\peripheral\aoto\lib\H003driver.dll 成功
+<<16:33:51.214#信息>>[InitDevice] 已存在副本
+<<16:37:42.592#信息>>[LoadLib] H003driver 动态库文件路径：C:\Users\Administrator\Desktop\client\peripheral\aoto\lib\H003driver.dll
+<<16:37:42.592#信息>>[LoadLib] WltRS 动态库文件路径：C:\Users\Administrator\Desktop\client\peripheral\aoto\lib\WltRS.dll
+<<16:37:42.592#错误>>[LoadLib] 加载动态库：C:\Users\Administrator\Desktop\client\peripheral\aoto\lib\H003driver.dll 成功
+<<16:37:42.789#信息>>[InitDevice] 已存在副本
+<<16:54:09.550#信息>>[LoadLib] H003driver 动态库文件路径：C:\Users\Administrator\Desktop\client\peripheral\aoto\lib\H003driver.dll
+<<16:54:09.550#信息>>[LoadLib] WltRS 动态库文件路径：C:\Users\Administrator\Desktop\client\peripheral\aoto\lib\WltRS.dll
+<<16:54:09.566#错误>>[LoadLib] 加载动态库：C:\Users\Administrator\Desktop\client\peripheral\aoto\lib\H003driver.dll 成功
+<<16:54:09.744#信息>>[InitDevice] 已存在副本

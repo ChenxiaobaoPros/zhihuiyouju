@@ -107,7 +107,9 @@
     <p onclick="CipherTextMode()">&ensp;--密文键盘</p><input type="text" id="txt1" />
     <p onclick="Decrypt()">&ensp;--解密</p><input type="text" id="txt2" />
     <p>物联网</p>
-    <p onclick="wulianwang()">&ensp;--开启物联网</p>
+    <p onclick="wulianwang()">&ensp;--物联网</p>
+    <p onclick="getallDevState()">&ensp;--获取所有设备状态</p>
+    <p onclick="getallDevInfo()">&ensp;--获取所有设备信息</p>
     <p>高拍仪</p>
     <p onclick="highMeter()">&ensp;--开启高拍仪</p>
     <p>打印</p>
@@ -118,7 +120,7 @@
     <p onclick="ypbox()">&ensp;--邮品柜</p>
     <p>RFID</p>
     <p onclick="rfid()">&ensp;--RFID</p>
-
+    <img src="D:\多功能业务柜\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug\web\youpingui\img\g1.png" alt="Alternate Text" />
     <p onclick="test()">测试</p>
 </body>
 </html>
@@ -127,7 +129,7 @@
         var retStr = window.external.GetProductList();
         var list = JSON.parse(retStr);
         alert(list.bodyList[0].ProductNmae);
-        var ret = window.external.GetProductInfoByName("1");
+        var ret = window.external.GetProductInfoByName("万年邮册");
         var obj = JSON.parse(ret);
         alert(obj.body.Price);
     }
@@ -200,6 +202,12 @@
         alert(str1);
         var info1 = JSON.parse(str1);
         alert(info1.LoRaAirPanel[0].data.deive_name);
+    }
+    function getallDevState() {
+        window.external.LoadManager(2);
+    }
+    function getallDevInfo() {
+        window.external.LoadOverView();
     }
     function print() {
         window.external.PrintWorke();

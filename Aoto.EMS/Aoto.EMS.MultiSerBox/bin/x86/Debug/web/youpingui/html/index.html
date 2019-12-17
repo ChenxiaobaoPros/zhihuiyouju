@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/index.css">
+
+
+
+</head>
+<body>
+    <div class="cabinet">
+        <div class="cabinet_top clearfix">
+            <span class="cabinet_top_span"></span>
+            <p class="cabinet_top_p1">丨</p>
+            <p class="cabinet_top_p2">欢迎您使用邮品零售柜</p>
+        </div>
+        <!--内容开始 -->
+        <div class="cabinet_centent">
+            <div class="cabinet_centent_lun">
+                <div class="slider"><!--主体结构，请用此类名调用插件，此类名可自定义-->
+                    <ul>
+                        <li><img src="../img/1.png"/></li>
+                        <li><img src="../img/2.png"/></li>
+                        <li><img src="../img/3.png"/></li>
+                        <li><img src="../img/1.png"/></li>
+                        <li><img src="../img/3.png"/></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="cabinet_centent_btn clearfix">
+                <div class="chuku">
+                   <img src="../img/ru.png" />
+                </div>
+                <div class="lingshou">
+                    <img src="../img/lingshou.png" />
+                </div>
+            </div>
+        </div>
+        <!--抢购页开始-->
+        <div class="warp">
+            <!--中间内容div-->
+            <div id="Big_Slide_box">
+                <div id="Big_Slide">
+                    <ul>
+                        <li class="Big_Slide_li">
+                            <img src="../img/p1.png" class="tu"/>
+                            <div class="shum">
+                                <p class="shum_p">万年邮册</p>
+                                <p class="shum_p2">（限量抢购）</p>
+                                <span class="shum_span"></span>
+                            </div>
+                            <div class="wenzi">
+                                <p class="wenzi_p"><span class="span1">库存：</span><span class="span2">5</span><span class="span1">产品价格：</span><span class="span3">￥30</span><span class="span4">/本</span></p>
+                            </div>
+                            <div class="qg_btn">
+                                <img src="../img/qg.png" />
+                            </div>
+                        </li>
+                        <li class="Big_Slide_li">
+                            <img src="../img/p3.png" class="tu"/>
+                            <div class="shum">
+                                <p class="shum_p">万年邮册</p>
+                                <p class="shum_p2">（限量抢购）</p>
+                                <span class="shum_span"></span>
+                            </div>
+                            <div class="wenzi">
+                                <p class="wenzi_p"><span class="span1">库存：</span><span class="span2">5</span><span class="span1">产品价格：</span><span class="span3">￥30</span><span class="span4">/本</span></p>
+                            </div>
+                            <div class="qg_btn">
+                                <img src="../img/qg.png" />
+                            </div>
+                        </li>
+                        <li class="Big_Slide_li">
+                            <img src="../img/p4.png" class="tu"/>
+                            <div class="shum">
+                                <p class="shum_p">万年邮册</p>
+                                <p class="shum_p2">（限量抢购）</p>
+                                <span class="shum_span"></span>
+                            </div>
+                            <div class="wenzi">
+                                <p class="wenzi_p"><span class="span1">库存：</span><span class="span2">5</span><span class="span1">产品价格：</span><span class="span3">￥30</span><span class="span4">/本</span></p>
+                            </div>
+                            <div class="qg_btn">
+                                <img src="../img/qg.png" />
+                            </div>
+                        </li>
+                    </ul>
+                    <a id="Big_Slide_Last"></a>
+                    <a id="Big_Slide_Next"></a>
+
+                </div>
+            </div>
+            <div class="fanhui">
+                <img src="../img/fahui.png" />
+            </div>
+        </div>
+        <!--支付页开始-->
+        <div class="zhifu">
+            <div class="Explain">
+                <div class="lianx clearfix">
+                    <p class="tongg"></p>
+                    <span class="bian"></span>
+                    <p class="tongg"></p>
+                    <span class="bian"></span>
+                    <p>3</p>
+                    <span></span>
+                    <p>4</p>
+                </div>
+                <div class="wan clearfix">
+                    <div class="wan_tu">
+                        <img src="../img/g3.png" />
+                    </div>
+                    <div class="wan_wez">
+                        <span class="cg"></span>
+                        <p class="wan_p1">万年邮册</p>
+                        <p class="wan_p2">限量抢购</p>
+                        <p class="wan_p3">产品价格：<span class="wan_p3_span1">￥30</span><span class="wan_p3_span2">/本</span></p>
+                    </div>
+                </div>
+                <div class="zhifutishi">
+                    <img src="../img/zhif2.gif" class="zhifu2"/>
+                    <p class="fkm">请展示付款码，在下方支付</p>
+                </div>
+                <div class="quxiao">
+                    <img src="../img/qux.png"/>
+                </div>
+            </div>
+            <div class="fanhui">
+                <img src="../img/fahui.png" />
+            </div>
+        </div>
+        <!--底部开始 -->
+        <div class="cabinet_bottom">
+
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/index.js"></script>
+    <script src="../js/YuxiSlider.jQuery.min.js"></script>
+    <script src="../js/BigSlide.js"></script>
+    <script>
+        $(".slider").YuxiSlider({
+            //首页轮播图
+            width:900, //容器宽度
+            height:1400, //容器高度
+            //control:$('.control'), //绑定控制按钮
+            during:4000, //间隔4秒自动滑动
+            speed:800, //移动速度0.8秒
+            mousewheel:true, //是否开启鼠标滚轮控制
+            direkey:true //是否开启左右箭头方向控制
+        });
+        $(document).ready(function(){
+            $(function(){
+                $(".lingshou").click(function(){
+                    //显示抢购页
+                    $(".cabinet_centent").hide();
+                    $(".warp").show();
+
+                });
+            });
+            $(function(){
+                //返回首页
+                $(".fanhui").click(function(){
+                    $(".cabinet_centent").show();
+                    $(".warp").hide();
+                    $(".zhifu").hide();
+                });
+            });
+            $(function(){
+                //显示支付页
+                $(".qg_btn").click(function(){
+                    $(".zhifu").show();
+                    $(".warp").hide();
+
+                });
+            });
+        });
+    </script>
+</body>
+</html>

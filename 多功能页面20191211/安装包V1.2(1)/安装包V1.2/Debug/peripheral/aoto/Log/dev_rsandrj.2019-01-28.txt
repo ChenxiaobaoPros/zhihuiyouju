@@ -1,0 +1,58 @@
+[2019-01-28 22:21:22.619][DllMain]-------------动态库加载------------------20150611
+[2019-01-28 22:21:22.625][InitializeData]日志级别:[2],日志保留天数:[30]
+[2019-01-28 22:21:22.874][InitializeData]动态库 E:\工总行\测试程序\Code\client\peripheral\aoto\LIB\PCOMM.DLL 加载成功
+[2019-01-28 22:21:22.875][ServiceDevice]无线服务启动...
+[2019-01-28 22:21:25.377][ServiceWirelessCom]打开串口[4]失败：-5
+[2019-01-28 22:21:25.378][ServiceWirelessCom]打开串口[3]失败：-5
+[2019-01-28 22:21:33.434][DllMain]-------------动态库卸载------------------
+
+[2019-01-28 22:21:53.665][DllMain]-------------动态库加载------------------20150611
+[2019-01-28 22:21:53.671][InitializeData]日志级别:[2],日志保留天数:[30]
+[2019-01-28 22:21:53.918][InitializeData]动态库 E:\工总行\测试程序\Code\client\peripheral\aoto\LIB\PCOMM.DLL 加载成功
+[2019-01-28 22:21:53.919][ServiceDevice]无线服务启动...
+[2019-01-28 22:21:56.422][ServiceWirelessCom]打开串口[3]失败：-5
+[2019-01-28 22:21:56.422][ServiceWirelessCom]打开串口[4]失败：-5
+[2019-01-28 22:22:03.608][DllMain]-------------动态库卸载------------------
+
+[2019-01-28 22:23:50.794][DllMain]-------------动态库加载------------------20150611
+[2019-01-28 22:23:50.799][InitializeData]日志级别:[2],日志保留天数:[30]
+[2019-01-28 22:23:51.050][InitializeData]动态库 E:\工总行\测试程序\Code\client\peripheral\aoto\LIB\PCOMM.DLL 加载成功
+[2019-01-28 22:23:51.050][ServiceDevice]无线服务启动...
+[2019-01-28 22:23:53.553][ServiceWirelessCom]打开串口[4]失败：-5
+[2019-01-28 22:23:53.554][ServiceWirelessCom]打开串口[3]失败：-5
+[2019-01-28 22:30:29.233][dev_oper]-------------设备操作------------------
+[2019-01-28 22:30:29.234][tran_dev_oper]地址定义串：<?xml version= "1.0" encoding="UTF-8"?><dev><dev_type>2</dev_type><dev_addr_type>1</dev_addr_type><dev_addr>com1,9600,201</dev_addr><scr_width>128</scr_width><scr_height>16</scr_height><sound_interval></sound_interval><sound_volume/><bg_sound/><bg_sound_volume></bg_sound_volume></dev>
+[2019-01-28 22:30:29.234][tran_dev_oper]指令串：<?xml version="1.0" encoding="UTF-8"?><cmd><cmd_name>Show_BERRNUM</cmd_name><cmd_data>A0002|2</cmd_data><show_type_list>00</show_type_list><show_align>2</show_align><show_switch_time></show_switch_time><sound_volume></sound_volume></cmd>
+[2019-01-28 22:30:29.235][LineScreenOper]Error=143(通信_轮询板无响应)
+[2019-01-28 22:30:29.235][dev_oper]操作状态:[失败]，返回值:[143]
+[2019-01-28 22:30:29.239][dev_oper]-------------设备操作------------------
+[2019-01-28 22:30:29.240][tran_dev_oper]地址定义串：<?xml version= "1.0" encoding="UTF-8"?><dev><dev_type>3</dev_type><dev_addr_type>1</dev_addr_type><dev_addr>com1,9600,301</dev_addr><scr_width>128</scr_width><scr_height>16</scr_height><sound_interval></sound_interval><sound_volume/><bg_sound/><bg_sound_volume></bg_sound_volume></dev>
+[2019-01-28 22:30:29.240][tran_dev_oper]指令串：<?xml version="1.0" encoding="UTF-8"?><cmd><cmd_name>Show_COMPNUM</cmd_name><cmd_data>m2|A0002|2</cmd_data><show_type_list>13</show_type_list><show_align>0</show_align><show_switch_time></show_switch_time><sound_volume></sound_volume></cmd>
+[2019-01-28 22:30:29.241][PicTextScreenOper]Error=143(通信_轮询板无响应)
+[2019-01-28 22:30:29.241][dev_oper]操作状态:[失败]，返回值:[143]
+[2019-01-28 22:30:30.499][dev_oper]-------------设备操作------------------
+[2019-01-28 22:30:30.499][tran_dev_oper]地址定义串：<?xml version= "1.0" encoding="UTF-8"?><dev><dev_type>7</dev_type><dev_addr_type>1</dev_addr_type><dev_addr>com1,9600,701</dev_addr><scr_width>128</scr_width><scr_height>16</scr_height><sound_interval>10</sound_interval><sound_volume/><bg_sound/><bg_sound_volume>5</bg_sound_volume></dev>
+[2019-01-28 22:30:30.499][tran_dev_oper]指令串：<?xml version="1.0" encoding="UTF-8"?><cmd><cmd_name>Show_SOUND</cmd_name><cmd_data>A0002|2</cmd_data><show_type_list></show_type_list><show_align></show_align><show_switch_time></show_switch_time><sound_volume>9</sound_volume></cmd>
+[2019-01-28 22:30:30.500][WSoundOper]无线音箱指令[Show_SOUND],地址[701]
+[2019-01-28 22:30:30.500][PushOperCommand]设备操作命令进入第[1]组队列，队列长度[1]，队列流水号[1]
+[2019-01-28 22:30:30.500][PushOperCommand]设备操作命令进入第[2]组队列，队列长度[1]，队列流水号[1]
+[2019-01-28 22:30:30.501][dev_oper]操作状态:[成功]，返回值:[0]
+[2019-01-28 22:33:56.574][dev_oper]-------------设备操作------------------
+[2019-01-28 22:33:56.575][tran_dev_oper]地址定义串：<?xml version= "1.0" encoding="UTF-8"?><dev><dev_type>2</dev_type><dev_addr_type>1</dev_addr_type><dev_addr>com1,9600,201</dev_addr><scr_width>128</scr_width><scr_height>16</scr_height><sound_interval></sound_interval><sound_volume/><bg_sound/><bg_sound_volume></bg_sound_volume></dev>
+[2019-01-28 22:33:56.575][tran_dev_oper]指令串：<?xml version="1.0" encoding="UTF-8"?><cmd><cmd_name>Show_BERRNUM</cmd_name><cmd_data>A0001|1</cmd_data><show_type_list>00</show_type_list><show_align>2</show_align><show_switch_time></show_switch_time><sound_volume></sound_volume></cmd>
+[2019-01-28 22:33:56.575][LineScreenOper]Error=143(通信_轮询板无响应)
+[2019-01-28 22:33:56.576][dev_oper]操作状态:[失败]，返回值:[143]
+[2019-01-28 22:33:56.576][dev_oper]-------------设备操作------------------
+[2019-01-28 22:33:56.576][tran_dev_oper]地址定义串：<?xml version= "1.0" encoding="UTF-8"?><dev><dev_type>3</dev_type><dev_addr_type>1</dev_addr_type><dev_addr>com1,9600,301</dev_addr><scr_width>128</scr_width><scr_height>16</scr_height><sound_interval></sound_interval><sound_volume/><bg_sound/><bg_sound_volume></bg_sound_volume></dev>
+[2019-01-28 22:33:56.577][tran_dev_oper]指令串：<?xml version="1.0" encoding="UTF-8"?><cmd><cmd_name>Show_COMPNUM</cmd_name><cmd_data>m2|A0001|1</cmd_data><show_type_list>13</show_type_list><show_align>0</show_align><show_switch_time></show_switch_time><sound_volume></sound_volume></cmd>
+[2019-01-28 22:33:56.577][PicTextScreenOper]Error=143(通信_轮询板无响应)
+[2019-01-28 22:33:56.577][dev_oper]操作状态:[失败]，返回值:[143]
+[2019-01-28 22:33:57.712][dev_oper]-------------设备操作------------------
+[2019-01-28 22:33:57.713][tran_dev_oper]地址定义串：<?xml version= "1.0" encoding="UTF-8"?><dev><dev_type>7</dev_type><dev_addr_type>1</dev_addr_type><dev_addr>com1,9600,701</dev_addr><scr_width>128</scr_width><scr_height>16</scr_height><sound_interval>10</sound_interval><sound_volume/><bg_sound/><bg_sound_volume>5</bg_sound_volume></dev>
+[2019-01-28 22:33:57.713][tran_dev_oper]指令串：<?xml version="1.0" encoding="UTF-8"?><cmd><cmd_name>Show_SOUND</cmd_name><cmd_data>A0001|1</cmd_data><show_type_list></show_type_list><show_align></show_align><show_switch_time></show_switch_time><sound_volume>9</sound_volume></cmd>
+[2019-01-28 22:33:57.713][WSoundOper]无线音箱指令[Show_SOUND],地址[701]
+[2019-01-28 22:33:57.714][PushOperCommand]设备操作命令进入第[1]组队列，队列长度[2]，队列流水号[2]
+[2019-01-28 22:33:57.714][PushOperCommand]设备操作命令进入第[2]组队列，队列长度[2]，队列流水号[2]
+[2019-01-28 22:33:57.714][dev_oper]操作状态:[成功]，返回值:[0]
+[2019-01-28 22:36:46.448][DllMain]-------------动态库卸载------------------
+

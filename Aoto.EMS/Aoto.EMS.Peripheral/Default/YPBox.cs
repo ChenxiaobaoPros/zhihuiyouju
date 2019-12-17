@@ -1,4 +1,6 @@
 ﻿using Aoto.EMS.Infrastructure;
+using Aoto.EMS.Infrastructure.ComponentModel;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -12,6 +14,8 @@ namespace Aoto.EMS.Peripheral
 {
     public class YPBox :IYPBox
     {
+        #region 托管
+
         [UnmanagedFunctionPointer(CallingConvention.StdCall)]
         public delegate int OpenDevice(int nPort);
 
@@ -39,19 +43,24 @@ namespace Aoto.EMS.Peripheral
         [UnmanagedFunctionPointer(CallingConvention.StdCall)]
         public delegate int CloseDevice();
 
+        #endregion
+
         private OpenDevice openDevice;
         private GetSerialNumber getSerialNumber;
         private MotorRun motorRun;
         private MotorPoll motorPoll;
         private CloseDevice closeDevice;
-
-
+        private IScriptInvoker scriptInvoker;
+        private RunAsyncCaller readAsyncCaller;
         private IntPtr intPtr;
         private int ComNumber = 3;
 
 
-
         public YPBox()
+        {
+            scriptInvoker = AutofacContainer.ResolveNamed<IScriptInvoker>("scriptInvoker");
+        }
+        public void Initialize()
         {
             string dllPath = Path.Combine(Application.StartupPath, "peripheral", "aoto", "YPBoxLib", "YPGDriver.dll");
             intPtr = Win32ApiInvoker.LoadLibrary(dllPath);
@@ -71,9 +80,6 @@ namespace Aoto.EMS.Peripheral
             api = Win32ApiInvoker.GetProcAddress(intPtr, "CloseDevice");
             closeDevice = (CloseDevice)Marshal.GetDelegateForFunctionPointer(api, typeof(CloseDevice));
 
-        }
-        public void Initialize()
-        {
             int ret = openDevice(ComNumber);
         }
         public void StartingMotor(int index)
@@ -89,6 +95,19 @@ namespace Aoto.EMS.Peripheral
             /* 状态
              "峰值电流:" + (Serial_Num[5] * 256 + Serial_Num[6]) + "mA 平均电流：" + (Serial_Num[7] * 256 + Serial_Num[8]) + "mA 运行时间：" + (Serial_Num[9] * 256 + Serial_Num[10]) + "mS\r\n"
              */
+            while (true)
+            {
+                ret = motorPoll(Serial_Num);
+
+                if (ret == 3)
+                {
+                    break;
+                }
+            }
+            JObject jo = new JObject(
+                new JProperty("retCode",true),
+                new JProperty("callback", "getBoxState"));
+            scriptInvoker.ScriptInvoke(jo);
 
         }
         public void QueryMotorStatus()

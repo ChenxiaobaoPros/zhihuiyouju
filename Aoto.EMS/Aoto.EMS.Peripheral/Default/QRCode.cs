@@ -75,6 +75,10 @@ namespace Aoto.EMS.Peripheral
             int ret = close_Hid(intPtr);
             return ret;
         }
+        public int OpenQRCode()
+        {
+            return open_Hid_Ex(callback, null);
+        }
         public void Initialize()
         {
             log.Debug("begin");

@@ -1,0 +1,216 @@
+[2019-12-03 18:53:03.175][XZMmkeyWindowsFormsApp.exe][324]---打开串口---
+[2019-12-03 18:53:03.176][XZMmkeyWindowsFormsApp.exe][324]SUNSON_OpenCom,nPortId = 3,nBaudrate = 9600
+[2019-12-03 18:53:03.186][XZMmkeyWindowsFormsApp.exe][324]SUNSON_OpenCom,success!
+[2019-12-03 18:53:10.411][XZMmkeyWindowsFormsApp.exe][324]---取键盘版本号---
+[2019-12-03 18:53:10.412][XZMmkeyWindowsFormsApp.exe][324]SUNSON_GetVersionNo
+[2019-12-03 18:53:10.493][XZMmkeyWindowsFormsApp.exe][324]SUNSON_GetVersionNo, CheckValue = 585A2D483630322D4633312D56312E30332D44303137
+[2019-12-03 18:53:12.007][XZMmkeyWindowsFormsApp.exe][324]---使用EPP仿真键盘---
+[2019-12-03 18:53:12.014][XZMmkeyWindowsFormsApp.exe][324]SUNSON_UseEppPlainTextMode, PlaintextLength = 8,AutoEnd = 01
+[2019-12-03 18:53:12.077][XZMmkeyWindowsFormsApp.exe][324]SUNSON_UseEppPlainTextMode,success!
+[2019-12-03 18:53:13.304][XZMmkeyWindowsFormsApp.exe][324]SUNSON_ScanKeyPress,ucValue = 35
+[2019-12-03 18:53:13.820][XZMmkeyWindowsFormsApp.exe][324]SUNSON_ScanKeyPress,ucValue = 35
+[2019-12-03 18:53:14.206][XZMmkeyWindowsFormsApp.exe][324]SUNSON_ScanKeyPress,ucValue = 35
+[2019-12-03 18:53:15.544][XZMmkeyWindowsFormsApp.exe][324]---系统复位---
+[2019-12-03 18:53:15.545][XZMmkeyWindowsFormsApp.exe][324]SUNSON_ResetEpp
+[2019-12-03 18:53:15.595][XZMmkeyWindowsFormsApp.exe][324]SUNSON_ResetEpp,success!
+[2019-12-03 18:53:17.066][XZMmkeyWindowsFormsApp.exe][324]SUNSON_ScanKeyPress,ucValue = 35
+[2019-12-03 18:53:17.563][XZMmkeyWindowsFormsApp.exe][324]SUNSON_ScanKeyPress,ucValue = 35
+[2019-12-03 18:53:17.948][XZMmkeyWindowsFormsApp.exe][324]SUNSON_ScanKeyPress,ucValue = 35
+[2019-12-03 18:53:20.174][XZMmkeyWindowsFormsApp.exe][324]---系统复位---
+[2019-12-03 18:53:20.175][XZMmkeyWindowsFormsApp.exe][324]SUNSON_ResetEpp
+[2019-12-03 18:53:20.232][XZMmkeyWindowsFormsApp.exe][324]SUNSON_ResetEpp,success!
+[2019-12-03 18:53:21.900][XZMmkeyWindowsFormsApp.exe][324]SUNSON_ScanKeyPress,ucValue = 31
+[2019-12-03 18:53:22.730][XZMmkeyWindowsFormsApp.exe][324]SUNSON_ScanKeyPress,ucValue = 31
+[2019-12-03 18:53:22.781][XZMmkeyWindowsFormsApp.exe][324]SUNSON_ScanKeyPress,ucValue = aa
+[2019-12-03 18:53:22.783][XZMmkeyWindowsFormsApp.exe][324]---使用EPP仿真键盘---
+[2019-12-03 18:53:22.783][XZMmkeyWindowsFormsApp.exe][324]SUNSON_CloseEppPlainTextMode
+[2019-12-03 18:53:22.840][XZMmkeyWindowsFormsApp.exe][324]SUNSON_CloseEppPlainTextMode,success!
+[2019-12-03 18:53:26.959][XZMmkeyWindowsFormsApp.exe][324]---下载用户密钥---
+[2019-12-03 18:53:26.960][XZMmkeyWindowsFormsApp.exe][324]SUNSON_LoadUserKey,KeyId1 = 00,KeyId2 = ffff,KeyAtt = 03,keyValueLength = 8
+[2019-12-03 18:53:27.189][XZMmkeyWindowsFormsApp.exe][324]SUNSON_LoadUserKey,success!
+[2019-12-03 18:53:30.058][XZMmkeyWindowsFormsApp.exe][324]---Pinblock运算---
+[2019-12-03 18:53:30.059][XZMmkeyWindowsFormsApp.exe][324]SUNSON_GetPinBlock, UserKeyId = 0,JM_mode, = 36,padchar = 00,CardLen = 12,CardNo = 123456789012
+[2019-12-03 18:53:30.132][XZMmkeyWindowsFormsApp.exe][324]SUNSON_GetPinBlock, ReturnInfo = 0x19(失败)
+[2019-12-03 18:53:31.424][XZMmkeyWindowsFormsApp.exe][324]---取PIN操作---
+[2019-12-03 18:53:31.425][XZMmkeyWindowsFormsApp.exe][324]SUNSON_GetPin, PinMinLen = 0,PinMaxLen, = 8,AutoReturnFlag = 01
+[2019-12-03 18:53:31.492][XZMmkeyWindowsFormsApp.exe][324]SUNSON_GetPin,success!
+[2019-12-03 18:53:34.497][XZMmkeyWindowsFormsApp.exe][324]SUNSON_ScanKeyPress,ucValue = 2a
+[2019-12-03 18:53:35.250][XZMmkeyWindowsFormsApp.exe][324]SUNSON_ScanKeyPress,ucValue = 2a
+[2019-12-03 18:53:36.307][XZMmkeyWindowsFormsApp.exe][324]SUNSON_ScanKeyPress,ucValue = 2a
+[2019-12-03 18:53:37.297][XZMmkeyWindowsFormsApp.exe][324]SUNSON_ScanKeyPress,ucValue = 2a
+[2019-12-03 18:53:40.195][XZMmkeyWindowsFormsApp.exe][324]---数据运算---
+[2019-12-03 18:53:40.195][XZMmkeyWindowsFormsApp.exe][324]SUNSON_DataCompute, KeyId = 0,JM_mode, = 0x30,SF_mode = 0x30,padchar = 0x00,datalen = 0
+[2019-12-03 18:53:40.195][XZMmkeyWindowsFormsApp.exe][324]Data数据长度小于0
+[2019-12-03 18:53:43.423][XZMmkeyWindowsFormsApp.exe][324]---Pinblock运算---
+[2019-12-03 18:53:43.423][XZMmkeyWindowsFormsApp.exe][324]SUNSON_GetPinBlock, UserKeyId = 0,JM_mode, = 36,padchar = 00,CardLen = 12,CardNo = 123456789012
+[2019-12-03 18:53:43.502][XZMmkeyWindowsFormsApp.exe][324]SUNSON_GetPinBlock, CheckValue = E178C6B82CB239D6
+[2019-12-03 18:53:47.573][XZMmkeyWindowsFormsApp.exe][324]---数据运算---
+[2019-12-03 18:53:47.574][XZMmkeyWindowsFormsApp.exe][324]SUNSON_DataCompute, KeyId = 0,JM_mode, = 0x30,SF_mode = 0x30,padchar = 0x00,datalen = 8
+[2019-12-03 18:53:47.576][XZMmkeyWindowsFormsApp.exe][324]DataBlock= E178C6B82CB239D6
+[2019-12-03 18:53:47.660][XZMmkeyWindowsFormsApp.exe][324]DataCompute, DataResult = 3636363600000000
+[2019-12-03 18:53:56.940][XZMmkeyWindowsFormsApp.exe][660]---打开串口---
+[2019-12-03 18:53:56.941][XZMmkeyWindowsFormsApp.exe][660]SUNSON_OpenCom,nPortId = 3,nBaudrate = 9600
+[2019-12-03 18:53:56.954][XZMmkeyWindowsFormsApp.exe][660]SUNSON_OpenCom,success!
+[2019-12-03 18:54:02.276][XZMmkeyWindowsFormsApp.exe][660]---取PIN操作---
+[2019-12-03 18:54:02.277][XZMmkeyWindowsFormsApp.exe][660]SUNSON_GetPin, PinMinLen = 0,PinMaxLen, = 8,AutoReturnFlag = 01
+[2019-12-03 18:54:02.342][XZMmkeyWindowsFormsApp.exe][660]SUNSON_GetPin,success!
+[2019-12-03 18:54:03.678][XZMmkeyWindowsFormsApp.exe][660]SUNSON_ScanKeyPress,ucValue = 2a
+[2019-12-03 18:54:06.212][XZMmkeyWindowsFormsApp.exe][660]SUNSON_ScanKeyPress,ucValue = 2a
+[2019-12-03 18:54:06.601][XZMmkeyWindowsFormsApp.exe][660]SUNSON_ScanKeyPress,ucValue = 2a
+[2019-12-03 18:54:08.718][XZMmkeyWindowsFormsApp.exe][660]---下载用户密钥---
+[2019-12-03 18:54:08.719][XZMmkeyWindowsFormsApp.exe][660]SUNSON_LoadUserKey,KeyId1 = 00,KeyId2 = ffff,KeyAtt = 03,keyValueLength = 8
+[2019-12-03 18:54:08.947][XZMmkeyWindowsFormsApp.exe][660]SUNSON_LoadUserKey,success!
+[2019-12-03 18:54:10.376][XZMmkeyWindowsFormsApp.exe][660]---Pinblock运算---
+[2019-12-03 18:54:10.377][XZMmkeyWindowsFormsApp.exe][660]SUNSON_GetPinBlock, UserKeyId = 0,JM_mode, = 36,padchar = 00,CardLen = 12,CardNo = 123456789012
+[2019-12-03 18:54:10.450][XZMmkeyWindowsFormsApp.exe][660]SUNSON_GetPinBlock, CheckValue = 41F2C0AD7BAF86D0
+[2019-12-03 18:54:11.763][XZMmkeyWindowsFormsApp.exe][660]---数据运算---
+[2019-12-03 18:54:11.764][XZMmkeyWindowsFormsApp.exe][660]SUNSON_DataCompute, KeyId = 0,JM_mode, = 0x30,SF_mode = 0x30,padchar = 0x00,datalen = 8
+[2019-12-03 18:54:11.764][XZMmkeyWindowsFormsApp.exe][660]DataBlock= 41F2C0AD7BAF86D0
+[2019-12-03 18:54:11.842][XZMmkeyWindowsFormsApp.exe][660]DataCompute, DataResult = 3532310000000000
+[2019-12-03 18:55:00.398][XZMmkeyWindowsFormsApp.exe][18544]---打开串口---
+[2019-12-03 18:55:00.398][XZMmkeyWindowsFormsApp.exe][18544]SUNSON_OpenCom,nPortId = 3,nBaudrate = 9600
+[2019-12-03 18:55:00.408][XZMmkeyWindowsFormsApp.exe][18544]SUNSON_OpenCom,success!
+[2019-12-03 18:55:02.142][XZMmkeyWindowsFormsApp.exe][18544]---取PIN操作---
+[2019-12-03 18:55:02.142][XZMmkeyWindowsFormsApp.exe][18544]SUNSON_GetPin, PinMinLen = 0,PinMaxLen, = 8,AutoReturnFlag = 01
+[2019-12-03 18:55:02.198][XZMmkeyWindowsFormsApp.exe][18544]SUNSON_GetPin,success!
+[2019-12-03 18:55:04.313][XZMmkeyWindowsFormsApp.exe][18544]SUNSON_ScanKeyPress,ucValue = 2a
+[2019-12-03 18:55:04.704][XZMmkeyWindowsFormsApp.exe][18544]SUNSON_ScanKeyPress,ucValue = 2a
+[2019-12-03 18:55:05.202][XZMmkeyWindowsFormsApp.exe][18544]SUNSON_ScanKeyPress,ucValue = 2a
+[2019-12-03 18:55:07.000][XZMmkeyWindowsFormsApp.exe][18544]---下载用户密钥---
+[2019-12-03 18:55:07.001][XZMmkeyWindowsFormsApp.exe][18544]SUNSON_LoadUserKey,KeyId1 = 00,KeyId2 = ffff,KeyAtt = 03,keyValueLength = 8
+[2019-12-03 18:55:07.236][XZMmkeyWindowsFormsApp.exe][18544]SUNSON_LoadUserKey,success!
+[2019-12-03 18:55:07.966][XZMmkeyWindowsFormsApp.exe][18544]---Pinblock运算---
+[2019-12-03 18:55:07.966][XZMmkeyWindowsFormsApp.exe][18544]SUNSON_GetPinBlock, UserKeyId = 0,JM_mode, = 36,padchar = 00,CardLen = 12,CardNo = 123456789012
+[2019-12-03 18:55:08.052][XZMmkeyWindowsFormsApp.exe][18544]SUNSON_GetPinBlock, CheckValue = C91D449B8AB46AFA
+[2019-12-03 18:55:09.008][XZMmkeyWindowsFormsApp.exe][18544]---数据运算---
+[2019-12-03 18:55:09.008][XZMmkeyWindowsFormsApp.exe][18544]SUNSON_DataCompute, KeyId = 0,JM_mode, = 0x30,SF_mode = 0x30,padchar = 0x00,datalen = 8
+[2019-12-03 18:55:09.008][XZMmkeyWindowsFormsApp.exe][18544]DataBlock= C91D449B8AB46AFA
+[2019-12-03 18:55:09.091][XZMmkeyWindowsFormsApp.exe][18544]DataCompute, DataResult = 3132330000000000
+[2019-12-03 18:55:59.392][XZMmkeyWindowsFormsApp.exe][15796]---打开串口---
+[2019-12-03 18:55:59.394][XZMmkeyWindowsFormsApp.exe][15796]SUNSON_OpenCom,nPortId = 3,nBaudrate = 9600
+[2019-12-03 18:55:59.411][XZMmkeyWindowsFormsApp.exe][15796]SUNSON_OpenCom,success!
+[2019-12-03 18:56:01.303][XZMmkeyWindowsFormsApp.exe][15796]---取PIN操作---
+[2019-12-03 18:56:01.304][XZMmkeyWindowsFormsApp.exe][15796]SUNSON_GetPin, PinMinLen = 0,PinMaxLen, = 8,AutoReturnFlag = 01
+[2019-12-03 18:56:01.361][XZMmkeyWindowsFormsApp.exe][15796]SUNSON_GetPin,success!
+[2019-12-03 18:56:04.639][XZMmkeyWindowsFormsApp.exe][15796]SUNSON_ScanKeyPress,ucValue = 2a
+[2019-12-03 18:56:05.138][XZMmkeyWindowsFormsApp.exe][15796]SUNSON_ScanKeyPress,ucValue = 2a
+[2019-12-03 18:56:05.551][XZMmkeyWindowsFormsApp.exe][15796]SUNSON_ScanKeyPress,ucValue = 2a
+[2019-12-03 18:56:06.599][XZMmkeyWindowsFormsApp.exe][15796]---下载用户密钥---
+[2019-12-03 18:56:06.600][XZMmkeyWindowsFormsApp.exe][15796]SUNSON_LoadUserKey,KeyId1 = 00,KeyId2 = ffff,KeyAtt = 03,keyValueLength = 8
+[2019-12-03 18:56:06.831][XZMmkeyWindowsFormsApp.exe][15796]SUNSON_LoadUserKey,success!
+[2019-12-03 18:56:07.498][XZMmkeyWindowsFormsApp.exe][15796]---Pinblock运算---
+[2019-12-03 18:56:07.499][XZMmkeyWindowsFormsApp.exe][15796]SUNSON_GetPinBlock, UserKeyId = 0,JM_mode, = 36,padchar = 00,CardLen = 12,CardNo = 123456789012
+[2019-12-03 18:56:07.582][XZMmkeyWindowsFormsApp.exe][15796]SUNSON_GetPinBlock, CheckValue = C91D449B8AB46AFA
+[2019-12-03 18:56:08.871][XZMmkeyWindowsFormsApp.exe][15796]---数据运算---
+[2019-12-03 18:56:08.872][XZMmkeyWindowsFormsApp.exe][15796]SUNSON_DataCompute, KeyId = 0,JM_mode, = 0x30,SF_mode = 0x30,padchar = 0x00,datalen = 8
+[2019-12-03 18:56:08.872][XZMmkeyWindowsFormsApp.exe][15796]DataBlock= C91D449B8AB46AFA
+[2019-12-03 18:56:08.942][XZMmkeyWindowsFormsApp.exe][15796]DataCompute, DataResult = 3132330000000000
+[2019-12-03 18:57:20.645][XZMmkeyWindowsFormsApp.exe][11728]---打开串口---
+[2019-12-03 18:57:20.646][XZMmkeyWindowsFormsApp.exe][11728]SUNSON_OpenCom,nPortId = 3,nBaudrate = 9600
+[2019-12-03 18:57:20.649][XZMmkeyWindowsFormsApp.exe][11728]SUNSON_OpenCom,success!
+[2019-12-03 18:57:22.167][XZMmkeyWindowsFormsApp.exe][11728]---下载用户密钥---
+[2019-12-03 18:57:22.168][XZMmkeyWindowsFormsApp.exe][11728]SUNSON_LoadUserKey,KeyId1 = 00,KeyId2 = ffff,KeyAtt = 03,keyValueLength = 8
+[2019-12-03 18:57:22.407][XZMmkeyWindowsFormsApp.exe][11728]SUNSON_LoadUserKey,success!
+[2019-12-03 18:57:23.720][XZMmkeyWindowsFormsApp.exe][11728]---Pinblock运算---
+[2019-12-03 18:57:23.721][XZMmkeyWindowsFormsApp.exe][11728]SUNSON_GetPinBlock, UserKeyId = 0,JM_mode, = 36,padchar = 00,CardLen = 12,CardNo = 123456789012
+[2019-12-03 18:57:23.798][XZMmkeyWindowsFormsApp.exe][11728]SUNSON_GetPinBlock, ReturnInfo = 0x19(失败)
+[2019-12-03 18:57:25.752][XZMmkeyWindowsFormsApp.exe][11728]---取PIN操作---
+[2019-12-03 18:57:25.754][XZMmkeyWindowsFormsApp.exe][11728]SUNSON_GetPin, PinMinLen = 0,PinMaxLen, = 8,AutoReturnFlag = 01
+[2019-12-03 18:57:25.814][XZMmkeyWindowsFormsApp.exe][11728]SUNSON_GetPin,success!
+[2019-12-03 18:57:27.509][XZMmkeyWindowsFormsApp.exe][11728]SUNSON_ScanKeyPress,ucValue = 2a
+[2019-12-03 18:57:28.006][XZMmkeyWindowsFormsApp.exe][11728]SUNSON_ScanKeyPress,ucValue = 2a
+[2019-12-03 18:57:28.420][XZMmkeyWindowsFormsApp.exe][11728]SUNSON_ScanKeyPress,ucValue = 2a
+[2019-12-03 18:57:30.872][XZMmkeyWindowsFormsApp.exe][11728]---Pinblock运算---
+[2019-12-03 18:57:30.873][XZMmkeyWindowsFormsApp.exe][11728]SUNSON_GetPinBlock, UserKeyId = 0,JM_mode, = 36,padchar = 00,CardLen = 12,CardNo = 123456789012
+[2019-12-03 18:57:30.947][XZMmkeyWindowsFormsApp.exe][11728]SUNSON_GetPinBlock, CheckValue = C91D449B8AB46AFA
+[2019-12-03 18:57:33.015][XZMmkeyWindowsFormsApp.exe][11728]---数据运算---
+[2019-12-03 18:57:33.016][XZMmkeyWindowsFormsApp.exe][11728]SUNSON_DataCompute, KeyId = 0,JM_mode, = 0x30,SF_mode = 0x30,padchar = 0x00,datalen = 8
+[2019-12-03 18:57:33.017][XZMmkeyWindowsFormsApp.exe][11728]DataBlock= C91D449B8AB46AFA
+[2019-12-03 18:57:33.091][XZMmkeyWindowsFormsApp.exe][11728]DataCompute, DataResult = 3132330000000000
+[2019-12-03 18:57:41.452][XZMmkeyWindowsFormsApp.exe][16752]---打开串口---
+[2019-12-03 18:57:41.453][XZMmkeyWindowsFormsApp.exe][16752]SUNSON_OpenCom,nPortId = 3,nBaudrate = 9600
+[2019-12-03 18:57:41.471][XZMmkeyWindowsFormsApp.exe][16752]SUNSON_OpenCom,success!
+[2019-12-03 18:57:42.651][XZMmkeyWindowsFormsApp.exe][16752]---取PIN操作---
+[2019-12-03 18:57:42.651][XZMmkeyWindowsFormsApp.exe][16752]SUNSON_GetPin, PinMinLen = 0,PinMaxLen, = 8,AutoReturnFlag = 01
+[2019-12-03 18:57:42.701][XZMmkeyWindowsFormsApp.exe][16752]SUNSON_GetPin,success!
+[2019-12-03 18:57:43.591][XZMmkeyWindowsFormsApp.exe][16752]SUNSON_ScanKeyPress,ucValue = 2a
+[2019-12-03 18:57:43.979][XZMmkeyWindowsFormsApp.exe][16752]SUNSON_ScanKeyPress,ucValue = 2a
+[2019-12-03 18:57:44.716][XZMmkeyWindowsFormsApp.exe][16752]SUNSON_ScanKeyPress,ucValue = 2a
+[2019-12-03 18:57:45.327][XZMmkeyWindowsFormsApp.exe][16752]SUNSON_ScanKeyPress,ucValue = 2a
+[2019-12-03 18:57:45.771][XZMmkeyWindowsFormsApp.exe][16752]SUNSON_ScanKeyPress,ucValue = 2a
+[2019-12-03 18:57:46.269][XZMmkeyWindowsFormsApp.exe][16752]SUNSON_ScanKeyPress,ucValue = 2a
+[2019-12-03 18:57:46.906][XZMmkeyWindowsFormsApp.exe][16752]SUNSON_ScanKeyPress,ucValue = 2a
+[2019-12-03 18:57:47.404][XZMmkeyWindowsFormsApp.exe][16752]SUNSON_ScanKeyPress,ucValue = 2a
+[2019-12-03 18:57:47.456][XZMmkeyWindowsFormsApp.exe][16752]SUNSON_ScanKeyPress,ucValue = aa
+[2019-12-03 18:57:47.460][XZMmkeyWindowsFormsApp.exe][16752]---使用EPP仿真键盘---
+[2019-12-03 18:57:47.461][XZMmkeyWindowsFormsApp.exe][16752]SUNSON_CloseEppPlainTextMode
+[2019-12-03 18:57:47.514][XZMmkeyWindowsFormsApp.exe][16752]SUNSON_CloseEppPlainTextMode,success!
+[2019-12-03 18:57:48.961][XZMmkeyWindowsFormsApp.exe][16752]---下载用户密钥---
+[2019-12-03 18:57:48.961][XZMmkeyWindowsFormsApp.exe][16752]SUNSON_LoadUserKey,KeyId1 = 00,KeyId2 = ffff,KeyAtt = 03,keyValueLength = 8
+[2019-12-03 18:57:49.193][XZMmkeyWindowsFormsApp.exe][16752]SUNSON_LoadUserKey,success!
+[2019-12-03 18:57:50.257][XZMmkeyWindowsFormsApp.exe][16752]---Pinblock运算---
+[2019-12-03 18:57:50.258][XZMmkeyWindowsFormsApp.exe][16752]SUNSON_GetPinBlock, UserKeyId = 0,JM_mode, = 36,padchar = 00,CardLen = 12,CardNo = 123456789012
+[2019-12-03 18:57:50.345][XZMmkeyWindowsFormsApp.exe][16752]SUNSON_GetPinBlock, CheckValue = 96D0028878D58C89
+[2019-12-03 18:57:51.408][XZMmkeyWindowsFormsApp.exe][16752]---数据运算---
+[2019-12-03 18:57:51.409][XZMmkeyWindowsFormsApp.exe][16752]SUNSON_DataCompute, KeyId = 0,JM_mode, = 0x30,SF_mode = 0x30,padchar = 0x00,datalen = 8
+[2019-12-03 18:57:51.410][XZMmkeyWindowsFormsApp.exe][16752]DataBlock= 96D0028878D58C89
+[2019-12-03 18:57:51.481][XZMmkeyWindowsFormsApp.exe][16752]DataCompute, DataResult = 3132333435363738
+[2019-12-03 18:58:34.099][XZMmkeyWindowsFormsApp.exe][2504]---打开串口---
+[2019-12-03 18:58:34.100][XZMmkeyWindowsFormsApp.exe][2504]SUNSON_OpenCom,nPortId = 3,nBaudrate = 9600
+[2019-12-03 18:58:34.114][XZMmkeyWindowsFormsApp.exe][2504]SUNSON_OpenCom,success!
+[2019-12-03 18:58:34.860][XZMmkeyWindowsFormsApp.exe][2504]---取PIN操作---
+[2019-12-03 18:58:34.861][XZMmkeyWindowsFormsApp.exe][2504]SUNSON_GetPin, PinMinLen = 0,PinMaxLen, = 8,AutoReturnFlag = 01
+[2019-12-03 18:58:34.929][XZMmkeyWindowsFormsApp.exe][2504]SUNSON_GetPin,success!
+[2019-12-03 18:58:35.933][XZMmkeyWindowsFormsApp.exe][2504]SUNSON_ScanKeyPress,ucValue = 2a
+[2019-12-03 18:58:36.592][XZMmkeyWindowsFormsApp.exe][2504]SUNSON_ScanKeyPress,ucValue = 2a
+[2019-12-03 18:58:37.136][XZMmkeyWindowsFormsApp.exe][2504]SUNSON_ScanKeyPress,ucValue = 2a
+[2019-12-03 18:58:37.625][XZMmkeyWindowsFormsApp.exe][2504]---下载用户密钥---
+[2019-12-03 18:58:37.625][XZMmkeyWindowsFormsApp.exe][2504]SUNSON_LoadUserKey,KeyId1 = 00,KeyId2 = ffff,KeyAtt = 03,keyValueLength = 8
+[2019-12-03 18:58:37.856][XZMmkeyWindowsFormsApp.exe][2504]SUNSON_LoadUserKey,success!
+[2019-12-03 18:58:38.057][XZMmkeyWindowsFormsApp.exe][2504]---Pinblock运算---
+[2019-12-03 18:58:38.057][XZMmkeyWindowsFormsApp.exe][2504]SUNSON_GetPinBlock, UserKeyId = 0,JM_mode, = 36,padchar = 00,CardLen = 12,CardNo = 123456789012
+[2019-12-03 18:58:38.144][XZMmkeyWindowsFormsApp.exe][2504]SUNSON_GetPinBlock, CheckValue = C91D449B8AB46AFA
+[2019-12-03 18:58:38.537][XZMmkeyWindowsFormsApp.exe][2504]---数据运算---
+[2019-12-03 18:58:38.538][XZMmkeyWindowsFormsApp.exe][2504]SUNSON_DataCompute, KeyId = 0,JM_mode, = 0x30,SF_mode = 0x30,padchar = 0x00,datalen = 8
+[2019-12-03 18:58:38.538][XZMmkeyWindowsFormsApp.exe][2504]DataBlock= C91D449B8AB46AFA
+[2019-12-03 18:58:38.624][XZMmkeyWindowsFormsApp.exe][2504]DataCompute, DataResult = 3132330000000000
+[2019-12-03 18:58:48.547][XZMmkeyWindowsFormsApp.exe][18468]---打开串口---
+[2019-12-03 18:58:48.547][XZMmkeyWindowsFormsApp.exe][18468]SUNSON_OpenCom,nPortId = 3,nBaudrate = 9600
+[2019-12-03 18:58:48.556][XZMmkeyWindowsFormsApp.exe][18468]SUNSON_OpenCom,success!
+[2019-12-03 18:58:49.537][XZMmkeyWindowsFormsApp.exe][18468]---取PIN操作---
+[2019-12-03 18:58:49.538][XZMmkeyWindowsFormsApp.exe][18468]SUNSON_GetPin, PinMinLen = 0,PinMaxLen, = 8,AutoReturnFlag = 01
+[2019-12-03 18:58:49.594][XZMmkeyWindowsFormsApp.exe][18468]SUNSON_GetPin,success!
+[2019-12-03 18:58:51.264][XZMmkeyWindowsFormsApp.exe][18468]SUNSON_ScanKeyPress,ucValue = 2a
+[2019-12-03 18:58:51.653][XZMmkeyWindowsFormsApp.exe][18468]SUNSON_ScanKeyPress,ucValue = 2a
+[2019-12-03 18:58:52.041][XZMmkeyWindowsFormsApp.exe][18468]SUNSON_ScanKeyPress,ucValue = 2a
+[2019-12-03 18:58:52.440][XZMmkeyWindowsFormsApp.exe][18468]SUNSON_ScanKeyPress,ucValue = 2a
+[2019-12-03 18:58:53.555][XZMmkeyWindowsFormsApp.exe][18468]---下载用户密钥---
+[2019-12-03 18:58:53.556][XZMmkeyWindowsFormsApp.exe][18468]SUNSON_LoadUserKey,KeyId1 = 00,KeyId2 = ffff,KeyAtt = 03,keyValueLength = 8
+[2019-12-03 18:58:53.784][XZMmkeyWindowsFormsApp.exe][18468]SUNSON_LoadUserKey,success!
+[2019-12-03 18:58:53.958][XZMmkeyWindowsFormsApp.exe][18468]---Pinblock运算---
+[2019-12-03 18:58:53.959][XZMmkeyWindowsFormsApp.exe][18468]SUNSON_GetPinBlock, UserKeyId = 0,JM_mode, = 36,padchar = 00,CardLen = 12,CardNo = 123456789012
+[2019-12-03 18:58:54.040][XZMmkeyWindowsFormsApp.exe][18468]SUNSON_GetPinBlock, CheckValue = BF67CAB8AFCCFA27
+[2019-12-03 18:58:54.545][XZMmkeyWindowsFormsApp.exe][18468]---数据运算---
+[2019-12-03 18:58:54.545][XZMmkeyWindowsFormsApp.exe][18468]SUNSON_DataCompute, KeyId = 0,JM_mode, = 0x30,SF_mode = 0x30,padchar = 0x00,datalen = 8
+[2019-12-03 18:58:54.546][XZMmkeyWindowsFormsApp.exe][18468]DataBlock= BF67CAB8AFCCFA27
+[2019-12-03 18:58:54.616][XZMmkeyWindowsFormsApp.exe][18468]DataCompute, DataResult = 3132333400000000
+[2019-12-03 19:00:17.798][XZMmkeyWindowsFormsApp.exe][8456]---打开串口---
+[2019-12-03 19:00:17.798][XZMmkeyWindowsFormsApp.exe][8456]SUNSON_OpenCom,nPortId = 3,nBaudrate = 9600
+[2019-12-03 19:00:17.809][XZMmkeyWindowsFormsApp.exe][8456]SUNSON_OpenCom,success!
+[2019-12-03 19:00:18.654][XZMmkeyWindowsFormsApp.exe][8456]---取PIN操作---
+[2019-12-03 19:00:18.654][XZMmkeyWindowsFormsApp.exe][8456]SUNSON_GetPin, PinMinLen = 0,PinMaxLen, = 8,AutoReturnFlag = 01
+[2019-12-03 19:00:18.720][XZMmkeyWindowsFormsApp.exe][8456]SUNSON_GetPin,success!
+[2019-12-03 19:00:20.058][XZMmkeyWindowsFormsApp.exe][8456]SUNSON_ScanKeyPress,ucValue = 2a
+[2019-12-03 19:00:20.592][XZMmkeyWindowsFormsApp.exe][8456]SUNSON_ScanKeyPress,ucValue = 2a
+[2019-12-03 19:00:21.313][XZMmkeyWindowsFormsApp.exe][8456]SUNSON_ScanKeyPress,ucValue = 2a
+[2019-12-03 19:00:21.838][XZMmkeyWindowsFormsApp.exe][8456]SUNSON_ScanKeyPress,ucValue = 2a
+[2019-12-03 19:00:23.215][XZMmkeyWindowsFormsApp.exe][8456]---下载用户密钥---
+[2019-12-03 19:00:23.216][XZMmkeyWindowsFormsApp.exe][8456]SUNSON_LoadUserKey,KeyId1 = 00,KeyId2 = ffff,KeyAtt = 03,keyValueLength = 8
+[2019-12-03 19:00:23.454][XZMmkeyWindowsFormsApp.exe][8456]SUNSON_LoadUserKey,success!
+[2019-12-03 19:00:23.738][XZMmkeyWindowsFormsApp.exe][8456]---Pinblock运算---
+[2019-12-03 19:00:23.738][XZMmkeyWindowsFormsApp.exe][8456]SUNSON_GetPinBlock, UserKeyId = 0,JM_mode, = 36,padchar = 00,CardLen = 12,CardNo = 123456789012
+[2019-12-03 19:00:23.822][XZMmkeyWindowsFormsApp.exe][8456]SUNSON_GetPinBlock, CheckValue = BF67CAB8AFCCFA27
+[2019-12-03 19:00:24.554][XZMmkeyWindowsFormsApp.exe][8456]---数据运算---
+[2019-12-03 19:00:24.554][XZMmkeyWindowsFormsApp.exe][8456]SUNSON_DataCompute, KeyId = 0,JM_mode, = 0x30,SF_mode = 0x30,padchar = 0x00,datalen = 8
+[2019-12-03 19:00:24.554][XZMmkeyWindowsFormsApp.exe][8456]DataBlock= BF67CAB8AFCCFA27
+[2019-12-03 19:00:24.638][XZMmkeyWindowsFormsApp.exe][8456]DataCompute, DataResult = 3132333400000000

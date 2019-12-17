@@ -22,3 +22,114 @@
 [2019-12-17 09:52:30.584][Aoto.EMS.MultiSerBox.exe][12532]---打开串口---
 [2019-12-17 09:52:30.585][Aoto.EMS.MultiSerBox.exe][12532]SUNSON_OpenCom,nPortId = 6,nBaudrate = 9600
 [2019-12-17 09:52:30.585][Aoto.EMS.MultiSerBox.exe][12532]SUNSON_OpenCom,failure!
+[2019-12-17 10:04:41.031][Aoto.EMS.MultiSerBox.exe][4636]---打开串口---
+[2019-12-17 10:04:41.031][Aoto.EMS.MultiSerBox.exe][4636]SUNSON_OpenCom,nPortId = 6,nBaudrate = 9600
+[2019-12-17 10:04:41.032][Aoto.EMS.MultiSerBox.exe][4636]SUNSON_OpenCom,failure!
+[2019-12-17 10:36:00.480][Aoto.EMS.MultiSerBox.exe][6544]---打开串口---
+[2019-12-17 10:36:00.481][Aoto.EMS.MultiSerBox.exe][6544]SUNSON_OpenCom,nPortId = 6,nBaudrate = 9600
+[2019-12-17 10:36:00.481][Aoto.EMS.MultiSerBox.exe][6544]SUNSON_OpenCom,failure!
+[2019-12-17 10:36:49.059][Aoto.EMS.MultiSerBox.exe][15624]---打开串口---
+[2019-12-17 10:36:49.059][Aoto.EMS.MultiSerBox.exe][15624]SUNSON_OpenCom,nPortId = 6,nBaudrate = 9600
+[2019-12-17 10:36:49.059][Aoto.EMS.MultiSerBox.exe][15624]SUNSON_OpenCom,failure!
+[2019-12-17 10:41:44.250][Aoto.EMS.MultiSerBox.exe][6584]---打开串口---
+[2019-12-17 10:41:44.250][Aoto.EMS.MultiSerBox.exe][6584]SUNSON_OpenCom,nPortId = 6,nBaudrate = 9600
+[2019-12-17 10:41:44.250][Aoto.EMS.MultiSerBox.exe][6584]SUNSON_OpenCom,failure!
+[2019-12-17 11:06:31.000][Aoto.EMS.MultiSerBox.exe][2564]---打开串口---
+[2019-12-17 11:06:31.000][Aoto.EMS.MultiSerBox.exe][2564]SUNSON_OpenCom,nPortId = 6,nBaudrate = 9600
+[2019-12-17 11:06:31.000][Aoto.EMS.MultiSerBox.exe][2564]SUNSON_OpenCom,failure!
+[2019-12-17 11:07:38.952][Aoto.EMS.MultiSerBox.exe][8916]---打开串口---
+[2019-12-17 11:07:38.952][Aoto.EMS.MultiSerBox.exe][8916]SUNSON_OpenCom,nPortId = 6,nBaudrate = 9600
+[2019-12-17 11:07:38.952][Aoto.EMS.MultiSerBox.exe][8916]SUNSON_OpenCom,failure!
+[2019-12-17 11:08:09.930][Aoto.EMS.MultiSerBox.exe][10352]---打开串口---
+[2019-12-17 11:08:09.930][Aoto.EMS.MultiSerBox.exe][10352]SUNSON_OpenCom,nPortId = 6,nBaudrate = 9600
+[2019-12-17 11:08:09.931][Aoto.EMS.MultiSerBox.exe][10352]SUNSON_OpenCom,failure!
+[2019-12-17 13:06:54.710][Aoto.EMS.MultiSerBox.exe][13320]---打开串口---
+[2019-12-17 13:06:54.711][Aoto.EMS.MultiSerBox.exe][13320]SUNSON_OpenCom,nPortId = 6,nBaudrate = 9600
+[2019-12-17 13:06:54.711][Aoto.EMS.MultiSerBox.exe][13320]SUNSON_OpenCom,failure!
+[2019-12-17 13:07:57.976][Aoto.EMS.MultiSerBox.exe][2252]---打开串口---
+[2019-12-17 13:07:57.977][Aoto.EMS.MultiSerBox.exe][2252]SUNSON_OpenCom,nPortId = 6,nBaudrate = 9600
+[2019-12-17 13:07:57.977][Aoto.EMS.MultiSerBox.exe][2252]SUNSON_OpenCom,failure!
+[2019-12-17 13:15:21.055][Aoto.EMS.MultiSerBox.exe][3972]---打开串口---
+[2019-12-17 13:15:21.055][Aoto.EMS.MultiSerBox.exe][3972]SUNSON_OpenCom,nPortId = 6,nBaudrate = 9600
+[2019-12-17 13:15:21.055][Aoto.EMS.MultiSerBox.exe][3972]SUNSON_OpenCom,failure!
+[2019-12-17 13:21:16.536][Aoto.EMS.MultiSerBox.exe][15804]---打开串口---
+[2019-12-17 13:21:16.537][Aoto.EMS.MultiSerBox.exe][15804]SUNSON_OpenCom,nPortId = 6,nBaudrate = 9600
+[2019-12-17 13:21:16.537][Aoto.EMS.MultiSerBox.exe][15804]SUNSON_OpenCom,failure!
+[2019-12-17 13:22:42.197][Aoto.EMS.MultiSerBox.exe][4308]---打开串口---
+[2019-12-17 13:22:42.197][Aoto.EMS.MultiSerBox.exe][4308]SUNSON_OpenCom,nPortId = 6,nBaudrate = 9600
+[2019-12-17 13:22:42.197][Aoto.EMS.MultiSerBox.exe][4308]SUNSON_OpenCom,failure!
+[2019-12-17 13:25:26.340][Aoto.EMS.MultiSerBox.exe][3396]---打开串口---
+[2019-12-17 13:25:26.341][Aoto.EMS.MultiSerBox.exe][3396]SUNSON_OpenCom,nPortId = 6,nBaudrate = 9600
+[2019-12-17 13:25:26.341][Aoto.EMS.MultiSerBox.exe][3396]SUNSON_OpenCom,failure!
+[2019-12-17 13:26:48.626][Aoto.EMS.MultiSerBox.exe][4504]---打开串口---
+[2019-12-17 13:26:48.626][Aoto.EMS.MultiSerBox.exe][4504]SUNSON_OpenCom,nPortId = 6,nBaudrate = 9600
+[2019-12-17 13:26:48.626][Aoto.EMS.MultiSerBox.exe][4504]SUNSON_OpenCom,failure!
+[2019-12-17 13:28:19.364][Aoto.EMS.MultiSerBox.exe][4728]---打开串口---
+[2019-12-17 13:28:19.364][Aoto.EMS.MultiSerBox.exe][4728]SUNSON_OpenCom,nPortId = 6,nBaudrate = 9600
+[2019-12-17 13:28:19.364][Aoto.EMS.MultiSerBox.exe][4728]SUNSON_OpenCom,failure!
+[2019-12-17 13:34:26.456][Aoto.EMS.MultiSerBox.exe][11972]---打开串口---
+[2019-12-17 13:34:26.456][Aoto.EMS.MultiSerBox.exe][11972]SUNSON_OpenCom,nPortId = 6,nBaudrate = 9600
+[2019-12-17 13:34:26.457][Aoto.EMS.MultiSerBox.exe][11972]SUNSON_OpenCom,failure!
+[2019-12-17 13:56:34.162][Aoto.EMS.MultiSerBox.exe][14308]---打开串口---
+[2019-12-17 13:56:34.162][Aoto.EMS.MultiSerBox.exe][14308]SUNSON_OpenCom,nPortId = 6,nBaudrate = 9600
+[2019-12-17 13:56:34.162][Aoto.EMS.MultiSerBox.exe][14308]SUNSON_OpenCom,failure!
+[2019-12-17 14:28:30.055][Aoto.EMS.MultiSerBox.exe][12168]---打开串口---
+[2019-12-17 14:28:30.055][Aoto.EMS.MultiSerBox.exe][12168]SUNSON_OpenCom,nPortId = 6,nBaudrate = 9600
+[2019-12-17 14:28:30.055][Aoto.EMS.MultiSerBox.exe][12168]SUNSON_OpenCom,failure!
+[2019-12-17 14:33:55.232][Aoto.EMS.MultiSerBox.exe][15276]---打开串口---
+[2019-12-17 14:33:55.232][Aoto.EMS.MultiSerBox.exe][15276]SUNSON_OpenCom,nPortId = 6,nBaudrate = 9600
+[2019-12-17 14:33:55.233][Aoto.EMS.MultiSerBox.exe][15276]SUNSON_OpenCom,failure!
+[2019-12-17 14:38:27.480][Aoto.EMS.MultiSerBox.exe][7296]---打开串口---
+[2019-12-17 14:38:27.480][Aoto.EMS.MultiSerBox.exe][7296]SUNSON_OpenCom,nPortId = 6,nBaudrate = 9600
+[2019-12-17 14:38:27.481][Aoto.EMS.MultiSerBox.exe][7296]SUNSON_OpenCom,failure!
+[2019-12-17 14:44:47.597][Aoto.EMS.MultiSerBox.exe][8032]---打开串口---
+[2019-12-17 14:44:47.598][Aoto.EMS.MultiSerBox.exe][8032]SUNSON_OpenCom,nPortId = 6,nBaudrate = 9600
+[2019-12-17 14:44:47.598][Aoto.EMS.MultiSerBox.exe][8032]SUNSON_OpenCom,failure!
+[2019-12-17 14:45:58.944][Aoto.EMS.MultiSerBox.exe][1368]---打开串口---
+[2019-12-17 14:45:58.945][Aoto.EMS.MultiSerBox.exe][1368]SUNSON_OpenCom,nPortId = 6,nBaudrate = 9600
+[2019-12-17 14:45:58.945][Aoto.EMS.MultiSerBox.exe][1368]SUNSON_OpenCom,failure!
+[2019-12-17 14:48:09.230][Aoto.EMS.MultiSerBox.exe][16976]---打开串口---
+[2019-12-17 14:48:09.231][Aoto.EMS.MultiSerBox.exe][16976]SUNSON_OpenCom,nPortId = 6,nBaudrate = 9600
+[2019-12-17 14:48:09.231][Aoto.EMS.MultiSerBox.exe][16976]SUNSON_OpenCom,failure!
+[2019-12-17 14:49:05.455][Aoto.EMS.MultiSerBox.exe][8360]---打开串口---
+[2019-12-17 14:49:05.455][Aoto.EMS.MultiSerBox.exe][8360]SUNSON_OpenCom,nPortId = 6,nBaudrate = 9600
+[2019-12-17 14:49:05.455][Aoto.EMS.MultiSerBox.exe][8360]SUNSON_OpenCom,failure!
+[2019-12-17 15:28:26.226][Aoto.EMS.MultiSerBox.exe][9328]---打开串口---
+[2019-12-17 15:28:26.226][Aoto.EMS.MultiSerBox.exe][9328]SUNSON_OpenCom,nPortId = 6,nBaudrate = 9600
+[2019-12-17 15:28:26.227][Aoto.EMS.MultiSerBox.exe][9328]SUNSON_OpenCom,failure!
+[2019-12-17 15:35:50.768][Aoto.EMS.MultiSerBox.exe][17100]---打开串口---
+[2019-12-17 15:35:50.769][Aoto.EMS.MultiSerBox.exe][17100]SUNSON_OpenCom,nPortId = 6,nBaudrate = 9600
+[2019-12-17 15:35:50.769][Aoto.EMS.MultiSerBox.exe][17100]SUNSON_OpenCom,failure!
+[2019-12-17 15:37:57.123][Aoto.EMS.MultiSerBox.exe][16524]---打开串口---
+[2019-12-17 15:37:57.124][Aoto.EMS.MultiSerBox.exe][16524]SUNSON_OpenCom,nPortId = 6,nBaudrate = 9600
+[2019-12-17 15:37:57.124][Aoto.EMS.MultiSerBox.exe][16524]SUNSON_OpenCom,failure!
+[2019-12-17 15:46:12.106][Aoto.EMS.MultiSerBox.exe][14296]---打开串口---
+[2019-12-17 15:46:12.107][Aoto.EMS.MultiSerBox.exe][14296]SUNSON_OpenCom,nPortId = 6,nBaudrate = 9600
+[2019-12-17 15:46:12.107][Aoto.EMS.MultiSerBox.exe][14296]SUNSON_OpenCom,failure!
+[2019-12-17 15:47:58.959][Aoto.EMS.MultiSerBox.exe][15340]---打开串口---
+[2019-12-17 15:47:58.959][Aoto.EMS.MultiSerBox.exe][15340]SUNSON_OpenCom,nPortId = 6,nBaudrate = 9600
+[2019-12-17 15:47:58.959][Aoto.EMS.MultiSerBox.exe][15340]SUNSON_OpenCom,failure!
+[2019-12-17 15:48:16.553][Aoto.EMS.MultiSerBox.exe][11592]---打开串口---
+[2019-12-17 15:48:16.553][Aoto.EMS.MultiSerBox.exe][11592]SUNSON_OpenCom,nPortId = 6,nBaudrate = 9600
+[2019-12-17 15:48:16.553][Aoto.EMS.MultiSerBox.exe][11592]SUNSON_OpenCom,failure!
+[2019-12-17 15:49:01.037][Aoto.EMS.MultiSerBox.exe][11656]---打开串口---
+[2019-12-17 15:49:01.038][Aoto.EMS.MultiSerBox.exe][11656]SUNSON_OpenCom,nPortId = 6,nBaudrate = 9600
+[2019-12-17 15:49:01.038][Aoto.EMS.MultiSerBox.exe][11656]SUNSON_OpenCom,failure!
+[2019-12-17 15:49:28.791][Aoto.EMS.MultiSerBox.exe][16080]---打开串口---
+[2019-12-17 15:49:28.791][Aoto.EMS.MultiSerBox.exe][16080]SUNSON_OpenCom,nPortId = 6,nBaudrate = 9600
+[2019-12-17 15:49:28.791][Aoto.EMS.MultiSerBox.exe][16080]SUNSON_OpenCom,failure!
+[2019-12-17 15:49:44.720][Aoto.EMS.MultiSerBox.exe][2784]---打开串口---
+[2019-12-17 15:49:44.721][Aoto.EMS.MultiSerBox.exe][2784]SUNSON_OpenCom,nPortId = 6,nBaudrate = 9600
+[2019-12-17 15:49:44.721][Aoto.EMS.MultiSerBox.exe][2784]SUNSON_OpenCom,failure!
+[2019-12-17 15:50:00.894][Aoto.EMS.MultiSerBox.exe][8408]---打开串口---
+[2019-12-17 15:50:00.894][Aoto.EMS.MultiSerBox.exe][8408]SUNSON_OpenCom,nPortId = 6,nBaudrate = 9600
+[2019-12-17 15:50:00.894][Aoto.EMS.MultiSerBox.exe][8408]SUNSON_OpenCom,failure!
+[2019-12-17 16:31:19.814][Aoto.EMS.MultiSerBox.exe][12964]---打开串口---
+[2019-12-17 16:31:19.814][Aoto.EMS.MultiSerBox.exe][12964]SUNSON_OpenCom,nPortId = 6,nBaudrate = 9600
+[2019-12-17 16:31:19.814][Aoto.EMS.MultiSerBox.exe][12964]SUNSON_OpenCom,failure!
+[2019-12-17 16:32:24.745][Aoto.EMS.MultiSerBox.exe][12852]---打开串口---
+[2019-12-17 16:32:24.745][Aoto.EMS.MultiSerBox.exe][12852]SUNSON_OpenCom,nPortId = 6,nBaudrate = 9600
+[2019-12-17 16:32:24.745][Aoto.EMS.MultiSerBox.exe][12852]SUNSON_OpenCom,failure!
+[2019-12-17 16:34:22.996][Aoto.EMS.MultiSerBox.exe][3976]---打开串口---
+[2019-12-17 16:34:22.997][Aoto.EMS.MultiSerBox.exe][3976]SUNSON_OpenCom,nPortId = 6,nBaudrate = 9600
+[2019-12-17 16:34:22.997][Aoto.EMS.MultiSerBox.exe][3976]SUNSON_OpenCom,failure!

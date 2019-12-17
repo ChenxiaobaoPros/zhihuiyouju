@@ -1,0 +1,126 @@
+<<11:11:50.539#信息>>[InitializeData]日志保存天数：[30]
+<<11:11:50.540#信息>>[InitializeData]GetModuleFileName：[D:\智慧邮局\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug\]
+<<11:11:50.540#信息>>[InitializeData]GetCurrentDirectory：[D:\智慧邮局\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug]
+<<11:11:50.544#信息>>[InitializeData]调用结束
+<<11:11:50.545#信息>>[IDCR_Initialize]去掉入参非法字符前lpszConfigXml=<?xml version ="1.0" encoding="utf-8"?><Device>  <DeviceId>IDCard001</DeviceId>  <LogLevel>3</LogLevel></Device>
+<<11:11:50.546#信息>>[IDCR_Initialize]去掉入参非法字符后lpszConfigXml=<?xml version ="1.0" encoding="utf-8"?><Device>  <DeviceId>IDCard001</DeviceId>  <LogLevel>3</LogLevel></Device>
+<<11:11:50.546#信息>>[IDCR_Initialize]设备标识为：IDCard001,日志级别为：3
+<<11:11:50.547#信息>>[IDCR_Initialize]读取串口信息：Com3
+<<11:11:50.696#信息>>[IDCR_Initialize]当前身份证阅读器波特率为: 115200
+<<11:11:50.711#信息>>[IDCR_Initialize]返回值：0(成功)
+<<11:11:50.713#信息>>[IDCR_Initialize]调用开始
+
+<<11:12:01.283#信息>>[IDCR_CancelRead]调用开始
+<<11:12:01.285#信息>>[IDCR_CancelRead]返回值：0(成功)
+<<11:12:01.286#信息>>[IDCR_CancelRead]调用结束
+
+<<11:24:39.506#信息>>[InitializeData]日志保存天数：[30]
+<<11:24:39.507#信息>>[InitializeData]GetModuleFileName：[D:\智慧邮局\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug\]
+<<11:24:39.507#信息>>[InitializeData]GetCurrentDirectory：[D:\智慧邮局\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug]
+<<11:24:39.510#信息>>[InitializeData]调用结束
+<<11:24:39.511#信息>>[IDCR_Initialize]去掉入参非法字符前lpszConfigXml=<?xml version ="1.0" encoding="utf-8"?><Device>  <DeviceId>IDCard001</DeviceId>  <LogLevel>3</LogLevel></Device>
+<<11:24:39.512#信息>>[IDCR_Initialize]去掉入参非法字符后lpszConfigXml=<?xml version ="1.0" encoding="utf-8"?><Device>  <DeviceId>IDCard001</DeviceId>  <LogLevel>3</LogLevel></Device>
+<<11:24:39.512#信息>>[IDCR_Initialize]设备标识为：IDCard001,日志级别为：3
+<<11:24:39.512#信息>>[IDCR_Initialize]读取串口信息：Com3
+<<11:24:39.657#信息>>[IDCR_Initialize]当前身份证阅读器波特率为: 115200
+<<11:24:39.672#信息>>[IDCR_Initialize]返回值：0(成功)
+<<11:24:39.673#信息>>[IDCR_Initialize]调用开始
+
+<<11:24:45.522#信息>>[IDCR_DataAvailable]寻卡成功
+<<11:24:45.538#信息>>[IDCR_DataAvailable]选卡成功
+<<11:24:46.325#信息>>[IDCR_DataAvailable]读卡成功
+<<11:24:46.331#信息>>[IDCR_DataAvailable]返回值：0(成功)，lpAvailable:1
+<<11:24:46.331#信息>>[IDCR_DataAvailable]调用结束
+
+<<11:24:46.332#信息>>[IDCR_ReadData]调用开始
+<<11:24:46.332#信息>>[IDCR_ReadData]参数dwIndex=0,dwBufferSize=256
+<<11:24:46.333#信息>>[IDCR_ReadData]调用开始
+<<11:24:46.333#信息>>[IDCR_ReadData]参数dwIndex=1,dwBufferSize=200
+<<11:24:46.333#信息>>[IDCR_ReadData]读取姓名：陈祥宝
+<<11:24:46.334#信息>>[IDCR_ReadData]返回值:0(成功),返回的数据lpBuffer=陈祥宝,有效长度lpNumberOfBytesRead=6
+<<11:24:46.334#信息>>[IDCR_ReadData]调用结束
+
+<<11:24:46.334#信息>>[IDCR_ReadData]调用开始
+<<11:24:46.335#信息>>[IDCR_ReadData]参数dwIndex=2,dwBufferSize=200
+<<11:24:46.335#信息>>[IDCR_ReadData]读取性别：男
+<<11:24:46.335#信息>>[IDCR_ReadData]返回值:0(成功),返回的数据lpBuffer=男,有效长度lpNumberOfBytesRead=2
+<<11:24:46.336#信息>>[IDCR_ReadData]调用结束
+
+<<11:24:46.336#信息>>[IDCR_ReadData]调用开始
+<<11:24:46.337#信息>>[IDCR_ReadData]参数dwIndex=3,dwBufferSize=200
+<<11:24:46.337#信息>>[IDCR_ReadData]读取民族：汉族
+<<11:24:46.337#信息>>[IDCR_ReadData]返回值:0(成功),返回的数据lpBuffer=汉族,有效长度lpNumberOfBytesRead=4
+<<11:24:46.338#信息>>[IDCR_ReadData]调用结束
+
+<<11:24:46.338#信息>>[IDCR_ReadData]调用开始
+<<11:24:46.338#信息>>[IDCR_ReadData]参数dwIndex=4,dwBufferSize=200
+<<11:24:46.339#信息>>[IDCR_ReadData]读取出生日期：19910121
+<<11:24:46.339#信息>>[IDCR_ReadData]返回值:0(成功),返回的数据lpBuffer=19910121,有效长度lpNumberOfBytesRead=8
+<<11:24:46.339#信息>>[IDCR_ReadData]调用结束
+
+<<11:24:46.340#信息>>[IDCR_ReadData]调用开始
+<<11:24:46.340#信息>>[IDCR_ReadData]参数dwIndex=5,dwBufferSize=200
+<<11:24:46.341#信息>>[IDCR_ReadData]读取住址：北京市海淀区西土城路10号北京邮电大学世纪学院计算机科学与技术2011
+<<11:24:46.341#信息>>[IDCR_ReadData]返回值:0(成功),返回的数据lpBuffer=北京市海淀区西土城路10号北京邮电大学世纪学院计算机科学与技术2011,有效长度lpNumberOfBytesRead=64
+<<11:24:46.341#信息>>[IDCR_ReadData]调用结束
+
+<<11:24:46.341#信息>>[IDCR_ReadData]调用开始
+<<11:24:46.342#信息>>[IDCR_ReadData]参数dwIndex=6,dwBufferSize=200
+<<11:24:46.342#信息>>[IDCR_ReadData]读取身份证号：371326199101214311
+<<11:24:46.342#信息>>[IDCR_ReadData]返回值:0(成功),返回的数据lpBuffer=371326199101214311,有效长度lpNumberOfBytesRead=18
+<<11:24:46.343#信息>>[IDCR_ReadData]调用结束
+
+<<11:24:46.343#信息>>[IDCR_ReadData]调用开始
+<<11:24:46.343#信息>>[IDCR_ReadData]参数dwIndex=7,dwBufferSize=200
+<<11:24:46.344#信息>>[IDCR_ReadData]读取签发机关：北京市公安局海淀分局
+<<11:24:46.344#信息>>[IDCR_ReadData]返回值:0(成功),返回的数据lpBuffer=北京市公安局海淀分局,有效长度lpNumberOfBytesRead=20
+<<11:24:46.344#信息>>[IDCR_ReadData]调用结束
+
+<<11:24:46.345#信息>>[IDCR_ReadData]调用开始
+<<11:24:46.345#信息>>[IDCR_ReadData]参数dwIndex=8,dwBufferSize=200
+<<11:24:46.345#信息>>[IDCR_ReadData]读取有效期限--生效日期：20140530
+<<11:24:46.345#信息>>[IDCR_ReadData]返回值:0(成功),返回的数据lpBuffer=20140530,有效长度lpNumberOfBytesRead=8
+<<11:24:46.346#信息>>[IDCR_ReadData]调用结束
+
+<<11:24:46.346#信息>>[IDCR_ReadData]调用开始
+<<11:24:46.346#信息>>[IDCR_ReadData]参数dwIndex=9,dwBufferSize=200
+<<11:24:46.347#信息>>[IDCR_ReadData]读取有效期限--失效日期：20240530
+<<11:24:46.347#信息>>[IDCR_ReadData]返回值:0(成功),返回的数据lpBuffer=20240530,有效长度lpNumberOfBytesRead=8
+<<11:24:46.347#信息>>[IDCR_ReadData]调用结束
+
+<<11:24:46.348#信息>>[IDCR_ReadData]返回值:0(成功),返回的数据lpBuffer=陈祥宝|男|汉族|19910121|北京市海淀区西土城路10号北京邮电大学世纪学院计算机科学与技术2011|371326199101214311|北京市公安局海淀分局|20140530|20240530|D:\智慧邮局\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug\peripheral\aoto\IDCardlib\image\zp.bmp,有效长度lpNumberOfBytesRead=241
+<<11:24:46.348#信息>>[IDCR_ReadData]调用结束
+
+<<11:24:46.348#信息>>[IDCR_CancelRead]调用开始
+<<11:24:46.349#信息>>[IDCR_CancelRead]返回值：0(成功)
+<<11:24:46.349#信息>>[IDCR_CancelRead]调用结束
+
+<<11:42:55.963#信息>>[InitializeData]日志保存天数：[30]
+<<11:42:55.965#信息>>[InitializeData]GetModuleFileName：[D:\智慧邮局\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug\]
+<<11:42:55.966#信息>>[InitializeData]GetCurrentDirectory：[D:\智慧邮局\Aoto.EMS\Aoto.EMS.MultiSerBox\bin\x86\Debug]
+<<11:42:55.972#信息>>[InitializeData]调用结束
+<<11:42:55.975#信息>>[IDCR_Initialize]去掉入参非法字符前lpszConfigXml=<?xml version ="1.0" encoding="utf-8"?><Device>  <DeviceId>IDCard001</DeviceId>  <LogLevel>3</LogLevel></Device>
+<<11:42:55.976#信息>>[IDCR_Initialize]去掉入参非法字符后lpszConfigXml=<?xml version ="1.0" encoding="utf-8"?><Device>  <DeviceId>IDCard001</DeviceId>  <LogLevel>3</LogLevel></Device>
+<<11:42:55.977#信息>>[IDCR_Initialize]设备标识为：IDCard001,日志级别为：3
+<<11:42:55.979#信息>>[IDCR_Initialize]读取串口信息：Com3
+<<11:42:55.980#信息>>[IDCR_Initialize]获取身份证阅读器波特率失败, [SDT_GetCOMBaud]返回值：[0X05]
+<<11:42:55.981#信息>>[IDCR_Initialize]设置身份证阅读器波特率失败, [SDT_SetCOMBaud]返回值：[0X01]
+<<11:42:55.982#信息>>[IDCR_Initialize]端口 3 打开失败, [SDT_OpenPort]返回值：[0X01]
+<<11:42:55.989#错误>>[IDCR_BeginRead]Error：设备未初始化
+<<11:42:55.991#信息>>[IDCR_BeginRead]返回值：3004(失败)
+<<11:42:55.992#信息>>[IDCR_BeginRead]调用结束
+
+<<11:42:55.993#信息>>[IDCR_CancelRead]调用开始
+<<11:42:55.994#错误>>[IDCR_CancelRead]Error：设备未初始化
+<<11:42:55.995#信息>>[IDCR_CancelRead]返回值：3004(失败)
+<<11:42:55.996#信息>>[IDCR_CancelRead]调用结束
+
+<<11:48:11.250#错误>>[IDCR_BeginRead]Error：设备未初始化
+<<11:48:11.252#信息>>[IDCR_BeginRead]返回值：3004(失败)
+<<11:48:11.252#信息>>[IDCR_BeginRead]调用结束
+
+<<11:48:11.253#信息>>[IDCR_CancelRead]调用开始
+<<11:48:11.255#错误>>[IDCR_CancelRead]Error：设备未初始化
+<<11:48:11.255#信息>>[IDCR_CancelRead]返回值：3004(失败)
+<<11:48:11.255#信息>>[IDCR_CancelRead]调用结束
+
