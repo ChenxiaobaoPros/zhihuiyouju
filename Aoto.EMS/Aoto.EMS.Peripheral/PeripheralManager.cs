@@ -134,12 +134,24 @@ namespace Aoto.EMS.Peripheral
         void StartingMotor(int index);
         void Inspecting();
     }
+    public interface IRFID
+    {
+        void Initialize();
+        void Read(JObject jo);
+        void ReadAsync(JObject jo);
+        void GetReadResult();
+        void Inspection();
+    }
     /// <summary>
     /// 金属键盘
     /// </summary>
     public interface IKeyBoard {
         void Initialize();
         void Read(JObject jo);
+        void ReadAsync(JObject jo);
+        void TurnOnTextMode();
+        void TurnOnCipherTextMode();
+        void Decrypt();
         event RunCompletedEventHandler RunCompletedEvent;
     }
     public class PeripheralManager
@@ -165,6 +177,7 @@ namespace Aoto.EMS.Peripheral
         private IHybridCardReader hybridCardReader;
         private IFinger finger;
         private IYPBox ypBox;
+        private IRFID rfid;
         //private IReader mifareCardReader;
 
         private static readonly ILog log = LogManager.GetLogger("peripheral");
@@ -186,11 +199,11 @@ namespace Aoto.EMS.Peripheral
             //mifareCardReader = AutofacContainer.ResolveNamed<IReader>("mifareCardReader");
 
             //签字板
-            //signaturePlate = AutofacContainer.ResolveNamed<ISignaturePlate>("signaturePlate");
-            ////金属键盘
-            //keyBoard = AutofacContainer.ResolveNamed<IKeyBoard>("keyBoard");
-            ////金属键盘数据返回
-            //keyBoard.RunCompletedEvent += new RunCompletedEventHandler(ReadKeyBoardCompletedEvent);
+            signaturePlate = AutofacContainer.ResolveNamed<ISignaturePlate>("signaturePlate");
+            //金属键盘
+            keyBoard = AutofacContainer.ResolveNamed<IKeyBoard>("keyBoard");
+            //金属键盘数据返回
+            keyBoard.RunCompletedEvent += new RunCompletedEventHandler(ReadKeyBoardCompletedEvent);
             //指纹
             finger = AutofacContainer.ResolveNamed<IFinger>("finger");
             finger.RunCompletedEvent += new RunCompletedEventHandler(ReadFingerCompletedEvent);
@@ -199,7 +212,8 @@ namespace Aoto.EMS.Peripheral
             qRCode.RunCompletedEvent += new RunCompletedEventHandler(ReadQRCodeCompletedEvent);
             //邮品柜
             ypBox = AutofacContainer.ResolveNamed<IYPBox>("ypBox");
-
+            //RFID
+            rfid = AutofacContainer.ResolveNamed<IRFID>("rfid");
             //magneticCardReaderWriter.RunCompletedEvent += new RunCompletedEventHandler(ReadCardCompletedEvent);
             //icCardReaderWriter.RunCompletedEvent += new RunCompletedEventHandler(ReadCardCompletedEvent);
             idCardReader.RunCompletedEvent += new RunCompletedEventHandler(ReadCardCompletedEvent);
@@ -225,6 +239,7 @@ namespace Aoto.EMS.Peripheral
         public IFinger Finger { get { return finger; } }
         public IQRCode QRCode { get { return qRCode; } }
         public IYPBox YPBox { get { return ypBox; } }
+        public IRFID RFID { get { return rfid; } }
         private static object lockedObject = new object();
         private static string res = String.Empty;
 

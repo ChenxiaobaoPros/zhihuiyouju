@@ -24,7 +24,9 @@ namespace Aoto.EMS.MultiSerBox
             webBrowser.ObjectForScripting = this;
             webBrowser.ScriptErrorsSuppressed = true;
             webBrowser.ScrollBarsEnabled = true;
-           
+
+            //pictureBoxQRCode.Image = QrCodeFactory.CreateQRCode(@"http://api.pho.so/photo.aspx?type=3");
+
         }
         public void Shut()
         {
@@ -65,6 +67,8 @@ namespace Aoto.EMS.MultiSerBox
 
         private void FrmShell_Load(object sender, EventArgs e)
         {
+            //SetDeiveState("LoRaPlug", new string[] { "GMK8502203" }, "0");
+
             //peripheralManager = AutofacContainer.ResolveNamed<PeripheralManager>("peripheralManager"); //也可以用反射
             peripheralManager = new PeripheralManager();
             //webBrowser.Navigate(AppState.WelcomeUrl);
@@ -158,11 +162,22 @@ namespace Aoto.EMS.MultiSerBox
         #endregion
 
         #region 键盘
-        public void loadKeyBoard()
+        //明文
+        public void TextModel()
         {
-            peripheralManager.KeyBoard.Read(new JObject());
+            peripheralManager.KeyBoard.ReadAsync(new JObject());
+            peripheralManager.KeyBoard.TurnOnTextMode();
         }
-
+        //密文
+        public void CipherTextMode()
+        {
+            peripheralManager.KeyBoard.TurnOnCipherTextMode();
+        }
+        //解密
+        public void Decrypt()
+        {
+            peripheralManager.KeyBoard.Decrypt();
+        }
         #endregion
 
         #region 签字板
@@ -179,12 +194,47 @@ namespace Aoto.EMS.MultiSerBox
 
         #region 吸卡器
         HybridCardReader hybridCardReader;
-        public string loadMoveCard()
+        public void loadMoveCard()
         {
             if (hybridCardReader == null)
                 hybridCardReader = new HybridCardReader();
+           
+        }
+        public void HalfBacnk()
+        {
+            hybridCardReader.HalfwayBack();
+        }
+        public void BackCard()
+        {
             hybridCardReader.BackCard();
-            return null;
+        }
+        public void RFCard()
+        {
+            hybridCardReader.RFCard();
+        }
+        public void ICCard()
+        {
+            hybridCardReader.ICCard();
+        }
+        public void GetCardReaderInfo()
+        {
+            hybridCardReader.GetCardReaderInfo();
+        }
+        public void MagRead()
+        {
+            hybridCardReader.MagRead();
+        }
+        public void IsMCard()
+        {
+            hybridCardReader.IsMCard();
+        }
+        public void MRead()
+        {
+            hybridCardReader.MRead(); 
+        }
+        public void CPURead()
+        {
+            hybridCardReader.CPURead(); 
         }
         #endregion
 
@@ -219,14 +269,35 @@ namespace Aoto.EMS.MultiSerBox
         }
         #endregion
 
+        #endregion
+
         #region 邮品柜
+
+        #region 邮品柜
+
         public void LoadYPBox()
         {
             peripheralManager.YPBox.Initialize();
+            peripheralManager.YPBox.Inspecting();
+
         }
         public void StartMotor(int index)
         {
             peripheralManager.YPBox.StartingMotor(index);
+        }
+
+        #endregion
+
+        #region RFID
+        public void LoadRFID()
+        {
+            peripheralManager.RFID.Initialize();
+            peripheralManager.RFID.Inspection();
+        }
+        public void GetRFID()
+        {
+            //peripheralManager.RFID.GetInspectionResult();
+            peripheralManager.RFID.GetReadResult();
         }
         #endregion
 
@@ -682,205 +753,205 @@ namespace Aoto.EMS.MultiSerBox
         public string LoadManager(int app_id)
         {
             #region 真实数据
-            //accessTokenJo = GetAccessToken(api_token);
-            //if (accessTokenJo.Value<int>("expiresIn") <= 100)
-            //{
-            //    //超时
-            //    return "";
-            //}
-            //accessToken = accessTokenJo["accessToken"].ToString();
+            accessTokenJo = GetAccessToken(api_token);
+            if (accessTokenJo.Value<int>("expiresIn") <= 100)
+            {
+                //超时
+                return "";
+            }
+            accessToken = accessTokenJo["accessToken"].ToString();
 
-            ////2、查询指定应用下，所有设备
-            //JObject requestJo = new JObject();
+            //2、查询指定应用下，所有设备
+            JObject requestJo = new JObject();
 
-            //foreach (string typeName in type_names)
-            //{
-            //    requestJo.Add(
-            //        new JProperty(typeName,
-            //            new JObject(
-            //                new JProperty("all", true),
-            //                new JProperty("group_ids", new JArray(app_id)),
-            //                new JProperty("device_ids", new JArray())
-            //                )));
-            //}
-            //allJo = GetState(accessToken, requestJo);//所有类型，所有设备(指定空间下)
+            foreach (string typeName in type_names)
+            {
+                requestJo.Add(
+                    new JProperty(typeName,
+                        new JObject(
+                            new JProperty("all", true),
+                            new JProperty("group_ids", new JArray(app_id)),
+                            new JProperty("device_ids", new JArray())
+                            )));
+            }
+            allJo = GetState(accessToken, requestJo);//所有类型，所有设备(指定空间下)
 
-            ////将状态填充
-            //IEnumerable<JProperty> jTypeProperties = allJo.Properties();
+            //将状态填充
+            IEnumerable<JProperty> jTypeProperties = allJo.Properties();
 
-            //this.responseJo = new JObject();
-            //foreach (JProperty jp in jTypeProperties)
-            //{
-            //    if (jp.Value.Count() != 0)
-            //    {
-            //        IEnumerable<JProperty> jDevProperties = (jp.Value as JObject).Properties(); //获取该类型所有设备
+            this.responseJo = new JObject();
+            foreach (JProperty jp in jTypeProperties)
+            {
+                if (jp.Value.Count() != 0)
+                {
+                    IEnumerable<JProperty> jDevProperties = (jp.Value as JObject).Properties(); //获取该类型所有设备
 
-            //        JObject deiveListByTypeJo = new JObject();
-            //        JArray deiveArrayJo = new JArray();
-            //        switch (jp.Path)
-            //        {
-            //            //433转换器
-            //            case "433Changer":
-            //                break;
-            //            //LoRa门锁
-            //            case "LoRaDoorLockx":
-            //                break;
-            //            //MPM4780智能变送器
-            //            case "MPM4780_Transmitters":
-            //                break;
-            //            //单火三路开关控制器
-            //            case "YBL-SingleFireThreeKeySwitch":
-            //                foreach (JProperty jdp in jDevProperties)
-            //                {
-            //                    JObject deiveInfo = CreateDeiveInfo(jdp);
-            //                    //首先判断是否在线
-            //                    CheckOnline(jdp, deiveInfo);
+                    JObject deiveListByTypeJo = new JObject();
+                    JArray deiveArrayJo = new JArray();
+                    switch (jp.Path)
+                    {
+                        //433转换器
+                        case "433Changer":
+                            break;
+                        //LoRa门锁
+                        case "LoRaDoorLockx":
+                            break;
+                        //MPM4780智能变送器
+                        case "MPM4780_Transmitters":
+                            break;
+                        //单火三路开关控制器
+                        case "YBL-SingleFireThreeKeySwitch":
+                            foreach (JProperty jdp in jDevProperties)
+                            {
+                                JObject deiveInfo = CreateDeiveInfo(jdp);
+                                //首先判断是否在线
+                                CheckOnline(jdp, deiveInfo);
 
-            //                    JObject dataJo = new JObject(
-            //                        new JProperty("deive_name", jdp.Value["name"]),
-            //                        //new JProperty("deive_name", jdp.Value["data"]["CONTROL_PKT_NUM"]),//控制次数
-            //                        //new JProperty("deive_name", jdp.Value["data"]["FAILED_PKT_NUM"]),//失败次数
-            //                        //new JProperty("deive_name", jdp.Value["data"]["RETRANS_PKT_NUM"]),//重传次数
-            //                        new JProperty("deive_one", jdp.Value["data"]["cloud_state"]["DEV_SWITCH_STA_ONE"]),
-            //                        new JProperty("deive_two", jdp.Value["data"]["cloud_state"]["DEV_SWITCH_STA_TWO"]),
-            //                        new JProperty("deive_three", jdp.Value["data"]["cloud_state"]["DEV_SWITCH_STA_THREE"]));
+                                JObject dataJo = new JObject(
+                                    new JProperty("deive_name", jdp.Value["name"]),
+                                    //new JProperty("deive_name", jdp.Value["data"]["CONTROL_PKT_NUM"]),//控制次数
+                                    //new JProperty("deive_name", jdp.Value["data"]["FAILED_PKT_NUM"]),//失败次数
+                                    //new JProperty("deive_name", jdp.Value["data"]["RETRANS_PKT_NUM"]),//重传次数
+                                    new JProperty("deive_one", jdp.Value["data"]["cloud_state"]["DEV_SWITCH_STA_ONE"]),
+                                    new JProperty("deive_two", jdp.Value["data"]["cloud_state"]["DEV_SWITCH_STA_TWO"]),
+                                    new JProperty("deive_three", jdp.Value["data"]["cloud_state"]["DEV_SWITCH_STA_THREE"]));
 
-            //                    deiveInfo.Add(new JProperty("data", dataJo));
-            //                    deiveArrayJo.Add(deiveInfo);
-            //                }
-            //                break;
-            //            //智能三路触控开关
-            //            case "ThreeWayLoraSwitch":
-            //                break;
-            //            //智能三鉴探测器
-            //            case "BODY_SENSOR":
-            //                break;
-            //            //智能单路触控开关
-            //            case "OneWayLoraSwitch":
-            //                break;
-            //            //智能双路触控开关
-            //            case "TwoWayLoraSwitch":
-            //                break;
-            //            //智能插座
-            //            case "LoRaPlug":
-            //                foreach (JProperty jdp in jDevProperties)
-            //                {
-            //                    JObject deiveInfo = CreateDeiveInfo(jdp);
+                                deiveInfo.Add(new JProperty("data", dataJo));
+                                deiveArrayJo.Add(deiveInfo);
+                            }
+                            break;
+                        //智能三路触控开关
+                        case "ThreeWayLoraSwitch":
+                            break;
+                        //智能三鉴探测器
+                        case "BODY_SENSOR":
+                            break;
+                        //智能单路触控开关
+                        case "OneWayLoraSwitch":
+                            break;
+                        //智能双路触控开关
+                        case "TwoWayLoraSwitch":
+                            break;
+                        //智能插座
+                        case "LoRaPlug":
+                            foreach (JProperty jdp in jDevProperties)
+                            {
+                                JObject deiveInfo = CreateDeiveInfo(jdp);
 
-            //                    //首先判断是否在线
-            //                    CheckOnline(jdp, deiveInfo);
+                                //首先判断是否在线
+                                CheckOnline(jdp, deiveInfo);
 
-            //                    JObject dataJo = new JObject(
-            //                    new JProperty("deive_name", jdp.Value["name"]),
-            //                    new JProperty("deive_i", jdp.Value["data"]["DEV_CURRENT"]),
-            //                    new JProperty("deive_v", jdp.Value["data"]["DEV_VOLRAGE"]));
+                                JObject dataJo = new JObject(
+                                new JProperty("deive_name", jdp.Value["name"]),
+                                new JProperty("deive_i", jdp.Value["data"]["DEV_CURRENT"]),
+                                new JProperty("deive_v", jdp.Value["data"]["DEV_VOLRAGE"]));
 
-            //                    deiveInfo.Add(new JProperty("data", dataJo));
-            //                    deiveArrayJo.Add(deiveInfo);
-            //                }
-            //                break;
-            //            //智能液位变送器
-            //            case "Liquid_Transmitters":
-            //                break;
-            //            //温湿度传感器
-            //            case "LoRaTempHumid":
-            //                foreach (JProperty jdp in jDevProperties)
-            //                {
-            //                    JObject deiveInfo = CreateDeiveInfo(jdp);
+                                deiveInfo.Add(new JProperty("data", dataJo));
+                                deiveArrayJo.Add(deiveInfo);
+                            }
+                            break;
+                        //智能液位变送器
+                        case "Liquid_Transmitters":
+                            break;
+                        //温湿度传感器
+                        case "LoRaTempHumid":
+                            foreach (JProperty jdp in jDevProperties)
+                            {
+                                JObject deiveInfo = CreateDeiveInfo(jdp);
 
-            //                    //首先判断是否在线
-            //                    CheckOnline(jdp, deiveInfo);
+                                //首先判断是否在线
+                                CheckOnline(jdp, deiveInfo);
 
-            //                    JObject dataJo = new JObject(
-            //                        new JProperty("deive_name", jdp.Value["name"]),
-            //                        new JProperty("deive_temperature", jdp.Value["data"]["DEV_TEMPRATURE"]),//温度
-            //                        new JProperty("deive_humidity", jdp.Value["data"]["DEV_MOISTURE"])//湿度
-            //                          );
+                                JObject dataJo = new JObject(
+                                    new JProperty("deive_name", jdp.Value["name"]),
+                                    new JProperty("deive_temperature", jdp.Value["data"]["DEV_TEMPRATURE"]),//温度
+                                    new JProperty("deive_humidity", jdp.Value["data"]["DEV_MOISTURE"])//湿度
+                                      );
 
-            //                    deiveInfo.Add(new JProperty("data", dataJo));
-            //                    deiveArrayJo.Add(deiveInfo);
-            //                }
-            //                break;
-            //            //温湿度传感器-XW-TH-B/BO-485
-            //            case "temperature-sensor":
-            //                break;
-            //            //漏液不定位传感器
-            //            case "fluid-leakage-controller":
-            //                break;
-            //            //漏液定位传感器
-            //            case "positioning-fluid-leakage-controller":
-            //                break;
-            //            //烟雾传感器
-            //            case "SmokeSensor":
-            //                foreach (JProperty jdp in jDevProperties)
-            //                {
-            //                    JObject deiveInfo = CreateDeiveInfo(jdp);
+                                deiveInfo.Add(new JProperty("data", dataJo));
+                                deiveArrayJo.Add(deiveInfo);
+                            }
+                            break;
+                        //温湿度传感器-XW-TH-B/BO-485
+                        case "temperature-sensor":
+                            break;
+                        //漏液不定位传感器
+                        case "fluid-leakage-controller":
+                            break;
+                        //漏液定位传感器
+                        case "positioning-fluid-leakage-controller":
+                            break;
+                        //烟雾传感器
+                        case "SmokeSensor":
+                            foreach (JProperty jdp in jDevProperties)
+                            {
+                                JObject deiveInfo = CreateDeiveInfo(jdp);
 
-            //                    //首先判断是否在线
-            //                    CheckOnline(jdp, deiveInfo);
+                                //首先判断是否在线
+                                CheckOnline(jdp, deiveInfo);
 
-            //                    JObject dataJo = new JObject(
-            //                        new JProperty("deive_name", jdp.Value["name"]),
-            //                        new JProperty("deive_smoke", jdp.Value["data"]["IS_SMOKE"]));// 需要转换
+                                JObject dataJo = new JObject(
+                                    new JProperty("deive_name", jdp.Value["name"]),
+                                    new JProperty("deive_smoke", jdp.Value["data"]["IS_SMOKE"]));// 需要转换
 
-            //                    deiveInfo.Add(new JProperty("data", dataJo));
-            //                    deiveArrayJo.Add(deiveInfo);
-            //                }
-            //                break;
-            //            //空调面板
-            //            case "LoRaAirPanel":
-            //                foreach (JProperty jdp in jDevProperties)
-            //                {
-            //                    JObject deiveInfo = CreateDeiveInfo(jdp);
+                                deiveInfo.Add(new JProperty("data", dataJo));
+                                deiveArrayJo.Add(deiveInfo);
+                            }
+                            break;
+                        //空调面板
+                        case "LoRaAirPanel":
+                            foreach (JProperty jdp in jDevProperties)
+                            {
+                                JObject deiveInfo = CreateDeiveInfo(jdp);
 
-            //                    //首先判断是否在线
-            //                    CheckOnline(jdp, deiveInfo);
+                                //首先判断是否在线
+                                CheckOnline(jdp, deiveInfo);
 
-            //                    JObject dataJo = new JObject(
-            //                        new JProperty("deive_name", jdp.Value["name"]),
-            //                        new JProperty("deive_temperature", jdp.Value["data"]["DEV_CURRENT_TEMP"]));
+                                JObject dataJo = new JObject(
+                                    new JProperty("deive_name", jdp.Value["name"]),
+                                    new JProperty("deive_temperature", jdp.Value["data"]["DEV_CURRENT_TEMP"]));
 
-            //                    deiveInfo.Add(new JProperty("data", dataJo));
-            //                    deiveArrayJo.Add(deiveInfo);
-            //                    //deiveJo.Add(new JProperty("工作模式", jdp.Value["data"]["cloud_state"]["DEV_MODE"]));
-            //                    //deiveJo.Add(new JProperty("开关按键键状态", jdp.Value["data"]["DEV_EVENT_SWITCH"]));
-            //                    //deiveJo.Add(new JProperty("减小按键", jdp.Value["data"]["DEV_EVENT_DOWN"]));
-            //                    //deiveJo.Add(new JProperty("调节模式按钮", jdp.Value["data"]["DEV_EVENT_DOWN"]));
-            //                    //deiveJo.Add(new JProperty("锁定状态", jdp.Value["data"]["cloud_state"]["DEV_LOCKED"]));
-            //                    //deiveJo.Add(new JProperty("目标温度", jdp.Value["data"]["cloud_state"]["DEV_TARGET_TEMP"]));
-            //                    //deiveJo.Add(new JProperty("风速", jdp.Value["data"]["cloud_state"]["DEV_SPEED"]));
-            //                    //deiveJo.Add(new JProperty("增加按键", jdp.Value["data"]["DEV_CURRENT_TEMP"]));
-            //                    //deiveJo.Add(new JProperty("调节风速按钮", jdp.Value["data"]["DEV_CURRENT_TEMP"]));
-            //                    //deiveJo.Add(new JProperty("重启状态", jdp.Value["data"]["DEV_CURRENT_TEMP"]));
-            //                    //deiveJo.Add(new JProperty("通信网关", jdp.Value["data"]["DEV_CURRENT_TEMP"]));
-            //                }
-            //                break;
-            //            //红外人体检测传感器
-            //            case "human-detection":
-            //                foreach (JProperty jdp in jDevProperties)
-            //                {
-            //                    JObject deiveInfo = CreateDeiveInfo(jdp);
+                                deiveInfo.Add(new JProperty("data", dataJo));
+                                deiveArrayJo.Add(deiveInfo);
+                                //deiveJo.Add(new JProperty("工作模式", jdp.Value["data"]["cloud_state"]["DEV_MODE"]));
+                                //deiveJo.Add(new JProperty("开关按键键状态", jdp.Value["data"]["DEV_EVENT_SWITCH"]));
+                                //deiveJo.Add(new JProperty("减小按键", jdp.Value["data"]["DEV_EVENT_DOWN"]));
+                                //deiveJo.Add(new JProperty("调节模式按钮", jdp.Value["data"]["DEV_EVENT_DOWN"]));
+                                //deiveJo.Add(new JProperty("锁定状态", jdp.Value["data"]["cloud_state"]["DEV_LOCKED"]));
+                                //deiveJo.Add(new JProperty("目标温度", jdp.Value["data"]["cloud_state"]["DEV_TARGET_TEMP"]));
+                                //deiveJo.Add(new JProperty("风速", jdp.Value["data"]["cloud_state"]["DEV_SPEED"]));
+                                //deiveJo.Add(new JProperty("增加按键", jdp.Value["data"]["DEV_CURRENT_TEMP"]));
+                                //deiveJo.Add(new JProperty("调节风速按钮", jdp.Value["data"]["DEV_CURRENT_TEMP"]));
+                                //deiveJo.Add(new JProperty("重启状态", jdp.Value["data"]["DEV_CURRENT_TEMP"]));
+                                //deiveJo.Add(new JProperty("通信网关", jdp.Value["data"]["DEV_CURRENT_TEMP"]));
+                            }
+                            break;
+                        //红外人体检测传感器
+                        case "human-detection":
+                            foreach (JProperty jdp in jDevProperties)
+                            {
+                                JObject deiveInfo = CreateDeiveInfo(jdp);
 
-            //                    CheckOnline(jdp, deiveInfo);
+                                CheckOnline(jdp, deiveInfo);
 
-            //                    JObject dataJo = new JObject(
-            //                          new JProperty("deive_name", jdp.Value["name"]),
-            //                                new JProperty("deive_someone", jdp.Value["data"]["HUMAN_STATUS"]));//需要转换
+                                JObject dataJo = new JObject(
+                                      new JProperty("deive_name", jdp.Value["name"]),
+                                            new JProperty("deive_someone", jdp.Value["data"]["HUMAN_STATUS"]));//需要转换
 
-            //                    deiveInfo.Add(new JProperty("data", dataJo));
-            //                    deiveArrayJo.Add(deiveInfo);
-            //                }
-            //                break;
-            //            default:
-            //                break;
-            //        }
+                                deiveInfo.Add(new JProperty("data", dataJo));
+                                deiveArrayJo.Add(deiveInfo);
+                            }
+                            break;
+                        default:
+                            break;
+                    }
 
-            //        this.responseJo.Add(new JProperty(jp.Path, deiveArrayJo));
+                    this.responseJo.Add(new JProperty(jp.Path, deiveArrayJo));
 
-            //    }
+                }
 
-            //}
-            //jsonResponse = responseJo.ToString(Formatting.None);
+            }
+            jsonResponse = responseJo.ToString(Formatting.None);
 
             #endregion
 
@@ -974,5 +1045,9 @@ namespace Aoto.EMS.MultiSerBox
         public string state { get; set; }
         public string typeName { get; set; }
     }
+    #endregion
+
+    #region 邮品柜
+
     #endregion
 }

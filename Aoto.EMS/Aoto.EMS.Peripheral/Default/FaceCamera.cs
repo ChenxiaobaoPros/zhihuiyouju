@@ -11,6 +11,7 @@ namespace Aoto.EMS.Peripheral
 {
     public class FaceCamera : IFaceCamera
     {
+        #region 托管
         /// <summary>
         /// 登录设备
         /// </summary>
@@ -79,6 +80,8 @@ namespace Aoto.EMS.Peripheral
 
         [UnmanagedFunctionPointer(CallingConvention.StdCall)]
         public delegate bool NET_DVR_StopSaveRealData(Int32 lRealHandle);
+        #endregion
+
         #endregion
 
         private IntPtr intPtr; //加载句柄
@@ -199,6 +202,8 @@ namespace Aoto.EMS.Peripheral
             return m_UserID;
         }
 
+        #region 抓拍 录视频
+
         public string DisplayDVR()
         {
             string message = "";
@@ -286,7 +291,6 @@ namespace Aoto.EMS.Peripheral
             }
             return sBmpPicFileName;
         }
-
         public string StartRecord()
         {
             //录像保存路径和文件名 the path and file name to save  
@@ -308,14 +312,11 @@ namespace Aoto.EMS.Peripheral
             }
 
         }
-
         public bool StopRecord()
         {
             //停止录像 Stop recording
             return stopRealData(m_RealHandle);
         }
-
-
         public void RealDataCallBack(Int32 lRealHandle, UInt32 dwDataType, IntPtr pBuffer, UInt32 dwBufSize, IntPtr pUser)
         {
             if (dwBufSize > 0)
@@ -330,7 +331,17 @@ namespace Aoto.EMS.Peripheral
                 fs.Close();
             }
         }
+        #endregion
 
+        #region 客流报警
+
+        #endregion
+
+        #region 人脸识别
+
+        #endregion
+
+        #region 结构体
 
         public const int STREAM_ID_LEN = 32;
 
@@ -419,6 +430,8 @@ namespace Aoto.EMS.Peripheral
             [MarshalAsAttribute(UnmanagedType.ByValArray, SizeConst = 216, ArraySubType = UnmanagedType.I1)]
             public byte[] byRes;
         }
+
+        #endregion
     }
 
     public delegate void RelDataCallBack(Int32 lRealHandle, UInt32 dwDataType, IntPtr pBuffer, UInt32 dwBufSize, IntPtr pUser);

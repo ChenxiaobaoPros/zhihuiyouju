@@ -82,25 +82,42 @@
 
 </head>
 <body>
-    <p onclick="loadborad()">手写板</p>
-    <p />
-    <p onclick="loadfinger()">指纹识别</p>
-    <p />
-    <p onclick="loadQRCode()">扫码</p>
-    <p onclick="closeQRCode()">关闭</p>
-    <p />
-    <p onclick="loadIDCard()">读身份证</p>
-    <p />
-    <p onclick="loadMoveCard()">吸卡器</p>
-    <p />
-    <p onclick="loadKeyBoard()">明文键盘</p><input type="text" id="text" />
-    <p onclick="">密文键盘</p>
-    <p onclick="">解密</p>
-    <p onclick="wulianwang()">物联网</p>
-    <p onclick="highMeter()">高拍仪</p>
-    <p onclick="print()">打印</p>
-    <p onclick="faceCam()">人脸识别</p>
-    <p onclick="ypbox()">邮品柜</p>
+    <p>签字版</p>
+    <p onclick="loadborad()">&ensp;--开启签字版</p>
+    <p>指纹</p>
+    <p onclick="loadfinger()">&ensp;--开启指纹识别</p>
+    <p>扫码</p>
+    <p onclick="loadQRCode()">&ensp;--扫码</p>
+    <p onclick="closeQRCode()">&ensp;--关闭</p>
+    <p>读身份证</p>
+    <p onclick="loadIDCard()">&ensp;--开启读卡</p>
+    <p>吸卡器</p>
+    <p onclick="loadMoveCard()">&ensp;--开启吸卡器</p>
+    <p onclick="getCardReaderInfo()">&ensp;--读卡机读取状态</p>
+    <p onclick="magRead()">&ensp;--读磁条</p>
+    <p onclick="isMCard()">&ensp;--检测是否M卡</p>
+    <p onclick="mRead()">&ensp;--读取M卡</p>
+    <p onclick="cpuRead()">&ensp;--读取CPU卡</p>
+    <p onclick="backCard()">&ensp;--退卡</p>
+    <p onclick="halfback()">&ensp;--退一半</p>
+    <p onclick="rfCard()">&ensp;--RF卡准备</p>
+    <p onclick="icCard()">&ensp;--IC卡准备</p>
+    <p>密码键盘</p>
+    <p onclick="TextModel()">&ensp;--明文键盘</p><input type="text" id="txt" />
+    <p onclick="CipherTextMode()">&ensp;--密文键盘</p><input type="text" id="txt1" />
+    <p onclick="Decrypt()">&ensp;--解密</p><input type="text" id="txt2" />
+    <p>物联网</p>
+    <p onclick="wulianwang()">&ensp;--开启物联网</p>
+    <p>高拍仪</p>
+    <p onclick="highMeter()">&ensp;--开启高拍仪</p>
+    <p>打印</p>
+    <p onclick="print()">&ensp;--打印</p>
+    <p>人脸识别</p>
+    <p onclick="faceCam()">&ensp;--人脸识别</p>
+    <p>邮品柜</p>
+    <p onclick="ypbox()">&ensp;--邮品柜</p>
+    <p>RFID</p>
+    <p onclick="rfid()">&ensp;--RFID</p>
 </body>
 </html>
 <script type="text/javascript">
@@ -122,39 +139,87 @@
     function loadMoveCard() {
         window.external.loadMoveCard();
     }
-    function loadKeyBoard() {
-        var oTxt = document.getElementById('text').focus();
-        window.external.loadKeyBoard();
+    function getCardReaderInfo() {
+        window.external.GetCardReaderInfo();
     }
-    function readBoard(str) {
-        var oTxt = document.getElementById('text');
-        oTxt.value += str;
+    function magRead() {
+        window.external.MagRead();
     }
-    function wulianwang()
-    {
+    function isMCard() {
+        window.external.IsMCard();
+    }
+    function mRead() {
+        window.external.MRead();
+    }
+     function cpuRead() {
+        window.external.CPURead();
+    }
+    function backCard() {
+        window.external.BackCard();
+    }
+    function halfback() {
+        window.external.HalfBacnk();
+    }
+    function rfCard() {
+        window.external.RFCard();
+    }
+    function icCard() {
+        window.external.ICCard();
+    }
+    function TextModel() {
+        //明文模式
+        var oTxt = document.getElementById('txt').focus();
+        window.external.TextModel();
+    }
+    function CipherTextMode() {
+        //密文模式
+        var oTxt = document.getElementById('txt1').focus();
+        window.external.CipherTextMode();
+    }
+    function Decrypt() {
+        //解密
+        var oTxt = document.getElementById('txt2').focus();
+        window.external.Decrypt();
+    }
+    function wulianwang() {
         //var str = window.external.LoadOverView();
         //var info = JSON.parse(str);
-        //alert(info[0].online); 
-        //alert(info[0].appName); 
+        //alert(info[0].online);
+        //alert(info[0].appName);
         var str1 = window.external.LoadManager(2);
         alert(str1);
         var info1 = JSON.parse(str1);
-        alert(info1.LoRaAirPanel[0].data.deive_name); 
+        alert(info1.LoRaAirPanel[0].data.deive_name);
     }
-    function print()
-    {
+    function print() {
         window.external.PrintWorke();
     }
-    function highMeter()
-    {
+    function highMeter() {
         window.external.LoadHighMeter();
     }
     function faceCam() {
         window.external.LoadFaceCam();
     }
-    function ypbox()
-    {
+    function ypbox() {
         window.external.LoadYPBox();
         window.external.StartMotor(0);
     }
+    function displayValue(str) {
+        var v = document.getElementById('txt').value;
+        var v1 = document.getElementById('txt1').value;
+        var ii = JSON.parse(str);
+        if (ii.model == "CipherText") {
+            $('#txt1').val(v1 + ii.value);
+        }
+        else if (ii.model == "Text") {
+            $('#txt').val(v + ii.value);
+        }
+        else if (ii.model == "Decrypt") {
+            $('#txt2').val(ii.value);
+        }
+    }
+    function rfid() {
+        window.external.LoadRFID();
+    }
+
 </script>

@@ -193,6 +193,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="image\bom.jpg" />
     <Content Include="image\邮政.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

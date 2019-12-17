@@ -110,6 +110,12 @@
       "timeout": 10000,
       "enabled": true,
       "logLevel": 0
+    },
+    "rfid": {
+      "dll": "AOTO_RFID_2019.dll",
+      "timeout": 10000,
+      "enabled": true,
+      "logLevel": 0
     }
   },
   "custRec": {
